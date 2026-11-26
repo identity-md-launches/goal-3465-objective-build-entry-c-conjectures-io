@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "$REPO/test/scratch/coverage-merge/runtime/bin/python",
+    "-m",
+    "eik",
+    "merge",
+    "$REPO/eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stdout",
+    "$REPO/eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stdout",
+    "$REPO/eik-work/trials/m0-tanh-refine/exhaustive-exp.stdout",
+    "$REPO/eik-work/final-validation/coverage/rv32im-sigmoid/rerun/report/rv32im-sigmoid-0-4096.json",
+    "$REPO/eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.stdout",
+    "$REPO/eik-work/final-validation/merged/rerun/rv32im-exp/rv32im-exp.json",
+    "$REPO/eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/thumbv6m-sigmoid.json",
+    "$REPO/eik-work/final-validation/coverage/thumbv6m-tanh/raw/targetcheck.stdout",
+    "$REPO/eik-work/final-validation/coverage/thumbv6m-exp/reports/new/targetcheck-thumbv6m-exp-0-4096.stdout",
+    "$REPO/eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stdout",
+    "$REPO/eik-work/final-validation/coverage/thumbv7em-tanh/new/reports/thumbv7em-tanh-0-4096.json",
+    "$REPO/eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+    "--require-targets",
+    "rv32im,thumbv6m,thumbv7em"
+  ],
+  "exit_code": 0,
+  "seconds": 0.221,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+}

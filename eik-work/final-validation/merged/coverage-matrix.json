@@ -1,0 +1,786 @@
+{
+  "cells": [
+    {
+      "chunks_covered": 4096,
+      "function": "sigmoid",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/host-sigmoid/coverage.json",
+        "sha256": "d8e894285592c29e835aba5c845ccef1c771a8205d176e099be53da7f722aae9"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/host-sigmoid/result.json",
+        "sha256": "bd36959eee19114bec9658ba9bdfde054153c1d89ef3679839a700bb2f9abc32"
+      },
+      "packet_status": "pass",
+      "runtime": "host",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": null,
+          "object": null,
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.json",
+            "sha256": "466b0f14a21e2c2fc5888c934a82e359bfe795ac4dfce26a94c500cc05dd7655"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stdout",
+            "sha256": "92412ffe579d985ad25b59a6f207927c914df81dc92b37d315d6552d0341b566"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stdout",
+            "sha256": "92412ffe579d985ad25b59a6f207927c914df81dc92b37d315d6552d0341b566"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "tanh",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/host-tanh/coverage.json",
+        "sha256": "6e0f521c30107bb2e69e9e1b8497f63d494072ef70d66ef5b731e13edff8e7f5"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/host-tanh/result.json",
+        "sha256": "19cf513456dae403ec331049aba00ed2686f2cdffbdc301bb740dec7794fbc4e"
+      },
+      "packet_status": "pass",
+      "runtime": "host",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": null,
+          "object": null,
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.json",
+            "sha256": "c47a2b73e78acbefe58012cbba5a493012f3997b31ad064c1eeb65f6f9f40f8d"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stdout",
+            "sha256": "ac1f2a0101af24a127a02235ac9a24fe45e2a4a3032d01c763e91ea4e00efa31"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stdout",
+            "sha256": "ac1f2a0101af24a127a02235ac9a24fe45e2a4a3032d01c763e91ea4e00efa31"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "exp",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/host-exp/coverage.json",
+        "sha256": "0f0e407e0d913e0edec90175b6567367c7df4bf6a134b2e69b1e32d9960e8e6f"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/host-exp/result.json",
+        "sha256": "3201ab817047ea5b623fd01cbc22c99d6756b3ddb63b51343db8ae3f09833220"
+      },
+      "packet_status": "pass",
+      "runtime": "host",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": null,
+          "object": null,
+          "provenance": "reused",
+          "record": {
+            "path": "eik-work/trials/m0-tanh-refine/exhaustive-exp.json",
+            "sha256": "3c6955588feded88fb826db69f86acfff3af46507a02122aeefc0e88840f46f0"
+          },
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/exhaustive-exp.stdout",
+            "sha256": "b83b0e0906ee6f0d9b25da40716ef958c373d9abd533cc9f5f465fe598837419"
+          },
+          "stderr": {
+            "path": "eik-work/trials/m0-tanh-refine/exhaustive-exp.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/trials/m0-tanh-refine/exhaustive-exp.stdout",
+            "sha256": "b83b0e0906ee6f0d9b25da40716ef958c373d9abd533cc9f5f465fe598837419"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "sigmoid",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/rv32im-sigmoid/coverage.json",
+        "sha256": "d43cfec8787826203467ea4ab63bb1bcf534d91a5230c6ce6f54316bdf6b80fe"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/rv32im-sigmoid/result.json",
+        "sha256": "5131e59db68eb31d2404cc429d2aea4e5cb8712f3d614713ed2ca39ce554eb66"
+      },
+      "packet_status": "pass",
+      "runtime": "rv32im",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/objects/target-check-rv32im.elf",
+            "sha256": "ddfad16a0a2bcaa5d16dc65624c3ddb316f255c72f89bd5589e036238a6f3888"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/objects/sub-rv32im.o",
+            "sha256": "c9982500d910a7e9e1cb9cfe755182333337f05e19ca974457a97dc08aa369aa"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/logs/targetcheck-all.json",
+            "sha256": "37a83ac8fb60d618dbe99ba2388a34ca97ea52de38515d121bb307fded7eac1c"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/report/rv32im-sigmoid-0-4096.json",
+            "sha256": "4effa9c942df36068775c851ebf100289d3e049d1e9e41d6198d70a243cc2f7c"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/logs/targetcheck-all.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/rv32im-sigmoid/rerun/logs/targetcheck-all.stdout",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "tanh",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/rv32im-tanh/coverage.json",
+        "sha256": "0fa7a3c72f244717ecc21ab2f2280504c5c1a4e7acaba88ad5e53e75b8a22bee"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/rv32im-tanh/result.json",
+        "sha256": "c0382f04e5bf75ba99e12b5f726d5e03e6de7e62ffdbff9fdda2a2672875b3b1"
+      },
+      "packet_status": "pass",
+      "runtime": "rv32im",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/objects/target-check-rv32im.elf",
+            "sha256": "06c856b3bc14bcf32fa380f9a8835bdf71c23a25fd57b783f950543108043e24"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/objects/sub-rv32im.o",
+            "sha256": "5a65863ffc60383a24ff581cc131bbcbcc17c762d38ea7561b7e11ff6e20bdf1"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.json",
+            "sha256": "8c87b4a0d18a2d631c5e2c13214070ddf95d68895e7be3f97afd8c1b4f51ea68"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.stdout",
+            "sha256": "07a8f30902b29f914775b2a72d29e440e8ba1023f36a48603b0ef8c943aa0469"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.stdout",
+            "sha256": "07a8f30902b29f914775b2a72d29e440e8ba1023f36a48603b0ef8c943aa0469"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "excluded_prior": [
+        {
+          "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+          "reason": "checker image not retained",
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-exp-all.stdout",
+            "sha256": "334556d2b3bfc1d2533aae73e72b3594370276b477219a0b43381627d3ddb35c"
+          }
+        }
+      ],
+      "function": "exp",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/rv32im-exp/result.json",
+        "sha256": "56ccf0845e5aa8a159e071b42ae937963723b7e9a1629fabd1509761dc180638"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/rv32im-exp/result.json",
+        "sha256": "56ccf0845e5aa8a159e071b42ae937963723b7e9a1629fabd1509761dc180638"
+      },
+      "packet_status": "incomplete",
+      "resolution": "fresh rerun",
+      "runtime": "rv32im",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/target-check-rv32im.elf",
+            "sha256": "77838d36c86131257d75888acf6a87151bf8ef825dedf13e38118f44e2435193"
+          },
+          "object": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/sub-rv32im.o",
+            "sha256": "577e49b56ceea3915ea73300a2791baa9094c99a0fb3ff11216b0c2069e520a0"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/full.json",
+            "sha256": "5718e5bb3d02143fca948f3061aa664f773266aa735ac9799cfb1126696d7b17"
+          },
+          "report": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/rv32im-exp.json",
+            "sha256": "7ee303913bb804a71be725d359a32792b0c3c81053ca34306cf20f3e5b4a735f"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/full.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/merged/rerun/rv32im-exp/full.stdout",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "excluded_prior": [
+        {
+          "image_sha256": "77bdc033b39f49e57c688715e4e8ecda69b75fc87a4d29a734741b95bad2bb29",
+          "reason": "checker image not retained",
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-sigmoid/prior/targetcheck-thumbv6m-sigmoid-all.stdout",
+            "sha256": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+          }
+        }
+      ],
+      "function": "sigmoid",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-sigmoid/coverage.json",
+        "sha256": "a6a208bab6b1559df442e1a41a70669b09f8b3699e9eada79161cab7b141c72d"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-sigmoid/result.json",
+        "sha256": "de0e7e95acd95191c580cee42a140619d99d8f35a093dc7e2dfada16e68c879b"
+      },
+      "packet_status": "incomplete",
+      "resolution": "fresh rerun",
+      "runtime": "thumbv6m",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/target-check-thumbv6m.elf",
+            "sha256": "8eeea9c879b3694300cd2439c7bab01661d3c01383550f3e9eeb8e46a381753e"
+          },
+          "object": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/sub-thumbv6m.o",
+            "sha256": "15e774f765ea06da61955dbab90dac05a51524e57d9fafa2574e62e70569db22"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/full.json",
+            "sha256": "b44c6a11dd5bf22636e2da550a508c8f8b12be360650ff9663e4b1f568340433"
+          },
+          "report": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/thumbv6m-sigmoid.json",
+            "sha256": "4c7f26b18d03ffcda40c91fab24a12d970dbfbc5de2d198d08b4ca2c51a8e629"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/full.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/merged/rerun/thumbv6m-sigmoid/full.stdout",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "tanh",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-tanh/coverage.json",
+        "sha256": "e1cc6f7f234f21a8eaca15d5cf9f3deb9af4dd7fc9f5bddc4a4a7c93b3598e2f"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-tanh/result.json",
+        "sha256": "419d15470ea297dc0da2cce47ab49ba47fed9a6ef3226ba6807a53f8e8a65d50"
+      },
+      "packet_status": "pass",
+      "runtime": "thumbv6m",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/target-check-thumbv6m.elf",
+            "sha256": "dfc981d188fafb244563d6dc30e6dc6fbdc5ecdaf1478f597f49548f71eabf19"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/sub-thumbv6m.o",
+            "sha256": "635c25768dab6cfcd39e95939ec04a892970e391b2fdedcf8aec1cc336d1db98"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/targetcheck.json",
+            "sha256": "5d9e9a521f57a4c375c7605d138fb2185f5f81f918abd7e54bf2c6e2d9016b4e"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/targetcheck.stdout",
+            "sha256": "2d86626a7bfadb917e9f4ec586576469ed01455c1a4acdc15232cac6e9ab0934"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/targetcheck.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-tanh/raw/targetcheck.stdout",
+            "sha256": "2d86626a7bfadb917e9f4ec586576469ed01455c1a4acdc15232cac6e9ab0934"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "exp",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-exp/coverage.json",
+        "sha256": "6950bd2da28a8c6f1ae731179571ef543c565c9439540b81382b1b8da77f1734"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv6m-exp/result.json",
+        "sha256": "a54df5faadc4f5d0a7ccbee39076c024249aff5ae72daf9053636fafde15dbc1"
+      },
+      "packet_status": "pass",
+      "runtime": "thumbv6m",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/objects/target-check-thumbv6m.elf",
+            "sha256": "8369f63c498b10d523dd50c3a6ac261a429b64b41d050ec59139f2e31d28496f"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/objects/sub-thumbv6m.o",
+            "sha256": "23549a4fd863437219c4fe5371ab2e59094d67c7013bb3a3bc71f486d4cbfa37"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/reports/new/targetcheck-thumbv6m-exp-0-4096.json",
+            "sha256": "76605145f06a6501271374ac73281e01ff04e2ed2f4b0fe480d571db81079013"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/reports/new/targetcheck-thumbv6m-exp-0-4096.stdout",
+            "sha256": "d48315a8c33657f5be4bc0632b895f56074ad76b3a56451bb0ee8b90e756571f"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/reports/new/targetcheck-thumbv6m-exp-0-4096.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/thumbv6m-exp/reports/new/targetcheck-thumbv6m-exp-0-4096.stdout",
+            "sha256": "d48315a8c33657f5be4bc0632b895f56074ad76b3a56451bb0ee8b90e756571f"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "sigmoid",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/coverage.json",
+        "sha256": "3035885e9e1b66c24bc24122af3817ddb88de2e661aaacd4b616eaaac19e6f42"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/result.json",
+        "sha256": "3632c64d961cf8919ec3ad2a68f40336ed0dd7049356098b14fd74b92d07d352"
+      },
+      "packet_status": "pass",
+      "runtime": "thumbv7em",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/objects/target-check-thumbv7em.elf",
+            "sha256": "8e424613a357f1a2292806aee346c01a879c8678b550a78559208699bd88134a"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/objects/sub-thumbv7em.o",
+            "sha256": "034e7e60b8ebb082d951306b57731b7bd4aad9267422fbdf14e4863e5971af59"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.json",
+            "sha256": "5531a6d9b5ef4f069348c72921ac74242d3cec1ee7875110e0f87a70d2411b01"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stdout",
+            "sha256": "aa25282cb06ff79e23d4a814dad8435cd5aec8dbceb5757560f4a4db92b90b4c"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stdout",
+            "sha256": "aa25282cb06ff79e23d4a814dad8435cd5aec8dbceb5757560f4a4db92b90b4c"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "tanh",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-tanh/coverage.json",
+        "sha256": "47476ad8bf4cd814c4e0608fd3d14add5c70fc7fd0ffc762cc20f4119a2c79c0"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-tanh/result.json",
+        "sha256": "ef3584010ab68f5629f3c6f9c6c93c86beb636e7ad1f1b48e485ca6540db8503"
+      },
+      "packet_status": "pass",
+      "runtime": "thumbv7em",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/objects/target-check-thumbv7em.elf",
+            "sha256": "afcd03fadde82c01d5c2da006e13548891ab2367a1f29cc454b54185453e23f9"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/objects/sub-thumbv7em.o",
+            "sha256": "449a5b34a0fc578613bcd6e05b0fdb6ea4a1c85707740689d8da8f6104fe166a"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/logs/targetcheck-thumbv7em-tanh-all.json",
+            "sha256": "1559df33f901c145156ea5388bc237cf287cdcd00d8a75e3e27c82fcc7705886"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/reports/thumbv7em-tanh-0-4096.json",
+            "sha256": "ae671f190d05b1de33d58dba70c2b418f5120343fdf864e996dbc94d47afceec"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/logs/targetcheck-thumbv7em-tanh-all.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-tanh/new/logs/targetcheck-thumbv7em-tanh-all.stdout",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    },
+    {
+      "chunks_covered": 4096,
+      "function": "exp",
+      "gaps": [],
+      "mismatches": 0,
+      "packet": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-exp/coverage.json",
+        "sha256": "1d0cd595cfd0a43a2e6f038aab55be467db19e2e87e9875864bb0600959925a5"
+      },
+      "packet_result": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-exp/result.json",
+        "sha256": "da992559021eb9208aaa79ea7921f325d965c690c06be83e257d5205dd5d8399"
+      },
+      "packet_status": "pass",
+      "runtime": "thumbv7em",
+      "sanitizer_failures": 0,
+      "selected": [
+        {
+          "chunks": [
+            0,
+            4096
+          ],
+          "image": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/objects/target-check-thumbv7em.elf",
+            "sha256": "e58cc8f392f9be4e29861d0f45c7a8bf2ef3d50970ea2733df88633f16ede1b7"
+          },
+          "object": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/objects/sub-thumbv7em.o",
+            "sha256": "bb3e1f50370af901b470d5f70335170a15ab0e1d3dbb1d1ccd7a41bb8c4c9c20"
+          },
+          "provenance": "rerun",
+          "record": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.json",
+            "sha256": "20c395c8977e9d7699e0e294e7c6e87d6a92053df58b14c2501e25b9d6d2c3f5"
+          },
+          "report": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+            "sha256": "abd7e5222256cecc0863c3ed550e6ec234a6bf2472f9b2147b38894139f13b6c"
+          },
+          "stderr": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stderr",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout": {
+            "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+            "sha256": "abd7e5222256cecc0863c3ed550e6ec234a6bf2472f9b2147b38894139f13b6c"
+          }
+        }
+      ],
+      "status": "pass",
+      "words_checked": 4294967296
+    }
+  ],
+  "chunk_semantics": "half-open [lo,hi); each chunk has 2^20 binary32 words",
+  "conflicts_resolved": [
+    {
+      "cell": "rv32im/exp",
+      "issue": "historical checker image 4c46aa4f... not retained; historical report excluded; fresh full-domain targetcheck selected"
+    },
+    {
+      "cell": "thumbv6m/sigmoid",
+      "issue": "historical checker image 77bdc033... not retained; historical report excluded; fresh full-domain targetcheck selected"
+    },
+    {
+      "cell": "host/tanh",
+      "issue": "four alternate shards overlap the selected whole-domain rerun; alternate shards excluded"
+    },
+    {
+      "cell": "rv32im/sigmoid",
+      "issue": "chunk-0 path reproduction probe overlaps selected whole-domain rerun; probe excluded"
+    },
+    {
+      "cell": "rv32im/tanh",
+      "issue": "chunk-0 path reproduction probes overlap selected whole-domain rerun; probes excluded"
+    },
+    {
+      "cell": "thumbv7em/exp",
+      "issue": "chunk-1016 smoke probe overlaps selected whole-domain rerun; probe excluded"
+    }
+  ],
+  "excluded_overlaps": [
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/0-1024/report.json",
+        "sha256": "05ca657c22324b35a4d69beb747e4e04d1e5795335c2b45e7395032f103f1307"
+      },
+      "runtime": "host"
+    },
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/1024-2048/report.json",
+        "sha256": "4beb3b4a448aa53d7ea925ccb5c8cd9221f2f088011de7daaff15d863683bd64"
+      },
+      "runtime": "host"
+    },
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/2048-3072/report.json",
+        "sha256": "014d07fe6087d10c031e06b8d39a3a007a7a83167b329a92f33f23ee68a8a955"
+      },
+      "runtime": "host"
+    },
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/3072-4096/report.json",
+        "sha256": "356e5eee56bec247bb062aa59c8ff52843fe10655556ec6128cd7098290ec18e"
+      },
+      "runtime": "host"
+    },
+    {
+      "function": "sigmoid",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/rv32im-sigmoid/path-reproduction/report/repro-chunk0.json",
+        "sha256": "2b0bb09b5c19177973c030c1586b9f2097a7766d610cc20dd3cee1733f60b3ef"
+      },
+      "runtime": "rv32im"
+    },
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/probe-root.stdout",
+        "sha256": "8d44220bb6d06b9e1c4c073dd6baf692d530c9841ca6115540b2068bdb7be4bb"
+      },
+      "runtime": "rv32im"
+    },
+    {
+      "function": "tanh",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/probe-trials.stdout",
+        "sha256": "35b7724293962fbec18121f4bcf248478670a23f89a719adce0c94552d9e5062"
+      },
+      "runtime": "rv32im"
+    },
+    {
+      "function": "exp",
+      "reason": "overlaps selected exhaustive range",
+      "report": {
+        "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/smoke.stdout",
+        "sha256": "55b45d2ec70dca99a8649cc66c81a5afb70a21797fe7dae1875a4a4756467e29"
+      },
+      "runtime": "thumbv7em"
+    }
+  ],
+  "fingerprint": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "sandbox": "none",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "fingerprint_report": {
+    "path": "eik-work/final-validation/merged/rerun/identity/fingerprint-details.stdout",
+    "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  "fingerprint_run": {
+    "record": {
+      "path": "eik-work/final-validation/merged/rerun/identity/fingerprint-details.json",
+      "sha256": "64a2bb36fdd24c37734f7ffef90b87e55ca417cbb7e410b4e24d26ee3b208bf2"
+    },
+    "stderr": {
+      "path": "eik-work/final-validation/merged/rerun/identity/fingerprint-details.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "eik-work/final-validation/merged/rerun/identity/fingerprint-details.stdout",
+      "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+    }
+  },
+  "gaps": [],
+  "merge": {
+    "record": {
+      "path": "eik-work/final-validation/merged/merger/selected.json",
+      "sha256": "70b4378971f1e84710d5341e62326df77dfd60ebd1c49a8e7303443a480067a9"
+    },
+    "stderr": {
+      "path": "eik-work/final-validation/merged/merger/selected.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "path": "eik-work/final-validation/merged/merger/selected.stdout",
+      "sha256": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+    }
+  },
+  "schema": 1,
+  "source": {
+    "path": "entry.c",
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  },
+  "status": "pass",
+  "toolkit": {
+    "eik-work/toolkit/dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+    "eik-work/toolkit/files.json": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+    "eik-work/toolkit/kit/RULES.md": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "eik-work/toolkit/kit/reference/digests.sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3",
+    "eik-work/toolkit/manifest.json": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+    "eik-work/toolkit/provision.py": "3ef691e90ae45a1602039ca6838d228ec43b0569c129f59937eea0e90cac5e8f",
+    "eik-work/toolkit/run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf"
+  }
+}
