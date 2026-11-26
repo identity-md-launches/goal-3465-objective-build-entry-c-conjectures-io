@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-baseline/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/eik-work/toolkit/sources/id46.c"
+  ],
+  "exit_code": 0,
+  "seconds": 1.208,
+  "source_sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "38a047ac0535abf80bf16bf2835b5989bb30ea849d50e136841b50f420efb045"
+}

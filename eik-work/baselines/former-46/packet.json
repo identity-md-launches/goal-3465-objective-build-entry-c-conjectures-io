@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "180434352": {
+      "overall": 37.06367915795186,
+      "rv32im": 30.047304173201553,
+      "thumbv6m": 45.71845463423567
+    },
+    "2851275305": {
+      "overall": 37.28275456240278,
+      "rv32im": 30.12469923100875,
+      "thumbv6m": 46.14166525286234
+    }
+  },
+  "sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+  "source": "id46",
+  "status": "measured",
+  "techniques": "Two-body source (derived from public #37/#39/#40 and credited ancestors). Target selection: no #ifdef on targets; constant RVB = r_EIK_SEL = (L'\\0' - 1 < 0) (wchar_t signed: rv32im and x86-64 host; unsigned: thumbv6m/thumbv7em), so each build dead-strips the other body with identical tokens. Only directives: #define, #ifndef r_EIK_SEL, #ifdef r_EIK_STATS (off). RV32IM body (r_ names) uses MULH/MULHU via 64-bit products. exp: range reduction k2 = floor(2y*512/ln2)|1, e^y = 2^(k2>>10) * 2^((2j+1)/1024) * e^r with |r| < ln2/1024; table exp8_r (256 x u32 hi + u16 lo, rounding offset 130 folded in), short polynomial in r; -4 < x <= -1/4 evaluated directly as output word by cubic cells te128_r (64 cells/binade) plus te125_126_r, eq4s33_r, nsm13_r; tiny |x| fast paths (1 - x + x^2 style with guard-bit tests). tanh: dispatch on t = w<<1 with two one-sided compares; deficit cells tdl_r[257] (cubic, 32-64 cells per binade, 1/8 <= y < 2), ta_r[138] cubic cells 64/binade up to ~9.125, small-y series tsr_r for y < 1/8, |x| >= ~9 saturates. sigmoid: shares tdl_r/ta_r cells (sb64_r, sq_r, tq_r B cells), |x| < 1/4 series, 2 <= x < 17.33 cells, x <= -87 subnormal results via exp exact path. Fast-path accept rule r_FAST_r: value with B guard bits, accept unless guard bits fall in an exhaustively found window around the midpoint; otherwise \"decline\" to an out-of-line cold mid_r tier (r_cold_r/r_ex_cold_r, codes 0-4) computing a 64-bit higher-precision product/exact tier, plus a list of inputs the mid tier rounds wrongly. Thumb body (t_ names, from #6/#12/#17) uses 16-bit limbs (no 32x32->64 on M0+): sigmoid/tanh cell tables t_t_eps (quadratic/cubic ep cells), t_t_tw[128] cubic refit cells, t_t_sm12/t_t_pdrow/t_t_crows banks, exp via 2^(j/512) table t_t_exp_lo[512] and mid2 64-bit fallback; hard cases via t_t_mid_pos/mid_neg/sigp_exact64. Polynomial degrees: mostly cubic per cell (degree 3), quadratic on some Thumb cells, degree-2/3 series near zero. Code ~19.9 KB rv32im / 20.4 KB thumbv6m."
+}
