@@ -1,0 +1,1 @@
+PASS {"functions": 49, "bytes": {"rv32im": 20528, "thumbv6m": 20256, "thumbv7em": 21060}, "stack_bound": {"rv32im": 192, "thumbv6m": 324, "thumbv7em": 288}}

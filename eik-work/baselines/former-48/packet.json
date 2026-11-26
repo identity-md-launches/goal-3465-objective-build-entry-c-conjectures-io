@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "180434352": {
+      "overall": 35.59472771500224,
+      "rv32im": 29.27921808697734,
+      "thumbv6m": 43.27248894903623
+    },
+    "2851275305": {
+      "overall": 35.723758701953884,
+      "rv32im": 29.384764035338684,
+      "thumbv6m": 43.43022575443038
+    }
+  },
+  "sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661",
+  "source": "id48",
+  "status": "measured",
+  "techniques": "id48 (sha256 c858c54e...61661, 168695 B) contains TWO complete implementations chosen at compile time by EIK_SEL = (L'\\0' - 1 < 0), i.e. wchar_t signedness: signed on x86-64 host and RV32IM -> *_r kernels (eik_exp_r/eik_tanh_r/eik_sigmoid_r); unsigned on ARM AAPCS (thumbv6m, thumbv7em) -> t_* kernels (t_eik_exp/t_eik_tanh/t_eik_sigmoid, machine-generated-looking code with labels and empty-statement padding). Host sanitizer/fullcheck therefore exercises only the _r path; the t_ path is validated only by target checks. RV32 path: exp uses Cody-Waite-style reduction k=round(x*2^8/ln2) via mulhu with fixed-point constants (1549082624 ~ 2^30*log2e*...), 256-entry 2^(j/256) table split as uint32 hi[256]+uint16 lo[256] (ex8_r) and an inline degree-3 polynomial on the reduced argument in Q32 (mulhs chains); separate per-binade piecewise cubic tables for negative/large inputs (nx_all[181] Horner cells c0..c3/w3, nq4_r[5*32]), tiny-|x| fast paths (1+x, 1-x+x^2/2 via one mulhu), underflow/overflow/NaN early exits. tanh/sigmoid: piecewise degree-3 Horner cells indexed directly by top exponent+mantissa bits (tl_r 132, tld_r 156, ta_r 138, tb_r 68, tla_r 35, kr_r 6 refinement rows, sq_r 5x33), result rounded if the guard bits (V&254 / V&0x1FE / Z&255) are non-ambiguous, otherwise a rounding-test slow path (th_core_r odd series, th_sdecb_r) or exact fallback through eik_exp / 64-bit division (ex_prec_r kw/(hi<<32)); saturation fast paths (sigmoid->1, tanh->+-1, small-x identity / x-x^3/3). ARM path: t_eps[] table of 4-word rows {q,v,p,aux} (~730 rows) shared by exp/tanh/sigmoid, small_exp_rows[25] cubic rows, t_exp_lo[512] uint16, t_srow[56], t_crows bank, 32x32->64 products written as uint64 (libgcc-free on v6m via compiler expansion), same strategy: table-driven degree-3 cell, guard-bit test, rare exact correction (t_exp_small_fix, t_exp_tail, t_sig_nb). Code bytes rv32im 20528, thumbv6m 20256, thumbv7em 21060; stack bound 192/324/288."
+}
