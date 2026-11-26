@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/former-42/work/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/eik-work/baselines/former-42/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 4.764,
+  "source_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "9a31ff9e9c1b242582979e950efc47866107e3ac75481e71a8862098f8d72535"
+}

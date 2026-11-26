@@ -1,0 +1,16 @@
+{
+  "inputs_py_sha256": "ce25cf5b1a1c573fa68010b3fdddf61a44d6d43c20ea48f4b744d0d61c3a218a",
+  "method": "Pinned eik.inputs.target_sample(seed, 32768); same word set per function and target for the given seed. SHA-256 of concatenated little-endian uint32 words. One word in each 2^17-word input slice.",
+  "rows": [
+    {
+      "input_sha256_little_endian_u32": "ad39d85eeecbd716e8251742341e80fdb49dd6ca1f0cd08a36feacd4d7fd66e7",
+      "seed": 180434352,
+      "words_per_function": 32768
+    },
+    {
+      "input_sha256_little_endian_u32": "f305eaf187c8bc1d285dda991c76efe91f4c1fa0306424828060b6854b5784e9",
+      "seed": 2851275305,
+      "words_per_function": 32768
+    }
+  ]
+}

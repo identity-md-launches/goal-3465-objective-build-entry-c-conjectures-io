@@ -1,0 +1,1305 @@
+{
+  "changes_versus_base": "None. entry.c is byte-for-byte id42.",
+  "commands_artifact": "commands.json",
+  "comparison": {
+    "boards_would_take_live": null,
+    "current_champion_same_seed_available": false,
+    "current_references": {
+      "overall": {
+        "promotion_id": 61,
+        "shipped": false,
+        "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+        "submission": 56
+      },
+      "rv32im": {
+        "promotion_id": 59,
+        "shipped": false,
+        "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+        "submission": 52
+      },
+      "thumbv6m": {
+        "promotion_id": 60,
+        "shipped": false,
+        "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+        "submission": 53
+      }
+    },
+    "historical_published_ratios_not_current_comparisons": [
+      {
+        "S_ratio": 0.9867430139465682,
+        "board": "rv32im",
+        "evaluation_id": 124,
+        "provenance": "api/submission-42.json#/evaluations/0/decision/score",
+        "reference_promotion_id": 48
+      },
+      {
+        "S_ratio": 0.9876365156638058,
+        "board": "thumbv6m",
+        "evaluation_id": 125,
+        "provenance": "api/submission-42.json#/evaluations/1/decision/score",
+        "reference_promotion_id": 47
+      },
+      {
+        "S_ratio": 0.9686072046227919,
+        "board": "overall",
+        "evaluation_id": 126,
+        "provenance": "api/submission-42.json#/evaluations/2/decision/score",
+        "reference_promotion_id": 46
+      }
+    ],
+    "local_reference": "kit/examples/incumbent.c; not a live champion",
+    "local_reference_sha256": "a8dd149453e54363c359ac82c9cee870006c7bf066a590ec7c8147a064622713",
+    "published_absolute_S": {
+      "overall": null,
+      "rv32im": null,
+      "thumbv6m": null
+    },
+    "same_seed_current_champion_ratios": {
+      "overall": null,
+      "rv32im": null,
+      "thumbv6m": null
+    },
+    "source_availability_evidence": {
+      "overall": {
+        "curl_exit_code": 0,
+        "http_status": 403,
+        "packet_path": "provenance/source-56.json",
+        "path": "api/source-56.json",
+        "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+        "stderr": "",
+        "timestamp_utc": "2026-11-26T06:51:25.381850+00:00",
+        "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+      },
+      "rv32im": {
+        "curl_exit_code": 0,
+        "http_status": 403,
+        "packet_path": "provenance/source-52.json",
+        "path": "api/source-52.json",
+        "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+        "stderr": "",
+        "timestamp_utc": "2026-11-26T06:51:25.582086+00:00",
+        "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+      },
+      "thumbv6m": {
+        "curl_exit_code": 0,
+        "http_status": 403,
+        "packet_path": "provenance/source-53.json",
+        "path": "api/source-53.json",
+        "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+        "stderr": "",
+        "timestamp_utc": "2026-11-26T06:51:25.586788+00:00",
+        "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source"
+      }
+    },
+    "source_http_status": {
+      "overall": 403,
+      "rv32im": 403,
+      "thumbv6m": 403
+    }
+  },
+  "coverage": {
+    "complete": false,
+    "full_host_domain_run": false,
+    "full_target_domain_run": false,
+    "label": "partial",
+    "limitation": "Zero observed wrong outputs applies only to scored calls, seeded target samples and the recorded quick sanitizer chunks. No exhaustive claim.",
+    "quick": true,
+    "scored_calls_per_target_per_seed": 12900,
+    "stratified_sample_words_per_target_per_seed": 98304,
+    "target_samples_per_function": 32768
+  },
+  "evaluator_identity": {
+    "details_artifact": "fingerprint.stdout",
+    "exact_fingerprint_match": true,
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "pinned_measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "pinned_verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8",
+    "production_problems": [],
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "experiments": [
+    {
+      "key": "B0a",
+      "seed": 180434352,
+      "source_change": "none",
+      "status": "completed"
+    },
+    {
+      "key": "B0b",
+      "seed": 2851275305,
+      "source_change": "none",
+      "status": "completed"
+    }
+  ],
+  "kit": {
+    "archive_paths": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT",
+      "README.md",
+      "RULES.md",
+      "eik",
+      "examples",
+      "harness",
+      "reference",
+      "requirements.txt",
+      "template",
+      "third_party"
+    ],
+    "commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "reference_digest_list_sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3",
+    "repository": "https://github.com/conjectures-io/exact-integer-kernels-miner",
+    "rules_sha256": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "tree": "cfc22d5a8c626c73d62472a71c0024a87f50cd44"
+  },
+  "limitations": [
+    "Quick checks cover only a partial domain.",
+    "Host and ARM select different arithmetic variants; sample agreement does not prove full-domain equivalence.",
+    "Current champion sources in the pinned snapshot returned HTTP 403; no current-champion ratios or live board takeover are established.",
+    "This is a former-source baseline copy, not a novel admissible competition submission."
+  ],
+  "measurement_settings": {
+    "cap_instr": 20000000,
+    "cflags": [
+      "-std=c11",
+      "-O2",
+      "-ffreestanding",
+      "-fno-builtin",
+      "-ftrivial-auto-var-init=zero",
+      "-fstack-size-section",
+      "-fno-jump-tables",
+      "-Werror=vla",
+      "-Werror=implicit-function-declaration",
+      "-Werror=int-conversion",
+      "-Wno-unused-command-line-argument",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables"
+    ],
+    "functions": [
+      "sigmoid",
+      "tanh",
+      "exp"
+    ],
+    "hard_fresh": true,
+    "hard_samples": 67108864,
+    "hard_threshold": -18,
+    "set_sizes": {
+      "hard": 300,
+      "typical": 2000,
+      "uniform": 1000,
+      "wide": 1000
+    },
+    "sets": {
+      "hard": 0.1,
+      "typical": 0.55,
+      "uniform": 0.05,
+      "wide": 0.3
+    },
+    "size": [
+      65536,
+      0.5
+    ],
+    "tail": [
+      20,
+      1000000.0,
+      0.1
+    ],
+    "takeover_ratio": 0.97,
+    "target_sample": 32768,
+    "targets": {
+      "rv32im": {
+        "cc": [
+          "-target",
+          "riscv32-freestanding-none",
+          "-mcpu=generic_rv32+m"
+        ],
+        "scored": true
+      },
+      "thumbv6m": {
+        "cc": [
+          "-target",
+          "thumb-freestanding-eabi",
+          "-mcpu=cortex_m0plus"
+        ],
+        "scored": true
+      },
+      "thumbv7em": {
+        "cc": [
+          "-target",
+          "thumb-freestanding-eabi",
+          "-mcpu=cortex_m4"
+        ],
+        "scored": false
+      }
+    }
+  },
+  "measurements": [
+    {
+      "S": {
+        "overall": 38.326983932556445,
+        "rv32im": 30.8668188855508,
+        "thumbv6m": 47.59018747001752,
+        "thumbv7em": 46.49303828278393
+      },
+      "command_artifact": "evaluate-180434352.json",
+      "complete_domain_coverage": false,
+      "elapsed_seconds": 503.0,
+      "hard_pool": {
+        "samples": 67108864,
+        "sizes": {
+          "exp": 440,
+          "sigmoid": 575,
+          "tanh": 209
+        },
+        "source": "hardscan",
+        "threshold_log2_ulps": -18
+      },
+      "hard_pool_artifacts": {
+        "exp": {
+          "path": "hard-pools/180434352-exp.txt",
+          "rows": 440,
+          "sha256": "d43617b658dd8a9cb808bbb65bf45681299af421a7b2883c446fe1dc307ac891"
+        },
+        "sigmoid": {
+          "path": "hard-pools/180434352-sigmoid.txt",
+          "rows": 575,
+          "sha256": "e2f539f7ff5a086d6a80fe4927796da6b13fc08ccea11acc9d0ac11ce7bae985"
+        },
+        "tanh": {
+          "path": "hard-pools/180434352-tanh.txt",
+          "rows": 209,
+          "sha256": "3fa97d57c0ecff0ea280f6c40e420c238a0aab5df41849dec56259cc8bb93872"
+        }
+      },
+      "host_check": {
+        "complete": false,
+        "functions": {
+          "exp": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.9,
+            "verdict": "passed",
+            "words_checked": 134217728
+          },
+          "sigmoid": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.8,
+            "verdict": "passed",
+            "words_checked": 134217728
+          },
+          "tanh": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.9,
+            "verdict": "passed",
+            "words_checked": 134217728
+          }
+        },
+        "ok": true,
+        "quick": true
+      },
+      "host_coverage": "partial",
+      "inputs_sha256": "8a246cce2fff8e2e0e06c5ec32bdd1f2ce93fa0d093c6be123f332b07ce85e30",
+      "local_candidate_boards_not_live_takeover_claim": [
+        "rv32im",
+        "thumbv6m",
+        "overall"
+      ],
+      "local_incumbent_comparison_only": {
+        "overall": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 144373.6451833691,
+          "entry_S": 38.326983932556445,
+          "ratio": 0.000265470778159527
+        },
+        "rv32im": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 153958.87963064067,
+          "entry_S": 30.8668188855508,
+          "ratio": 0.0002004874220935012
+        },
+        "thumbv6m": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 135385.1721546632,
+          "entry_S": 47.59018747001752,
+          "ratio": 0.00035151698456054536
+        }
+      },
+      "seed": 180434352,
+      "status": "would-take-over-after-full-check",
+      "stderr_artifact": "evaluate-180434352.stderr",
+      "stdout_artifact": "evaluate-180434352.stdout",
+      "target_sample_input_identity": {
+        "input_sha256_little_endian_u32": "ad39d85eeecbd716e8251742341e80fdb49dd6ca1f0cd08a36feacd4d7fd66e7",
+        "seed": 180434352,
+        "words_per_function": 32768
+      },
+      "targets": {
+        "rv32im": {
+          "S": 30.8668188855508,
+          "code_and_table_bytes": 19648,
+          "code_bytes": 6728,
+          "other_allocated_bytes": 0,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 136,
+                "mean": 47.83,
+                "median": 34,
+                "n": 300,
+                "p999": 136
+              },
+              "typical": {
+                "max": 92,
+                "mean": 32.0165,
+                "median": 28,
+                "n": 2000,
+                "p999": 90
+              },
+              "uniform": {
+                "max": 136,
+                "mean": 15.822,
+                "median": 14,
+                "n": 1000,
+                "p999": 92
+              },
+              "wide": {
+                "max": 136,
+                "mean": 28.218,
+                "median": 24,
+                "n": 1000,
+                "p999": 136
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 177,
+                "mean": 39.39,
+                "median": 20,
+                "n": 300,
+                "p999": 177
+              },
+              "typical": {
+                "max": 125,
+                "mean": 30.098,
+                "median": 29,
+                "n": 2000,
+                "p999": 90
+              },
+              "uniform": {
+                "max": 67,
+                "mean": 13.881,
+                "median": 12,
+                "n": 1000,
+                "p999": 59
+              },
+              "wide": {
+                "max": 149,
+                "mean": 23.584,
+                "median": 20,
+                "n": 1000,
+                "p999": 149
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 87,
+                "mean": 61.81333333333333,
+                "median": 80,
+                "n": 300,
+                "p999": 87
+              },
+              "typical": {
+                "max": 87,
+                "mean": 26.62,
+                "median": 25,
+                "n": 2000,
+                "p999": 81
+              },
+              "uniform": {
+                "max": 42,
+                "mean": 9.231,
+                "median": 9,
+                "n": 1000,
+                "p999": 34
+              },
+              "wide": {
+                "max": 87,
+                "mean": 15.105,
+                "median": 7,
+                "n": 1000,
+                "p999": 81
+              }
+            }
+          },
+          "readonly_data_bytes": 12920,
+          "score_terms": {
+            "S": 30.8668188855508,
+            "bytes": 19648,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 30.977516385519483,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 27.64652662781803,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 23.172415169301104,
+                "tail_factor": 1.0
+              }
+            },
+            "size_factor": 1.1400897716846687
+          },
+          "scored_board": true,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 8,
+          "stack_static_bound_bytes": 192,
+          "table_symbol_bytes": 12920,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv6m": {
+          "S": 47.59018747001752,
+          "code_and_table_bytes": 19966,
+          "code_bytes": 4332,
+          "other_allocated_bytes": 96,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 164,
+                "mean": 70.21666666666667,
+                "median": 91,
+                "n": 300,
+                "p999": 164
+              },
+              "typical": {
+                "max": 120,
+                "mean": 50.8265,
+                "median": 49,
+                "n": 2000,
+                "p999": 120
+              },
+              "uniform": {
+                "max": 164,
+                "mean": 20.906,
+                "median": 19,
+                "n": 1000,
+                "p999": 114
+              },
+              "wide": {
+                "max": 164,
+                "mean": 39.952,
+                "median": 35,
+                "n": 1000,
+                "p999": 164
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 227,
+                "mean": 63.17,
+                "median": 23,
+                "n": 300,
+                "p999": 227
+              },
+              "typical": {
+                "max": 176,
+                "mean": 47.829,
+                "median": 41,
+                "n": 2000,
+                "p999": 174
+              },
+              "uniform": {
+                "max": 163,
+                "mean": 19.359,
+                "median": 18,
+                "n": 1000,
+                "p999": 160
+              },
+              "wide": {
+                "max": 227,
+                "mean": 33.781,
+                "median": 23,
+                "n": 1000,
+                "p999": 214
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 155,
+                "mean": 100.99333333333334,
+                "median": 127,
+                "n": 300,
+                "p999": 155
+              },
+              "typical": {
+                "max": 155,
+                "mean": 43.393,
+                "median": 40,
+                "n": 2000,
+                "p999": 155
+              },
+              "uniform": {
+                "max": 47,
+                "mean": 14.776,
+                "median": 16,
+                "n": 1000,
+                "p999": 47
+              },
+              "wide": {
+                "max": 155,
+                "mean": 22.135,
+                "median": 10,
+                "n": 1000,
+                "p999": 149
+              }
+            }
+          },
+          "readonly_data_bytes": 15538,
+          "score_terms": {
+            "S": 47.59018747001752,
+            "bytes": 19966,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 46.71633220980983,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 42.34744372961969,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 36.560472065644745,
+                "tail_factor": 1.0
+              }
+            },
+            "size_factor": 1.1422158212973041
+          },
+          "scored_board": true,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 60,
+          "stack_static_bound_bytes": 332,
+          "table_symbol_bytes": 15533,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv7em": {
+          "S": 46.49303828278393,
+          "code_and_table_bytes": 20674,
+          "code_bytes": 5040,
+          "other_allocated_bytes": 96,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 145,
+                "mean": 64.94666666666667,
+                "median": 75,
+                "n": 300,
+                "p999": 145
+              },
+              "typical": {
+                "max": 113,
+                "mean": 48.6375,
+                "median": 47,
+                "n": 2000,
+                "p999": 113
+              },
+              "uniform": {
+                "max": 145,
+                "mean": 20.54,
+                "median": 20,
+                "n": 1000,
+                "p999": 108
+              },
+              "wide": {
+                "max": 145,
+                "mean": 38.389,
+                "median": 34,
+                "n": 1000,
+                "p999": 145
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 211,
+                "mean": 61.096666666666664,
+                "median": 29,
+                "n": 300,
+                "p999": 211
+              },
+              "typical": {
+                "max": 159,
+                "mean": 45.368,
+                "median": 42,
+                "n": 2000,
+                "p999": 157
+              },
+              "uniform": {
+                "max": 151,
+                "mean": 21.437,
+                "median": 19,
+                "n": 1000,
+                "p999": 150
+              },
+              "wide": {
+                "max": 211,
+                "mean": 35.085,
+                "median": 29,
+                "n": 1000,
+                "p999": 204
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 132,
+                "mean": 86.82333333333334,
+                "median": 105,
+                "n": 300,
+                "p999": 132
+              },
+              "typical": {
+                "max": 132,
+                "mean": 40.826,
+                "median": 37,
+                "n": 2000,
+                "p999": 132
+              },
+              "uniform": {
+                "max": 45,
+                "mean": 18.462,
+                "median": 22,
+                "n": 1000,
+                "p999": 45
+              },
+              "wide": {
+                "max": 132,
+                "mean": 23.346,
+                "median": 12,
+                "n": 1000,
+                "p999": 125
+              }
+            }
+          },
+          "readonly_data_bytes": 15538,
+          "score_terms": {
+            "S": 46.49303828278393,
+            "bytes": 20674,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 44.666500958424905,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 41.67817512454468,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 35.78133865448158,
+                "tail_factor": 1.0
+              }
+            },
+            "reported_only": true,
+            "size_factor": 1.1469351355147008
+          },
+          "scored_board": false,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 48,
+          "stack_static_bound_bytes": 336,
+          "table_symbol_bytes": 15533,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        }
+      }
+    },
+    {
+      "S": {
+        "overall": 38.35711315691715,
+        "rv32im": 30.864146868820445,
+        "thumbv6m": 47.66916564989685,
+        "thumbv7em": 46.65029593485769
+      },
+      "command_artifact": "evaluate-2851275305.json",
+      "complete_domain_coverage": false,
+      "elapsed_seconds": 488.1,
+      "hard_pool": {
+        "samples": 67108864,
+        "sizes": {
+          "exp": 399,
+          "sigmoid": 593,
+          "tanh": 162
+        },
+        "source": "hardscan",
+        "threshold_log2_ulps": -18
+      },
+      "hard_pool_artifacts": {
+        "exp": {
+          "path": "hard-pools/2851275305-exp.txt",
+          "rows": 399,
+          "sha256": "ca845b97cb1ff10ecc539d1f91eefb71b254f501cec1c371a1400f401629fb2b"
+        },
+        "sigmoid": {
+          "path": "hard-pools/2851275305-sigmoid.txt",
+          "rows": 593,
+          "sha256": "84580597321bcc2d652e4b94573fda37fd4cca22862b4e5052532bd3634f7302"
+        },
+        "tanh": {
+          "path": "hard-pools/2851275305-tanh.txt",
+          "rows": 162,
+          "sha256": "9a19cb95d658f4e5f4c91fb5d480de3c3fc9f7ecdbcede10e0f2c44bc8d49235"
+        }
+      },
+      "host_check": {
+        "complete": false,
+        "functions": {
+          "exp": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.6,
+            "verdict": "passed",
+            "words_checked": 134217728
+          },
+          "sigmoid": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.9,
+            "verdict": "passed",
+            "words_checked": 134217728
+          },
+          "tanh": {
+            "complete": false,
+            "examples": [],
+            "mismatches": 0,
+            "seconds": 16.6,
+            "verdict": "passed",
+            "words_checked": 134217728
+          }
+        },
+        "ok": true,
+        "quick": true
+      },
+      "host_coverage": "partial",
+      "inputs_sha256": "76dbea8d847ce16ba787857171f22e7cd84a6e40a3abe9204dc2ca97fe811555",
+      "local_candidate_boards_not_live_takeover_claim": [
+        "rv32im",
+        "thumbv6m",
+        "overall"
+      ],
+      "local_incumbent_comparison_only": {
+        "overall": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 144924.47266654816,
+          "entry_S": 38.35711315691715,
+          "ratio": 0.00026466967552934794
+        },
+        "rv32im": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 154528.4953490781,
+          "entry_S": 30.864146868820445,
+          "ratio": 0.00019973110330944913
+        },
+        "thumbv6m": {
+          "beats": true,
+          "champion": "incumbent",
+          "champion_S": 135917.3447604683,
+          "entry_S": 47.66916564989685,
+          "ratio": 0.0003507217252802122
+        }
+      },
+      "seed": 2851275305,
+      "status": "would-take-over-after-full-check",
+      "stderr_artifact": "evaluate-2851275305.stderr",
+      "stdout_artifact": "evaluate-2851275305.stdout",
+      "target_sample_input_identity": {
+        "input_sha256_little_endian_u32": "f305eaf187c8bc1d285dda991c76efe91f4c1fa0306424828060b6854b5784e9",
+        "seed": 2851275305,
+        "words_per_function": 32768
+      },
+      "targets": {
+        "rv32im": {
+          "S": 30.864146868820445,
+          "code_and_table_bytes": 19648,
+          "code_bytes": 6728,
+          "other_allocated_bytes": 0,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 136,
+                "mean": 51.913333333333334,
+                "median": 53,
+                "n": 300,
+                "p999": 136
+              },
+              "typical": {
+                "max": 92,
+                "mean": 32.3285,
+                "median": 28,
+                "n": 2000,
+                "p999": 91
+              },
+              "uniform": {
+                "max": 92,
+                "mean": 15.891,
+                "median": 14,
+                "n": 1000,
+                "p999": 58
+              },
+              "wide": {
+                "max": 88,
+                "mean": 27.934,
+                "median": 24,
+                "n": 1000,
+                "p999": 86
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 177,
+                "mean": 38.04333333333334,
+                "median": 20,
+                "n": 300,
+                "p999": 177
+              },
+              "typical": {
+                "max": 125,
+                "mean": 30.113,
+                "median": 29,
+                "n": 2000,
+                "p999": 89
+              },
+              "uniform": {
+                "max": 59,
+                "mean": 13.608,
+                "median": 12,
+                "n": 1000,
+                "p999": 59
+              },
+              "wide": {
+                "max": 149,
+                "mean": 23.67,
+                "median": 20,
+                "n": 1000,
+                "p999": 85
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 95,
+                "mean": 62.06,
+                "median": 80,
+                "n": 300,
+                "p999": 95
+              },
+              "typical": {
+                "max": 87,
+                "mean": 26.0985,
+                "median": 25,
+                "n": 2000,
+                "p999": 81
+              },
+              "uniform": {
+                "max": 42,
+                "mean": 9.222,
+                "median": 9,
+                "n": 1000,
+                "p999": 34
+              },
+              "wide": {
+                "max": 87,
+                "mean": 15.24,
+                "median": 9,
+                "n": 1000,
+                "p999": 80
+              }
+            }
+          },
+          "readonly_data_bytes": 12920,
+          "score_terms": {
+            "S": 30.864146868820445,
+            "bytes": 19648,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 31.311036647591347,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 27.560796343058005,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 22.99092655408052,
+                "tail_factor": 1.0
+              }
+            },
+            "size_factor": 1.1400897716846687
+          },
+          "scored_board": true,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 8,
+          "stack_static_bound_bytes": 192,
+          "table_symbol_bytes": 12920,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv6m": {
+          "S": 47.66916564989685,
+          "code_and_table_bytes": 19966,
+          "code_bytes": 4332,
+          "other_allocated_bytes": 96,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 164,
+                "mean": 77.86,
+                "median": 92,
+                "n": 300,
+                "p999": 164
+              },
+              "typical": {
+                "max": 120,
+                "mean": 51.2225,
+                "median": 49,
+                "n": 2000,
+                "p999": 120
+              },
+              "uniform": {
+                "max": 114,
+                "mean": 21.056,
+                "median": 19,
+                "n": 1000,
+                "p999": 77
+              },
+              "wide": {
+                "max": 134,
+                "mean": 39.821,
+                "median": 35,
+                "n": 1000,
+                "p999": 120
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 227,
+                "mean": 61.10333333333333,
+                "median": 23,
+                "n": 300,
+                "p999": 227
+              },
+              "typical": {
+                "max": 173,
+                "mean": 47.802,
+                "median": 41,
+                "n": 2000,
+                "p999": 173
+              },
+              "uniform": {
+                "max": 163,
+                "mean": 18.943,
+                "median": 18,
+                "n": 1000,
+                "p999": 105
+              },
+              "wide": {
+                "max": 224,
+                "mean": 33.997,
+                "median": 23,
+                "n": 1000,
+                "p999": 215
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 155,
+                "mean": 102.88333333333334,
+                "median": 127,
+                "n": 300,
+                "p999": 155
+              },
+              "typical": {
+                "max": 155,
+                "mean": 42.778,
+                "median": 40,
+                "n": 2000,
+                "p999": 153
+              },
+              "uniform": {
+                "max": 47,
+                "mean": 14.86,
+                "median": 16,
+                "n": 1000,
+                "p999": 47
+              },
+              "wide": {
+                "max": 153,
+                "mean": 22.1,
+                "median": 16,
+                "n": 1000,
+                "p999": 138
+              }
+            }
+          },
+          "readonly_data_bytes": 15538,
+          "score_terms": {
+            "S": 47.66916564989685,
+            "bytes": 19966,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 47.373700082092974,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 42.22857670368344,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 36.334934957827336,
+                "tail_factor": 1.0
+              }
+            },
+            "size_factor": 1.1422158212973041
+          },
+          "scored_board": true,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 60,
+          "stack_static_bound_bytes": 332,
+          "table_symbol_bytes": 15533,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv7em": {
+          "S": 46.65029593485769,
+          "code_and_table_bytes": 20674,
+          "code_bytes": 5040,
+          "other_allocated_bytes": 96,
+          "per_function_class_instruction_stats": {
+            "exp": {
+              "hard": {
+                "max": 145,
+                "mean": 71.81,
+                "median": 76,
+                "n": 300,
+                "p999": 145
+              },
+              "typical": {
+                "max": 113,
+                "mean": 49.0005,
+                "median": 47,
+                "n": 2000,
+                "p999": 113
+              },
+              "uniform": {
+                "max": 108,
+                "mean": 20.696,
+                "median": 20,
+                "n": 1000,
+                "p999": 75
+              },
+              "wide": {
+                "max": 125,
+                "mean": 38.332,
+                "median": 34,
+                "n": 1000,
+                "p999": 113
+              }
+            },
+            "sigmoid": {
+              "hard": {
+                "max": 211,
+                "mean": 59.28,
+                "median": 29,
+                "n": 300,
+                "p999": 211
+              },
+              "typical": {
+                "max": 157,
+                "mean": 45.2955,
+                "median": 42,
+                "n": 2000,
+                "p999": 157
+              },
+              "uniform": {
+                "max": 151,
+                "mean": 21.164,
+                "median": 19,
+                "n": 1000,
+                "p999": 102
+              },
+              "wide": {
+                "max": 204,
+                "mean": 35.536,
+                "median": 29,
+                "n": 1000,
+                "p999": 204
+              }
+            },
+            "tanh": {
+              "hard": {
+                "max": 132,
+                "mean": 88.06666666666666,
+                "median": 105,
+                "n": 300,
+                "p999": 132
+              },
+              "typical": {
+                "max": 132,
+                "mean": 40.354,
+                "median": 37,
+                "n": 2000,
+                "p999": 130
+              },
+              "uniform": {
+                "max": 45,
+                "mean": 18.633,
+                "median": 22,
+                "n": 1000,
+                "p999": 45
+              },
+              "wide": {
+                "max": 130,
+                "mean": 23.446,
+                "median": 22,
+                "n": 1000,
+                "p999": 113
+              }
+            }
+          },
+          "readonly_data_bytes": 15538,
+          "score_terms": {
+            "S": 46.65029593485769,
+            "bytes": 20674,
+            "functions": {
+              "exp": {
+                "geo_mean_instr": 45.299304971462874,
+                "tail_factor": 1.0
+              },
+              "sigmoid": {
+                "geo_mean_instr": 41.64870971452872,
+                "tail_factor": 1.0
+              },
+              "tanh": {
+                "geo_mean_instr": 35.66592956452421,
+                "tail_factor": 1.0
+              }
+            },
+            "reported_only": true,
+            "size_factor": 1.1469351355147008
+          },
+          "scored_board": false,
+          "scored_calls": 12900,
+          "scored_wrong_output_count": 0,
+          "stack_measured_peak_bytes": 48,
+          "stack_static_bound_bytes": 336,
+          "table_symbol_bytes": 15533,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        }
+      }
+    }
+  ],
+  "next_action": "Compare measured packets from all former targets on these same seeds, then run one proposed technique in a separate candidate and verify affected/full domains before any winning claim.",
+  "object_census_artifact": "object-census.json",
+  "proposed_single_technique_experiments": [
+    {
+      "change": "Halve cubic table density only for negative exp magnitudes [2,4], refitting coefficients and guard window; compare bytes, exp typical mean and hard tail.",
+      "key": "rv-negative-exp-cell-density",
+      "status": "not run"
+    },
+    {
+      "change": "Replace only the table-seeded linear t_sig_plateau scan by a balanced tree over unchanged t_spcuts; compare Thumb wide/hard instruction means and tails against code bytes.",
+      "key": "thumb-sigmoid-plateau-search",
+      "status": "not run"
+    }
+  ],
+  "schema": "identitymd-eik-baseline-1",
+  "selector": "id42",
+  "source": {
+    "bytes": 247785,
+    "normalised_sha256": "ac9fec2dd7f63bf4e670d58beff50451704af4d9e648c00ff9366ac823c790fb",
+    "path": "entry.c",
+    "request": {
+      "curl_exit_code": 0,
+      "http_status": 200,
+      "path": "sources/id42.c",
+      "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+      "stderr": "",
+      "timestamp_utc": "2026-11-26T06:51:25.806060+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/42/source"
+    },
+    "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+    "submission_metadata_path": "provenance/submission-42.json",
+    "submission_metadata_sha256": "a51df3b4ebafe187c53e57dbf912353191ef6c64eccd8822a3ab1be289eb694e",
+    "unchanged_from_manifest": true
+  },
+  "static_check": {
+    "exit_code": 0,
+    "result": {
+      "bytes": {
+        "rv32im": 19648,
+        "thumbv6m": 19966,
+        "thumbv7em": 20674
+      },
+      "functions": 82,
+      "stack_bound": {
+        "rv32im": 192,
+        "thumbv6m": 332,
+        "thumbv7em": 336
+      }
+    },
+    "stderr_artifact": "check.stderr",
+    "stdout_artifact": "check.stdout"
+  },
+  "status": "measured",
+  "target": "former-42",
+  "techniques": {
+    "analysis_artifact": "analysis.md",
+    "fast_paths": "Tiny identities and short series, negative-exp direct cells, threshold/saturation plateaus, sign-first bounds, special values and exp edges.",
+    "hard_cases": "Guard-bit rejection windows, modular midpoint residuals, shared high/tail anchors, tuned low table words, Thumb perfect-hash tie decisions and exceptional-word tests.",
+    "polynomial_degrees": "Degree 3 and 4 cell paths; quadratic general exp residual; small odd activation series through degree 7; higher-precision range-specific residual resolvers.",
+    "range_reduction": "Fixed-point ln(2)/512 reduction; RV odd anchors, Thumb sign-biased floor indices; exponent/binade activation cells and tanh(x/2) reuse.",
+    "tables": "RV: 256 odd exp anchors with 16-bit tails, cubic/quartic exp and activation cells; Thumb: 728 packed auxiliary/cubic records, 512 exp tails, 80 deficit cells and 144 sigmoid cells.",
+    "target_macros": "EIK_SEL=(L'\\0'-1<0) chooses RV versus Thumb arithmetic by wide-character signedness; EIK_STATS inactive; Q3B2/Q3B/Q3TT/Q3TS use unchanged defaults. Gate verifies identical preprocessed tokens."
+  },
+  "toolkit": {
+    "bootstrap_stderr": "bootstrap.stderr",
+    "bootstrap_stdout": "bootstrap.stdout",
+    "files_index_sha256": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+    "inventory_files_checked": 229,
+    "inventory_mismatches": [],
+    "manifest_sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+    "path": "eik-work/toolkit"
+  }
+}

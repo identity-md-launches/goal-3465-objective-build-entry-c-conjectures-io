@@ -1,0 +1,268 @@
+{
+  "method": "pyelftools: SHF_ALLOC sections of the exact scored entry objects; code=SHF_EXECINSTR; readonly data=.rodata*; table bytes=sum STT_OBJECT sizes; other allocated bytes include ARM exception indices; code may contain literal pools",
+  "targets": {
+    "rv32im": {
+      "allocated_sections": [
+        {
+          "bytes": 6728,
+          "flags": 6,
+          "name": ".text",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 12920,
+          "flags": 2,
+          "name": ".rodata",
+          "type": "SHT_PROGBITS"
+        }
+      ],
+      "code_and_table_bytes": 19648,
+      "code_bytes": 6728,
+      "guest_image_sha256": "f07fee1e943cf69d67fa1af5a23a126eb9027db5e8e8cb6e6a5c4ef81cc41e91",
+      "object_sha256": "1f54328e1fbede977307c1a4616850d72d786eb4553efb6135f80e379455ef2d",
+      "other_allocated_bytes": 0,
+      "readonly_data_bytes": 12920,
+      "table_symbol_bytes": 12920,
+      "table_symbols": [
+        {
+          "bytes": 2048,
+          "name": "tld_r"
+        },
+        {
+          "bytes": 1536,
+          "name": "tl_r"
+        },
+        {
+          "bytes": 1536,
+          "name": "ex8_r"
+        },
+        {
+          "bytes": 2208,
+          "name": "ta_r"
+        },
+        {
+          "bytes": 1024,
+          "name": "tb_r"
+        },
+        {
+          "bytes": 660,
+          "name": "sq_r"
+        },
+        {
+          "bytes": 264,
+          "name": "tla_r"
+        },
+        {
+          "bytes": 328,
+          "name": "tsr_r"
+        },
+        {
+          "bytes": 2576,
+          "name": "nxq_r"
+        },
+        {
+          "bytes": 640,
+          "name": "nq4_r"
+        },
+        {
+          "bytes": 100,
+          "name": "tnl_r"
+        }
+      ]
+    },
+    "thumbv6m": {
+      "allocated_sections": [
+        {
+          "bytes": 4332,
+          "flags": 6,
+          "name": ".text",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 96,
+          "flags": 130,
+          "name": ".ARM.exidx",
+          "type": "SHT_ARM_EXIDX"
+        },
+        {
+          "bytes": 15512,
+          "flags": 2,
+          "name": ".rodata",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 2,
+          "flags": 50,
+          "name": ".rodata.str1.1",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 16,
+          "flags": 18,
+          "name": ".rodata.cst16",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 8,
+          "flags": 18,
+          "name": ".rodata.cst4",
+          "type": "SHT_PROGBITS"
+        }
+      ],
+      "code_and_table_bytes": 19966,
+      "code_bytes": 4332,
+      "guest_image_sha256": "6b40f7930e4688308d2b51b4995d1037d7a16219c10f425ce8989efca47ed4f3",
+      "object_sha256": "aa776010cf504f287b7c3eb13846bc231ff31f13b2ee72fafa3c01762a852a0c",
+      "other_allocated_bytes": 96,
+      "readonly_data_bytes": 15538,
+      "table_symbol_bytes": 15533,
+      "table_symbols": [
+        {
+          "bytes": 5,
+          "name": "t_eik_sigmoid.t_cs3"
+        },
+        {
+          "bytes": 2,
+          "name": "t_sig_10"
+        },
+        {
+          "bytes": 960,
+          "name": "t_tw"
+        },
+        {
+          "bytes": 11648,
+          "name": "t_eps"
+        },
+        {
+          "bytes": 96,
+          "name": "t_spcuts"
+        },
+        {
+          "bytes": 1728,
+          "name": "t_crows"
+        },
+        {
+          "bytes": 16,
+          "name": "t_tanh_sg"
+        },
+        {
+          "bytes": 4,
+          "name": "t_eik_tanh.t_ts_sh"
+        },
+        {
+          "bytes": 4,
+          "name": "t_eik_tanh.t_cthr"
+        },
+        {
+          "bytes": 16,
+          "name": "t_eik_tanh.t_ts_row"
+        },
+        {
+          "bytes": 30,
+          "name": "t_an_tanh_groups"
+        },
+        {
+          "bytes": 1024,
+          "name": "t_exp_lo"
+        }
+      ]
+    },
+    "thumbv7em": {
+      "allocated_sections": [
+        {
+          "bytes": 5040,
+          "flags": 6,
+          "name": ".text",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 96,
+          "flags": 130,
+          "name": ".ARM.exidx",
+          "type": "SHT_ARM_EXIDX"
+        },
+        {
+          "bytes": 15512,
+          "flags": 2,
+          "name": ".rodata",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 2,
+          "flags": 50,
+          "name": ".rodata.str1.1",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 16,
+          "flags": 18,
+          "name": ".rodata.cst16",
+          "type": "SHT_PROGBITS"
+        },
+        {
+          "bytes": 8,
+          "flags": 18,
+          "name": ".rodata.cst4",
+          "type": "SHT_PROGBITS"
+        }
+      ],
+      "code_and_table_bytes": 20674,
+      "code_bytes": 5040,
+      "guest_image_sha256": "761234960e41389779a1cd3e8effca842d86685d3599248ebcf462fbefe40ed1",
+      "object_sha256": "bb3530a38176b6d72a8907ba21936cab29e8647a1bb2a3aba6e09c874ddda619",
+      "other_allocated_bytes": 96,
+      "readonly_data_bytes": 15538,
+      "table_symbol_bytes": 15533,
+      "table_symbols": [
+        {
+          "bytes": 11648,
+          "name": "t_eps"
+        },
+        {
+          "bytes": 960,
+          "name": "t_tw"
+        },
+        {
+          "bytes": 1728,
+          "name": "t_crows"
+        },
+        {
+          "bytes": 2,
+          "name": "t_sig_10"
+        },
+        {
+          "bytes": 96,
+          "name": "t_spcuts"
+        },
+        {
+          "bytes": 5,
+          "name": "t_eik_sigmoid.t_cs3"
+        },
+        {
+          "bytes": 4,
+          "name": "t_eik_tanh.t_ts_sh"
+        },
+        {
+          "bytes": 4,
+          "name": "t_eik_tanh.t_cthr"
+        },
+        {
+          "bytes": 16,
+          "name": "t_tanh_sg"
+        },
+        {
+          "bytes": 16,
+          "name": "t_eik_tanh.t_ts_row"
+        },
+        {
+          "bytes": 30,
+          "name": "t_an_tanh_groups"
+        },
+        {
+          "bytes": 1024,
+          "name": "t_exp_lo"
+        }
+      ]
+    }
+  }
+}

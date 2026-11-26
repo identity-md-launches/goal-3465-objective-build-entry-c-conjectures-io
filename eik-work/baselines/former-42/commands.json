@@ -1,0 +1,84 @@
+[
+  {
+    "argv": [
+      "$REPO/test/scratch/former-42/work/runtime/bin/python",
+      "-m",
+      "eik",
+      "setup"
+    ],
+    "exit_code": 0,
+    "label": "setup",
+    "seconds": 25.222,
+    "source_sha256": null,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+  },
+  {
+    "argv": [
+      "$REPO/test/scratch/former-42/work/runtime/bin/python",
+      "-m",
+      "eik",
+      "fingerprint",
+      "--details"
+    ],
+    "exit_code": 0,
+    "label": "fingerprint",
+    "seconds": 0.533,
+    "source_sha256": null,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  {
+    "argv": [
+      "$REPO/test/scratch/former-42/work/runtime/bin/python",
+      "-m",
+      "eik",
+      "check",
+      "$REPO/eik-work/baselines/former-42/entry.c"
+    ],
+    "exit_code": 0,
+    "label": "check",
+    "seconds": 4.764,
+    "source_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "9a31ff9e9c1b242582979e950efc47866107e3ac75481e71a8862098f8d72535"
+  },
+  {
+    "argv": [
+      "$REPO/test/scratch/former-42/work/runtime/bin/python",
+      "-m",
+      "eik",
+      "evaluate",
+      "$REPO/eik-work/baselines/former-42/entry.c",
+      "--quick",
+      "--json",
+      "--seed",
+      "180434352"
+    ],
+    "exit_code": 0,
+    "label": "evaluate-180434352",
+    "seconds": 503.415,
+    "source_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "4d28358894bd2f4437b9b1cee3928bfc17f8ba7751ecb739cf5b33cbc43ea4d4"
+  },
+  {
+    "argv": [
+      "$REPO/test/scratch/former-42/work/runtime/bin/python",
+      "-m",
+      "eik",
+      "evaluate",
+      "$REPO/eik-work/baselines/former-42/entry.c",
+      "--quick",
+      "--json",
+      "--seed",
+      "2851275305"
+    ],
+    "exit_code": 0,
+    "label": "evaluate-2851275305",
+    "seconds": 488.491,
+    "source_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "8e73be059251e74e826e63ae6e050312956f8d8d5fd92736474af4757330be60"
+  }
+]
