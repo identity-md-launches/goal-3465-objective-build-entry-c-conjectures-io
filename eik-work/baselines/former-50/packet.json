@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "180434352": {
+      "overall": 33.94598815736148,
+      "rv32im": 28.501406296161065,
+      "thumbv6m": 40.4306405096557
+    },
+    "2851275305": {
+      "overall": 34.0797868139245,
+      "rv32im": 28.623918516972903,
+      "thumbv6m": 40.575572089958854
+    }
+  },
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "source": "id50",
+  "status": "measured",
+  "techniques": "Fixed-point binade-indexed cubic cells, ln(2)/256 (RV32IM) and ln(2)/512 (Thumb) table reduction with quadratic fast residuals, small odd corrections for tanh/sigmoid, word-level special cases and saturation, guard-bit-triggered midpoint refinement, and compile-time EIK_SEL based on wide-character signedness with identical preprocessed entry tokens. See ANALYSIS.md for source details and two isolated experiments."
+}
