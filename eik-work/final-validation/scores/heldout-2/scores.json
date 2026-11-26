@@ -95,12 +95,38 @@
     "uniform": 1000
   },
   "stratified_words_per_function_per_target": 32768,
-  "evaluate_completed": false,
-  "evaluate_exit": 124,
-  "evaluate_phase_artifacts": {
-    "fresh_pool_files": 3,
-    "host_checker_artifacts": 0,
-    "result_files": 0
+  "evaluate_completed": true,
+  "evaluate_exit": 0,
+  "initial_evaluate": {
+    "completed": false,
+    "exit_code": 124,
+    "whole_command_cap_seconds": 600,
+    "phase_artifacts": {
+      "fresh_pool_files": 3,
+      "host_checker_artifacts": 0,
+      "result_files": 0
+    }
+  },
+  "evaluate_replay": {
+    "exit_code": 0,
+    "completed": true,
+    "seconds": 287.73,
+    "comparison_cap_seconds": 600,
+    "comparison_seconds": 261.777383
+  },
+  "evaluate_preview": {
+    "exit_code": 0,
+    "completed": true,
+    "seconds": 286.941,
+    "comparison_cap_seconds": null,
+    "comparison_seconds": null
+  },
+  "worker_profile_evaluate": {
+    "exit_code": -9,
+    "completed": false,
+    "seconds": 602.866,
+    "comparison_cap_seconds": 600,
+    "comparison_seconds": null
   },
   "paired_measure_stage": true,
   "quick_host_words": {
@@ -110,7 +136,11 @@
   },
   "explicit_compare": {
     "historical_submission": 50,
-    "board": "overall",
+    "boards": [
+      "rv32im",
+      "thumbv6m",
+      "overall"
+    ],
     "exit_code": 0
   },
   "exhaustive_correctness_certified_here": false

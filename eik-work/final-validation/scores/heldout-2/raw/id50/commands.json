@@ -1,0 +1,78 @@
+[
+ {
+  "case": "id50",
+  "label": "setup",
+  "argv": [
+   "python3",
+   "eik-work/toolkit/run.py",
+   "test/scratch/heldout2",
+   "id50",
+   "setup",
+   "setup"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "cap_seconds": null,
+  "cap_scope": null,
+  "seconds": 14.279,
+  "started_utc": "2026-11-26T12:00:11Z",
+  "stdout": "raw/id50/setup.stdout",
+  "stdout_sha256": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+  "stderr": "raw/id50/setup.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runner_record": "raw/id50/setup.runner.json",
+  "runner_record_sha256": "bee781352f8d0b2b598cb28943ec7389ff05cd40c4bbebab2873b9b0c7dc8b3d"
+ },
+ {
+  "case": "id50",
+  "label": "fingerprint",
+  "argv": [
+   "python3.12",
+   "eik-work/toolkit/run.py",
+   "test/scratch/heldout2",
+   "id50",
+   "fingerprint",
+   "fingerprint",
+   "--details"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "cap_seconds": null,
+  "cap_scope": null,
+  "seconds": 0.374,
+  "started_utc": "2026-11-26T12:00:51Z",
+  "stdout": "raw/id50/fingerprint.stdout",
+  "stdout_sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+  "stderr": "raw/id50/fingerprint.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runner_record": "raw/id50/fingerprint.runner.json",
+  "runner_record_sha256": "2e95032dafd31f856b50d6ae6db41789b34554e043a5e350cb2ab2ac940c6b42"
+ },
+ {
+  "case": "id50",
+  "label": "measure-2715043869",
+  "argv": [
+   "python3.12",
+   "eik-work/toolkit/run.py",
+   "test/scratch/heldout2",
+   "id50",
+   "measure-2715043869",
+   "measure",
+   "eik-work/baselines/former-50/entry.c",
+   "--seed",
+   "2715043869"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "cap_seconds": null,
+  "cap_scope": null,
+  "seconds": 21.28,
+  "started_utc": "2026-11-26T12:00:52Z",
+  "stdout": "raw/id50/measure-2715043869.stdout",
+  "stdout_sha256": "07f5cbf4c808b65864fac60f2443e6ac6f6eecd219eda764a61a913597ba89df",
+  "stderr": "raw/id50/measure-2715043869.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runner_record": "raw/id50/measure-2715043869.runner.json",
+  "runner_record_sha256": "60ac7183d50960c668e91c47616882b2a40aed8150da39128d68f1ef458986dd"
+ }
+]

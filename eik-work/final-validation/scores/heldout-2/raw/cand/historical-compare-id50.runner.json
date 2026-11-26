@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/heldout2/runtime/bin/python",
+    "-m",
+    "eik",
+    "compare",
+    "$REPO/entry.c",
+    "--seed",
+    "2715043869",
+    "--champion",
+    "rv32im=$REPO/eik-work/baselines/former-50/entry.c",
+    "--champion",
+    "thumbv6m=$REPO/eik-work/baselines/former-50/entry.c",
+    "--champion",
+    "overall=$REPO/eik-work/baselines/former-50/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 6.321,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "594b8ebabc33c72e0198240ae2705c066dc3bef1a529d58e321ef03369812000"
+}

@@ -307,6 +307,175 @@ def check_historical_compare(reports, fp):
             "explicit overall historical decision disagrees with the paired score")
 
 
+def replay(reports, fp):
+    """Check the repeat measurements and the phase-scoped evaluate attempt."""
+    candidate, id50 = reports["candidate"], reports["id50"]
+
+    def same_measurement(actual, prior, label):
+        # Whole ELF digests can differ across build directories.
+        require({k: v for k, v in actual.items() if k != "images"}
+                == {k: v for k, v in prior.items() if k != "images"}
+                and set(actual["images"]) == set(prior["images"])
+                and all(re.fullmatch(r"[a-f0-9]{64}", value) for value in actual["images"].values()),
+                f"{label}: repeat measurement differs")
+
+    records = {}
+    attempts = {}
+    incumbent_scores = {}
+    for case, src in (("cand", CANDIDATE), ("scoped", CANDIDATE),
+                      ("scoped-clean", CANDIDATE), ("id50", ID50)):
+        scoped = case.startswith("scoped")
+        evaluate_label = "evaluate-phase-scoped" if scoped else f"evaluate-{SEED}"
+        base = RAW / case
+        rows = read(base / "commands.json")
+        ledger = {row["label"]: row for row in rows}
+        require(len(rows) == len(ledger), f"{case}: duplicate replay command")
+        specs = {"setup": ["setup"], "fingerprint": ["fingerprint", "--details"]}
+        if case == "id50":
+            specs[f"measure-{SEED}"] = ["measure", src, "--seed", str(SEED)]
+        else:
+            specs.update({
+                "check": ["check", src],
+                evaluate_label: ["evaluate", src, "--quick", "--json", "--seed", str(SEED)],
+                "historical-compare-id50": ["compare", src, "--seed", str(SEED),
+                                            *[arg for board in BOARDS
+                                              for arg in ("--champion", f"{board}={ID50}")]],
+            })
+            if ledger[evaluate_label]["timed_out"]:
+                specs["fallback-measure"] = ["measure", src, "--seed", str(SEED)]
+                specs.update({f"fallback-fullcheck-quick-{fn}":
+                              ["fullcheck", src, "--function", fn, "--quick", "--seed", str(SEED)]
+                              for fn in FUNCTIONS})
+        require(set(ledger) == set(specs), f"{case}: replay commands missing")
+        for label, args in specs.items():
+            row = ledger[label]
+            evaluate = label == evaluate_label
+            require(row["case"] == case and row["argv"][0] in ("python3", "python3.12")
+                    and row["argv"][1:] == ["eik-work/toolkit/run.py", "test/scratch/heldout2",
+                                             case, label, *args]
+                    and datetime.fromisoformat(row["started_utc"]).utcoffset() is not None
+                    and row["seconds"] >= 0
+                    and row["cap_seconds"] == (600 if evaluate else None)
+                    and row["cap_scope"] == ("compare" if evaluate else None),
+                    f"{case}/{label}: unexpected replay invocation")
+            for stream in ("stdout", "stderr"):
+                path = base / f"{label}.{stream}"
+                require(row[stream] == str(path.relative_to(HERE))
+                        and digest(path) == row[f"{stream}_sha256"],
+                        f"{case}/{label}: unbound {stream}")
+            if row["timed_out"]:
+                require(scoped and evaluate and row["exit_code"] == -9 and row["seconds"] >= 600
+                        and row["runner_record"] is None and not (base / f"{label}.stdout").read_bytes()
+                        and (base / f"{label}.stderr").read_text().endswith(
+                            "Local incumbent comparison exceeded 600 seconds.\n"),
+                        "unsupported replay comparison timeout")
+                continue
+            path = base / f"{label}.runner.json"
+            require(row["exit_code"] == 0 and row["runner_record"] == str(path.relative_to(HERE))
+                    and digest(path) == row["runner_record_sha256"], f"{case}/{label}: runner record")
+            inner = read(path)
+            inner_args = [arg.replace(ID50, "$REPO/" + ID50) if arg.endswith(ID50)
+                          else "$REPO/" + arg if arg == CANDIDATE else arg for arg in args]
+            require(inner["argv"] == ["$REPO/test/scratch/heldout2/runtime/bin/python",
+                                      "-m", "eik", *inner_args]
+                    and inner["exit_code"] == 0 and 0 <= inner["seconds"] <= row["seconds"]
+                    and inner["source_sha256"] == (PINS[src] if src in args else None)
+                    and all(inner[f"{stream}_sha256"] == row[f"{stream}_sha256"]
+                            for stream in ("stdout", "stderr")),
+                    f"{case}/{label}: mismatched runner record")
+        records[case] = rows
+        require(read(base / "fingerprint.stdout") == read(RAW / "fingerprint.stdout"),
+                f"{case}: replay evaluator fingerprint changed")
+        for fn in FUNCTIONS:
+            files = list((base / "hard").glob(f"hardscan-*-67108864-{SEED}-{fn}.txt"))
+            require(len(files) == 1 and files[0].read_bytes() == (RAW / f"hard-{fn}.txt").read_bytes(),
+                    f"{case}: replay hard pool differs for {fn}")
+        if case == "id50":
+            same_measurement(read(base / f"measure-{SEED}.stdout"), id50, "id50")
+            continue
+
+        state_path = base / "incumbent-state.json"
+        state = read(state_path)
+        require(state_path.read_bytes() == (base / "incumbent-state-after.json").read_bytes()
+                and set(state["entries"]) == {"incumbent"}
+                and state["entries"]["incumbent"]["sha256"] == digest(KIT / "kit/examples/incumbent.c")
+                and set(state["boards"]) == set(BOARDS)
+                and all(item["champion"] == "incumbent" for item in state["boards"].values()),
+                "replay incumbent state changed")
+        row = ledger[evaluate_label]
+        status = {"exit_code": row["exit_code"], "completed": not row["timed_out"],
+                  "seconds": row["seconds"], "comparison_cap_seconds": 600 if scoped else None,
+                  "comparison_seconds": None}
+        if row["timed_out"]:
+            require((base / "incumbent-comparison-timeout").read_text()
+                    == "Local incumbent comparison exceeded 600 seconds.\n", "missing phase watchdog")
+            same_measurement(read(base / "fallback-measure.stdout"), candidate, "fallback candidate")
+            for fn in FUNCTIONS:
+                repeat = read(base / f"fallback-fullcheck-quick-{fn}.stdout")
+                prior = read(RAW / f"quick-{fn}.stdout")
+                require(dict(repeat, seconds=prior["seconds"]) == prior,
+                        f"fallback quick host check differs for {fn}")
+        else:
+            if scoped:
+                seconds = float((base / "incumbent-comparison-seconds").read_text())
+                require(0 < seconds <= 600 and seconds < row["seconds"], "invalid comparison timing")
+                status["comparison_seconds"] = seconds
+            ev = read(base / f"{evaluate_label}.stdout")
+            require(ev["status"] == "would-take-over-after-full-check"
+                    and all(ev[key] == candidate[key] for key in
+                            ("sha256", "seed", "fingerprint", "inputs_sha256", "hard_pool", "scores", "bytes"))
+                    and ev["measurements"] == candidate["targets"], "replay evaluate score differs")
+            require(set(ev["comparison"]) == set(BOARDS)
+                    and all(item["champion"] == "incumbent" for item in ev["comparison"].values()),
+                    "replay evaluate used a different opponent")
+            observed = {}
+            for board, decision in ev["comparison"].items():
+                champion_S = decision["champion_S"]
+                entry_S = candidate["scores"][board]["S"]
+                require(math.isfinite(champion_S) and champion_S > 0
+                        and decision["entry_S"] == entry_S
+                        and decision["ratio"] == entry_S / champion_S
+                        and decision["beats"] is (decision["ratio"] <= .970),
+                        f"{case}: invalid kit-incumbent ratio on {board}")
+                observed[board] = champion_S
+            require(observed["overall"] == math.sqrt(observed["rv32im"] * observed["thumbv6m"]),
+                    "kit-incumbent overall score has mixed sources")
+            if incumbent_scores:
+                require(observed == incumbent_scores, "kit-incumbent scores changed on replay")
+            incumbent_scores = observed
+            host = ev["host_check"]
+            require(host["ok"] is True and host["complete"] is False and host["quick"] is True
+                    and set(host["functions"]) == set(FUNCTIONS), "replay host check missing")
+            for fn in FUNCTIONS:
+                raw = read(RAW / f"quick-{fn}.stdout")
+                sample = host["functions"][fn]
+                require(all(sample[key] == raw[key] for key in ("verdict", "complete", "words_checked",
+                                                               "mismatches", "examples"))
+                        and not sample.get("sanitizer"), f"replay host check differs for {fn}")
+        compare = read(base / "historical-compare-id50.stdout")
+        prior_compare = read(RAW / "historical-compare.stdout")
+        for key in ("schema", "kind", "competition", "sha256", "seed", "fingerprint"):
+            require(compare[key] == prior_compare[key], f"replay historical compare differs in {key}")
+        same_measurement(compare["measure"], candidate, "replay candidate")
+        require(set(compare["champions"]) == {PINS[ID50]}, "replay comparison champion differs")
+        same_measurement(compare["champions"][PINS[ID50]], prior_compare["champions"][PINS[ID50]],
+                         "replay historical champion")
+        for board in BOARDS:
+            entry_S, champ_S = candidate["scores"][board]["S"], id50["scores"][board]["S"]
+            ratio = entry_S / champ_S
+            require(compare["decision"]["boards"][board] ==
+                    {"champion_sha256": PINS[ID50], "entry_S": entry_S, "champion_S": champ_S,
+                     "ratio": ratio, "beats": ratio <= .970}, f"wrong historical compare on {board}")
+        attempts[case] = status
+    install = (RAW / "replay-install.log").read_text()
+    dependencies = read(KIT / "dependencies.json")
+    for wheel in dependencies["wheels"]:
+        require(wheel["path"] in install and f"sha256={wheel['sha256']}" in install,
+                f"replay installer did not record the pinned {wheel['name']} wheel")
+    require("import probe -> 0" in install, "missing replay import probe")
+    return attempts, records
+
+
 def review():
     for path, expected in PINS.items():
         require(digest(ROOT / path) == expected, f"input pin mismatch {path}")
@@ -363,6 +532,9 @@ def review():
     else:
         require(phase["host_checker_artifacts"] == 0 and phase["result_files"] == 0,
                 "evaluate timeout phase differs from the recorded comparison cutoff")
+    attempts, replay_records = replay(reports, fp)
+    repeated = attempts["scoped-clean"]
+    ledger["replay"] = replay_records
     snapshot = read(SNAPSHOT)
     rows = {}
     for board in (*BOARDS, "thumbv7em"):
@@ -403,10 +575,13 @@ def review():
             "hard_pool": pool, "takeover_ratio": .970, "boards": rows,
             "scored_words_per_function_per_target": {name: count for name, (count, _) in CLASSES.items()},
             "stratified_words_per_function_per_target": 32768,
-            "evaluate_completed": evaluate_completed, "evaluate_exit": evaluate_exit,
-            "evaluate_phase_artifacts": phase,
+            "evaluate_completed": repeated["completed"], "evaluate_exit": repeated["exit_code"],
+            "initial_evaluate": {"completed": evaluate_completed, "exit_code": evaluate_exit,
+                                 "whole_command_cap_seconds": 600, "phase_artifacts": phase},
+            "evaluate_replay": repeated, "evaluate_preview": attempts["cand"],
+            "worker_profile_evaluate": attempts["scoped"],
             "paired_measure_stage": True, "quick_host_words": checks,
-            "explicit_compare": {"historical_submission": 50, "board": "overall", "exit_code": 0},
+            "explicit_compare": {"historical_submission": 50, "boards": list(BOARDS), "exit_code": 0},
             "exhaustive_correctness_certified_here": False}, ledger
 
 
@@ -423,17 +598,34 @@ def table(scores):
                      f"{row['candidate_over_id50']:.9f} | {threshold} | {submission} | — | — | "
                      f"{row['eligibility'].replace('_', ' ')} |")
     lines += ["", "The overall score uses the RV32IM and Thumbv6-M measurements from the same source.",
-              "An explicit kit comparison corroborated the overall former-50 ratio. Only its supplied overall row is used.",
+              "Explicit kit comparisons corroborated the former-50 ratios on all three boards.",
               "Each current source returned HTTP 403 SOURCE_WITHHELD in the board snapshot.",
               "A current-board ratio at or below 0.970 would still require exhaustive correctness.",
               "Each independent measurement scored 4,300 words and checked 32,768 stratified words per function on every target.",
               "The three quick host sanitizer checks covered 134,217,728 words per function.",
               "All scored words, target samples and quick host checks had zero wrong outputs."]
-    if not scores["evaluate_completed"]:
-        lines += ["", f"The quick evaluate command exited {scores['evaluate_exit']} at its ten-minute limit.",
+    initial = scores["initial_evaluate"]
+    if not initial["completed"]:
+        lines += ["", f"The initial quick evaluate command exited {initial['exit_code']} at its ten-minute whole-command limit.",
                   "It had generated the fresh pools and was cut off before producing a report or host checker.",
                   "The paired scores come from the unchanged measure stage with all target samples.",
                   "Separate quick fullcheck stages supplied the host sample evidence."]
+    lines += ["", "A preview replay also completed. The system startup module shadowed its watchdog, "
+              "so its command ledger records an attempted cap and the effective cap is null."]
+    profiled = scores["worker_profile_evaluate"]
+    if not profiled["completed"]:
+        lines += ["", f"The first comparison-scoped attempt exited {profiled['exit_code']} after "
+                  f"{profiled['seconds']:.3f} seconds wall time. It hit the 600-second comparison timer "
+                  "while profiling was also active in worker processes. Its separate measure and "
+                  "quick fullcheck stages reproduced the paired evidence."]
+    replay_status = scores["evaluate_replay"]
+    if replay_status["completed"]:
+        lines += ["", f"The coordinator-only watchdog run completed in {replay_status['seconds']:.3f} seconds. "
+                  f"The local incumbent comparison took {replay_status['comparison_seconds']:.3f} seconds "
+                  "under its 600-second phase cap. The repeat reproduced the paired scores and clean quick checks."]
+    else:
+        lines += ["", "The coordinator-only watchdog run timed out with the 600-second timer scoped to "
+                  "the local incumbent comparison. Its separate measure and quick fullcheck stages reproduced the evidence."]
     lines += ["", "Full-precision scores and eligibility are in `scores.json`. The command ledger and raw reports are in `raw/`.",
               "The offline bootstrap used the exact toolkit dependency pins. The fetch command restored payloads omitted from the reduced runtime export."]
     return "\n".join(lines) + "\n"
@@ -441,8 +633,8 @@ def table(scores):
 
 def artifact_hashes():
     require(RAW.is_dir() and not RAW.is_symlink(), "missing raw evidence directory")
-    paths = [*RAW.iterdir(), HERE / "scores.json", HERE / "scores.md",
-             HERE / "verify.py", HERE / "capture_inputs.py"]
+    paths = [path for path in HERE.rglob("*") if not path.is_dir()]
+    paths.remove(HERE / "result.json")
     return {str(path.relative_to(HERE)): digest(path) for path in sorted(paths)}
 
 
@@ -452,13 +644,14 @@ def main():
     scores, ledger = review()
     numeric_equal(scores, read(HERE / "scores.json"), "scores.json")
     require((HERE / "scores.md").read_text() == table(scores), "score table differs")
-    require(result["status"] == "incomplete" and result["commands"] == ledger
+    require(result["item"] == "heldout-2" and result["status"] == "incomplete" and result["commands"] == ledger
             and result["source"] == PINS and result["measured_facts"] == read(HERE / "scores.json")
+            and result["boards_candidate_would_take"] == []
             and result["tool"] == {"kit_commit": scores["kit_commit"], **scores["fingerprint"],
                                    "versions": read(RAW / "fingerprint.stdout")["details"]["tools"]},
             "result misstates evidence or claims unsupported success")
     require(set(result["gaps"]) == ({"current_sources", "exhaustive_correctness"}
-                                    | ({"evaluate_timeout"} if not scores["evaluate_completed"] else set())),
+                                    | ({"evaluate_timeout"} if not scores["evaluate_replay"]["completed"] else set())),
             "result omits limitations")
     print(f"heldout-2: verified seed {SEED}, paired candidate and former-50 scores, "
           "all current-board eligibility undetermined")

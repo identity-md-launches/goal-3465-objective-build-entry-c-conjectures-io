@@ -1,0 +1,221 @@
+{
+ "competition": "exact-integer-kernels",
+ "details": {
+  "measurement": {
+   "constants": {
+    "cap_instr": 20000000,
+    "cflags": [
+     "-std=c11",
+     "-O2",
+     "-ffreestanding",
+     "-fno-builtin",
+     "-ftrivial-auto-var-init=zero",
+     "-fstack-size-section",
+     "-fno-jump-tables",
+     "-Werror=vla",
+     "-Werror=implicit-function-declaration",
+     "-Werror=int-conversion",
+     "-Wno-unused-command-line-argument",
+     "-fno-unwind-tables",
+     "-fno-asynchronous-unwind-tables"
+    ],
+    "functions": [
+     "sigmoid",
+     "tanh",
+     "exp"
+    ],
+    "hard_fresh": true,
+    "hard_samples": 67108864,
+    "hard_threshold": -18,
+    "set_sizes": {
+     "hard": 300,
+     "typical": 2000,
+     "uniform": 1000,
+     "wide": 1000
+    },
+    "sets": {
+     "hard": 0.1,
+     "typical": 0.55,
+     "uniform": 0.05,
+     "wide": 0.3
+    },
+    "size": [
+     65536,
+     0.5
+    ],
+    "tail": [
+     20,
+     1000000.0,
+     0.1
+    ],
+    "takeover_ratio": 0.97,
+    "target_sample": 32768,
+    "targets": {
+     "rv32im": {
+      "cc": [
+       "-target",
+       "riscv32-freestanding-none",
+       "-mcpu=generic_rv32+m"
+      ],
+      "scored": true
+     },
+     "thumbv6m": {
+      "cc": [
+       "-target",
+       "thumb-freestanding-eabi",
+       "-mcpu=cortex_m0plus"
+      ],
+      "scored": true
+     },
+     "thumbv7em": {
+      "cc": [
+       "-target",
+       "thumb-freestanding-eabi",
+       "-mcpu=cortex_m4"
+      ],
+      "scored": false
+     }
+    }
+   },
+   "files": {
+    "eik/emu.py": "99b02149f2b91c0746407f3e466989316299ede262afd4f672d62da62a7d7bc0",
+    "eik/inputs.py": "ce25cf5b1a1c573fa68010b3fdddf61a44d6d43c20ea48f4b744d0d61c3a218a",
+    "eik/score.py": "d0aa34730f3032cf1d7af6d40c2dda8145849f8290c4d718730a24ee47a64e21",
+    "eik/stages.py": "0653717b5450b816caa79370270cde86fd54a31a643bfa6e78a87c1f12c3c489",
+    "harness/eik.h": "a87eb20f00a6261f17fdd575cb72bf5f19c78eca6515ac35e2c900a2269c56ca",
+    "harness/guest.c": "6b41936aa8fb0c1f9abf9b19bd27bddc5ecfc8f6c51ac976232d195d801fc437",
+    "harness/hardscan.c": "95d12bc0a15b025dce834851c495d3fdcd9d6cd5159fededea62039571f8ba94",
+    "third_party/exact-c/include/exact.h": "716ed6a99b22590ea00dd09d23ecd490372a59fe62ae3cf699ff1c2fec6aa60a",
+    "third_party/exact-c/src/acc.c": "e298e01725d6713d3545c1c8874952bd0c041c7ca32ae387679d533b8da36173",
+    "third_party/exact-c/src/act.c": "06c4a699955a42ea4ed5bb31918e56b6afe0f1c94373fc5ef2457510e3c1371a",
+    "third_party/exact-c/src/internal.h": "bc11ebad65b150518d906605ac29f5e83947da798390093d2950fc468aaa7b43",
+    "third_party/exact-c/src/scalar.c": "f730216b9453bfa2f3fce37e72a6c47967c908c774781062e7d28a5cb34fa209",
+    "third_party/exact-c/src/sha256.c": "1db83d0cd496e2a7625f625327f0e026c1684ebe20bbb945368a5f2bafa15d06"
+   },
+   "tools": {
+    "capstone": "5.0.9",
+    "clang": "clang version 22.1.8",
+    "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "machine": "x86_64",
+    "pyelftools": "0.33",
+    "unicorn": "2.1.4"
+   }
+  },
+  "tools": {
+   "clang": "clang version 22.1.8",
+   "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+   "machine": "x86_64",
+   "packages": {
+    "capstone": "5.0.9",
+    "pyelftools": "0.33",
+    "unicorn": "2.1.4",
+    "ziglang": "0.17.1"
+   },
+   "python": "3.12.3",
+   "zig": "0.17.1"
+  },
+  "verifier": {
+   "constants": {
+    "budget": [
+     {
+      "host": 12.0,
+      "rv32im": 230.0,
+      "thumbv6m": 352.0,
+      "thumbv7em": 352.0
+     },
+     5,
+     300,
+     null
+    ],
+    "cap_code": 65536,
+    "cap_instr": 20000000,
+    "cap_source": 262144,
+    "cap_stack": 8192,
+    "cflags": [
+     "-std=c11",
+     "-O2",
+     "-ffreestanding",
+     "-fno-builtin",
+     "-ftrivial-auto-var-init=zero",
+     "-fstack-size-section",
+     "-fno-jump-tables",
+     "-Werror=vla",
+     "-Werror=implicit-function-declaration",
+     "-Werror=int-conversion",
+     "-Wno-unused-command-line-argument",
+     "-fno-unwind-tables",
+     "-fno-asynchronous-unwind-tables"
+    ],
+    "functions": [
+     "sigmoid",
+     "tanh",
+     "exp"
+    ],
+    "host_sanitize": [
+     "-fsanitize=undefined,address",
+     "-fno-sanitize-recover=all"
+    ],
+    "target_sample": 32768,
+    "targets": {
+     "rv32im": {
+      "cc": [
+       "-target",
+       "riscv32-freestanding-none",
+       "-mcpu=generic_rv32+m"
+      ],
+      "scored": true
+     },
+     "thumbv6m": {
+      "cc": [
+       "-target",
+       "thumb-freestanding-eabi",
+       "-mcpu=cortex_m0plus"
+      ],
+      "scored": true
+     },
+     "thumbv7em": {
+      "cc": [
+       "-target",
+       "thumb-freestanding-eabi",
+       "-mcpu=cortex_m4"
+      ],
+      "scored": false
+     }
+    }
+   },
+   "files": {
+    "eik/policy.py": "ef80923726efc0f575518cb2fec6498872e0c6f1938f151ed7528a1d35a56b84",
+    "eik/reference.py": "97c447eb38ae5c0e3678104b6f2183ea2c7cc4ab8697918c20765d52a26498de",
+    "eik/stack.py": "f30453bee3c33eefd9f97c3e18f3b527f0971283c5a560ee4a196bbd5ea547c0",
+    "eik/stages.py": "0653717b5450b816caa79370270cde86fd54a31a643bfa6e78a87c1f12c3c489",
+    "eik/toolchain.py": "d6759a31d80eac55c919302da50af6fa04c544bac97cf813979da7cf440983f6",
+    "harness/check.c": "64711c61b66a437449d2475eaebe7a4e8c94c5efa207c58574f56758ca77bb12",
+    "harness/eik.h": "a87eb20f00a6261f17fdd575cb72bf5f19c78eca6515ac35e2c900a2269c56ca",
+    "harness/guest.c": "6b41936aa8fb0c1f9abf9b19bd27bddc5ecfc8f6c51ac976232d195d801fc437",
+    "harness/target_check.c": "aa84d1f5d1beaca73f7e09ab6f0129c67654b66fcdc6128b126504d79855a18e",
+    "reference/exp.digest": "9d44e4100c4f0340f9b825393cc64bd64eae6ccdde8ece146df9464bd4a5c0c2",
+    "reference/sigmoid.digest": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+    "reference/tanh.digest": "6596c8553a866cac76ac119eb05c832788d10d1e972ee32bbae35f513b21c34a",
+    "third_party/exact-c/include/exact.h": "716ed6a99b22590ea00dd09d23ecd490372a59fe62ae3cf699ff1c2fec6aa60a",
+    "third_party/exact-c/src/acc.c": "e298e01725d6713d3545c1c8874952bd0c041c7ca32ae387679d533b8da36173",
+    "third_party/exact-c/src/act.c": "06c4a699955a42ea4ed5bb31918e56b6afe0f1c94373fc5ef2457510e3c1371a",
+    "third_party/exact-c/src/internal.h": "bc11ebad65b150518d906605ac29f5e83947da798390093d2950fc468aaa7b43",
+    "third_party/exact-c/src/scalar.c": "f730216b9453bfa2f3fce37e72a6c47967c908c774781062e7d28a5cb34fa209",
+    "third_party/exact-c/src/sha256.c": "1db83d0cd496e2a7625f625327f0e026c1684ebe20bbb945368a5f2bafa15d06"
+   },
+   "tools": {
+    "capstone": "5.0.9",
+    "clang": "clang version 22.1.8",
+    "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "pyelftools": "0.33"
+   }
+  }
+ },
+ "kind": "fingerprint",
+ "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+ "mode": "development",
+ "production_problems": [],
+ "sandbox": "none",
+ "schema": "eik-report-1",
+ "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+}
