@@ -1,0 +1,56 @@
+{
+  "rv32im": {
+    "candidate": {
+      "entry_object_file_bytes": 89128,
+      "entry_object_sha256": "57ee42d0cf0d050de84c5f1b95b3a855cefb4979b18668abf574542f1e25a934",
+      "guest_allocated_section_bytes": 20956,
+      "guest_elf_file_bytes": 943856,
+      "guest_elf_sha256": "efad6f1ea6fc559906bfd17bb255f143c4e9b9fc93323f41d71354e9bc9b951c",
+      "targetcheck_elf_file_bytes": 942360,
+      "targetcheck_elf_sha256": "e9c57e9ce1539262fd23417896965495524305b5a7b7f46618a5b631c5ba1fd9"
+    },
+    "id50": {
+      "entry_object_file_bytes": 90184,
+      "entry_object_sha256": "a82daecfa69c52c05b54cbf1307d1da7637546003f18a28f3ba0bc1d4e0029f5",
+      "guest_allocated_section_bytes": 20856,
+      "guest_elf_file_bytes": 945024,
+      "guest_elf_sha256": "0952ad684286b2d9f729cd0c92e21025e721520e8fb88239d26e8be1dd7e6cb0"
+    }
+  },
+  "thumbv6m": {
+    "candidate": {
+      "entry_object_file_bytes": 91932,
+      "entry_object_sha256": "dc679362838eada795495a7b42b12647379c6bcd91cdc87cf41edca75c5a8f4a",
+      "guest_allocated_section_bytes": 20928,
+      "guest_elf_file_bytes": 84348,
+      "guest_elf_sha256": "111e28d6528b803da9477d813b73c05bcc36deef0c903bebef8f0e58fb1f7ca0",
+      "targetcheck_elf_file_bytes": 87788,
+      "targetcheck_elf_sha256": "b0df87dbca06ba03bf9f099d5c213a4f1dbf7ef3e68763f519ab99f51dec28b7"
+    },
+    "id50": {
+      "entry_object_file_bytes": 91928,
+      "entry_object_sha256": "b6f1c5dbfea9796b64d761bed9362165d54c8bfcd91ed0fd95bfeba74664a2c5",
+      "guest_allocated_section_bytes": 20928,
+      "guest_elf_file_bytes": 84344,
+      "guest_elf_sha256": "ca30faff5cebb70fa44ffb8501481a4e9fd7fad06264b19b0cc5aa0cf914bf9e"
+    }
+  },
+  "thumbv7em": {
+    "candidate": {
+      "entry_object_file_bytes": 82216,
+      "entry_object_sha256": "98e53a3e9b3b36c453955bd5ec69b8dc8c1ccd1cbc8ffb8b753600ff1e7b191b",
+      "guest_allocated_section_bytes": 21800,
+      "guest_elf_file_bytes": 74316,
+      "guest_elf_sha256": "2b842e652c0b5cf8b225b49ff95fb69d57a6f9d85985274b5cac47558123bdf3",
+      "targetcheck_elf_file_bytes": 77128,
+      "targetcheck_elf_sha256": "bbfcd757aadc9a048beb37647ddfd5b46843111fbcc0c70c724dc0031246290a"
+    },
+    "id50": {
+      "entry_object_file_bytes": 82212,
+      "entry_object_sha256": "452c4976850d0566707d71bf1954564e80ce29e7201323bfab1f4de1bdb0d52f",
+      "guest_allocated_section_bytes": 21800,
+      "guest_elf_file_bytes": 74308,
+      "guest_elf_sha256": "4b33f8eb910fb5c43699a1a5d047487976a4668a5d391ffa0ae4a6aae762ca6d"
+    }
+  }
+}

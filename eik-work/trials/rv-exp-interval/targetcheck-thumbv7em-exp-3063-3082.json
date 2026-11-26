@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rv-exp-interval/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/rv-exp-interval/entry.c",
+    "--function",
+    "exp",
+    "--target",
+    "thumbv7em",
+    "--chunks",
+    "3063:3082",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 12.087,
+  "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "8fe2fe9578acf90cf7fc7c5982ddddd8f6f3c29251e56861724cccaa0636d0d1"
+}

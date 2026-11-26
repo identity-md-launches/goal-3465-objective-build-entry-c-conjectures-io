@@ -1,0 +1,87 @@
+{
+  "rv32im": {
+    "candidate": {
+      ".rodata": {
+        "bytes": 13476,
+        "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4"
+      },
+      ".text": {
+        "bytes": 7480,
+        "sha256": "de221402fb08345dd107343641d7aae47347d11cc7a8004ab2bba1ab12342114"
+      }
+    },
+    "id50": {
+      ".rodata": {
+        "bytes": 13476,
+        "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4"
+      },
+      ".text": {
+        "bytes": 7380,
+        "sha256": "8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85"
+      }
+    },
+    "identical_allocated_sections": false
+  },
+  "thumbv6m": {
+    "candidate": {
+      ".ARM.exidx": {
+        "bytes": 112,
+        "sha256": "59d7336e6ed759d0882014dcec676dd859187cf9384e4f96ccba17f155839ae5"
+      },
+      ".rodata": {
+        "bytes": 15760,
+        "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4"
+      },
+      ".text": {
+        "bytes": 5056,
+        "sha256": "cffde42e75d9220a4962206e89ac07002e95217432aceb284723f2151f7a88d1"
+      }
+    },
+    "id50": {
+      ".ARM.exidx": {
+        "bytes": 112,
+        "sha256": "59d7336e6ed759d0882014dcec676dd859187cf9384e4f96ccba17f155839ae5"
+      },
+      ".rodata": {
+        "bytes": 15760,
+        "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4"
+      },
+      ".text": {
+        "bytes": 5056,
+        "sha256": "cffde42e75d9220a4962206e89ac07002e95217432aceb284723f2151f7a88d1"
+      }
+    },
+    "identical_allocated_sections": true
+  },
+  "thumbv7em": {
+    "candidate": {
+      ".ARM.exidx": {
+        "bytes": 112,
+        "sha256": "4bc5cdbe7170df514edc47d8024fb953593b97a629bde9776fa5e5f560a424ad"
+      },
+      ".rodata": {
+        "bytes": 15760,
+        "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4"
+      },
+      ".text": {
+        "bytes": 5928,
+        "sha256": "e3d1f972e8ce77c519c35239dae8fc55bc99c44b37daf716de721cd7a5dbfecd"
+      }
+    },
+    "id50": {
+      ".ARM.exidx": {
+        "bytes": 112,
+        "sha256": "4bc5cdbe7170df514edc47d8024fb953593b97a629bde9776fa5e5f560a424ad"
+      },
+      ".rodata": {
+        "bytes": 15760,
+        "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4"
+      },
+      ".text": {
+        "bytes": 5928,
+        "sha256": "e3d1f972e8ce77c519c35239dae8fc55bc99c44b37daf716de721cd7a5dbfecd"
+      }
+    },
+    "identical_allocated_sections": true
+  }
+}

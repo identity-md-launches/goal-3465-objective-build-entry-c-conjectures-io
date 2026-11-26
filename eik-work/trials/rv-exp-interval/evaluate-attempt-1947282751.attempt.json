@@ -1,0 +1,27 @@
+{
+  "command": [
+    "python3",
+    "eik-work/toolkit/run.py",
+    "test/scratch/rv-exp-interval",
+    "rv-exp-interval",
+    "evaluate-attempt-1947282751",
+    "evaluate",
+    "eik-work/trials/rv-exp-interval/entry.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "1947282751"
+  ],
+  "timeout_seconds": 180,
+  "exit_code": -9,
+  "timed_out": true,
+  "seconds": 180.023,
+  "reason": "Local incumbent remeasurement did not finish within the trial budget; use unchanged measure/fullcheck stages for absolute S and paired id50 ratios.",
+  "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completed_evaluate_report": false,
+  "scores": null,
+  "kit_verdict": null,
+  "observation": "The wrapper terminated the run group at its stated cap without a completed evaluator report; the pinned compare stage includes slow local incumbent remeasurement. This is a timeout observation, not a source rejection."
+}

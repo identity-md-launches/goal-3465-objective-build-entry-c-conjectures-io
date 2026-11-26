@@ -1,0 +1,14 @@
+{
+  "function": "exp",
+  "chunk_bits": 20,
+  "chunk_lo": 3063,
+  "chunk_hi_exclusive": 3082,
+  "first_word": "bf700000",
+  "last_word": "c09fffff",
+  "words_per_target": 19922944,
+  "input_definition": "Every unsigned 32-bit word w in [3063*2^20,3082*2^20), in ascending order; targetcheck emits and hashes each full 2^20-word chunk.",
+  "changed_first_word": "bf800001",
+  "changed_last_word": "c0800000",
+  "reference_digest_path": "eik-work/toolkit/kit/reference/exp.digest",
+  "reference_digest_sha256": "9d44e4100c4f0340f9b825393cc64bd64eae6ccdde8ece146df9464bd4a5c0c2"
+}

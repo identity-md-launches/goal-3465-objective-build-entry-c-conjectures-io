@@ -1,0 +1,19 @@
+--- id50/entry.c
++++ rv-exp-interval/entry.c
+@@ -766,6 +766,8 @@
+   const uint8_t *pb;
+   uint32_t sn;
+   uint32_t sp;
++  if ((w - 0xBF800001u) <= 0x00FFFFFFu)
++    goto negcubic_;
+   if (((int32_t) w) < 0)
+   {
+     if (w <= 0xBF800000u)
+@@ -844,6 +846,7 @@
+     }
+     if ((w - 1) <= (0xC0800000u - 1))
+     {
++      negcubic_:;
+       const uint32_t ix = 33u + (4u * (((w >> 17) - 0x5FC0u) + 32u));
+       uint32_t u = w << 15;
+       uint32_t F1 = ext_r.w[ix + 1u];

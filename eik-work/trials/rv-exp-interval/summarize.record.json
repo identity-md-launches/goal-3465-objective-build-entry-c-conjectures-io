@@ -1,0 +1,7 @@
+{
+  "command": [
+    "python3",
+    "eik-work/trials/rv-exp-interval/summarize.py"
+  ],
+  "exit_code": 0
+}

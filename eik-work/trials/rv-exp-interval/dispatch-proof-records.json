@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "eik-work/trials/rv-exp-interval/dispatch-proof.c",
+      "-o",
+      "test/scratch/rv-exp-interval/dispatch-proof"
+    ],
+    "exit_code": 0,
+    "seconds": 0.098
+  },
+  {
+    "command": [
+      "test/scratch/rv-exp-interval/dispatch-proof"
+    ],
+    "exit_code": 0,
+    "seconds": 4.521
+  }
+]

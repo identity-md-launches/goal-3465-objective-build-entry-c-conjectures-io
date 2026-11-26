@@ -1,0 +1,20 @@
+{
+  "command": [
+    "$REPO/test/scratch/rv-exp-interval/runtime/bin/python",
+    "$REPO/eik-work/trials/rv-exp-interval/inspect-path.py"
+  ],
+  "environment": {
+    "EIK_BUILD_DIR": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/build",
+    "PYTHONPATH": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/kit",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "EIK_THREADS": "2",
+    "ZIG_GLOBAL_CACHE_DIR": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/build/zig-cache",
+    "ZIG_LOCAL_CACHE_DIR": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/build/zig-cache",
+    "HOME": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/home",
+    "TMPDIR": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/tmp",
+    "PATH": "$REPO/test/scratch/eik-dependencies/qemu/bin:/usr/bin:/bin"
+  },
+  "cwd": "$REPO/test/scratch/rv-exp-interval/cases/rv-exp-interval/kit",
+  "exit_code": 0,
+  "seconds": 5.902
+}

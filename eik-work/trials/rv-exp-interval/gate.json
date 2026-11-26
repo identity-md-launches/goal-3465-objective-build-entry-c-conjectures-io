@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rv-exp-interval/runtime/bin/python",
+    "-m",
+    "eik",
+    "gate",
+    "$REPO/eik-work/trials/rv-exp-interval/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 4.356,
+  "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "d05f4fb75054f7d821a2b2d39f682cbc3ca8ddafb40e8d82bd77513e4194c2e9"
+}

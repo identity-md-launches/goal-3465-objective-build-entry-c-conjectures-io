@@ -1,0 +1,1 @@
+PASS supplemental: exact diff; offline input hashes; all-word dispatch proof; guest boundary/midpoint outputs and branch means; 19 target chunks on each ISA; all 2^32 host inputs for all three functions under ASan+UBSan; Thumb code identity; both required bounded evaluate commands.

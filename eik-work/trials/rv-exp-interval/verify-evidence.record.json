@@ -1,0 +1,7 @@
+{
+  "command": [
+    "python3",
+    "eik-work/trials/rv-exp-interval/verify-evidence.py"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,649 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "332cb47966adb4e07c1485aa843f5aee6a191a29da3dd7f718ef477dd2b5713d",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 36.507508925017504,
+     "rv32im": 32.896202279994895,
+     "thumbv6m": 40.515260593492414
+    },
+    "S_thumbv7em_reported_only": 39.95633850332885,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "332cb47966adb4e07c1485aa843f5aee6a191a29da3dd7f718ef477dd2b5713d",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19060,
+      "functions": {
+       "exp": {
+        "hard_p999": 112,
+        "means": {
+         "hard": 57.75,
+         "typical": 44.14,
+         "uniform": 28.9,
+         "wide": 41.079
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1361481063361634,
+      "stack": 24,
+      "stack_bound": 192,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 178,
+        "means": {
+         "hard": 48.50333333333333,
+         "typical": 37.908,
+         "uniform": 18.579,
+         "wide": 29.537
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 75.93333333333334,
+         "typical": 37.149,
+         "uniform": 14.698,
+         "wide": 20.731
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 164,
+        "means": {
+         "hard": 49.23,
+         "typical": 37.824,
+         "uniform": 20.233,
+         "wide": 29.983
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.41333333333333,
+         "typical": 35.997,
+         "uniform": 16.627,
+         "wide": 21.468
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 36.3786812099431,
+     "rv32im": 32.83644311370611,
+     "thumbv6m": 40.30303897386101
+    },
+    "S_thumbv7em_reported_only": 39.74954420309734,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "332cb47966adb4e07c1485aa843f5aee6a191a29da3dd7f718ef477dd2b5713d",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19060,
+      "functions": {
+       "exp": {
+        "hard_p999": 112,
+        "means": {
+         "hard": 59.156666666666666,
+         "typical": 43.717,
+         "uniform": 28.85,
+         "wide": 40.91
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.578
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1361481063361634,
+      "stack": 28,
+      "stack_bound": 192,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 187,
+        "means": {
+         "hard": 46.58,
+         "typical": 37.4395,
+         "uniform": 18.766,
+         "wide": 29.272
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.36,
+         "typical": 36.761,
+         "uniform": 14.364,
+         "wide": 21.07
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 171,
+        "means": {
+         "hard": 47.22,
+         "typical": 37.216,
+         "uniform": 20.47,
+         "wide": 29.959
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.19,
+         "typical": 35.666,
+         "uniform": 16.293,
+         "wide": 21.741
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9"
+ },
+ "kind": "trial",
+ "note": "Single early unsigned word-range check in eik_exp_r for [0xBF800001,0xC0800000], jumping to the identical original cubic cell and refinement arithmetic. RV32 regresses by about 15.2%; Thumb allocated sections and scores are unchanged under the preserved id50 selector. No takeover recommendation. Full-population stage scores paired with unchanged id50, two-seed quick sanitizer checks, complete all-input host checks and selected object checks retained; bounded evaluate attempts documented separately.",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.0739336642413637,
+   "rv32im": 1.153333515190882,
+   "thumbv6m": 1.0
+  },
+  "1947282751": {
+   "overall": 1.0730574674529845,
+   "rv32im": 1.1514523284566125,
+   "thumbv6m": 1.0
+  }
+ },
+ "runs": {
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval check check eik-work/trials/rv-exp-interval/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "73dea4a5d4ef8b4f44c5fdd83c9d668f091d8a8f8848878e89066e24b6138e31",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "12ca65f4252c25f54c27c548b820a3d6d386068f3ddc1aec82e2333969624b50"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "e3a78f181e18fa39b7bf8ed605b7e8b8ccceab1c1c7aa2d20b3541d5d1584d06",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1874435642-exp fullcheck eik-work/trials/rv-exp-interval/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "3433e212db1dc7fded54b705cea67778150ea134921ce8555d0fe77b512b910a",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "e78db74297bdc261fb60f98d243bfb48f2c8e7e95aa48cb04669f47e59b37294"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1874435642-sigmoid fullcheck eik-work/trials/rv-exp-interval/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "71ea6533051741bd0fa323f25204c6db3d0215ecaa0af2f88015dbac4994cfbb",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "f0d47ae3602876427445fbecf18e5851e55ba3228c8d6a3dd98e27f8b5686d17"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1874435642-tanh fullcheck eik-work/trials/rv-exp-interval/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "4f072b11b7c4b1363a26ffc8541ac7fb9c353f076e5d651589ed06f01cb2696f",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "696d81f7e095a3af00ef52d6ff5020bb96b01caf54c7e74adcb72460287a5e5c"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1947282751-exp fullcheck eik-work/trials/rv-exp-interval/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "0cdd8113cef5455608f6067ff1a63e60974fbac5b790c26e7849f023bcfedd49",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "c36383522e92b478296833d8870fcb936c5474d4dc12cf02631d51bea91a97ca"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1947282751-sigmoid fullcheck eik-work/trials/rv-exp-interval/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "ff30acc730392865e19043b3ba017955cf5df30d51cdc3d9ee2c6c98de0b130d",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "c6e215346a2b625224d028f219c4d98666fab880db4cc1c1d808b0c5eb098c97"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-1947282751-tanh fullcheck eik-work/trials/rv-exp-interval/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "faa4ffd3d63d5b983e611177e5b37c446e763f896eebe4fa20a064daab54fb1d",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "9ca742960e185f2b6b6e754f4aa093a9854c3b9fc617591865a4dd2ab2bc3db5"
+   }
+  },
+  "fullcheck-all-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-all-exp fullcheck eik-work/trials/rv-exp-interval/entry.c --function exp",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-all-exp.json": "57d8559531f14c822dadbd1a3359b8511e3af9304af33cf551a7c65a6d2aa320",
+    "fullcheck-all-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-all-exp.stdout": "d83350bf0572731bfae3b6eaa51a0d5433458d56ea3ca1d6c96bbefdc4d5fc00"
+   }
+  },
+  "fullcheck-all-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-all-sigmoid fullcheck eik-work/trials/rv-exp-interval/entry.c --function sigmoid",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-all-sigmoid.json": "aa22fb8bb51a900188744d723807316fe2e331eafcf72e9c075efd675d0894f5",
+    "fullcheck-all-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-all-sigmoid.stdout": "ab83187cb0e4e1c658f387c16d3add472e6c266b44e18170fad26ec610e59d57"
+   }
+  },
+  "fullcheck-all-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval fullcheck-all-tanh fullcheck eik-work/trials/rv-exp-interval/entry.c --function tanh",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-all-tanh.json": "6c6cc535769d352a8e41ad4e7c2f2845ef6581ae08e84363cdaed81a272a9aa1",
+    "fullcheck-all-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-all-tanh.stdout": "47a925c659baf686d8c8d907dc6af578f77247ae0482fb92b5da36d14c33c818"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval gate gate eik-work/trials/rv-exp-interval/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "e819b48c228fefebe156fdd240e4e79abf332a4af2c6898194e1cf7af663c60c",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "d05f4fb75054f7d821a2b2d39f682cbc3ca8ddafb40e8d82bd77513e4194c2e9"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval measure-1874435642 measure eik-work/trials/rv-exp-interval/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "9877803644cbd59d50c9d3b7ebb9498c65ec3b12df48687be6fd28ac116b62d1",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "cc2bad4a815a7114c7ddcbf5400d70f1b7723b618012ca8a3b7ada268d42b583"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval measure-1947282751 measure eik-work/trials/rv-exp-interval/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "08112c48d4c86741c8e8a09e5287d4cad99ea33f67010cd6d15a4268f45c3cba",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "d34c752f34ae25b80b2433c2804f27aac4085380a8f66871b3f8b9408d1140cc"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "2736e8efd5c392588ece9bd0b0a5046b3f81de791154282dd55caf0c02101c2d",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "targetcheck-rv32im-exp-3063-3082": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval targetcheck-rv32im-exp-3063-3082 targetcheck eik-work/trials/rv-exp-interval/entry.c --function exp --target rv32im --chunks 3063:3082 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-3063-3082.json": "ddbe26ddd4af093479ffc723aa2ba972024401dcfd8f25a30c63599cda9060a6",
+    "targetcheck-rv32im-exp-3063-3082.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-3063-3082.stdout": "fc6c4ecc5a67dffdb74dca23ccf17c786bc3798d8c746ce08a703bdaf1363ab1"
+   }
+  },
+  "targetcheck-thumbv6m-exp-3063-3082": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval targetcheck-thumbv6m-exp-3063-3082 targetcheck eik-work/trials/rv-exp-interval/entry.c --function exp --target thumbv6m --chunks 3063:3082 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv6m-exp-3063-3082.json": "b164dfcfe2cd065b6adb1e5ff86b686a351d54eec558a0a5fdcef77ba1c8bffa",
+    "targetcheck-thumbv6m-exp-3063-3082.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-exp-3063-3082.stdout": "ac1cdfff0f1ae05a2f47a91bb9c4955332ffe70d6bab16c579f52983e1ab2c0b"
+   }
+  },
+  "targetcheck-thumbv7em-exp-3063-3082": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-interval rv-exp-interval targetcheck-thumbv7em-exp-3063-3082 targetcheck eik-work/trials/rv-exp-interval/entry.c --function exp --target thumbv7em --chunks 3063:3082 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-exp-3063-3082.json": "241a8e3f620249f3cb7c55caabf57f6496020f007c831e7150a4638c67e34c35",
+    "targetcheck-thumbv7em-exp-3063-3082.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-exp-3063-3082.stdout": "8fe2fe9578acf90cf7fc7c5982ddddd8f6f3c29251e56861724cccaa0636d0d1"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/rv-exp-interval/entry.c",
+  "sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9"
+ },
+ "status": "measured",
+ "target": "rv-exp-interval"
+}

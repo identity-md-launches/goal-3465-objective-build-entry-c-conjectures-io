@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python3",
+    "eik-work/trials/paired-control/verify.py",
+    "eik-work/trials/rv-exp-interval"
+  ],
+  "exit_code": 0
+}

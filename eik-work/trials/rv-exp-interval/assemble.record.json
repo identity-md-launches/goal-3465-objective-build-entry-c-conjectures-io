@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "eik-work/trials/paired-control/verify.py",
+    "assemble",
+    "eik-work/trials/rv-exp-interval",
+    "--source",
+    "eik-work/trials/rv-exp-interval/entry.c",
+    "--logs",
+    "test/scratch/rv-exp-interval/cases/rv-exp-interval/logs",
+    "--status",
+    "measured",
+    "--note",
+    "Single early unsigned word-range check in eik_exp_r for [0xBF800001,0xC0800000], jumping to the identical original cubic cell and refinement arithmetic. RV32 regresses by about 15.2%; Thumb allocated sections and scores are unchanged under the preserved id50 selector. No takeover recommendation. Full-population stage scores paired with unchanged id50, two-seed quick sanitizer checks, complete all-input host checks and selected object checks retained; bounded evaluate attempts documented separately."
+  ],
+  "exit_code": 0
+}
