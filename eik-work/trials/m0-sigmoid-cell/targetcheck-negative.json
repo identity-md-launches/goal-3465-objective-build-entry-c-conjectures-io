@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-sigmoid/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/m0-sigmoid-cell/entry.c",
+    "--function",
+    "sigmoid",
+    "--target",
+    "thumbv6m",
+    "--chunks",
+    "3071:3079",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 27.711,
+  "source_sha256": "f8c2ac2d2752bfec1febb2d6d0789d2b7776fe64bc551e668965d58732d0de90",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "6a6310e5d9b1cd617a3f6388a484afc76521ce6a4bd632f2c61ce311aeec2082"
+}

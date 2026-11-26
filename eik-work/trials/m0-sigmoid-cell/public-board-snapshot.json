@@ -1,0 +1,152 @@
+{
+  "recorded_at": "2026-11-26T10:07:39.580844+00:00",
+  "public_boards_and_references": [
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards",
+      "http_status": "200",
+      "exit_code": 0,
+      "body": {
+        "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+        "publication_hash": "d4e64a8af20a92bdae3f31f3c7caff1703c584ff325c017ffa4c07c94ebb7389",
+        "boards": [
+          {
+            "id": "rv32im",
+            "config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+            "models": {
+              "rv32im": 1.0
+            },
+            "reward_share": 0.25,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+              {
+                "id": "eik-compare-x86",
+                "weight": 1.0,
+                "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+              }
+            ],
+            "current_promotion_id": 59,
+            "paused": false,
+            "pause_reason": null
+          },
+          {
+            "id": "overall",
+            "config_hash": "06897c371a250b616e35121c39975bbd6f2da774175b47033f8d22ff09381bc9",
+            "models": {
+              "rv32im": 0.5,
+              "thumbv6m": 0.5
+            },
+            "reward_share": 0.5,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+              {
+                "id": "eik-compare-x86",
+                "weight": 1.0,
+                "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+              }
+            ],
+            "current_promotion_id": 61,
+            "paused": false,
+            "pause_reason": null
+          },
+          {
+            "id": "thumbv6m",
+            "config_hash": "688d360c2dfaa6c9c8f7e5519b4bc97ebedcbe41e55f38d1e907286079e6dbdf",
+            "models": {
+              "thumbv6m": 1.0
+            },
+            "reward_share": 0.25,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+              {
+                "id": "eik-compare-x86",
+                "weight": 1.0,
+                "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+              }
+            ],
+            "current_promotion_id": 60,
+            "paused": false,
+            "pause_reason": null
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im",
+      "http_status": "200",
+      "exit_code": 0,
+      "body": {
+        "board": "rv32im",
+        "config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+        "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+        "reference": {
+          "promotion_id": 59,
+          "submission": 52,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "shipped": false
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=thumbv6m",
+      "http_status": "200",
+      "exit_code": 0,
+      "body": {
+        "board": "thumbv6m",
+        "config_hash": "688d360c2dfaa6c9c8f7e5519b4bc97ebedcbe41e55f38d1e907286079e6dbdf",
+        "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+        "reference": {
+          "promotion_id": 60,
+          "submission": 53,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "shipped": false
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=overall",
+      "http_status": "200",
+      "exit_code": 0,
+      "body": {
+        "board": "overall",
+        "config_hash": "06897c371a250b616e35121c39975bbd6f2da774175b47033f8d22ff09381bc9",
+        "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+        "reference": {
+          "promotion_id": 61,
+          "submission": 56,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "shipped": false
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "source_access": [
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source",
+      "http_status": "403",
+      "exit_code": 0,
+      "response": "{\"type\":\"about:blank\",\"title\":\"Not permitted\",\"status\":403,\"detail\":\"Source is published only for former champions that hold no board.\",\"reason_code\":\"SOURCE_WITHHELD\"}",
+      "stderr": ""
+    },
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source",
+      "http_status": "403",
+      "exit_code": 0,
+      "response": "{\"type\":\"about:blank\",\"title\":\"Not permitted\",\"status\":403,\"detail\":\"Source is published only for former champions that hold no board.\",\"reason_code\":\"SOURCE_WITHHELD\"}",
+      "stderr": ""
+    },
+    {
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source",
+      "http_status": "403",
+      "exit_code": 0,
+      "response": "{\"type\":\"about:blank\",\"title\":\"Not permitted\",\"status\":403,\"detail\":\"Source is published only for former champions that hold no board.\",\"reason_code\":\"SOURCE_WITHHELD\"}",
+      "stderr": ""
+    }
+  ]
+}

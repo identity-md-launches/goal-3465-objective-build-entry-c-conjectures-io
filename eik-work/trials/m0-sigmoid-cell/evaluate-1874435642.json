@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-sigmoid/runtime/bin/python",
+    "-m",
+    "eik",
+    "evaluate",
+    "$REPO/eik-work/trials/m0-sigmoid-cell/entry.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "1874435642"
+  ],
+  "exit_code": 0,
+  "seconds": 101.934,
+  "source_sha256": "f8c2ac2d2752bfec1febb2d6d0789d2b7776fe64bc551e668965d58732d0de90",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "1df8121a176bf7a7a75d55932f843e5aae360b9872c814711f3cf5e46a1b0ca0"
+}

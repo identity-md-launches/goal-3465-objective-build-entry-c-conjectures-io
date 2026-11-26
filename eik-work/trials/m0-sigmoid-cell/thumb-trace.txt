@@ -1,0 +1,344 @@
+All 91 narrow rows match id50. All shared rows are byte-for-byte equivalent as integer fields.
+input bfffffff
+  t_eps: 39 retired, result 3df420ab
+    00023ee4  ldm      r5, {r1, r2, r3, r4, r5}
+    00023ee6  subs     r4, r4, r0
+    00023ee8  bmi      #0x23fe4
+    00023fe4  lsrs     r1, r4, #0xc
+    00023fe6  ands     r1, r3
+    00023fe8  subs     r5, r5, r1
+    00023fea  uxth     r1, r0
+    00023fec  ldm      r5, {r3, r4, r5}  [row offset -2048, 4 bytes, row offset -2044, 4 bytes, row offset -2040, 4 bytes]
+    00023fee  muls     r5, r1, r5
+    00023ff0  subs     r5, r3, r5
+    00023ff2  asrs     r5, r5, #0xf
+    00023ff4  muls     r5, r1, r5
+    00023ff6  asrs     r5, r5, #0xf
+    00023ff8  adds     r4, r4, r5
+    00023ffa  uxtb     r3, r3
+    00023ffc  muls     r1, r3, r1
+    00023ffe  adds     r1, r4, r1
+    00024000  bmi      #0x240ee
+    00024002  lsls     r3, r1, #1
+    00024004  adds     r3, #0x81
+    00024006  bpl      #0x2400a
+    00024008  b        #0x2413a
+    0002413a  adds     r1, #0xa0
+    0002413c  lsls     r2, r1, #0x1a
+    0002413e  lsrs     r2, r2, #0x1c
+    00024140  beq      #0x24242
+    00024142  lsrs     r0, r1, #6
+    00024144  movs     r1, #0x3f
+    00024146  lsls     r1, r1, #0x18
+  t_sigmoid_negative: 45 retired, result 3df420ab
+input c0000000
+  t_eps: 38 retired, result 3df420a9
+    00023fa2  ldm      r5!, {r1, r2}
+    00023fa4  subs     r2, r0, r2
+    00023fa6  bhs      #0x24086
+    00023fa8  asrs     r2, r2, #0x10
+    00023faa  lsls     r2, r2, #4
+    00023fac  adds     r5, r1, r2
+    00023fae  uxth     r1, r0
+    00023fb0  ldm      r5!, {r2, r3, r4}  [row offset +0, 4 bytes, row offset +4, 4 bytes, row offset +8, 4 bytes]
+    00023fb2  uxth     r5, r4
+    00023fb4  muls     r5, r1, r5
+    00023fb6  adds     r3, r5, r3
+    00023fb8  uxtb     r5, r2
+    00023fba  muls     r5, r1, r5
+    00023fbc  subs     r4, r4, r5
+    00023fbe  lsrs     r4, r4, #0xf
+    00023fc0  muls     r4, r1, r4
+    00023fc2  subs     r2, r2, r4
+    00023fc4  lsrs     r2, r2, #0xf
+    00023fc6  muls     r2, r1, r2
+    00023fc8  lsrs     r1, r2, #0xf
+    00023fca  adds     r1, r3, r1
+    00023fcc  lsls     r2, r1, #1
+    00023fce  subs     r2, #0x87
+    00023fd0  bpl      #0x23fd4
+    00023fd4  uxtb     r3, r2
+    00023fd6  cmp      r3, #0xf8
+    00023fd8  bls      #0x23fdc
+    00023fdc  lsrs     r0, r2, #8
+    00023fde  ldr      r1, [pc, #0x320]
+  t_sigmoid_negative: 47 retired, result 3df420a9
+    0002456a  bhs      #0x2465c
+    0002456c  movs     r1, #0x7f
+    0002456e  lsls     r2, r1, #4
+    00024570  lsrs     r1, r0, #0xc
+    00024572  ands     r1, r2
+    00024574  ldr      r2, [pc, #0x2f4]
+    00024576  adds     r4, r2, r1
+    00024578  ldrh     r5, [r4, #0xc]  [row offset +12, 2 bytes]
+    0002457a  uxth     r2, r0
+    0002457c  muls     r5, r2, r5
+    0002457e  ldr      r6, [r4, #4]  [row offset +4, 4 bytes]
+    00024580  ldr      r3, [r4, #8]  [row offset +8, 4 bytes]
+    00024582  adds     r5, r5, r6
+    00024584  ldrb     r4, [r4, #0xe]  [row offset +14, 1 bytes]
+    00024586  muls     r4, r2, r4
+    00024588  subs     r3, r3, r4
+    0002458a  lsrs     r3, r3, #0xf
+    0002458c  muls     r3, r2, r3
+    0002458e  ldr      r4, [pc, #0x2dc]
+    00024590  ldr      r1, [r4, r1]  [row offset +0, 4 bytes]
+    00024592  subs     r1, r1, r3
+    00024594  lsrs     r1, r1, #0xf
+    00024596  muls     r1, r2, r1
+    00024598  lsrs     r1, r1, #0xf
+    0002459a  adds     r1, r5, r1
+    0002459c  lsls     r2, r1, #1
+    0002459e  subs     r2, #0x87
+    000245a0  bpl      #0x245a4
+    000245a4  uxtb     r3, r2
+input c0123456
+  t_eps: 38 retired, result 3dbd466f
+    00023fa2  ldm      r5!, {r1, r2}
+    00023fa4  subs     r2, r0, r2
+    00023fa6  bhs      #0x24086
+    00023fa8  asrs     r2, r2, #0x10
+    00023faa  lsls     r2, r2, #4
+    00023fac  adds     r5, r1, r2
+    00023fae  uxth     r1, r0
+    00023fb0  ldm      r5!, {r2, r3, r4}  [row offset +0, 4 bytes, row offset +4, 4 bytes, row offset +8, 4 bytes]
+    00023fb2  uxth     r5, r4
+    00023fb4  muls     r5, r1, r5
+    00023fb6  adds     r3, r5, r3
+    00023fb8  uxtb     r5, r2
+    00023fba  muls     r5, r1, r5
+    00023fbc  subs     r4, r4, r5
+    00023fbe  lsrs     r4, r4, #0xf
+    00023fc0  muls     r4, r1, r4
+    00023fc2  subs     r2, r2, r4
+    00023fc4  lsrs     r2, r2, #0xf
+    00023fc6  muls     r2, r1, r2
+    00023fc8  lsrs     r1, r2, #0xf
+    00023fca  adds     r1, r3, r1
+    00023fcc  lsls     r2, r1, #1
+    00023fce  subs     r2, #0x87
+    00023fd0  bpl      #0x23fd4
+    00023fd4  uxtb     r3, r2
+    00023fd6  cmp      r3, #0xf8
+    00023fd8  bls      #0x23fdc
+    00023fdc  lsrs     r0, r2, #8
+    00023fde  ldr      r1, [pc, #0x320]
+  t_sigmoid_negative: 47 retired, result 3dbd466f
+    0002456a  bhs      #0x2465c
+    0002456c  movs     r1, #0x7f
+    0002456e  lsls     r2, r1, #4
+    00024570  lsrs     r1, r0, #0xc
+    00024572  ands     r1, r2
+    00024574  ldr      r2, [pc, #0x2f4]
+    00024576  adds     r4, r2, r1
+    00024578  ldrh     r5, [r4, #0xc]  [row offset +12, 2 bytes]
+    0002457a  uxth     r2, r0
+    0002457c  muls     r5, r2, r5
+    0002457e  ldr      r6, [r4, #4]  [row offset +4, 4 bytes]
+    00024580  ldr      r3, [r4, #8]  [row offset +8, 4 bytes]
+    00024582  adds     r5, r5, r6
+    00024584  ldrb     r4, [r4, #0xe]  [row offset +14, 1 bytes]
+    00024586  muls     r4, r2, r4
+    00024588  subs     r3, r3, r4
+    0002458a  lsrs     r3, r3, #0xf
+    0002458c  muls     r3, r2, r3
+    0002458e  ldr      r4, [pc, #0x2dc]
+    00024590  ldr      r1, [r4, r1]  [row offset +0, 4 bytes]
+    00024592  subs     r1, r1, r3
+    00024594  lsrs     r1, r1, #0xf
+    00024596  muls     r1, r2, r1
+    00024598  lsrs     r1, r1, #0xf
+    0002459a  adds     r1, r5, r1
+    0002459c  lsls     r2, r1, #1
+    0002459e  subs     r2, #0x87
+    000245a0  bpl      #0x245a4
+    000245a4  uxtb     r3, r2
+input c05affff
+  t_eps: 41 retired, result 3d0182b0
+    00023fa2  ldm      r5!, {r1, r2}
+    00023fa4  subs     r2, r0, r2
+    00023fa6  bhs      #0x24086
+    00023fa8  asrs     r2, r2, #0x10
+    00023faa  lsls     r2, r2, #4
+    00023fac  adds     r5, r1, r2
+    00023fae  uxth     r1, r0
+    00023fb0  ldm      r5!, {r2, r3, r4}  [row offset +0, 4 bytes, row offset +4, 4 bytes, row offset +8, 4 bytes]
+    00023fb2  uxth     r5, r4
+    00023fb4  muls     r5, r1, r5
+    00023fb6  adds     r3, r5, r3
+    00023fb8  uxtb     r5, r2
+    00023fba  muls     r5, r1, r5
+    00023fbc  subs     r4, r4, r5
+    00023fbe  lsrs     r4, r4, #0xf
+    00023fc0  muls     r4, r1, r4
+    00023fc2  subs     r2, r2, r4
+    00023fc4  lsrs     r2, r2, #0xf
+    00023fc6  muls     r2, r1, r2
+    00023fc8  lsrs     r1, r2, #0xf
+    00023fca  adds     r1, r3, r1
+    00023fcc  lsls     r2, r1, #1
+    00023fce  subs     r2, #0x87
+    00023fd0  bpl      #0x23fd4
+    00023fd2  b        #0x2414c
+    0002414c  lsls     r2, r1, #2
+    0002414e  subs     r2, #0x80
+    00024150  uxtb     r3, r2
+    00024152  cmp      r3, #0x14
+  t_sigmoid_negative: 49 retired, result 3d0182b0
+    0002456a  bhs      #0x2465c
+    0002456c  movs     r1, #0x7f
+    0002456e  lsls     r2, r1, #4
+    00024570  lsrs     r1, r0, #0xc
+    00024572  ands     r1, r2
+    00024574  ldr      r2, [pc, #0x2f4]
+    00024576  adds     r4, r2, r1
+    00024578  ldrh     r5, [r4, #0xc]  [row offset +12, 2 bytes]
+    0002457a  uxth     r2, r0
+    0002457c  muls     r5, r2, r5
+    0002457e  ldr      r6, [r4, #4]  [row offset +4, 4 bytes]
+    00024580  ldr      r3, [r4, #8]  [row offset +8, 4 bytes]
+    00024582  adds     r5, r5, r6
+    00024584  ldrb     r4, [r4, #0xe]  [row offset +14, 1 bytes]
+    00024586  muls     r4, r2, r4
+    00024588  subs     r3, r3, r4
+    0002458a  lsrs     r3, r3, #0xf
+    0002458c  muls     r3, r2, r3
+    0002458e  ldr      r4, [pc, #0x2dc]
+    00024590  ldr      r1, [r4, r1]  [row offset +0, 4 bytes]
+    00024592  subs     r1, r1, r3
+    00024594  lsrs     r1, r1, #0xf
+    00024596  muls     r1, r2, r1
+    00024598  lsrs     r1, r1, #0xf
+    0002459a  adds     r1, r5, r1
+    0002459c  lsls     r2, r1, #1
+    0002459e  subs     r2, #0x87
+    000245a0  bpl      #0x245a4
+    000245a2  b        #0x24732
+input c05b0000
+  t_eps: 45 retired, result 3d0182ae
+  t_sigmoid_negative: 50 retired, result 3d0182ae
+input c0000021
+  t_eps: 115 retired, result 3df4203a
+    00023fa2  ldm      r5!, {r1, r2}
+    00023fa4  subs     r2, r0, r2
+    00023fa6  bhs      #0x24086
+    00023fa8  asrs     r2, r2, #0x10
+    00023faa  lsls     r2, r2, #4
+    00023fac  adds     r5, r1, r2
+    00023fae  uxth     r1, r0
+    00023fb0  ldm      r5!, {r2, r3, r4}  [row offset +0, 4 bytes, row offset +4, 4 bytes, row offset +8, 4 bytes]
+    00023fb2  uxth     r5, r4
+    00023fb4  muls     r5, r1, r5
+    00023fb6  adds     r3, r5, r3
+    00023fb8  uxtb     r5, r2
+    00023fba  muls     r5, r1, r5
+    00023fbc  subs     r4, r4, r5
+    00023fbe  lsrs     r4, r4, #0xf
+    00023fc0  muls     r4, r1, r4
+    00023fc2  subs     r2, r2, r4
+    00023fc4  lsrs     r2, r2, #0xf
+    00023fc6  muls     r2, r1, r2
+    00023fc8  lsrs     r1, r2, #0xf
+    00023fca  adds     r1, r3, r1
+    00023fcc  lsls     r2, r1, #1
+    00023fce  subs     r2, #0x87
+    00023fd0  bpl      #0x23fd4
+    00023fd4  uxtb     r3, r2
+    00023fd6  cmp      r3, #0xf8
+    00023fd8  bls      #0x23fdc
+    00023fda  b        #0x2417a
+    0002417a  lsrs     r1, r1, #5
+  t_sigmoid_negative: 123 retired, result 3df4203a
+    0002456a  bhs      #0x2465c
+    0002456c  movs     r1, #0x7f
+    0002456e  lsls     r2, r1, #4
+    00024570  lsrs     r1, r0, #0xc
+    00024572  ands     r1, r2
+    00024574  ldr      r2, [pc, #0x2f4]
+    00024576  adds     r4, r2, r1
+    00024578  ldrh     r5, [r4, #0xc]  [row offset +12, 2 bytes]
+    0002457a  uxth     r2, r0
+    0002457c  muls     r5, r2, r5
+    0002457e  ldr      r6, [r4, #4]  [row offset +4, 4 bytes]
+    00024580  ldr      r3, [r4, #8]  [row offset +8, 4 bytes]
+    00024582  adds     r5, r5, r6
+    00024584  ldrb     r4, [r4, #0xe]  [row offset +14, 1 bytes]
+    00024586  muls     r4, r2, r4
+    00024588  subs     r3, r3, r4
+    0002458a  lsrs     r3, r3, #0xf
+    0002458c  muls     r3, r2, r3
+    0002458e  ldr      r4, [pc, #0x2dc]
+    00024590  ldr      r1, [r4, r1]  [row offset +0, 4 bytes]
+    00024592  subs     r1, r1, r3
+    00024594  lsrs     r1, r1, #0xf
+    00024596  muls     r1, r2, r1
+    00024598  lsrs     r1, r1, #0xf
+    0002459a  adds     r1, r5, r1
+    0002459c  lsls     r2, r1, #1
+    0002459e  subs     r2, #0x87
+    000245a0  bpl      #0x245a4
+    000245a4  uxtb     r3, r2
+input c05a0037
+  t_eps: 120 retired, result 3d037b9a
+    00023fa2  ldm      r5!, {r1, r2}
+    00023fa4  subs     r2, r0, r2
+    00023fa6  bhs      #0x24086
+    00023fa8  asrs     r2, r2, #0x10
+    00023faa  lsls     r2, r2, #4
+    00023fac  adds     r5, r1, r2
+    00023fae  uxth     r1, r0
+    00023fb0  ldm      r5!, {r2, r3, r4}  [row offset +0, 4 bytes, row offset +4, 4 bytes, row offset +8, 4 bytes]
+    00023fb2  uxth     r5, r4
+    00023fb4  muls     r5, r1, r5
+    00023fb6  adds     r3, r5, r3
+    00023fb8  uxtb     r5, r2
+    00023fba  muls     r5, r1, r5
+    00023fbc  subs     r4, r4, r5
+    00023fbe  lsrs     r4, r4, #0xf
+    00023fc0  muls     r4, r1, r4
+    00023fc2  subs     r2, r2, r4
+    00023fc4  lsrs     r2, r2, #0xf
+    00023fc6  muls     r2, r1, r2
+    00023fc8  lsrs     r1, r2, #0xf
+    00023fca  adds     r1, r3, r1
+    00023fcc  lsls     r2, r1, #1
+    00023fce  subs     r2, #0x87
+    00023fd0  bpl      #0x23fd4
+    00023fd2  b        #0x2414c
+    0002414c  lsls     r2, r1, #2
+    0002414e  subs     r2, #0x80
+    00024150  uxtb     r3, r2
+    00024152  cmp      r3, #0x14
+  t_sigmoid_negative: 128 retired, result 3d037b9a
+    0002456a  bhs      #0x2465c
+    0002456c  movs     r1, #0x7f
+    0002456e  lsls     r2, r1, #4
+    00024570  lsrs     r1, r0, #0xc
+    00024572  ands     r1, r2
+    00024574  ldr      r2, [pc, #0x2f4]
+    00024576  adds     r4, r2, r1
+    00024578  ldrh     r5, [r4, #0xc]  [row offset +12, 2 bytes]
+    0002457a  uxth     r2, r0
+    0002457c  muls     r5, r2, r5
+    0002457e  ldr      r6, [r4, #4]  [row offset +4, 4 bytes]
+    00024580  ldr      r3, [r4, #8]  [row offset +8, 4 bytes]
+    00024582  adds     r5, r5, r6
+    00024584  ldrb     r4, [r4, #0xe]  [row offset +14, 1 bytes]
+    00024586  muls     r4, r2, r4
+    00024588  subs     r3, r3, r4
+    0002458a  lsrs     r3, r3, #0xf
+    0002458c  muls     r3, r2, r3
+    0002458e  ldr      r4, [pc, #0x2dc]
+    00024590  ldr      r1, [r4, r1]  [row offset +0, 4 bytes]
+    00024592  subs     r1, r1, r3
+    00024594  lsrs     r1, r1, #0xf
+    00024596  muls     r1, r2, r1
+    00024598  lsrs     r1, r1, #0xf
+    0002459a  adds     r1, r5, r1
+    0002459c  lsls     r2, r1, #1
+    0002459e  subs     r2, #0x87
+    000245a0  bpl      #0x245a4
+    000245a2  b        #0x24732
+RV32IM allocated section (address, SHA-256), before -> after
+  .rodata: (65748, 'bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4') -> (65748, 'bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4')
+  .text: (83320, '8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85') -> (83320, '8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85')

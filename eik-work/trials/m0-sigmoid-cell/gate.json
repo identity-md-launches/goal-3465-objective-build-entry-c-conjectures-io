@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-sigmoid/runtime/bin/python",
+    "-m",
+    "eik",
+    "gate",
+    "$REPO/eik-work/trials/m0-sigmoid-cell/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 6.194,
+  "source_sha256": "f8c2ac2d2752bfec1febb2d6d0789d2b7776fe64bc551e668965d58732d0de90",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "b3e08a716ffd48b29abd3e3c6f56dbf3a805a0b0009402764bccd38be2b56dcf"
+}
