@@ -1,0 +1,105 @@
+{
+  "failures": [],
+  "function": "sigmoid",
+  "gaps": [],
+  "history": {
+    "image_sha256": "1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a",
+    "mismatches_reported": 0,
+    "raw": {
+      "json": {
+        "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.json",
+        "sha256": "ad3e6426c183cc27b546063862d54dd2c76c540b7a5a158bb7aef4feef9f3b74"
+      },
+      "stderr": {
+        "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stdout",
+        "sha256": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85"
+      }
+    },
+    "reason": "original checker ELF and runtime unavailable",
+    "selected": false,
+    "words_reported": 4294967296
+  },
+  "ranges": [
+    {
+      "chunks": [
+        0,
+        4096
+      ],
+      "fingerprint": {
+        "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+        "sandbox": "none",
+        "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+      },
+      "image_sha256": "8e424613a357f1a2292806aee346c01a879c8678b550a78559208699bd88134a",
+      "input_words": [
+        0,
+        4294967296
+      ],
+      "mismatches": 0,
+      "provenance": "rerun",
+      "raw": {
+        "json": {
+          "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.json",
+          "sha256": "5531a6d9b5ef4f069348c72921ac74242d3cec1ee7875110e0f87a70d2411b01"
+        },
+        "stderr": {
+          "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stdout",
+          "sha256": "aa25282cb06ff79e23d4a814dad8435cd5aec8dbceb5757560f4a4db92b90b4c"
+        }
+      },
+      "words_checked": 4294967296
+    }
+  ],
+  "runtime": {
+    "assets": {
+      "qemu/bin/qemu-arm": "4707fc8fee4660dba6d150d930152d995f2aa784e3b52b4deb8be282533d1f87",
+      "qemu/source/qemu_7.2+dfsg-7+deb12u18.debian.tar.xz": "28a1c86310ee53b6bf1854cffe6f6be6ed29a08db7d05759f8ac57b8d6a6cb2f",
+      "qemu/source/qemu_7.2+dfsg.orig.tar.xz": "91aca71520040edc40b8d437aa3004dae614f58e286cf653ee8996c07af2962f",
+      "wheels/capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "273fd8d747d2e35c88f91450be51a603ecfaafb00d96d9f315dcb8689c86193e",
+      "wheels/pyelftools-0.33-py3-none-any.whl": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036",
+      "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239",
+      "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl": "ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54"
+    },
+    "fingerprint": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "sandbox": "none",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "mode": "development",
+    "qemu": {
+      "package_member": "usr/bin/qemu-arm-static",
+      "path": "qemu/bin/qemu-arm",
+      "sha256": "4707fc8fee4660dba6d150d930152d995f2aa784e3b52b4deb8be282533d1f87",
+      "version": "qemu-arm version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)"
+    },
+    "qemu_arguments": [
+      "-cpu",
+      "max"
+    ],
+    "sigmoid_reference_sha256": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+    "tools": {
+      "clang": "clang version 22.1.8",
+      "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "machine": "x86_64",
+      "packages": {
+        "capstone": "5.0.9",
+        "pyelftools": "0.33",
+        "unicorn": "2.1.4",
+        "ziglang": "0.17.1"
+      },
+      "python": "3.12.3",
+      "zig": "0.17.1"
+    }
+  },
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "status": "pass",
+  "target": "thumbv7em"
+}

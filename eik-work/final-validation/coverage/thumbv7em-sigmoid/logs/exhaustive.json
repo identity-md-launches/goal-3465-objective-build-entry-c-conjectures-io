@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/thumbv7em-sigmoid/run/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/entry.c",
+    "--function",
+    "sigmoid",
+    "--target",
+    "thumbv7em",
+    "--chunks",
+    "0:4096",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 113.352,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "aa25282cb06ff79e23d4a814dad8435cd5aec8dbceb5757560f4a4db92b90b4c"
+}

@@ -1,0 +1,226 @@
+{
+  "artifact_sha256": {
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/README.md": "2320fef80f0608c4087c4bb82f942c966c75d7c84179bad04a2980f2b3367dfd",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/build_guest.py": "4d36bc3250cc8cfc8d1fd4bc092d1843e679b11582c60048e2bff7136d815645",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/coverage.json": "3035885e9e1b66c24bc24122af3817ddb88de2e661aaacd4b616eaaac19e6f42",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/build-guest.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/build-guest.stdout": "f0cc3a3049e808261c450a64651041a9faab95bc96763e73df51c8a7e8063977",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.json": "5531a6d9b5ef4f069348c72921ac74242d3cec1ee7875110e0f87a70d2411b01",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/exhaustive.stdout": "aa25282cb06ff79e23d4a814dad8435cd5aec8dbceb5757560f4a4db92b90b4c",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/fingerprint.json": "7b8ed84e0885343eed18dbbcbeb5c19153b3849feb1cdc6f768d589ad5b7a6e4",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/install.log": "35c93b8fb5497d6e174e31c854a1a7a41c15a2ea13d6d11b00c3f474a9b18437",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/prepare.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/prepare.stderr": "0821e4e0b3c3a00f65a2c8239b2c619252b49357b9eb802c0999987c85d176b0",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/prepare.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/restore.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/restore.stdout": "981eb2167c5ed12b83219a6a92bb001f2ae6d95888b5b2e995e2dea124733143",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/restored-prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/restored-prepare.stdout": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/runtime.stdout": "35f832465d84e3083c734c89e88fd80c34e35934e06fe223b362d548dc6e9664",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/sigmoid.json": "74fdc8a124a68427f34e778e95122145f22dcf1485fbd66d0f6292717685613a",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/logs/sigmoid.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/objects/guest-thumbv7em.elf": "0eb0b931e79ad4797aa001a2656da7be78e31c1b1af7786e1d82dd13cd9a5baf",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/objects/sub-thumbv7em.o": "034e7e60b8ebb082d951306b57731b7bd4aad9267422fbdf14e4863e5971af59",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/objects/target-check-thumbv7em.elf": "8e424613a357f1a2292806aee346c01a879c8678b550a78559208699bd88134a",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/restore.py": "3cdfd2e01ee577181b1cf8eae07247117f8086293994ba5bc0b455d7d5e4f45e",
+    "eik-work/final-validation/coverage/thumbv7em-sigmoid/verify.py": "800f0021073c641da35219f53f47273d02050efb64a7853876b3d00b666de3df",
+    "eik-work/freeze/evidence/logs/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "eik-work/freeze/evidence/objects/guest-thumbv7em.elf": "48de0ea1940bc91803ca63d9e819a1b55026409e02089883d408de353363ace8",
+    "eik-work/freeze/evidence/objects/sub-thumbv7em.o": "a3d16db18998114b0104013e65b7bb09e2b8631a720e55fbb0190f2aa1370828",
+    "eik-work/freeze/manifest.json": "7ed07bccda548cfc10ad76ed9bd22a836e1d6984f3d1c208a912fec86d7f990f",
+    "eik-work/offline-runtime/manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+    "eik-work/offline-runtime/payload/qemu/bin/qemu-arm.xz": "66b73bf696f03bee91fb2fb2349c0213aa67bf95fce8b30d2ed03447d344f860",
+    "eik-work/offline-runtime/prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b",
+    "eik-work/toolkit/dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+    "eik-work/toolkit/files.json": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+    "eik-work/toolkit/run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf",
+    "eik-work/trials/m0-tanh-refine/entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "eik-work/trials/m0-tanh-refine/packet.json": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c",
+    "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.json": "ad3e6426c183cc27b546063862d54dd2c76c540b7a5a158bb7aef4feef9f3b74",
+    "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stdout": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85",
+    "entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  },
+  "commands": {
+    "build_guest": {
+      "argv": [
+        "test/scratch/thumbv7em-sigmoid/run/runtime/bin/python",
+        "eik-work/final-validation/coverage/thumbv7em-sigmoid/build_guest.py",
+        "test/scratch/thumbv7em-sigmoid/run/cases/exhaustive",
+        "entry.c"
+      ],
+      "environment": {
+        "EIK_BUILD_DIR": "$REPO/test/scratch/thumbv7em-sigmoid/run/cases/exhaustive/build",
+        "EIK_THREADS": "2",
+        "HOME": "$REPO/test/scratch/thumbv7em-sigmoid/run/cases/exhaustive/home",
+        "LANG": "C.UTF-8",
+        "PATH": "$REPO/test/scratch/thumbv7em-sigmoid/dependencies/qemu/bin:/usr/bin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONNOUSERSITE": "1",
+        "TMPDIR": "$REPO/test/scratch/thumbv7em-sigmoid/run/cases/exhaustive/tmp",
+        "ZIG_GLOBAL_CACHE_DIR": "$REPO/test/scratch/thumbv7em-sigmoid/run/cases/exhaustive/build/zig-cache",
+        "ZIG_LOCAL_CACHE_DIR": "$REPO/test/scratch/thumbv7em-sigmoid/run/cases/exhaustive/build/zig-cache"
+      },
+      "exit_code": 0
+    },
+    "fingerprint": {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/thumbv7em-sigmoid/dependencies",
+        "test/scratch/thumbv7em-sigmoid/run",
+        "fingerprint",
+        "fingerprint",
+        "fingerprint",
+        "--details"
+      ],
+      "exit_code": 0
+    },
+    "prepare_export": {
+      "argv": [
+        "python3",
+        "eik-work/offline-runtime/prepare.py",
+        "test/scratch/thumbv7em-sigmoid/dependencies"
+      ],
+      "exit_code": 1
+    },
+    "prepare_restored": {
+      "argv": [
+        "python3",
+        "test/scratch/thumbv7em-sigmoid/offline-runtime/prepare.py",
+        "test/scratch/thumbv7em-sigmoid/dependencies"
+      ],
+      "exit_code": 0
+    },
+    "restore": {
+      "argv": [
+        "python3",
+        "test/scratch/thumbv7em-sigmoid/restore.py"
+      ],
+      "exit_code": 0
+    },
+    "setup": {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/thumbv7em-sigmoid/dependencies",
+        "test/scratch/thumbv7em-sigmoid/run",
+        "exhaustive",
+        "sigmoid",
+        "setup"
+      ],
+      "exit_code": 0
+    },
+    "targetcheck": {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/thumbv7em-sigmoid/dependencies",
+        "test/scratch/thumbv7em-sigmoid/run",
+        "exhaustive",
+        "exhaustive",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "sigmoid",
+        "--target",
+        "thumbv7em",
+        "--chunks",
+        "0:4096",
+        "--jobs",
+        "2"
+      ],
+      "exit_code": 0
+    }
+  },
+  "failures": [],
+  "gaps": [],
+  "image_binding": {
+    "freeze_nonallocated_section_differences": {
+      "guest-thumbv7em.elf": [
+        ".debug_info",
+        ".debug_line",
+        ".debug_str"
+      ],
+      "sub-thumbv7em.o": [
+        ".debug_info",
+        ".debug_line",
+        ".debug_str",
+        ".rel.debug_line"
+      ]
+    },
+    "linked_symbols": {
+      "guest-thumbv7em.elf": {
+        "entry": 153009,
+        "entry_symbol": "eik_batch",
+        "sigmoid_address": 147157,
+        "sigmoid_bytes": 1738
+      },
+      "target-check-thumbv7em.elf": {
+        "entry": 152581,
+        "entry_symbol": "_start",
+        "sigmoid_address": 147189,
+        "sigmoid_bytes": 1738
+      }
+    }
+  },
+  "measurements": {
+    "chunks": [
+      0,
+      4096
+    ],
+    "mismatches": 0,
+    "seconds": 106.6,
+    "words_checked": 4294967296
+  },
+  "runtime": {
+    "assets": {
+      "qemu/bin/qemu-arm": "4707fc8fee4660dba6d150d930152d995f2aa784e3b52b4deb8be282533d1f87",
+      "qemu/source/qemu_7.2+dfsg-7+deb12u18.debian.tar.xz": "28a1c86310ee53b6bf1854cffe6f6be6ed29a08db7d05759f8ac57b8d6a6cb2f",
+      "qemu/source/qemu_7.2+dfsg.orig.tar.xz": "91aca71520040edc40b8d437aa3004dae614f58e286cf653ee8996c07af2962f",
+      "wheels/capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "273fd8d747d2e35c88f91450be51a603ecfaafb00d96d9f315dcb8689c86193e",
+      "wheels/pyelftools-0.33-py3-none-any.whl": "f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036",
+      "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239",
+      "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl": "ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54"
+    },
+    "fingerprint": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "sandbox": "none",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "mode": "development",
+    "qemu": {
+      "package_member": "usr/bin/qemu-arm-static",
+      "path": "qemu/bin/qemu-arm",
+      "sha256": "4707fc8fee4660dba6d150d930152d995f2aa784e3b52b4deb8be282533d1f87",
+      "version": "qemu-arm version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)"
+    },
+    "qemu_arguments": [
+      "-cpu",
+      "max"
+    ],
+    "sigmoid_reference_sha256": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+    "tools": {
+      "clang": "clang version 22.1.8",
+      "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "machine": "x86_64",
+      "packages": {
+        "capstone": "5.0.9",
+        "pyelftools": "0.33",
+        "unicorn": "2.1.4",
+        "ziglang": "0.17.1"
+      },
+      "python": "3.12.3",
+      "zig": "0.17.1"
+    }
+  },
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "status": "pass"
+}
