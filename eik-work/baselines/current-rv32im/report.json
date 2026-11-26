@@ -1,0 +1,333 @@
+{
+  "board_snapshot": {
+    "authority": "Pinned setup snapshot only; public rechecks are separately retained and do not change the selector.",
+    "board_config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+    "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+    "public_recheck_matches_pinned_board_and_rv32im_reference": true,
+    "reference_timestamp_utc": "2026-11-26T06:51:24.030361+00:00",
+    "references": {
+      "overall": {
+        "promotion_id": 61,
+        "shipped": false,
+        "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+        "submission": 56
+      },
+      "rv32im": {
+        "promotion_id": 59,
+        "shipped": false,
+        "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+        "submission": 52
+      },
+      "thumbv6m": {
+        "promotion_id": 60,
+        "shipped": false,
+        "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+        "submission": 53
+      }
+    },
+    "timestamp_utc": "2026-11-26T06:51:23.515647+00:00"
+  },
+  "checks": {
+    "baseline_packet": {
+      "exit_code": 0,
+      "status": "passed-unavailability-evidence",
+      "stderr": "logs/final-verify.stderr",
+      "stdout": "logs/final-verify.stdout"
+    },
+    "eik_check": "not-run",
+    "host_sanitizers": "not-run",
+    "packet_evidence_integrity": "passed: response and command hashes, unchanged toolkit, null unmeasured rows, matching public RV32IM reference",
+    "source_policy": "not-run",
+    "target_object_checks": "not-run",
+    "toolkit_integrity": "passed",
+    "two_seed_evaluation": "not-run"
+  },
+  "commands_path": "commands.json",
+  "experiments": [
+    {
+      "change": "If its exp reducer uses a wide quotient or division to select k, replace just that selector with a bounded 32-bit reciprocal multiply and correction, retaining the residual arithmetic and rounding fallback.",
+      "id": "range-reduction",
+      "prerequisite": "Obtain the exact published submission-52 bytes and verify their advertised SHA-256; inspect its range reduction first.",
+      "status": "proposed-only",
+      "validation": "Compare unchanged baseline and variant on both shared seeds and fresh seeds with all target samples and full scoring counts; inspect rv32im high-multiply lowering, thumbv6m helper cost, size and hard p99.9. Require correctness and sanitizer checks before adopting."
+    },
+    {
+      "change": "Derive exact bit thresholds for correctly rounded exp(x)=1, sigmoid(x)=1/2 and tanh(x)=x near zero; if absent, add one proven early return per function before range reduction, preserving signed zero and NaN rules.",
+      "id": "tiny-input-fast-path",
+      "prerequisite": "Inspect the available source first to determine whether an equivalent certified tiny-input path already exists.",
+      "status": "proposed-only",
+      "validation": "Test both threshold neighbors exhaustively within the derived small intervals, then measure one change at a time on both shared seeds and fresh seeds. Track typical/wide/uniform means, hard tail, branches and code size on all three targets."
+    }
+  ],
+  "fingerprints": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "status": "pinned-identities-only-not-locally-measured",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "generated_at_utc": "2026-11-26T07:31:13.106236+00:00",
+  "kit": {
+    "commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "immutable_file_check": "evidence/integrity.json",
+    "inventory_sha256": "c2a0814a9d4a358e67e693eebfdf0b776ce57dd376b04d626c32c3c80321906b",
+    "manifest_sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+    "repository": "https://github.com/conjectures-io/exact-integer-kernels-miner",
+    "rules_sha256": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "tree": "cfc22d5a8c626c73d62472a71c0024a87f50cd44"
+  },
+  "limitations": [
+    "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+    "No entry.c exists because no exact bytes were obtained. The advertised source hash has not been independently verified against source.",
+    "Absolute published S is absent; all local S, diagnostics, size, stack, class statistics and mismatch counts are null. Null is not zero or a pass.",
+    "No quick or full correctness evaluation ran. Packet acceptance validates documented unavailability, not behavior or speed.",
+    "Source technique details are unknown. Proposed experiments are conditional hypotheses, not claims about the withheld implementation."
+  ],
+  "local_measurements": {
+    "boards_it_would_take": null,
+    "candidate_to_current_champion_ratios": null,
+    "coverage": {
+      "exhaustive": false,
+      "host_inputs_checked": 0,
+      "scored_calls": 0,
+      "target_inputs_checked": 0
+    },
+    "expected_scoring_set_sizes": {
+      "hard": 300,
+      "typical": 2000,
+      "uniform": 1000,
+      "wide": 1000
+    },
+    "expected_target_words_per_function": 32768,
+    "rows": [
+      {
+        "S": {
+          "overall": null,
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "fresh_hard_pools_generated": false,
+        "input_sha256_expected": "8a246cce2fff8e2e0e06c5ec32bdd1f2ce93fa0d093c6be123f332b07ce85e30",
+        "input_sha256_measured": null,
+        "mismatch_counts": null,
+        "per_function_class_statistics": null,
+        "seed": 180434352,
+        "size_bytes": {
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "stack_bytes": {
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "status": "not-run-source-unavailable",
+        "target_samples_run": false
+      },
+      {
+        "S": {
+          "overall": null,
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "fresh_hard_pools_generated": false,
+        "input_sha256_expected": "76dbea8d847ce16ba787857171f22e7cd84a6e40a3abe9204dc2ca97fe811555",
+        "input_sha256_measured": null,
+        "mismatch_counts": null,
+        "per_function_class_statistics": null,
+        "seed": 2851275305,
+        "size_bytes": {
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "stack_bytes": {
+          "rv32im": null,
+          "thumbv6m": null,
+          "thumbv7em": null
+        },
+        "status": "not-run-source-unavailable",
+        "target_samples_run": false
+      }
+    ],
+    "settings_preserved": true,
+    "status": "not-run-source-unavailable"
+  },
+  "next_action": "Revisit the same submission-52 public source endpoint after source publication; verify SHA-256 12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d before copying exact bytes to entry.c. Then use the pinned offline runner with isolated scratch for setup, fingerprint, check and both listed quick evaluations, keeping full input sizes and fresh hard pools/target samples.",
+  "planned_runner_commands": [
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "test/scratch/current-rv32im/runtime-work",
+        "current-rv32im",
+        "setup",
+        "setup"
+      ],
+      "exit_code": null,
+      "label": "setup",
+      "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+      "status": "not-run"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "test/scratch/current-rv32im/runtime-work",
+        "current-rv32im",
+        "fingerprint",
+        "fingerprint",
+        "--details"
+      ],
+      "exit_code": null,
+      "label": "fingerprint",
+      "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+      "status": "not-run"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "test/scratch/current-rv32im/runtime-work",
+        "current-rv32im",
+        "check",
+        "check",
+        "eik-work/baselines/current-rv32im/entry.c"
+      ],
+      "exit_code": null,
+      "label": "check",
+      "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+      "status": "not-run"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "test/scratch/current-rv32im/runtime-work",
+        "current-rv32im",
+        "evaluate-180434352",
+        "evaluate",
+        "eik-work/baselines/current-rv32im/entry.c",
+        "--quick",
+        "--json",
+        "--seed",
+        "180434352"
+      ],
+      "exit_code": null,
+      "label": "evaluate-180434352",
+      "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+      "status": "not-run"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "test/scratch/current-rv32im/runtime-work",
+        "current-rv32im",
+        "evaluate-2851275305",
+        "evaluate",
+        "eik-work/baselines/current-rv32im/entry.c",
+        "--quick",
+        "--json",
+        "--seed",
+        "2851275305"
+      ],
+      "exit_code": null,
+      "label": "evaluate-2851275305",
+      "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+      "status": "not-run"
+    }
+  ],
+  "published_history": {
+    "absolute_S": {
+      "overall": null,
+      "rv32im": null,
+      "thumbv6m": null
+    },
+    "interpretation": "Historical challenger/reference ratios from public submission metadata, not absolute S, not local measurement, and not evidence of a new board takeover.",
+    "ratios": [
+      {
+        "S_ratio": 0.9663356577371272,
+        "board": "rv32im",
+        "evaluation_id": 154,
+        "provenance": "api/submission-52.json#/evaluations/0/decision/score",
+        "reference_promotion_id": 53
+      },
+      {
+        "S_ratio": 1.0,
+        "board": "thumbv6m",
+        "evaluation_id": 155,
+        "provenance": "api/submission-52.json#/evaluations/1/decision/score",
+        "reference_promotion_id": 57
+      },
+      {
+        "S_ratio": 0.9953888317067958,
+        "board": "overall",
+        "evaluation_id": 156,
+        "provenance": "api/submission-52.json#/evaluations/2/decision/score",
+        "reference_promotion_id": 58
+      }
+    ],
+    "timestamp_utc": "2026-11-26T06:51:24.957058+00:00"
+  },
+  "schema": "identitymd-baseline-availability-1",
+  "source": {
+    "advertised_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+    "board": "rv32im",
+    "entry_path": null,
+    "hash_provenance": "api/submission-52.json#/source_sha256",
+    "measured_source_sha256": null,
+    "pinned_request": {
+      "curl_exit_code": 0,
+      "http_status": 403,
+      "path": "api/source-52.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "stderr": "",
+      "timestamp_utc": "2026-11-26T06:51:25.582086+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+    },
+    "promotion_id": 59,
+    "public_recheck": {
+      "curl_exit_code": 0,
+      "finished_at_utc": "2026-11-26T07:31:12.867556+00:00",
+      "http_status": 403,
+      "path": "evidence/recheck-source-52.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "timestamp_utc": "2026-11-26T07:31:12.734432+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+    },
+    "reason": "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+    "selector": "current-rv32im",
+    "source_bytes_present": false,
+    "submission": 52
+  },
+  "status": "unavailable",
+  "target": "current-rv32im",
+  "techniques": {
+    "fast_paths": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "hard_cases": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "polynomial_degrees": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "range_reduction": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "tables": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "target_macros": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    }
+  }
+}

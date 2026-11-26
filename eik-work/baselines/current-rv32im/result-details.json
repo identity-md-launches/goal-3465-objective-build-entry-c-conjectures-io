@@ -1,0 +1,243 @@
+{
+  "S_rows": [
+    {
+      "overall": null,
+      "rv32im": null,
+      "seed": 180434352,
+      "status": "not-run-source-unavailable",
+      "thumbv6m": null,
+      "thumbv7em": null
+    },
+    {
+      "overall": null,
+      "rv32im": null,
+      "seed": 2851275305,
+      "status": "not-run-source-unavailable",
+      "thumbv6m": null,
+      "thumbv7em": null
+    }
+  ],
+  "artifact_paths": {
+    "commands": "eik-work/baselines/current-rv32im/commands.json",
+    "evidence": "eik-work/baselines/current-rv32im/evidence",
+    "logs": "eik-work/baselines/current-rv32im/logs",
+    "packet": "eik-work/baselines/current-rv32im/packet.json",
+    "readme": "eik-work/baselines/current-rv32im/README.md",
+    "report": "eik-work/baselines/current-rv32im/report.json"
+  },
+  "baseline_status": "unavailable",
+  "check": {
+    "exitCode": 0,
+    "tail": "current-rv32im: unavailable (HTTP 403, curl 0)\n"
+  },
+  "checks": {
+    "baseline_packet": {
+      "exit_code": 0,
+      "status": "passed-unavailability-evidence",
+      "stderr": "logs/repair-verify.stderr",
+      "stdout": "logs/repair-verify.stdout"
+    },
+    "eik_check": "not-run",
+    "host_sanitizers": "not-run",
+    "packet_evidence_integrity": "passed: response and command hashes, unchanged toolkit, null unmeasured rows, matching public RV32IM reference",
+    "source_policy": "not-run",
+    "target_object_checks": "not-run",
+    "toolkit_integrity": "passed",
+    "two_seed_evaluation": "not-run"
+  },
+  "commands": [
+    {
+      "argv": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "15",
+        "--max-time",
+        "45",
+        "--output",
+        "eik-work/baselines/current-rv32im/evidence/recheck-batch-board.json",
+        "--write-out",
+        "%{http_code}",
+        "https://api.imd.fun/goals/245c10e6-494e-43f3-a3bf-bc67925b46dd/board?batch=e01-baseline-foundation"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "15",
+        "--max-time",
+        "45",
+        "--output",
+        "eik-work/baselines/current-rv32im/evidence/recheck-boards.json",
+        "--write-out",
+        "%{http_code}",
+        "https://conjectures.io/v1/competitions/exact-integer-kernels/boards"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "15",
+        "--max-time",
+        "45",
+        "--output",
+        "eik-work/baselines/current-rv32im/evidence/recheck-leaderboard-rv32im.json",
+        "--write-out",
+        "%{http_code}",
+        "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "curl",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "15",
+        "--max-time",
+        "45",
+        "--output",
+        "eik-work/baselines/current-rv32im/evidence/recheck-source-52.json",
+        "--write-out",
+        "%{http_code}",
+        "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/packet.py",
+        "current-rv32im",
+        "eik-work/baselines/current-rv32im"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "baseline",
+        "eik-work/baselines/current-rv32im"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "baseline",
+        "eik-work/baselines/current-rv32im"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "baseline",
+        "eik-work/baselines/current-rv32im"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "kit": {
+    "commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "immutable_file_check": "evidence/integrity.json",
+    "inventory_sha256": "c2a0814a9d4a358e67e693eebfdf0b776ce57dd376b04d626c32c3c80321906b",
+    "manifest_sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+    "repository": "https://github.com/conjectures-io/exact-integer-kernels-miner",
+    "rules_sha256": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "tree": "cfc22d5a8c626c73d62472a71c0024a87f50cd44"
+  },
+  "limitations": [
+    "Exact source bytes are unavailable: pinned manifest source-52 request returned HTTP 403 SOURCE_WITHHELD; no substitute source or measurements were used.",
+    "No entry.c exists because no exact bytes were obtained. The advertised source hash has not been independently verified against source.",
+    "Absolute published S is absent; all local S, diagnostics, size, stack, class statistics and mismatch counts are null. Null is not zero or a pass.",
+    "No quick or full correctness evaluation ran. Packet acceptance validates documented unavailability, not behavior or speed.",
+    "Source technique details are unknown. Proposed experiments are conditional hypotheses, not claims about the withheld implementation."
+  ],
+  "measurement_fingerprint": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "measurement_status": "not-run-source-unavailable",
+  "next_action": "Revisit the same submission-52 public source endpoint after source publication; verify SHA-256 12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d before copying exact bytes to entry.c. Then use the pinned offline runner with isolated scratch for setup, fingerprint, check and both listed quick evaluations, keeping full input sizes and fresh hard pools/target samples.",
+  "notes": "Repaired the rejected output schema: result.json contains only status, check and notes. All prior detailed result fields are preserved in eik-work/baselines/current-rv32im/result-details.json; existing report.json, packet.json, evidence and logs remain intact. Ran python3 eik-work/toolkit/verify.py baseline eik-work/baselines/current-rv32im (exit 0); stdout/stderr and timestamped command record are in logs/repair-verify.* and commands.json. The verifier accepts the documented-unavailability branch: manifest selector current-rv32im resolves to submission 52 (promotion 59), whose source endpoint returned HTTP 403 SOURCE_WITHHELD. No entry.c or kernel measurements exist; both shared-seed S rows are null and technique details unknown. No correctness, sanitizer, target-object or speed claim is made. Next: when public source is released, verify its advertised SHA-256 and run the pinned offline check and both quick evaluations.",
+  "published_historical_S": {
+    "overall": null,
+    "rv32im": null,
+    "thumbv6m": null
+  },
+  "published_historical_ratios": [
+    {
+      "S_ratio": 0.9663356577371272,
+      "board": "rv32im",
+      "evaluation_id": 154,
+      "provenance": "api/submission-52.json#/evaluations/0/decision/score",
+      "reference_promotion_id": 53
+    },
+    {
+      "S_ratio": 1.0,
+      "board": "thumbv6m",
+      "evaluation_id": 155,
+      "provenance": "api/submission-52.json#/evaluations/1/decision/score",
+      "reference_promotion_id": 57
+    },
+    {
+      "S_ratio": 0.9953888317067958,
+      "board": "overall",
+      "evaluation_id": 156,
+      "provenance": "api/submission-52.json#/evaluations/2/decision/score",
+      "reference_promotion_id": 58
+    }
+  ],
+  "source": {
+    "advertised_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+    "entry_c": null,
+    "http_status": 403,
+    "promotion_id": 59,
+    "reason_code": "SOURCE_WITHHELD",
+    "submission": 52,
+    "verified_source_sha256": null
+  },
+  "status": "done",
+  "target": "current-rv32im",
+  "techniques": {
+    "fast_paths": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "hard_cases": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "polynomial_degrees": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "range_reduction": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "tables": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    },
+    "target_macros": {
+      "detail": "Cannot inspect submission 52 without its exact source.",
+      "status": "unavailable"
+    }
+  }
+}

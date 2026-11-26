@@ -1,0 +1,174 @@
+[
+  {
+    "argv": [
+      "curl",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--connect-timeout",
+      "15",
+      "--max-time",
+      "45",
+      "--output",
+      "eik-work/baselines/current-rv32im/evidence/recheck-batch-board.json",
+      "--write-out",
+      "%{http_code}",
+      "https://api.imd.fun/goals/245c10e6-494e-43f3-a3bf-bc67925b46dd/board?batch=e01-baseline-foundation"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:12.401400+00:00",
+    "label": "recheck-batch-board",
+    "seconds": 0.474,
+    "started_at_utc": "2026-11-26T07:31:11.927553+00:00",
+    "stderr": "logs/recheck-batch-board.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/recheck-batch-board.stdout",
+    "stdout_sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+  },
+  {
+    "argv": [
+      "curl",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--connect-timeout",
+      "15",
+      "--max-time",
+      "45",
+      "--output",
+      "eik-work/baselines/current-rv32im/evidence/recheck-boards.json",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/boards"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:12.592238+00:00",
+    "label": "recheck-boards",
+    "seconds": 0.19,
+    "started_at_utc": "2026-11-26T07:31:12.402492+00:00",
+    "stderr": "logs/recheck-boards.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/recheck-boards.stdout",
+    "stdout_sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+  },
+  {
+    "argv": [
+      "curl",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--connect-timeout",
+      "15",
+      "--max-time",
+      "45",
+      "--output",
+      "eik-work/baselines/current-rv32im/evidence/recheck-leaderboard-rv32im.json",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:12.733253+00:00",
+    "label": "recheck-leaderboard-rv32im",
+    "seconds": 0.14,
+    "started_at_utc": "2026-11-26T07:31:12.593420+00:00",
+    "stderr": "logs/recheck-leaderboard-rv32im.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/recheck-leaderboard-rv32im.stdout",
+    "stdout_sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+  },
+  {
+    "argv": [
+      "curl",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--connect-timeout",
+      "15",
+      "--max-time",
+      "45",
+      "--output",
+      "eik-work/baselines/current-rv32im/evidence/recheck-source-52.json",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:12.867556+00:00",
+    "label": "recheck-source-52",
+    "seconds": 0.133,
+    "started_at_utc": "2026-11-26T07:31:12.734432+00:00",
+    "stderr": "logs/recheck-source-52.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/recheck-source-52.stdout",
+    "stdout_sha256": "d26eae87829adde551bf4b852f9da6b8c3c2db9b65b8b68870632a2db5f53e00"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/packet.py",
+      "current-rv32im",
+      "eik-work/baselines/current-rv32im"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:13.062742+00:00",
+    "label": "assemble",
+    "seconds": 0.194,
+    "started_at_utc": "2026-11-26T07:31:12.869150+00:00",
+    "stderr": "logs/assemble.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/assemble.stdout",
+    "stdout_sha256": "6dd0cd7e682da1d3d89aca6fd7e04ad26ee61e24607c3afff833ae220abb847c"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "baseline",
+      "eik-work/baselines/current-rv32im"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:31:13.291804+00:00",
+    "label": "verify-baseline",
+    "seconds": 0.184,
+    "started_at_utc": "2026-11-26T07:31:13.107998+00:00",
+    "stderr": "logs/verify-baseline.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/verify-baseline.stdout",
+    "stdout_sha256": "6dd0cd7e682da1d3d89aca6fd7e04ad26ee61e24607c3afff833ae220abb847c"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "baseline",
+      "eik-work/baselines/current-rv32im"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:32:02.967765+00:00",
+    "label": "final-verify",
+    "seconds": 0.211,
+    "started_at_utc": "2026-11-26T07:32:02.756509+00:00",
+    "stderr": "logs/final-verify.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/final-verify.stdout",
+    "stdout_sha256": "6dd0cd7e682da1d3d89aca6fd7e04ad26ee61e24607c3afff833ae220abb847c"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "baseline",
+      "eik-work/baselines/current-rv32im"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-26T07:33:08.386780+00:00",
+    "label": "repair-verify",
+    "seconds": 0.193,
+    "started_at_utc": "2026-11-26T07:33:08.193343+00:00",
+    "stderr": "logs/repair-verify.stderr",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "logs/repair-verify.stdout",
+    "stdout_sha256": "6dd0cd7e682da1d3d89aca6fd7e04ad26ee61e24607c3afff833ae220abb847c"
+  }
+]
