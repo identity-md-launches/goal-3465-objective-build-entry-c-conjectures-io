@@ -1,0 +1,9 @@
+# Exhaustive host sigmoid evidence
+
+The frozen root entry and historical trial entry have the same SHA-256. The historical record is independently checked against its packet index and command record. Its full-domain verdict, counts, stderr, and pinned verifier and measurement fingerprints agree. The historical checker, candidate object, and sanitizer library bytes cannot be identified from that record, so the selected coverage comes from a fresh run. The historical record remains in its original location.
+
+The rerun used Linux x86-64, Python 3.12.3, and GCC 13.3.0 with AddressSanitizer and UndefinedBehaviorSanitizer enabled together and recovery disabled. A scratch copy of the offline bundle was completed with the three omitted, hash-pinned payloads. Unchanged `prepare.py` verified the restored bundle. Unchanged `toolkit/run.py` ran `fullcheck entry.c --function sigmoid --chunks 0:4096 --threads 2` against the pinned reference. The same checker binary also ran directly over the full domain to capture the native stderr stream that the kit processes internally.
+
+The packet preserves the GCC candidate object and linked checker as inert evidence files. Their hashes, the resolved library hashes, and the sanitizer environment are in `raw/runtime.json`. The original toolkit reports and fingerprints are preserved verbatim. The direct run is corroboration of the selected range and contributes no additional words to the coverage count.
+
+`python3 eik-work/final-validation/coverage/host-sigmoid/verify.py` checks the packet offline using the standard library. It checks repository pins, raw reports, source and command bindings, fingerprints, ELF instrumentation and dependencies, and complete zero-failure coverage. It reads the captured compiler and library identities from the packet, so the machine running the verifier can use a different compiler or runtime.

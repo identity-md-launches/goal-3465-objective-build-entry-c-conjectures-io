@@ -1,0 +1,159 @@
+{
+  "artifacts": {
+    "eik-work/final-validation/coverage/host-sigmoid/coverage.json": "d8e894285592c29e835aba5c845ccef1c771a8205d176e099be53da7f722aae9",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/check-host": "7899301273715a9b130f7d7b2815df09c73f56f294220fde9e99d4c994d1272a",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.json": "466b0f14a21e2c2fc5888c934a82e359bfe795ac4dfce26a94c500cc05dd7655",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/exhaustive-sigmoid.stdout": "92412ffe579d985ad25b59a6f207927c914df81dc92b37d315d6552d0341b566",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/fingerprint.json": "2d8f28cb75bcfaf797b58cdc6a14cfd7ba30c333190816157a48c868727cd61d",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/install.log": "310bf4907dcbbbe12cd2ced67b277dd652b83b9bc200e8da8720d62543ca0872",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/native.json": "ed2a54d63b11219ff97333b0504eb71c693f5217e0176d5d4d79ac6eb6d2ef48",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/native.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/native.stdout": "1fdd61f44ef79b6bd97d30cc8e675f992ef7a83ff23b1ba61813b360903421d2",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/prepare.json": "10e100bec354d1edfe8af39fdba4b856531851239c24a45a8baff952f23259b7",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/prepare.stdout": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/runtime.json": "8ddb40b9646f2d4c53138808151ee27bdd977a348aec0af92cb08e7dbc29c066",
+    "eik-work/final-validation/coverage/host-sigmoid/raw/sub-host-san.o": "1e5f7b609bc89522911fc3924f2c0d215e83b371c26d390fb3980f9546217ba7",
+    "eik-work/trials/m0-tanh-refine/exhaustive-sigmoid.json": "cbaefea0324c4ad1e244b8716a1eea2f705ded123533f647f72776baf8955b6d",
+    "eik-work/trials/m0-tanh-refine/exhaustive-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/trials/m0-tanh-refine/exhaustive-sigmoid.stdout": "38274b64c8b908737c057d05c2d6e104d8de4f0292c0b5c3fba12ea8731f6ea7",
+    "eik-work/trials/m0-tanh-refine/fingerprint.json": "954577a72da0cf9d44a64e3e887c68deff975b6f929e23982cf33d0cf41fa35f",
+    "eik-work/trials/m0-tanh-refine/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eik-work/trials/m0-tanh-refine/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "test/scratch/host-sigmoid/bundle/offline-runtime/prepare.py",
+        "test/scratch/host-sigmoid/deps"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "test/scratch/host-sigmoid/bundle/offline-runtime/prepare.py",
+        "test/scratch/host-sigmoid/deps-audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/host-sigmoid/deps",
+        "test/scratch/host-sigmoid/work",
+        "exhaustive",
+        "fingerprint",
+        "fingerprint",
+        "--details"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/host-sigmoid/deps",
+        "test/scratch/host-sigmoid/work",
+        "exhaustive",
+        "exhaustive-sigmoid",
+        "fullcheck",
+        "entry.c",
+        "--function",
+        "sigmoid",
+        "--chunks",
+        "0:4096",
+        "--threads",
+        "2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "test/scratch/host-sigmoid/work/cases/exhaustive/build/593e2420f5363dcb-3fd8738f07e4/check-host",
+        "sigmoid",
+        "test/scratch/host-sigmoid/work/cases/exhaustive/kit/reference/sigmoid.digest",
+        "2",
+        "0",
+        "1",
+        "0",
+        "4096"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "fingerprint": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "sandbox": "none",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "function": "sigmoid",
+  "gaps": [],
+  "measured": {
+    "chunk_hi": 4096,
+    "chunk_lo": 0,
+    "complete": true,
+    "examples": [],
+    "fullcheck_seconds": 476.5,
+    "mismatches": 0,
+    "native_seconds": 476.2,
+    "quick": false,
+    "range_complete": true,
+    "sanitizer_errors": 0,
+    "threads": 2,
+    "words_checked": 4294967296
+  },
+  "pinned_inputs": {
+    "eik-work/offline-runtime/manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+    "eik-work/offline-runtime/prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b",
+    "eik-work/toolkit/dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+    "eik-work/toolkit/files.json": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+    "eik-work/toolkit/kit/reference/sigmoid.digest": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+    "eik-work/toolkit/provision.py": "3ef691e90ae45a1602039ca6838d228ec43b0569c129f59937eea0e90cac5e8f",
+    "eik-work/toolkit/run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf",
+    "eik-work/trials/m0-tanh-refine/entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "eik-work/trials/m0-tanh-refine/packet.json": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c",
+    "entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  },
+  "runtime": "host",
+  "sanitizer_flags": [
+    "-fsanitize=undefined,address",
+    "-fno-sanitize-recover=all"
+  ],
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "status": "pass",
+  "tool_identity": {
+    "cc1_sha256": "5d1679131184e2de4435b426eb264bf13472fe026db8e5c6bc97445814e8e2f4",
+    "checker_sha256": "7899301273715a9b130f7d7b2815df09c73f56f294220fde9e99d4c994d1272a",
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "gcc_sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+    "linked_libraries": {
+      "ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f",
+      "libasan.so.8": "8d5845bdf056b5db4cfb9fff40ad5eeea8f6da05a8ca6f5935a7d1c138ed2558",
+      "libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+      "libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+      "libm.so.6": "5dcc4d25466e29ca390ed6fabb371c69b65dff6fa4e91c34561057a020d6994a",
+      "libstdc++.so.6": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+      "libubsan.so.1": "f4a999fcf8392a200e9d93fb066ddb9e89daab8cd94a62137f4506472240a2e8"
+    },
+    "object_sha256": "1e5f7b609bc89522911fc3924f2c0d215e83b371c26d390fb3980f9546217ba7",
+    "platform": [
+      "Linux",
+      "x86_64"
+    ],
+    "python": "3.12.3",
+    "python_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+    "reference_sha256": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+    "sanitizer_env": {
+      "ASAN_OPTIONS": "exitcode=66:detect_leaks=0:abort_on_error=0:handle_abort=1:symbolize=1",
+      "UBSAN_OPTIONS": "halt_on_error=1:exitcode=67:print_stacktrace=1"
+    }
+  }
+}

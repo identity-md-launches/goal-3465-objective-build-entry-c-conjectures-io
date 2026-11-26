@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "test/scratch/host-sigmoid/work/cases/exhaustive/build/593e2420f5363dcb-3fd8738f07e4/check-host",
+    "sigmoid",
+    "test/scratch/host-sigmoid/work/cases/exhaustive/kit/reference/sigmoid.digest",
+    "2",
+    "0",
+    "1",
+    "0",
+    "4096"
+  ],
+  "checker_sha256": "7899301273715a9b130f7d7b2815df09c73f56f294220fde9e99d4c994d1272a",
+  "exit_code": 0,
+  "reference_sha256": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "1fdd61f44ef79b6bd97d30cc8e675f992ef7a83ff23b1ba61813b360903421d2"
+}

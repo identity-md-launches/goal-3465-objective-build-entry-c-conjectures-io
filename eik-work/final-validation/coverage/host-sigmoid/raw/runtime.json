@@ -1,0 +1,27 @@
+{
+  "cc1_sha256": "5d1679131184e2de4435b426eb264bf13472fe026db8e5c6bc97445814e8e2f4",
+  "checker_sha256": "7899301273715a9b130f7d7b2815df09c73f56f294220fde9e99d4c994d1272a",
+  "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "gcc_sha256": "1b99826121ae6682a634e5efe09bd3e3df58ce58e0b28f849114ab5b89139c26",
+  "linked_libraries": {
+    "ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f",
+    "libasan.so.8": "8d5845bdf056b5db4cfb9fff40ad5eeea8f6da05a8ca6f5935a7d1c138ed2558",
+    "libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+    "libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+    "libm.so.6": "5dcc4d25466e29ca390ed6fabb371c69b65dff6fa4e91c34561057a020d6994a",
+    "libstdc++.so.6": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+    "libubsan.so.1": "f4a999fcf8392a200e9d93fb066ddb9e89daab8cd94a62137f4506472240a2e8"
+  },
+  "object_sha256": "1e5f7b609bc89522911fc3924f2c0d215e83b371c26d390fb3980f9546217ba7",
+  "platform": [
+    "Linux",
+    "x86_64"
+  ],
+  "python": "3.12.3",
+  "python_sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f",
+  "reference_sha256": "a62545e4b3067576aa72b26eca71d60f20f8db9774f58fadb45dd0c5a4d69e95",
+  "sanitizer_env": {
+    "ASAN_OPTIONS": "exitcode=66:detect_leaks=0:abort_on_error=0:handle_abort=1:symbolize=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:exitcode=67:print_stacktrace=1"
+  }
+}

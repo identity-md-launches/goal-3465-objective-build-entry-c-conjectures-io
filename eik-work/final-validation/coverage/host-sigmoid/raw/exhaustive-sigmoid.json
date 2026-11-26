@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "$REPO/test/scratch/host-sigmoid/work/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/entry.c",
+    "--function",
+    "sigmoid",
+    "--chunks",
+    "0:4096",
+    "--threads",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 480.341,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "92412ffe579d985ad25b59a6f207927c914df81dc92b37d315d6552d0341b566"
+}
