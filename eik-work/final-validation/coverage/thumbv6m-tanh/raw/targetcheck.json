@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/thumbv6m-tanh/work/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/entry.c",
+    "--function",
+    "tanh",
+    "--target",
+    "thumbv6m",
+    "--chunks",
+    "0:4096",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 158.731,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2d86626a7bfadb917e9f4ec586576469ed01455c1a4acdc15232cac6e9ab0934"
+}
