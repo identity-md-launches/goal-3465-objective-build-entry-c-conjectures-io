@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-exp-reduction/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/m0-exp-reduction/entry.c",
+    "--function",
+    "sigmoid",
+    "--target",
+    "thumbv7em",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 62.846,
+  "source_sha256": "c33bec89f7767b513aeaa81a54fd1945b3cba077d57d55b9733adad4c9424c88",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "d1400e8516ec08308cf43cf313cde5b7fe1df8a65099ec061d668f9b857afc9b"
+}

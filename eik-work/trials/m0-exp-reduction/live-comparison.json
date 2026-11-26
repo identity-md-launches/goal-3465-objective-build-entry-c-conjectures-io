@@ -1,0 +1,62 @@
+{
+  "boards_endpoint": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards",
+  "boards": {
+    "rv32im": {
+      "promotion_id": 59,
+      "submission_id": 52,
+      "source_http_status": 403,
+      "seeds": {
+        "1874435642": {
+          "candidate_S": 28.52271424241966,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        },
+        "1947282751": {
+          "candidate_S": 28.517414314250885,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        }
+      }
+    },
+    "overall": {
+      "promotion_id": 61,
+      "submission_id": 56,
+      "source_http_status": 403,
+      "seeds": {
+        "1874435642": {
+          "candidate_S": 34.2460624086769,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        },
+        "1947282751": {
+          "candidate_S": 34.16017983509542,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        }
+      }
+    },
+    "thumbv6m": {
+      "promotion_id": 60,
+      "submission_id": 53,
+      "source_http_status": 403,
+      "seeds": {
+        "1874435642": {
+          "candidate_S": 41.11785367027895,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        },
+        "1947282751": {
+          "candidate_S": 40.91948426694916,
+          "champion_S": null,
+          "candidate_over_champion": null,
+          "takeover": null
+        }
+      }
+    }
+  }
+}

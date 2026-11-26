@@ -1,0 +1,18 @@
+--- a/eik-work/baselines/former-50/entry.c
++++ b/eik-work/trials/m0-exp-reduction/entry.c
+@@ -3059,6 +3059,15 @@
+   t_top:
+   if ((t_s < 12u) != 0u)
+   {
++    if (t_s == 10u)
++    {
++      /* Negative binade [2, 4) in magnitude. Row 10 has M = -2^19. */
++      uint32_t t_index = (3476905865u - 2955u * (t_w >> 9)) >> 15;
++      t_P0 = 1317922824u * t_index - (t_w << 19);
++      t_kb = (t_index >> 9) | (t_index << 23);
++      t_tb = (const uint8_t *) &t_eps[0].t_aux;
++      goto t_xn;
++    }
+     t_rp = &t_xrow[t_s];
+     t_xa:
+     {

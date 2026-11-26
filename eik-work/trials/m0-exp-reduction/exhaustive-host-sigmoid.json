@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-exp-reduction/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/trials/m0-exp-reduction/entry.c",
+    "--function",
+    "sigmoid"
+  ],
+  "exit_code": 0,
+  "seconds": 231.625,
+  "source_sha256": "c33bec89f7767b513aeaa81a54fd1945b3cba077d57d55b9733adad4c9424c88",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a243fc6df81b04931437acce19349e133a4a74781214bb50c56f34a03594093a"
+}

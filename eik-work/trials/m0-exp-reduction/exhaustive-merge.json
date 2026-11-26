@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-exp-reduction/runtime/bin/python",
+    "-m",
+    "eik",
+    "merge",
+    "--require-targets",
+    "rv32im,thumbv6m,thumbv7em",
+    "$REPO/test/scratch/m0-exp-reduction/cases/trial/logs/exhaustive-host-exp.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/trial/logs/exhaustive-host-sigmoid.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/trial/logs/exhaustive-host-tanh.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-rv32im-exp.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-rv32im-sigmoid.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-rv32im-tanh.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv6m-exp.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv6m-sigmoid.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv6m-tanh.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv7em-exp.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv7em-sigmoid.stdout",
+    "$REPO/test/scratch/m0-exp-reduction/cases/target/logs/exhaustive-thumbv7em-tanh.stdout"
+  ],
+  "exit_code": 0,
+  "seconds": 0.239,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "ca530dad0cd541e042143a0f2e80f2eac49f1e6c92ce40723ed894d5afbec917"
+}

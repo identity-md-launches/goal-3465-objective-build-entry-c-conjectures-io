@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-exp-reduction/runtime/bin/python",
+    "-m",
+    "eik",
+    "evaluate",
+    "$REPO/eik-work/trials/m0-exp-reduction/entry.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "1874435642"
+  ],
+  "exit_code": 0,
+  "seconds": 510.282,
+  "source_sha256": "c33bec89f7767b513aeaa81a54fd1945b3cba077d57d55b9733adad4c9424c88",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "3e53bf61f80a635e2d33b4067a2162aa723bb0063ac25c0334ee52177f2ed834"
+}

@@ -1,0 +1,67 @@
+{
+    "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+    "publication_hash": "d4e64a8af20a92bdae3f31f3c7caff1703c584ff325c017ffa4c07c94ebb7389",
+    "boards": [
+        {
+            "id": "rv32im",
+            "config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+            "models": {
+                "rv32im": 1.0
+            },
+            "reward_share": 0.25,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+                {
+                    "id": "eik-compare-x86",
+                    "weight": 1.0,
+                    "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+                }
+            ],
+            "current_promotion_id": 59,
+            "paused": false,
+            "pause_reason": null
+        },
+        {
+            "id": "overall",
+            "config_hash": "06897c371a250b616e35121c39975bbd6f2da774175b47033f8d22ff09381bc9",
+            "models": {
+                "rv32im": 0.5,
+                "thumbv6m": 0.5
+            },
+            "reward_share": 0.5,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+                {
+                    "id": "eik-compare-x86",
+                    "weight": 1.0,
+                    "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+                }
+            ],
+            "current_promotion_id": 61,
+            "paused": false,
+            "pause_reason": null
+        },
+        {
+            "id": "thumbv6m",
+            "config_hash": "688d360c2dfaa6c9c8f7e5519b4bc97ebedcbe41e55f38d1e907286079e6dbdf",
+            "models": {
+                "thumbv6m": 1.0
+            },
+            "reward_share": 0.25,
+            "promotion_bar": 0.97,
+            "guard_limit": null,
+            "environments": [
+                {
+                    "id": "eik-compare-x86",
+                    "weight": 1.0,
+                    "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+                }
+            ],
+            "current_promotion_id": 60,
+            "paused": false,
+            "pause_reason": null
+        }
+    ]
+}

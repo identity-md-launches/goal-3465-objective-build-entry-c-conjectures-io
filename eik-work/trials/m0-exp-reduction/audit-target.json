@@ -1,0 +1,283 @@
+{
+  "text_sha256": {
+    "rv32im": [
+      "8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85",
+      "8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85"
+    ],
+    "thumbv6m": [
+      "cffde42e75d9220a4962206e89ac07002e95217432aceb284723f2151f7a88d1",
+      "2251971be6584fd73d9df92366fc67306fe34c92a92f00dd8e3cf0e8b51dff46"
+    ],
+    "thumbv7em": [
+      "e3d1f972e8ce77c519c35239dae8fc55bc99c44b37daf716de721cd7a5dbfecd",
+      "9264ccdfc1be9973b6e3c12b93d0a86dd7cf6bffde50ae48e27f8c74c1bc06c6"
+    ]
+  },
+  "rows": {
+    "1874435642": {
+      "class_split": {
+        "typical": {
+          "row10": {
+            "n": 572,
+            "before": 42.1993006993007,
+            "after": 48.1993006993007
+          },
+          "other": {
+            "n": 1428,
+            "before": 43.219187675070025,
+            "after": 44.90826330532213
+          }
+        },
+        "wide": {
+          "row10": {
+            "n": 11,
+            "before": 41.0,
+            "after": 47.0
+          },
+          "other": {
+            "n": 989,
+            "before": 34.29322548028311,
+            "after": 34.85540950455005
+          }
+        },
+        "hard": {
+          "row10": {
+            "n": 3,
+            "before": 90.0,
+            "after": 96.0
+          },
+          "other": {
+            "n": 297,
+            "before": 56.55892255892256,
+            "after": 57.14141414141414
+          }
+        },
+        "uniform": {
+          "row10": {
+            "n": 2,
+            "before": 41.0,
+            "after": 47.0
+          },
+          "other": {
+            "n": 998,
+            "before": 19.817635270541082,
+            "after": 20.103206412825653
+          }
+        }
+      },
+      "near_midpoints": [
+        {
+          "input": "c01021e4",
+          "distance_ulps": 8.291e-07,
+          "output": "3dd7695c",
+          "before": 90,
+          "after": 96
+        },
+        {
+          "input": "c00ecd7c",
+          "distance_ulps": 2.974e-06,
+          "output": "3ddbef16",
+          "before": 90,
+          "after": 96
+        },
+        {
+          "input": "c0382e72",
+          "distance_ulps": 4.598e-08,
+          "output": "3d666d27",
+          "before": 90,
+          "after": 96
+        }
+      ]
+    },
+    "1947282751": {
+      "class_split": {
+        "typical": {
+          "row10": {
+            "n": 618,
+            "before": 41.63430420711974,
+            "after": 47.63430420711974
+          },
+          "other": {
+            "n": 1382,
+            "before": 43.154848046309695,
+            "after": 44.85455861070912
+          }
+        },
+        "wide": {
+          "row10": {
+            "n": 15,
+            "before": 41.0,
+            "after": 47.0
+          },
+          "other": {
+            "n": 985,
+            "before": 34.20710659898477,
+            "after": 34.72690355329949
+          }
+        },
+        "hard": {
+          "row10": {
+            "n": 1,
+            "before": 90.0,
+            "after": 96.0
+          },
+          "other": {
+            "n": 299,
+            "before": 59.34448160535117,
+            "after": 59.979933110367895
+          }
+        },
+        "uniform": {
+          "row10": {
+            "n": 1,
+            "before": 41.0,
+            "after": 47.0
+          },
+          "other": {
+            "n": 999,
+            "before": 20.126126126126128,
+            "after": 20.4004004004004
+          }
+        }
+      },
+      "near_midpoints": [
+        {
+          "input": "c06b694a",
+          "distance_ulps": 1.303e-06,
+          "output": "3ccefa58",
+          "before": 90,
+          "after": 96
+        },
+        {
+          "input": "c064202a",
+          "distance_ulps": 1.884e-06,
+          "output": "3ce7eef2",
+          "before": 90,
+          "after": 96
+        },
+        {
+          "input": "c06cf9f2",
+          "distance_ulps": 2.419e-06,
+          "output": "3cc9fa53",
+          "before": 90,
+          "after": 96
+        }
+      ]
+    }
+  },
+  "boundaries": {
+    "bfffffff": {
+      "output": "3e0a9556",
+      "before": 41,
+      "after": 43
+    },
+    "c0000000": {
+      "output": "3e0a9555",
+      "before": 41,
+      "after": 47
+    },
+    "c07fffff": {
+      "output": "3c960ab0",
+      "before": 41,
+      "after": 47
+    },
+    "c0800000": {
+      "output": "3c960aae",
+      "before": 41,
+      "after": 43
+    }
+  },
+  "trace_word": "c0000000",
+  "trace_id50": [
+    "000247ec  push    {r4, r5, r7, lr}",
+    "000247ee  add     r7, sp, #8",
+    "000247f0  asrs    r2, r0, #0x17",
+    "000247f2  adds    r2, #0x8a",
+    "000247f4  cmp     r2, #0xb",
+    "000247f6  bls     #0x2486c",
+    "0002486c  lsls    r1, r2, #5",
+    "0002486e  ldr     r2, [pc, #0x284]  [0x00013d28]",
+    "00024870  adds    r5, r2, r1",
+    "00024872  ldm     r5, {r1, r2, r3, r4, r5}",
+    "00024874  muls    r3, r0, r3",
+    "00024876  lsrs    r0, r0, #9",
+    "00024878  muls    r0, r1, r0",
+    "0002487a  adds    r0, r0, r5",
+    "0002487c  lsrs    r1, r0, #0xf",
+    "0002487e  muls    r4, r1, r4",
+    "00024880  rors    r1, r5",
+    "00024882  adds    r0, r4, r3",
+    "00024884  lsrs    r3, r1, #0x13",
+    "00024886  ldr     r2, [r2, r3]",
+    "00024888  lsls    r3, r2, #0xa",
+    "0002488a  lsrs    r3, r3, #0x11",
+    "0002488c  lsrs    r4, r2, #0x16",
+    "0002488e  asrs    r5, r0, #0xa",
+    "00024890  muls    r5, r4, r5",
+    "00024892  asrs    r4, r5, #0x11",
+    "00024894  adds    r3, r4, r3",
+    "00024896  asrs    r4, r0, #0x10",
+    "00024898  muls    r4, r3, r4",
+    "0002489a  asrs    r3, r4, #9",
+    "0002489c  adds    r3, r3, r5",
+    "0002489e  asrs    r3, r3, #9",
+    "000248a0  adds    r2, r3, r2",
+    "000248a2  bpl     #0x24938",
+    "000248a4  uxtb    r3, r2",
+    "000248a6  cmp     r3, #5",
+    "000248a8  bhs     #0x2496e",
+    "0002496e  lsls    r0, r1, #0x17",
+    "00024970  lsrs    r1, r2, #8",
+    "00024972  adds    r0, r1, r0",
+    "00024974  pop     {r4, r5, r7, pc}"
+  ],
+  "trace_candidate": [
+    "000247ec  push    {r4, r5, r7, lr}",
+    "000247ee  add     r7, sp, #8",
+    "000247f0  asrs    r2, r0, #0x17",
+    "000247f2  adds    r2, #0x8a",
+    "000247f4  cmp     r2, #0xb",
+    "000247f6  bls     #0x2486c",
+    "0002486c  cmp     r2, #0xa",
+    "0002486e  bne     #0x24936",
+    "00024870  lsrs    r1, r0, #9",
+    "00024872  ldr     r2, [pc, #0x2ec]  [0xfffff475]",
+    "00024874  muls    r2, r1, r2",
+    "00024876  ldr     r1, [pc, #0x2ec]  [0xcf3d5f89]",
+    "00024878  adds    r1, r2, r1",
+    "0002487a  lsrs    r2, r1, #0xf",
+    "0002487c  movs    r3, #9",
+    "0002487e  mov     r1, r2",
+    "00024880  rors    r1, r3",
+    "00024882  ldr     r3, [pc, #0x2e4]  [0x4e8de808]",
+    "00024884  muls    r3, r2, r3",
+    "00024886  lsls    r0, r0, #0x13",
+    "00024888  subs    r0, r3, r0",
+    "0002488a  ldr     r2, [pc, #0x298]  [0x000104f4]",
+    "0002488c  adds    r2, #0xc",
+    "0002488e  b       #0x2494e",
+    "0002494e  lsrs    r3, r1, #0x13",
+    "00024950  ldr     r2, [r2, r3]",
+    "00024952  lsls    r3, r2, #0xa",
+    "00024954  lsrs    r3, r3, #0x11",
+    "00024956  lsrs    r4, r2, #0x16",
+    "00024958  asrs    r5, r0, #0xa",
+    "0002495a  muls    r5, r4, r5",
+    "0002495c  asrs    r4, r5, #0x11",
+    "0002495e  adds    r3, r4, r3",
+    "00024960  asrs    r4, r0, #0x10",
+    "00024962  muls    r4, r3, r4",
+    "00024964  asrs    r3, r4, #9",
+    "00024966  adds    r3, r3, r5",
+    "00024968  asrs    r3, r3, #9",
+    "0002496a  adds    r2, r3, r2",
+    "0002496c  bmi     #0x249b2",
+    "000249b2  uxtb    r3, r2",
+    "000249b4  cmp     r3, #5",
+    "000249b6  blo     #0x249c0",
+    "000249b8  lsls    r0, r1, #0x17",
+    "000249ba  lsrs    r1, r2, #8",
+    "000249bc  adds    r0, r1, r0",
+    "000249be  pop     {r4, r5, r7, pc}"
+  ]
+}
