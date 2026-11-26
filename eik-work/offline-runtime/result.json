@@ -1,0 +1,402 @@
+{
+  "artifact_sha256": {
+    "README.md": "2f7d2dc59e51bd74082784cca9756f2ad138a1afcbd12a915a29c8b2fffa38f8",
+    "evidence/bootstrap.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/bootstrap.stdout": "d788abbfb43acb29c0b706380516af85a14b1ad806f2e30eefa976ea537ee766",
+    "evidence/check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/check.stdout": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b",
+    "evidence/commands.json": "db487d3eb0941e29bae729a0fd56aeb5e940db47571c23132a27a415bfbbc91d",
+    "evidence/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "evidence/gcc.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/gcc.stdout": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048",
+    "evidence/host.report.json": "ca33a76a6ad1f67781b30d78e5b5296fbe382c6748bfb5330bdb668a1be63e59",
+    "evidence/host.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/host.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/install.log": "e8586bdd954508453312ded0539a8065c6fbc5038d0717e15fa2dd2920ebd0a7",
+    "evidence/isolation.json": "26c56c3fcae2afda25cbf4d8693afd5373a10ff1cac4f9d1ab6060e8aa047bf4",
+    "evidence/kit-logs/check.json": "f623db573890f52e535654496fc8df1a70f308f5f86974ecb23ab7fa762831df",
+    "evidence/kit-logs/check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/check.stdout": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b",
+    "evidence/kit-logs/fingerprint.json": "8ca299eb7a98c0d0bbd193b31967360dad3c97d941728d029c43e8067069ce7a",
+    "evidence/kit-logs/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "evidence/kit-logs/host.json": "44d71c500b5d65e0c00f4a59ec5f54908a8a56466d781562e497cf02e30f3900",
+    "evidence/kit-logs/host.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/host.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/rv32im.json": "4398804356ac2dfc40a0ba96451141a6f1e3716dc2ddde2bed8cf1267b036e06",
+    "evidence/kit-logs/rv32im.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/rv32im.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/setup.json": "87f1d5c3a9d4cbf924b9f9f3cdf3b0538714967b21e11fb9cdeae66615e79b52",
+    "evidence/kit-logs/setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+    "evidence/kit-logs/thumbv6m.json": "561114ee4e18e96a9a64f75132e013a25a15a495fee081c9bea286fe99d8efca",
+    "evidence/kit-logs/thumbv6m.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/thumbv6m.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/thumbv7em.json": "7a7628af00273ec51ddf074d06e9f33379efe5fb1ad3c7362ea629001cd1f0e7",
+    "evidence/kit-logs/thumbv7em.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/kit-logs/thumbv7em.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/network-interfaces.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/network-interfaces.stdout": "dcee31fcbec3e6c05cc28dd7f68c6ce4dd33ec6c92104c80ecac9d1aac3f79c0",
+    "evidence/prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/prepare.stdout": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99",
+    "evidence/python.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/python.stdout": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+    "evidence/reduced-export/commands.json": "b64513d944ec4c9a006b79b37dc8d98309a8219e623ab263ed50e08e0f279bd5",
+    "evidence/reduced-export/gcc.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/reduced-export/gcc.stdout": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048",
+    "evidence/reduced-export/isolation.json": "f30f1639c6d7d7c4f3558a84eaea728ff337e075fe2d3e176efc4f0bfb4bed6c",
+    "evidence/reduced-export/network-interfaces.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/reduced-export/network-interfaces.stdout": "dcee31fcbec3e6c05cc28dd7f68c6ce4dd33ec6c92104c80ecac9d1aac3f79c0",
+    "evidence/reduced-export/prepare.stderr": "0821e4e0b3c3a00f65a2c8239b2c619252b49357b9eb802c0999987c85d176b0",
+    "evidence/reduced-export/prepare.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/reduced-export/python.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/reduced-export/python.stdout": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366",
+    "evidence/rv32im.report.json": "de59e3eda534ed77bb3f133e9c34cb9421f0448bc3e77bb69c1ed2f5e5d2edd4",
+    "evidence/rv32im.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/rv32im.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+    "evidence/thumbv6m.report.json": "6e3c7aece2f661da7dad444acd5c5e4aae7dbd3969f397db6597415c903c0581",
+    "evidence/thumbv6m.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/thumbv6m.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/thumbv7em.report.json": "5ff588e308e8ce50955af8810a3cf9b38a9db4859fa814bc82d90f2e915b1c45",
+    "evidence/thumbv7em.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/thumbv7em.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/upload-rejection.json": "84f5c91d34a5720b5d44a7a1466833b809bb59caa3a265b236b3053a814d6c3c",
+    "manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+    "prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b",
+    "replay.py": "3e8093e8373d3863863a207d83a387f434a115311e628cd37f9e941b0cc8f504",
+    "verify.py": "de4eab4c3fe2a1e42a1cfecad393b58b2e6072e8fb62e8f877758895f890d53c"
+  },
+  "commands": [
+    {
+      "argv": [
+        "cat",
+        "/proc/net/dev"
+      ],
+      "exit_code": 0,
+      "name": "network-interfaces"
+    },
+    {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "name": "python"
+    },
+    {
+      "argv": [
+        "gcc",
+        "--version"
+      ],
+      "exit_code": 0,
+      "name": "gcc"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/offline-runtime/prepare.py",
+        "test/scratch/offline-cold-replay/dependencies"
+      ],
+      "exit_code": 0,
+      "name": "prepare"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "bootstrap",
+        "--offline",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies"
+      ],
+      "exit_code": 0,
+      "name": "bootstrap"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "setup",
+        "setup"
+      ],
+      "exit_code": 0,
+      "name": "setup"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "fingerprint",
+        "fingerprint",
+        "--details"
+      ],
+      "exit_code": 0,
+      "name": "fingerprint"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "check",
+        "check",
+        "entry.c"
+      ],
+      "exit_code": 0,
+      "name": "check"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "host",
+        "fullcheck",
+        "entry.c",
+        "--function",
+        "exp",
+        "--chunks",
+        "1016:1017",
+        "--threads",
+        "1",
+        "--out",
+        "test/scratch/offline-cold-replay/host.json"
+      ],
+      "exit_code": 0,
+      "name": "host"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "rv32im",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "exp",
+        "--chunks",
+        "1016:1017",
+        "--target",
+        "rv32im",
+        "--jobs",
+        "1",
+        "--out",
+        "test/scratch/offline-cold-replay/rv32im.json"
+      ],
+      "exit_code": 0,
+      "name": "rv32im"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "thumbv6m",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "exp",
+        "--chunks",
+        "1016:1017",
+        "--target",
+        "thumbv6m",
+        "--jobs",
+        "1",
+        "--out",
+        "test/scratch/offline-cold-replay/thumbv6m.json"
+      ],
+      "exit_code": 0,
+      "name": "thumbv6m"
+    },
+    {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/offline-cold-replay/dependencies",
+        "test/scratch/offline-cold-replay/work",
+        "smoke",
+        "thumbv7em",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "exp",
+        "--chunks",
+        "1016:1017",
+        "--target",
+        "thumbv7em",
+        "--jobs",
+        "1",
+        "--out",
+        "test/scratch/offline-cold-replay/thumbv7em.json"
+      ],
+      "exit_code": 0,
+      "name": "thumbv7em"
+    }
+  ],
+  "distribution": {
+    "omitted_payload_bytes": 141043620,
+    "omitted_payloads": [
+      "qemu/source/qemu_7.2+dfsg.orig.tar.xz",
+      "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl"
+    ],
+    "retained_payload_bytes": 6020137,
+    "upload_rejection": {
+      "exit_code": 1,
+      "limit_bytes": 8388608,
+      "max_pieces": 12,
+      "name": "bundle_size",
+      "reported_bytes": 143261515
+    }
+  },
+  "gaps": [
+    "Required payload excluded by upload cap: qemu/source/qemu_7.2+dfsg.orig.tar.xz",
+    "Required payload excluded by upload cap: wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "Required payload excluded by upload cap: wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl"
+  ],
+  "measured_facts": {
+    "one_chunk": {
+      "host": {
+        "mismatches": 0,
+        "seconds": 0.2,
+        "verdict": "passed",
+        "words_checked": 1048576
+      },
+      "rv32im": {
+        "mismatches": 0,
+        "seconds": 0.5,
+        "verdict": "passed",
+        "words_checked": 1048576
+      },
+      "thumbv6m": {
+        "mismatches": 0,
+        "seconds": 0.5,
+        "verdict": "passed",
+        "words_checked": 1048576
+      },
+      "thumbv7em": {
+        "mismatches": 0,
+        "seconds": 0.5,
+        "verdict": "passed",
+        "words_checked": 1048576
+      }
+    },
+    "static_check": {
+      "bytes": {
+        "rv32im": 18960,
+        "thumbv6m": 20508,
+        "thumbv7em": 21254
+      },
+      "functions": 42,
+      "stack_bound": {
+        "rv32im": 176,
+        "thumbv6m": 312,
+        "thumbv7em": 280
+      }
+    }
+  },
+  "reduced_export_replay": {
+    "commands": [
+      {
+        "argv": [
+          "cat",
+          "/proc/net/dev"
+        ],
+        "exit_code": 0,
+        "name": "network-interfaces"
+      },
+      {
+        "argv": [
+          "python3",
+          "--version"
+        ],
+        "exit_code": 0,
+        "name": "python"
+      },
+      {
+        "argv": [
+          "gcc",
+          "--version"
+        ],
+        "exit_code": 0,
+        "name": "gcc"
+      },
+      {
+        "argv": [
+          "python3",
+          "eik-work/offline-runtime/prepare.py",
+          "test/scratch/offline-runtime-repair/cold-export/dependencies"
+        ],
+        "exit_code": 1,
+        "name": "prepare"
+      }
+    ],
+    "scratch": "test/scratch/offline-runtime-repair/cold-export"
+  },
+  "schema": 1,
+  "scratch": "test/scratch/offline-cold-replay",
+  "source_identities": {
+    "entry_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "kit_commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "reference_digest_list_sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3"
+  },
+  "status": "incomplete",
+  "tool_identities": {
+    "fingerprint": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "host_and_target": {
+      "clang": "clang version 22.1.8",
+      "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "machine": "x86_64",
+      "packages": {
+        "capstone": "5.0.9",
+        "pyelftools": "0.33",
+        "unicorn": "2.1.4",
+        "ziglang": "0.17.1"
+      },
+      "python": "3.12.3",
+      "zig": "0.17.1"
+    },
+    "qemu": {
+      "qemu-arm": {
+        "package_member": "usr/bin/qemu-arm-static",
+        "path": "qemu/bin/qemu-arm",
+        "sha256": "4707fc8fee4660dba6d150d930152d995f2aa784e3b52b4deb8be282533d1f87",
+        "version": "qemu-arm version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)"
+      },
+      "qemu-riscv32": {
+        "package_member": "usr/bin/qemu-riscv32-static",
+        "path": "qemu/bin/qemu-riscv32",
+        "sha256": "8d4bbe04ffc6ca304ba047a3b9539f85ba803113c4671e20cd32f0d5ccf21e76",
+        "version": "qemu-riscv32 version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)"
+      }
+    }
+  }
+}

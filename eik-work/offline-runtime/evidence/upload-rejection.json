@@ -1,0 +1,7 @@
+{
+  "name": "bundle_size",
+  "exit_code": 1,
+  "reported_bytes": 143261515,
+  "limit_bytes": 8388608,
+  "max_pieces": 12
+}

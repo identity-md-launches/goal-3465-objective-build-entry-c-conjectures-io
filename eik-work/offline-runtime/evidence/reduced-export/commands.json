@@ -1,0 +1,35 @@
+[
+  {
+    "argv": [
+      "cat",
+      "/proc/net/dev"
+    ],
+    "exit_code": 0,
+    "name": "network-interfaces"
+  },
+  {
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "exit_code": 0,
+    "name": "python"
+  },
+  {
+    "argv": [
+      "gcc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "name": "gcc"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/offline-runtime/prepare.py",
+      "test/scratch/offline-runtime-repair/cold-export/dependencies"
+    ],
+    "exit_code": 1,
+    "name": "prepare"
+  }
+]

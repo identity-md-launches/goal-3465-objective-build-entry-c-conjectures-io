@@ -1,0 +1,10 @@
+{
+  "child_net": "net:[4026532467]",
+  "interfaces": [
+    "lo"
+  ],
+  "machine": "x86_64",
+  "new_scratch": true,
+  "parent_net": "net:[4026532526]",
+  "system": "Linux"
+}

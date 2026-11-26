@@ -1,0 +1,189 @@
+[
+  {
+    "argv": [
+      "cat",
+      "/proc/net/dev"
+    ],
+    "exit_code": 0,
+    "name": "network-interfaces"
+  },
+  {
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "exit_code": 0,
+    "name": "python"
+  },
+  {
+    "argv": [
+      "gcc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "name": "gcc"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/offline-runtime/prepare.py",
+      "test/scratch/offline-cold-replay/dependencies"
+    ],
+    "exit_code": 0,
+    "name": "prepare"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "bootstrap",
+      "--offline",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies"
+    ],
+    "exit_code": 0,
+    "name": "bootstrap"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "setup",
+      "setup"
+    ],
+    "exit_code": 0,
+    "name": "setup"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "fingerprint",
+      "fingerprint",
+      "--details"
+    ],
+    "exit_code": 0,
+    "name": "fingerprint"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "check",
+      "check",
+      "entry.c"
+    ],
+    "exit_code": 0,
+    "name": "check"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "host",
+      "fullcheck",
+      "entry.c",
+      "--function",
+      "exp",
+      "--chunks",
+      "1016:1017",
+      "--threads",
+      "1",
+      "--out",
+      "test/scratch/offline-cold-replay/host.json"
+    ],
+    "exit_code": 0,
+    "name": "host"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "rv32im",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "exp",
+      "--chunks",
+      "1016:1017",
+      "--target",
+      "rv32im",
+      "--jobs",
+      "1",
+      "--out",
+      "test/scratch/offline-cold-replay/rv32im.json"
+    ],
+    "exit_code": 0,
+    "name": "rv32im"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "thumbv6m",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "exp",
+      "--chunks",
+      "1016:1017",
+      "--target",
+      "thumbv6m",
+      "--jobs",
+      "1",
+      "--out",
+      "test/scratch/offline-cold-replay/thumbv6m.json"
+    ],
+    "exit_code": 0,
+    "name": "thumbv6m"
+  },
+  {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/offline-cold-replay/dependencies",
+      "test/scratch/offline-cold-replay/work",
+      "smoke",
+      "thumbv7em",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "exp",
+      "--chunks",
+      "1016:1017",
+      "--target",
+      "thumbv7em",
+      "--jobs",
+      "1",
+      "--out",
+      "test/scratch/offline-cold-replay/thumbv7em.json"
+    ],
+    "exit_code": 0,
+    "name": "thumbv7em"
+  }
+]
