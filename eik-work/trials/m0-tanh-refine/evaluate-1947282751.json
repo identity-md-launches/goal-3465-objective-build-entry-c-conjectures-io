@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-tanh-refine/runtime/bin/python",
+    "-m",
+    "eik",
+    "evaluate",
+    "$REPO/eik-work/trials/m0-tanh-refine/entry.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "1947282751"
+  ],
+  "exit_code": 0,
+  "seconds": 121.025,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2dbd3f278dabd358d9abab2ef9a28cc9c3d2a403c385c28f502fc97ae61956d6"
+}

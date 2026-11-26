@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-tanh-refine/runtime/bin/python",
+    "-m",
+    "eik",
+    "merge",
+    "--require-targets",
+    "rv32im,thumbv6m,thumbv7em",
+    "$REPO/test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-sigmoid.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-tanh.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-exp.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-sigmoid-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-tanh-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-exp-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/thumbv6m-complete/logs/targetcheck-thumbv6m-sigmoid-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/thumbv6m-complete/logs/targetcheck-thumbv6m-exp-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/thumbv7em-complete/logs/targetcheck-thumbv7em-sigmoid-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/thumbv7em-complete/logs/targetcheck-thumbv7em-exp-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/target/logs/targetcheck-thumbv6m-all.stdout",
+    "$REPO/test/scratch/m0-tanh-refine/cases/target-m4/logs/targetcheck-thumbv7em-all.stdout"
+  ],
+  "exit_code": 0,
+  "seconds": 0.405,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+}

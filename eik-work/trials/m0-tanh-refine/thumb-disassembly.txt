@@ -1,0 +1,103 @@
+test/scratch/m0-tanh-refine/cases/object-base/build/88617bb49e36a06c-3fd8738f07e4/guest-thumbv6m.elf sha256=190bc11d30d5bc378e0cdf2787efd2720178a40755972ac2243441a8264fc8c8
+000245aa  5ad1        bne       #0x24662
+000245ac  4102        lsls      r1, r0, #9
+000245ae  490c        lsrs      r1, r1, #0x11
+000245b0  7ad0        beq       #0x246a8
+000245b2  010a        lsrs      r1, r0, #8
+000245b4  89b2        uxth      r1, r1
+000245b6  0a46        mov       r2, r1
+000245b8  4a43        muls      r2, r1, r2
+000245ba  120c        lsrs      r2, r2, #0x10
+000245bc  834b        ldr       r3, [pc, #0x20c]
+000245be  5343        muls      r3, r2, r3
+000245c0  1a0c        lsrs      r2, r3, #0x10
+000245c2  4a43        muls      r2, r1, r2
+000245c4  8249        ldr       r1, [pc, #0x208]
+000245c6  5118        adds      r1, r2, r1
+000245c8  4a02        lsls      r2, r1, #9
+000245ca  d20e        lsrs      r2, r2, #0x1b
+000245cc  00d1        bne       #0x245d0
+000245ce  8fe0        b         #0x246f0
+000245d0  c90d        lsrs      r1, r1, #0x17
+000245d2  401a        subs      r0, r0, r1
+000245d4  b0bd        pop       {r4, r5, r7, pc}
+000246f0  490a        lsrs      r1, r1, #9
+000246f2  890b        lsrs      r1, r1, #0xe
+000246f4  441a        subs      r4, r0, r1
+000246f6  a20d        lsrs      r2, r4, #0x16
+000246f8  1e23        movs      r3, #0x1e
+000246fa  9343        bics      r3, r2
+000246fc  0f22        movs      r2, #0xf
+000246fe  5203        lsls      r2, r2, #0xd
+00024700  8900        lsls      r1, r1, #2
+00024702  8d1e        subs      r5, r1, #2
+00024704  6a43        muls      r2, r5, r2
+00024706  9a40        lsls      r2, r3
+00024708  0321        movs      r1, #3
+0002470a  6943        muls      r1, r5, r1
+0002470c  00f084fc    bl        #0x25018
+00024710  2018        adds      r0, r4, r0
+00024712  b0bd        pop       {r4, r5, r7, pc}
+test/scratch/m0-tanh-refine/cases/trial/build/593e2420f5363dcb-3fd8738f07e4/guest-thumbv6m.elf sha256=c5c3659c6ec4321559515067ffb73978a70745004a907f74d27199fe9f36b961
+000245aa  5bd1        bne       #0x24664
+000245ac  4102        lsls      r1, r0, #9
+000245ae  490c        lsrs      r1, r1, #0x11
+000245b0  7bd0        beq       #0x246aa
+000245b2  010a        lsrs      r1, r0, #8
+000245b4  89b2        uxth      r1, r1
+000245b6  0a46        mov       r2, r1
+000245b8  4a43        muls      r2, r1, r2
+000245ba  120c        lsrs      r2, r2, #0x10
+000245bc  834b        ldr       r3, [pc, #0x20c]
+000245be  5343        muls      r3, r2, r3
+000245c0  1a0c        lsrs      r2, r3, #0x10
+000245c2  4a43        muls      r2, r1, r2
+000245c4  8249        ldr       r1, [pc, #0x208]
+000245c6  5118        adds      r1, r2, r1
+000245c8  824a        ldr       r2, [pc, #0x208]
+000245ca  0a40        ands      r2, r1
+000245cc  824b        ldr       r3, [pc, #0x208]
+000245ce  9a42        cmp       r2, r3
+000245d0  7ed3        blo       #0x246d0
+000245d2  c90d        lsrs      r1, r1, #0x17
+000245d4  401a        subs      r0, r0, r1
+000245d6  b0bd        pop       {r4, r5, r7, pc}
+000246ce  b0bd        pop       {r4, r5, r7, pc}
+000246d0  490a        lsrs      r1, r1, #9
+000246d2  890b        lsrs      r1, r1, #0xe
+000246d4  441a        subs      r4, r0, r1
+000246d6  a20d        lsrs      r2, r4, #0x16
+000246d8  1e23        movs      r3, #0x1e
+000246da  9343        bics      r3, r2
+000246dc  0f22        movs      r2, #0xf
+000246de  5203        lsls      r2, r2, #0xd
+000246e0  8900        lsls      r1, r1, #2
+000246e2  8d1e        subs      r5, r1, #2
+000246e4  6a43        muls      r2, r5, r2
+000246e6  9a40        lsls      r2, r3
+000246e8  0321        movs      r1, #3
+000246ea  6943        muls      r1, r5, r1
+000246ec  00f098fc    bl        #0x25020
+000246f0  2018        adds      r0, r4, r0
+000246f2  b0bd        pop       {r4, r5, r7, pc}
+000246f4  511a        subs      r1, r2, r1
+rv32im object-base
+.rodata 13476 bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4
+.text 7380 8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85
+rv32im trial
+.rodata 13476 bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4
+.text 7380 8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85
+thumbv6m object-base
+.rodata 15760 189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4
+.text 5056 cffde42e75d9220a4962206e89ac07002e95217432aceb284723f2151f7a88d1
+thumbv6m trial
+.rodata 15760 189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4
+.text 5064 01d706cdcbb125e98f9dc709b91588f88e50533558a2af8fa4ee70e608751766
+literal @ 0x247d4: 0x007fe000
+literal @ 0x247d8: 0x0003c001
+thumbv7em object-base
+.rodata 15760 189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4
+.text 5928 e3d1f972e8ce77c519c35239dae8fc55bc99c44b37daf716de721cd7a5dbfecd
+thumbv7em trial
+.rodata 15760 189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4
+.text 5928 29cf36d7b5200d241597c9270675f91b68fe0e59650a54f58cecdacfb832c397

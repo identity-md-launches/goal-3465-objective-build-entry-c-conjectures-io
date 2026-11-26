@@ -1,0 +1,18 @@
+before exponent             input=0x3b7fffff r=  None result=0x3b7fffaa instructions=27->27
+before exponent             input=0xbb7fffff r=  None result=0xbb7fffaa instructions=27->27
+first cell first            input=0x3b800000 r=  None result=0x3b7fffab instructions=25->25
+first cell first            input=0xbb800000 r=  None result=0xbb7fffab instructions=25->25
+first cell last             input=0x3b8000ff r=  None result=0x3b8000d4 instructions=20->20
+first cell last             input=0xbb8000ff r=  None result=0xbb8000d4 instructions=20->20
+first guard                 input=0x3b800100 r=  None result=0x3b8000d5 instructions=32->34
+first guard                 input=0xbb800100 r=  None result=0xbb8000d5 instructions=32->34
+last guard                  input=0x3bffffff r=  None result=0x3bfffeaa instructions=32->34
+last guard                  input=0xbbffffff r=  None result=0xbbfffeaa instructions=32->34
+after exponent              input=0x3c000000 r=  None result=0x3bfffeab instructions=102->102
+after exponent              input=0xbc000000 r=  None result=0xbbfffeab instructions=102->102
+new fast                    input=0x3b859800 r=254608 result=0x3b8597cf instructions=75->34
+new fast                    input=0xbb859800 r=254608 result=0xbb8597cf instructions=75->34
+midpoint distance [0, 1]    input=0x3bc11b0b r=148854 result=0x3bc11a78 instructions=75->76
+midpoint distance [0, 1]    input=0xbbc11b0b r=148854 result=0xbbc11a78 instructions=75->76
+midpoint distance [-1, 0]   input=0x3bc8b605 r=162290 result=0x3bc8b561 instructions=75->76
+midpoint distance [-1, 0]   input=0xbbc8b605 r=162290 result=0xbbc8b561 instructions=75->76

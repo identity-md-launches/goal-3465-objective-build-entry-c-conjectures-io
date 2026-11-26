@@ -1,0 +1,47 @@
+{
+  "rv32im": {
+    "promotion": 59,
+    "submission": 52,
+    "source_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source",
+    "http_status": 403,
+    "response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "trial_champion_ratio": null
+  },
+  "thumbv6m": {
+    "promotion": 60,
+    "submission": 53,
+    "source_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source",
+    "http_status": 403,
+    "response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "trial_champion_ratio": null
+  },
+  "overall": {
+    "promotion": 61,
+    "submission": 56,
+    "source_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source",
+    "http_status": 403,
+    "response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "trial_champion_ratio": null
+  }
+}
