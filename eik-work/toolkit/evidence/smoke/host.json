@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/run/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/toolkit/kit/template/entry.c",
+    "--function",
+    "exp",
+    "--chunks",
+    "1016:1017",
+    "--threads",
+    "1"
+  ],
+  "exit_code": 0,
+  "seconds": 41.633
+}

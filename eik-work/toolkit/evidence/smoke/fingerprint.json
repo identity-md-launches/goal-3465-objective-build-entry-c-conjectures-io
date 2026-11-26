@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/run/runtime/bin/python",
+    "-m",
+    "eik",
+    "fingerprint",
+    "--details"
+  ],
+  "exit_code": 0,
+  "seconds": 0.843
+}

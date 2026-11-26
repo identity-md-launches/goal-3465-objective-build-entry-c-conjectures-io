@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "python3",
+    "eik-work/toolkit/run.py",
+    "test/scratch/eik/run",
+    "smoke",
+    "evaluate-180434352",
+    "evaluate",
+    "eik-work/toolkit/sources/id50.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "180434352"
+  ],
+  "exit_code": 130,
+  "reason": "Supplementary smoke ended after required setup checks passed. The evaluator had emitted no report.",
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "status": "interrupted",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

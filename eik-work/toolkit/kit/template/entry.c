@@ -1,0 +1,507 @@
+/* TEMPLATE ENTRY: start here.
+ *
+ * An entry is one C file that defines eik_sigmoid, eik_tanh and eik_exp (RULES.md). This one is
+ * correct on every input as it stands: each function first tries a fast path, and falls back to the
+ * incumbent (exact-c's slow but correctly rounded implementation, at the bottom of this file, generated
+ * from examples/incumbent.c) for every input the fast path does not settle. The fast paths below
+ * settle nothing yet, so as it stands this file is exactly as slow as the incumbent.
+ *
+ * To score better, settle more inputs in the fast paths, in fewer instructions:
+ *   - A fast path returns true with the correctly rounded result in *out, or false to decline. It must
+ *     never guess: one wrong output on any of the 2^32 inputs rejects the entry.
+ *   - The usual method: compute the result with a known error bound, round both ends of the interval
+ *     to binary32, and accept only when they agree. Where they do not, the input is close to a
+ *     rounding boundary: decline, or use a more precise path.
+ *   - Some ranges need no arithmetic at all: for small enough |x|, a Taylor bound shows the correctly
+ *     rounded result is a constant, or x itself.
+ *   - The score weighs typical inputs (50%), a wide spread of magnitudes (30%) and near-midpoint hard
+ *     inputs (20%). See RULES.md, "Score".
+ *   - Special values (NaN, infinities, zeros) are handled by the fallback, so a fast path may decline
+ *     them. The fallback costs ~100-200k instructions per call: inputs that reach it are expensive.
+ *   - Test a fast path on every input it covers: python -m eik fullcheck entry.c --function F
+ *     --chunks LO:HI, where the chunk of an input word is word >> 20.
+ */
+
+/* ---- your fast paths ---- */
+
+/* Each returns true with the correctly rounded result in *out, or false to let the incumbent
+ * compute it. */
+
+static bool fast_sigmoid(uint32_t x, uint32_t *out)
+{
+    (void)x;
+    (void)out;
+    return false;
+}
+
+static bool fast_tanh(uint32_t x, uint32_t *out)
+{
+    (void)x;
+    (void)out;
+    return false;
+}
+
+static bool fast_exp(uint32_t x, uint32_t *out)
+{
+    (void)x;
+    (void)out;
+    return false;
+}
+
+/* ---- entry points ---- */
+
+static uint32_t slow_sigmoid(uint32_t w);
+static uint32_t slow_tanh(uint32_t w);
+static uint32_t slow_exp(uint32_t w);
+
+uint32_t eik_sigmoid(uint32_t x)
+{
+    uint32_t r;
+    return fast_sigmoid(x, &r) ? r : slow_sigmoid(x);
+}
+
+uint32_t eik_tanh(uint32_t x)
+{
+    uint32_t r;
+    return fast_tanh(x, &r) ? r : slow_tanh(x);
+}
+
+uint32_t eik_exp(uint32_t x)
+{
+    uint32_t r;
+    return fast_exp(x, &r) ? r : slow_exp(x);
+}
+
+/* ---- fallback: the incumbent (exact-c), unchanged except that its entry points are renamed ---- */
+
+typedef uint32_t er_word;
+/* Shared by the library's source files; not part of the API. */
+
+
+#define ER_SIGN 0x80000000u
+#define ER_EXP 0x7F800000u
+#define ER_FRAC 0x007FFFFFu
+#define ER_QUIET 0x00400000u
+#define ER_CANONICAL_NAN 0x7FC00000u
+#define ER_ONE 0x3F800000u
+
+static inline int er_is_nan(er_word w) { return (w & ER_EXP) == ER_EXP && (w & ER_FRAC) != 0; }
+static inline int er_is_inf(er_word w) { return (w & ~ER_SIGN) == ER_EXP; }
+static inline int er_is_zero(er_word w) { return (w & ~ER_SIGN) == 0; }
+
+/* Rounds `m · 2^e` to binary32, nearest-even; `sticky` says nonzero bits lie below `m`'s bit 0.
+ * `m` must be nonzero. Handles subnormal results and overflow to infinity. */
+static er_word er_pack(er_word sign, uint64_t m, int e, int sticky);
+
+/* Correctly rounded tanh (`fn` 0), sigmoid (1) or exp (2) of `w`. `*level` is the index of the
+ * precision that settled it, -1 if none was needed (special values and saturated inputs), and
+ * past the last precision if none settled (the tests show none does). */
+static er_word er_activation(int fn, er_word w, int *level);
+
+
+static er_word er_pack(er_word sign, uint64_t m, int e, int sticky)
+{
+    int t = 63;
+    while (!(m >> t & 1))
+        t--;
+    /* Drop `s` bits: keep 24 significant bits, or down to 2^-149 for subnormal results. */
+    int s = t - 23 > -149 - e ? t - 23 : -149 - e;
+    uint64_t q;
+    if (s <= 0) {
+        q = m << -s; /* exact */
+    } else {
+        uint64_t half = s <= 64 ? m >> (s - 1) & 1 : 0;
+        int below = sticky || (s > 1 && (s > 64 || (m & ((UINT64_C(1) << (s - 1)) - 1))));
+        q = s < 64 ? m >> s : 0;
+        if (half && (below || (q & 1)))
+            q++;
+    }
+    e += s;
+    if (q == 0x1000000u) {
+        q >>= 1;
+        e++;
+    }
+    if (q < 0x800000u) /* subnormal (e is -149), or zero after rounding */
+        return sign | (er_word)q;
+    int biased = e + 150;
+    if (biased >= 255)
+        return sign | ER_EXP;
+    return sign | (er_word)biased << 23 | ((er_word)q & ER_FRAC);
+}
+
+/* Correctly rounded sigmoid, tanh and exp (`sigmoidCR`, `tanhCR` in `ExactToolkit/Activation.lean`,
+ * `expW` in `ContractExact.lean`, which is FloatLib's `CorrectlyRounded.exp`): the binary32 value
+ * nearest to the real `1 / (1 + e^-x)`, `tanh x` or `e^x`, ties to even, for every finite input.
+ * Special values: a NaN is quieted (sign and payload kept); tanh(±∞) = ±1, tanh(±0) = ±0;
+ * σ(+∞) = 1, σ(−∞) = +0, σ(±0) = 1/2; exp(+∞) = +∞, exp(−∞) = +0, exp(±0) = 1, and a finite
+ * input whose rounded result would exceed the largest binary32 value gives +∞.
+ *
+ * Any correctly rounded method gives the specification's bits, so this one need not follow
+ * FloatLib's steps, only its strategy (Ziv's): compute an interval that surely holds the real value;
+ * if both ends round to the same binary32 value, that is the real value's rounding (rounding is
+ * monotonic); otherwise retry at a higher precision. For a nonzero binary32 input the real value
+ * is transcendental, so it is never a rounding boundary and some precision settles it.
+ *
+ * The interval comes from arithmetic on positive big binary floating-point numbers (`bf`: an
+ * n-limb significand and an exponent) in which every operation rounds down for the lower end and
+ * up for the upper end, so the only error to bound by hand is the tail of one series:
+ *
+ *   M = e^y − 1, y > 0:  the series Σ_{k≥1} r^k / k! at r = y / 2^s ≤ 1/2 (positive terms, each at
+ *                        most a quarter of the one before, so the tail after a term is below it),
+ *                        then s doublings M ← M·(M + 2), because e^(2r) − 1 = M·(M + 2)
+ *   tanh a = M / (M + 2)          with y = 2a, a = |x| ≤ 16   (increasing in M)
+ *   σ x    = (1 + M) / (2 + M)    with y = x, 0 < x ≤ 32      (increasing in M)
+ *   σ x    = 1 / (2 + M)          with y = −x, −128 ≤ x < 0   (decreasing in M)
+ *   e^x    = 1 + M                with y = x, 0 < x < 89      (increasing in M)
+ *   e^x    = 1 / (1 + M)          with y = −x, −104 < x < 0   (decreasing in M)
+ *
+ * No subtraction occurs, so tiny inputs keep their relative precision (tanh a ≈ a, σ x ≈ e^x).
+ * Outside those ranges the result is fixed: |tanh a| > 1 − 2e^-32 rounds to ±1, σ x > 1 − e^-32
+ * rounds to 1, σ x < e^-128 < 2^-150 rounds to +0, e^x ≥ e^89 > 2^128 rounds to +∞, and
+ * e^x ≤ e^-104 < 2^-150 rounds to +0. Inside the ranges, er_pack's rounding gives the overflow to
+ * +∞, the subnormal results and the underflow to +0. Precisions run from 64 to 1088 bits;
+ * tests/act_check.c checks every binary32 input settles and how far it goes. */
+
+
+#define BF_LIMBS 34 /* limbs at the highest precision */
+
+/* A positive number `m · 2^e`, `m` an n-limb integer (least significant limb first) with its top
+ * bit set. Only the first n limbs are used. */
+typedef struct {
+    int32_t e;
+    uint32_t m[BF_LIMBS];
+} bf;
+
+/* z = v · 2^e for v > 0, exactly (n ≥ 2). */
+static void bf_set(bf *z, int n, uint64_t v, int32_t e)
+{
+    int t = 63;
+    while (!(v >> t & 1))
+        t--;
+    v <<= 63 - t;
+    memset(z->m, 0, sizeof z->m);
+    z->m[n - 1] = (uint32_t)(v >> 32);
+    z->m[n - 2] = (uint32_t)v;
+    z->e = e - (63 - t) - 32 * (n - 2);
+}
+
+/* z += one unit in the last place. */
+static void bf_up(bf *z, int n)
+{
+    for (int i = 0; i < n; i++)
+        if (++z->m[i] != 0)
+            return;
+    z->m[n - 1] = 0x80000000u; /* the significand was all ones: now 2^(32n) */
+    z->e++;
+}
+
+/* Shifts the `len`-limb integer `a` left by one bit. */
+static void shl1(uint32_t *a, int len)
+{
+    for (int i = len - 1; i > 0; i--)
+        a[i] = a[i] << 1 | a[i - 1] >> 31;
+    a[0] <<= 1;
+}
+
+/* z = a · b, rounded down, or up if `up`. z may be a or b. */
+static void bf_mul(bf *z, const bf *a, const bf *b, int n, int up)
+{
+    uint32_t p[2 * BF_LIMBS];
+    memset(p, 0, sizeof p);
+    for (int i = 0; i < n; i++) {
+        uint64_t carry = 0;
+        for (int j = 0; j < n; j++) {
+            uint64_t t = (uint64_t)a->m[i] * b->m[j] + p[i + j] + carry;
+            p[i + j] = (uint32_t)t;
+            carry = t >> 32;
+        }
+        p[i + n] = (uint32_t)carry;
+    }
+    int32_t e = a->e + b->e + 32 * n;
+    if (!(p[2 * n - 1] >> 31)) { /* the product of two n-limb normals has 64n or 64n − 1 bits */
+        shl1(p, 2 * n);
+        e--;
+    }
+    int sticky = 0;
+    for (int i = 0; i < n; i++)
+        sticky |= p[i] != 0;
+    memcpy(z->m, p + n, (size_t)n * sizeof *p);
+    z->e = e;
+    if (up && sticky)
+        bf_up(z, n);
+}
+
+/* z = a + b, rounded down, or up if `up`. z may be a or b. */
+static void bf_add(bf *z, const bf *a, const bf *b, int n, int up)
+{
+    if (a->e < b->e) {
+        const bf *t = a;
+        a = b;
+        b = t;
+    }
+    /* b's significand shifted right to a's exponent, and whether bits fell off. */
+    uint32_t s[BF_LIMBS];
+    int sticky = 0;
+    int64_t d = (int64_t)a->e - b->e;
+    if (d >= 32 * (int64_t)n) {
+        memset(s, 0, sizeof s);
+        sticky = 1;
+    } else {
+        int q = (int)(d / 32), r = (int)(d % 32);
+        for (int i = 0; i < n; i++) {
+            uint32_t lo = i + q < n ? b->m[i + q] : 0, hi = i + q + 1 < n ? b->m[i + q + 1] : 0;
+            s[i] = r ? lo >> r | hi << (32 - r) : lo;
+        }
+        for (int i = 0; i < q; i++)
+            sticky |= b->m[i] != 0;
+        if (r)
+            sticky |= (b->m[q] & ((1u << r) - 1)) != 0;
+    }
+    uint32_t out[BF_LIMBS];
+    uint64_t carry = 0;
+    for (int i = 0; i < n; i++) {
+        uint64_t t = (uint64_t)a->m[i] + s[i] + carry;
+        out[i] = (uint32_t)t;
+        carry = t >> 32;
+    }
+    int32_t e = a->e;
+    if (carry) {
+        sticky |= (out[0] & 1) != 0;
+        for (int i = 0; i < n - 1; i++)
+            out[i] = out[i] >> 1 | out[i + 1] << 31;
+        out[n - 1] = out[n - 1] >> 1 | 0x80000000u;
+        e++;
+    }
+    memcpy(z->m, out, (size_t)n * sizeof *out);
+    z->e = e;
+    if (up && sticky)
+        bf_up(z, n);
+}
+
+/* z = a / k for 2 ≤ k < 2^31, rounded down, or up if `up`. z may be a. */
+static void bf_div_small(bf *z, const bf *a, uint32_t k, int n, int up)
+{
+    /* q = floor(a.m · 2^32 / k), n + 1 limbs; a.m ≥ 2^(32n − 1) and k < 2^31 put its top bit at
+     * 32n or above, so q[n] ≠ 0. */
+    uint32_t q[BF_LIMBS + 1];
+    uint64_t rem = 0;
+    for (int i = n; i >= 0; i--) {
+        uint64_t cur = rem << 32 | (i > 0 ? a->m[i - 1] : 0);
+        q[i] = (uint32_t)(cur / k);
+        rem = cur % k;
+    }
+    int shift = 0; /* left shift that puts q's top bit at bit 32(n + 1) − 1 */
+    while (!(q[n] >> 31)) {
+        shl1(q, n + 1);
+        shift++;
+    }
+    memcpy(z->m, q + 1, (size_t)n * sizeof *q);
+    z->e = a->e - shift;
+    if (up && (q[0] != 0 || rem != 0))
+        bf_up(z, n);
+}
+
+/* z = a / b, rounded down, or up if `up`, by binary long division. z may be a or b. */
+static void bf_div(bf *z, const bf *a, const bf *b, int n, int up)
+{
+    uint32_t r[BF_LIMBS + 1], q[BF_LIMBS + 1];
+    memcpy(r, a->m, (size_t)n * sizeof *r);
+    r[n] = 0;
+    memset(q, 0, sizeof q);
+    /* r < 2·b.m throughout; the quotient bits weigh 2^0 down to 2^-32n. */
+    for (int i = 0; i <= 32 * n; i++) {
+        shl1(q, n + 1);
+        int ge = r[n] != 0;
+        if (!ge) {
+            ge = 1;
+            for (int j = n - 1; j >= 0; j--)
+                if (r[j] != b->m[j]) {
+                    ge = r[j] > b->m[j];
+                    break;
+                }
+        }
+        if (ge) {
+            uint64_t borrow = 0;
+            for (int j = 0; j <= n; j++) {
+                uint64_t d = (uint64_t)r[j] - (j < n ? b->m[j] : 0) - borrow;
+                r[j] = (uint32_t)d;
+                borrow = (d >> 32) & 1;
+            }
+            q[0] |= 1;
+        }
+        shl1(r, n + 1);
+    }
+    int sticky = 0;
+    for (int j = 0; j <= n; j++)
+        sticky |= r[j] != 0;
+    int32_t e = a->e - b->e - 32 * n;
+    if (q[n] & 1) { /* 32n + 1 quotient bits */
+        sticky |= (q[0] & 1) != 0;
+        for (int i = 0; i < n; i++)
+            q[i] = q[i] >> 1 | q[i + 1] << 31;
+        e++;
+    }
+    for (int i = 0; i < n; i++)
+        z->m[i] = q[i];
+    z->e = e;
+    if (up && sticky)
+        bf_up(z, n);
+}
+
+/* The binary32 rounding (nearest-even) of a positive bf. */
+static er_word bf_round(const bf *a, int n)
+{
+    uint64_t top = (uint64_t)a->m[n - 1] << 32 | a->m[n - 2];
+    int sticky = 0;
+    for (int i = 0; i < n - 2; i++)
+        sticky |= a->m[i] != 0;
+    return er_pack(0, top, a->e + 32 * (n - 2), sticky);
+}
+
+/* [lo, hi] holds e^y − 1 for y = |w| · 2^shift, w finite and nonzero. */
+static void expm1_enclose(bf *lo, bf *hi, er_word w, int shift, int n)
+{
+    uint32_t k = (w & ER_EXP) >> 23;
+    uint64_t m = (w & ER_FRAC) | (k ? 0x800000u : 0);
+    int32_t e = (int32_t)(k ? k : 1) - 150 + shift; /* y = m · 2^e */
+    int t = 23;
+    while (!(m >> t & 1))
+        t--;
+    int s = e + t + 2 > 0 ? e + t + 2 : 0; /* y < 2^(e + t + 1), so y / 2^s ≤ 1/2 */
+    bf r, tl, th, two;
+    bf_set(&r, n, m, e - s);
+    tl = r;
+    th = r;
+    *lo = r;
+    *hi = r;
+    for (uint32_t j = 2;; j++) { /* term j = term (j − 1) · r / j, rounded each way */
+        bf_mul(&tl, &tl, &r, n, 0);
+        bf_div_small(&tl, &tl, j, n, 0);
+        bf_mul(&th, &th, &r, n, 1);
+        bf_div_small(&th, &th, j, n, 1);
+        bf_add(lo, lo, &tl, n, 0);
+        bf_add(hi, hi, &th, n, 1);
+        if ((int64_t)th.e < (int64_t)lo->e - 32 * n - 4) /* term < sum · 2^(-32n − 3) */
+            break;
+    }
+    bf_add(hi, hi, &th, n, 1); /* the rest of the series is below the last term */
+    bf_set(&two, n, 2, 0);
+    for (int i = 0; i < s; i++) {
+        bf u;
+        bf_add(&u, lo, &two, n, 0);
+        bf_mul(lo, lo, &u, n, 0);
+        bf_add(&u, hi, &two, n, 1);
+        bf_mul(hi, hi, &u, n, 1);
+    }
+}
+
+/* Limbs at each precision tried. */
+static const int levels[] = {2, 4, 8, 16, BF_LIMBS};
+#define LEVELS ((int)(sizeof levels / sizeof levels[0]))
+
+enum { TANH, SIGMOID, EXP }; /* er_activation's `fn` */
+
+/* One try at `n` limbs for a finite nonzero `w` in the evaluated range: 0 and the result in `out`
+ * if the interval's ends round alike, otherwise 1. */
+static int attempt(int fn, er_word w, int n, er_word *out)
+{
+    bf lo, hi, a, b, one, two;
+    bf_set(&one, n, 1, 0);
+    bf_set(&two, n, 2, 0);
+    if (fn == TANH) { /* M / (M + 2), M = e^(2|x|) − 1 */
+        expm1_enclose(&lo, &hi, w, 1, n);
+        bf_add(&a, &lo, &two, n, 1);
+        bf_div(&lo, &lo, &a, n, 0);
+        bf_add(&a, &hi, &two, n, 0);
+        bf_div(&hi, &hi, &a, n, 1);
+    } else if (fn == EXP && !(w & ER_SIGN)) { /* 1 + M, M = e^x − 1 */
+        expm1_enclose(&lo, &hi, w, 0, n);
+        bf_add(&lo, &lo, &one, n, 0);
+        bf_add(&hi, &hi, &one, n, 1);
+    } else if (fn == EXP) { /* 1 / (1 + M), M = e^-x − 1 */
+        expm1_enclose(&lo, &hi, w, 0, n);
+        bf_add(&a, &hi, &one, n, 1);
+        bf_add(&b, &lo, &one, n, 0);
+        bf_div(&lo, &one, &a, n, 0);
+        bf_div(&hi, &one, &b, n, 1);
+    } else if (!(w & ER_SIGN)) { /* (1 + M) / (2 + M), M = e^x − 1 */
+        expm1_enclose(&lo, &hi, w, 0, n);
+        bf_add(&a, &lo, &one, n, 0);
+        bf_add(&b, &lo, &two, n, 1);
+        bf_div(&lo, &a, &b, n, 0);
+        bf_add(&a, &hi, &one, n, 1);
+        bf_add(&b, &hi, &two, n, 0);
+        bf_div(&hi, &a, &b, n, 1);
+    } else { /* 1 / (2 + M), M = e^-x − 1 */
+        expm1_enclose(&lo, &hi, w, 0, n);
+        bf_add(&a, &hi, &two, n, 1);
+        bf_add(&b, &lo, &two, n, 0);
+        bf_div(&lo, &one, &a, n, 0);
+        bf_div(&hi, &one, &b, n, 1);
+    }
+    er_word r = bf_round(&lo, n);
+    *out = r;
+    return r != bf_round(&hi, n);
+}
+
+/* The rounded value for a finite nonzero `w` in the evaluated range, and the index of the
+ * precision that settled it in `*level` (LEVELS if none did; the tests show that never happens,
+ * and the lower end's rounding is returned then). */
+static er_word evaluate(int fn, er_word w, int *level)
+{
+    er_word r = 0;
+    int i = 0;
+    while (i < LEVELS && attempt(fn, w, levels[i], &r))
+        i++;
+    *level = i;
+    return r;
+}
+
+static er_word er_activation(int fn, er_word w, int *level)
+{
+    *level = -1; /* no evaluation */
+    if (er_is_nan(w))
+        return w | ER_QUIET;
+    er_word sign = w & ER_SIGN, mag = w & ~ER_SIGN;
+    if (fn == EXP) {
+        if (mag == 0)
+            return ER_ONE;
+        if (!sign && mag >= 0x42B20000u) /* x ≥ 89, +∞ included */
+            return ER_EXP;
+        if (sign && mag >= 0x42D00000u) /* x ≤ −104, −∞ included */
+            return 0;
+        return evaluate(EXP, w, level);
+    }
+    if (fn == TANH) {
+        if (mag == 0)
+            return w;
+        if (mag > 0x41800000u) /* |x| > 16, ±∞ included */
+            return sign | ER_ONE;
+        return sign | evaluate(TANH, mag, level);
+    }
+    if (mag == 0)
+        return 0x3F000000u; /* 1/2 */
+    if (!sign && mag > 0x42000000u) /* x > 32, +∞ included */
+        return ER_ONE;
+    if (sign && mag > 0x43000000u) /* x < −128, −∞ included */
+        return 0;
+    return evaluate(SIGMOID, w, level);
+}
+
+static uint32_t slow_sigmoid(uint32_t w)
+{
+    int level;
+    return er_activation(1, w, &level);
+}
+
+static uint32_t slow_tanh(uint32_t w)
+{
+    int level;
+    return er_activation(0, w, &level);
+}
+
+static uint32_t slow_exp(uint32_t w)
+{
+    int level;
+    return er_activation(EXP, w, &level);
+}

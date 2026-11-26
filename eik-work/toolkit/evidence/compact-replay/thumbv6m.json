@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-size-replay/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/toolkit/kit/template/entry.c",
+    "--function",
+    "exp",
+    "--target",
+    "thumbv6m",
+    "--chunks",
+    "0:1",
+    "--jobs",
+    "1",
+    "--out",
+    "$REPO/test/scratch/eik-size-replay/reports/thumbv6m.json"
+  ],
+  "exit_code": 0,
+  "seconds": 40.484,
+  "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

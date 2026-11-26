@@ -1,0 +1,17 @@
+Collecting capstone==5.0.9 (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 6))
+  Downloading capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 8.5 MB/s eta 0:00:00
+Collecting pyelftools==0.33 (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 9))
+  Downloading pyelftools-0.33-py3-none-any.whl (201 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 201.2/201.2 kB 7.4 MB/s eta 0:00:00
+Collecting unicorn==2.1.4 (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 11))
+  Downloading unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.4/16.4 MB 18.5 MB/s eta 0:00:00
+Collecting ziglang==0.17.1 (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 14))
+  Downloading ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl (101.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.1/101.1 MB 12.0 MB/s eta 0:00:00
+Saved ./eik-work/toolkit/wheels/capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Saved ./eik-work/toolkit/wheels/pyelftools-0.33-py3-none-any.whl
+Saved ./eik-work/toolkit/wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Saved ./eik-work/toolkit/wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl
+Successfully downloaded capstone pyelftools unicorn ziglang

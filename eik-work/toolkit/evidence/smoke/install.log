@@ -1,0 +1,9 @@
+['python3.12', '-m', 'venv', '--without-pip', '$REPO/test/scratch/eik/run/runtime'] -> 0
+['python3.12', '-m', 'pip', '--isolated', '--python', '$REPO/test/scratch/eik/run/runtime/bin/python', 'install', '--no-index', '--only-binary=:all:', '--require-hashes', '--find-links', '$REPO/eik-work/toolkit/wheels', '-r', '$REPO/eik-work/toolkit/kit/requirements.txt'] -> 0
+Looking in links: $REPO/eik-work/toolkit/wheels
+Processing ./eik-work/toolkit/wheels/capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 6))
+Processing ./eik-work/toolkit/wheels/pyelftools-0.33-py3-none-any.whl (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 9))
+Processing ./eik-work/toolkit/wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 11))
+Processing ./eik-work/toolkit/wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl (from -r $REPO/eik-work/toolkit/kit/requirements.txt (line 14))
+Installing collected packages: ziglang, unicorn, pyelftools, capstone
+Successfully installed capstone-5.0.9 pyelftools-0.33 unicorn-2.1.4 ziglang-0.17.1

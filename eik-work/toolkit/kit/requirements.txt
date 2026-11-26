@@ -1,0 +1,16 @@
+# The harness (python -m eik): pinned to the wheel, for x86-64 and arm64 Linux.
+#   pip install --require-hashes -r requirements.txt
+# Instruction counts depend on the clang in `ziglang` and the emulator in `unicorn`; production mode
+# refuses any other installed version, and the verifier fingerprint records them.
+# Also needed on the host: gcc with UBSan and ASan (the full check), bubblewrap (the sandbox).
+capstone==5.0.9 \
+    --hash=sha256:273fd8d747d2e35c88f91450be51a603ecfaafb00d96d9f315dcb8689c86193e \
+    --hash=sha256:41772ad0c71aa5d3e97d541e802593c2e71fb94ac7e20d4202f97ce2a3eb8ed5
+pyelftools==0.33 \
+    --hash=sha256:f215ad5f47d3f1373a21496a6c9e0707c622840d0622f23ff7ce08678b020036
+unicorn==2.1.4 \
+    --hash=sha256:9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239 \
+    --hash=sha256:bd1fb0c9af5f57e356d8a96928b4fe045b2e18f308ef23b481d5f970008aa722
+ziglang==0.17.1 \
+    --hash=sha256:ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54 \
+    --hash=sha256:b7c5f02fccd40f89b999ee16a1f5ddced56e6182370f8affe494bcf8a28cf07e

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-size-replay/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/toolkit/kit/template/entry.c",
+    "--function",
+    "exp",
+    "--chunks",
+    "0:1",
+    "--threads",
+    "1",
+    "--out",
+    "$REPO/test/scratch/eik-size-replay/reports/host.json"
+  ],
+  "exit_code": 0,
+  "seconds": 9.23,
+  "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

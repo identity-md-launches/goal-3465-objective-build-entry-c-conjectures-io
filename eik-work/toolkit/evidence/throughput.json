@@ -1,0 +1,58 @@
+{
+  "host": {
+    "chunks": [
+      1016,
+      1017
+    ],
+    "command_wall_seconds": 41.633,
+    "elapsed_context": "single job or thread, overlapping smoke commands, shard time excludes build",
+    "function": "exp",
+    "mismatches": 0,
+    "shard_seconds": 35.9,
+    "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+    "words_checked": 1048576,
+    "words_per_second": 29208.2
+  },
+  "target-rv32im": {
+    "chunks": [
+      1016,
+      1017
+    ],
+    "command_wall_seconds": 214.809,
+    "elapsed_context": "single job or thread, overlapping smoke commands, shard time excludes build",
+    "function": "exp",
+    "mismatches": 0,
+    "shard_seconds": 200.3,
+    "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+    "words_checked": 1048576,
+    "words_per_second": 5235.0
+  },
+  "target-thumbv6m": {
+    "chunks": [
+      1016,
+      1017
+    ],
+    "command_wall_seconds": 220.748,
+    "elapsed_context": "single job or thread, overlapping smoke commands, shard time excludes build",
+    "function": "exp",
+    "mismatches": 0,
+    "shard_seconds": 204.8,
+    "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+    "words_checked": 1048576,
+    "words_per_second": 5120.0
+  },
+  "target-thumbv7em": {
+    "chunks": [
+      1016,
+      1017
+    ],
+    "command_wall_seconds": 129.688,
+    "elapsed_context": "single job or thread, overlapping smoke commands, shard time excludes build",
+    "function": "exp",
+    "mismatches": 0,
+    "shard_seconds": 113.4,
+    "source_sha256": "3c18cfc155333a15fb5e3b8fffa041b793e5892f13f8b4b1c67d5424da0ca2df",
+    "words_checked": 1048576,
+    "words_per_second": 9246.7
+  }
+}

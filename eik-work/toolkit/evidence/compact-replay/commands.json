@@ -1,0 +1,23 @@
+{
+  "provision": {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/provision.py",
+      "--fetch"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "9d086ea8c6a8795b1455cb280ebb228fcb188ff4b10f4ee9c7fd55c820d0e3e2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bootstrap-offline": {
+    "argv": [
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "bootstrap",
+      "--offline"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "d788abbfb43acb29c0b706380516af85a14b1ad806f2e30eefa976ea537ee766",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
