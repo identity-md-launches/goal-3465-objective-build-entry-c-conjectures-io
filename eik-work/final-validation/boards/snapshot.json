@@ -1,0 +1,2254 @@
+{
+ "access": {
+  "authentication": null,
+  "method": "anonymous unauthenticated GET",
+  "user_agent": "identitymd-eik-final-validation/board-snapshot (anonymous GET, no auth)"
+ },
+ "api_base": "https://conjectures.io/v1/competitions/exact-integer-kernels/",
+ "board_references": {
+  "overall": {
+   "promotion_id": 61,
+   "shipped": false,
+   "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+   "submission": 56
+  },
+  "rv32im": {
+   "promotion_id": 59,
+   "shipped": false,
+   "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+   "submission": 52
+  },
+  "thumbv6m": {
+   "promotion_id": 60,
+   "shipped": false,
+   "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+   "submission": 53
+  }
+ },
+ "boards": {
+  "overall": {
+   "config_hash": "06897c371a250b616e35121c39975bbd6f2da774175b47033f8d22ff09381bc9",
+   "current_promotion_id": 61,
+   "environments": [
+    {
+     "id": "eik-compare-x86",
+     "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+     "weight": 1.0
+    }
+   ],
+   "guard_limit": null,
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "models": {
+    "rv32im": 0.5,
+    "thumbv6m": 0.5
+   },
+   "paused": false,
+   "promotion_bar": 0.97,
+   "reward_share": 0.5
+  },
+  "rv32im": {
+   "config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+   "current_promotion_id": 59,
+   "environments": [
+    {
+     "id": "eik-compare-x86",
+     "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+     "weight": 1.0
+    }
+   ],
+   "guard_limit": null,
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "models": {
+    "rv32im": 1.0
+   },
+   "paused": false,
+   "promotion_bar": 0.97,
+   "reward_share": 0.25
+  },
+  "thumbv6m": {
+   "config_hash": "688d360c2dfaa6c9c8f7e5519b4bc97ebedcbe41e55f38d1e907286079e6dbdf",
+   "current_promotion_id": 60,
+   "environments": [
+    {
+     "id": "eik-compare-x86",
+     "identity": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+     "weight": 1.0
+    }
+   ],
+   "guard_limit": null,
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "models": {
+    "thumbv6m": 1.0
+   },
+   "paused": false,
+   "promotion_bar": 0.97,
+   "reward_share": 0.25
+  }
+ },
+ "configuration": {
+  "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+  "publication_hash": "d4e64a8af20a92bdae3f31f3c7caff1703c584ff325c017ffa4c07c94ebb7389"
+ },
+ "entries": {
+  "37": {
+   "declared_source_sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+   "detail": null,
+   "downloaded_sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+   "hash_provenance": "raw/submission-37.json#/source_sha256",
+   "path": "references/id37.c",
+   "promotion_ids": [
+    46
+   ],
+   "reason_code": null,
+   "roles": [
+    {
+     "board": null,
+     "role": "former-champion"
+    }
+   ],
+   "source_available_flag": true,
+   "source_request": "source-37",
+   "status": "published",
+   "submission": 37
+  },
+  "42": {
+   "declared_source_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+   "detail": null,
+   "downloaded_sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+   "hash_provenance": "raw/submission-42.json#/source_sha256",
+   "path": "references/id42.c",
+   "promotion_ids": [
+    49
+   ],
+   "reason_code": null,
+   "roles": [
+    {
+     "board": null,
+     "role": "former-champion"
+    }
+   ],
+   "source_available_flag": true,
+   "source_request": "source-42",
+   "status": "published",
+   "submission": 42
+  },
+  "46": {
+   "declared_source_sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+   "detail": null,
+   "downloaded_sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+   "hash_provenance": "raw/submission-46.json#/source_sha256",
+   "path": "references/id46.c",
+   "promotion_ids": [
+    52
+   ],
+   "reason_code": null,
+   "roles": [
+    {
+     "board": null,
+     "role": "former-champion"
+    }
+   ],
+   "source_available_flag": true,
+   "source_request": "source-46",
+   "status": "published",
+   "submission": 46
+  },
+  "48": {
+   "declared_source_sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661",
+   "detail": null,
+   "downloaded_sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661",
+   "hash_provenance": "raw/submission-48.json#/source_sha256",
+   "path": "references/id48.c",
+   "promotion_ids": [
+    55
+   ],
+   "reason_code": null,
+   "roles": [
+    {
+     "board": null,
+     "role": "former-champion"
+    }
+   ],
+   "source_available_flag": true,
+   "source_request": "source-48",
+   "status": "published",
+   "submission": 48
+  },
+  "50": {
+   "declared_source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+   "detail": null,
+   "downloaded_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+   "hash_provenance": "raw/submission-50.json#/source_sha256",
+   "path": "references/id50.c",
+   "promotion_ids": [
+    57,
+    58
+   ],
+   "reason_code": null,
+   "roles": [
+    {
+     "board": null,
+     "role": "former-champion"
+    }
+   ],
+   "source_available_flag": true,
+   "source_request": "source-50",
+   "status": "published",
+   "submission": 50
+  },
+  "52": {
+   "declared_source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+   "detail": "Source is published only for former champions that hold no board.",
+   "downloaded_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "hash_provenance": "raw/submission-52.json#/source_sha256",
+   "path": "raw/source-52.json",
+   "promotion_ids": [
+    59
+   ],
+   "reason_code": "SOURCE_WITHHELD",
+   "roles": [
+    {
+     "board": "rv32im",
+     "promotion_id": 59,
+     "role": "leaderboard-reference"
+    }
+   ],
+   "source_available_flag": false,
+   "source_request": "source-52",
+   "status": "withheld",
+   "submission": 52
+  },
+  "53": {
+   "declared_source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+   "detail": "Source is published only for former champions that hold no board.",
+   "downloaded_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "hash_provenance": "raw/submission-53.json#/source_sha256",
+   "path": "raw/source-53.json",
+   "promotion_ids": [
+    60
+   ],
+   "reason_code": "SOURCE_WITHHELD",
+   "roles": [
+    {
+     "board": "rv32im",
+     "evaluation_id": 157,
+     "role": "leaderboard-challenger"
+    },
+    {
+     "board": "thumbv6m",
+     "promotion_id": 60,
+     "role": "leaderboard-reference"
+    }
+   ],
+   "source_available_flag": false,
+   "source_request": "source-53",
+   "status": "withheld",
+   "submission": 53
+  },
+  "54": {
+   "declared_source_sha256": "d75e9690a805190e45f0a4e50fd5a3d9e73c8a8f0c145ff36df4f57659bf466b",
+   "detail": "Source is published only for former champions that hold no board.",
+   "downloaded_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "hash_provenance": "raw/submission-54.json#/source_sha256",
+   "path": "raw/source-54.json",
+   "promotion_ids": [],
+   "reason_code": "SOURCE_WITHHELD",
+   "roles": [
+    {
+     "board": "rv32im",
+     "evaluation_id": 160,
+     "role": "leaderboard-challenger"
+    },
+    {
+     "board": "thumbv6m",
+     "evaluation_id": 161,
+     "role": "leaderboard-challenger"
+    }
+   ],
+   "source_available_flag": false,
+   "source_request": "source-54",
+   "status": "withheld",
+   "submission": 54
+  },
+  "55": {
+   "declared_source_sha256": "bd002800c895c0124028a55865c6b8c119bc00705748a88638d97c0050e672a6",
+   "detail": "Source is published only for former champions that hold no board.",
+   "downloaded_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "hash_provenance": "raw/submission-55.json#/source_sha256",
+   "path": "raw/source-55.json",
+   "promotion_ids": [],
+   "reason_code": "SOURCE_WITHHELD",
+   "roles": [
+    {
+     "board": "rv32im",
+     "evaluation_id": 163,
+     "role": "leaderboard-challenger"
+    },
+    {
+     "board": "thumbv6m",
+     "evaluation_id": 164,
+     "role": "leaderboard-challenger"
+    }
+   ],
+   "source_available_flag": false,
+   "source_request": "source-55",
+   "status": "withheld",
+   "submission": 55
+  },
+  "56": {
+   "declared_source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+   "detail": "Source is published only for former champions that hold no board.",
+   "downloaded_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "hash_provenance": "raw/submission-56.json#/source_sha256",
+   "path": "raw/source-56.json",
+   "promotion_ids": [
+    61
+   ],
+   "reason_code": "SOURCE_WITHHELD",
+   "roles": [
+    {
+     "board": "rv32im",
+     "evaluation_id": 166,
+     "role": "leaderboard-challenger"
+    },
+    {
+     "board": "thumbv6m",
+     "evaluation_id": 167,
+     "role": "leaderboard-challenger"
+    },
+    {
+     "board": "overall",
+     "promotion_id": 61,
+     "role": "leaderboard-reference"
+    }
+   ],
+   "source_available_flag": false,
+   "source_request": "source-56",
+   "status": "withheld",
+   "submission": 56
+  }
+ },
+ "environment": {
+  "platform": "linux",
+  "python": "3.12.3",
+  "transport": "python urllib (stdlib), TLS via system trust store"
+ },
+ "files": {
+  "raw/boards.json": {
+   "bytes": 1330,
+   "sha256": "a22bfb2e3671e4db56f91f9fce70351af23b99e43226c222f80c615bfaf457e8"
+  },
+  "raw/leaderboard-overall.json": {
+   "bytes": 352,
+   "sha256": "f2e9e75ac29e46c6bf2bc0be9f97aacedcc77c9c3626704822f08623d524c176"
+  },
+  "raw/leaderboard-rv32im.json": {
+   "bytes": 1677,
+   "sha256": "c99f7b5887aade348c38fd34115d11c40acd1d6fab1e1f833aebe52babc366a4"
+  },
+  "raw/leaderboard-thumbv6m.json": {
+   "bytes": 1347,
+   "sha256": "36fcc3ab27a51097b2a35d7cded855b1189ff0d79726907afdc5c29e16ebecdc"
+  },
+  "raw/requests.json": {
+   "bytes": 44369,
+   "sha256": "3ba21f2b0850a87b4198f141fb1829c1dd392c0c5e537dbe24a1e25bc05b85f2"
+  },
+  "raw/source-52.json": {
+   "bytes": 168,
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  "raw/source-53.json": {
+   "bytes": 168,
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  "raw/source-54.json": {
+   "bytes": 168,
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  "raw/source-55.json": {
+   "bytes": 168,
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  "raw/source-56.json": {
+   "bytes": 168,
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  "raw/submission-37.json": {
+   "bytes": 2076,
+   "sha256": "5ca62ddf0a886c64ac62a70c91d9feb860325ea9af4f6504761e9ad6db044dc7"
+  },
+  "raw/submission-42.json": {
+   "bytes": 2076,
+   "sha256": "a51df3b4ebafe187c53e57dbf912353191ef6c64eccd8822a3ab1be289eb694e"
+  },
+  "raw/submission-46.json": {
+   "bytes": 2075,
+   "sha256": "605db0c543744b8b96fc818235fd52ee0818084d7854ca08ed17a70a54ea19c0"
+  },
+  "raw/submission-48.json": {
+   "bytes": 2059,
+   "sha256": "2ddd9f81e6bcb433e21e9a3b31647dfd5f3dee513c3a4603c0961300aef4d571"
+  },
+  "raw/submission-50.json": {
+   "bytes": 2059,
+   "sha256": "f419deffe85653504c7b1827b3a18f52320744848b7ceb81c6095dddb662e77e"
+  },
+  "raw/submission-52.json": {
+   "bytes": 2062,
+   "sha256": "15b5ce881658f0ee5b952e4c976629d4b4626510969a8bd39f16887159346b97"
+  },
+  "raw/submission-53.json": {
+   "bytes": 2077,
+   "sha256": "a5ac7584b8e8f83028c47c0cad1754682bf7fa5c5c5998a0619bab00dc39699f"
+  },
+  "raw/submission-54.json": {
+   "bytes": 2094,
+   "sha256": "6c27fd93ae6702b9651b6470de6f25c18d4ebf28cc41e3695c94af87cc7fa9e7"
+  },
+  "raw/submission-55.json": {
+   "bytes": 2092,
+   "sha256": "1b7a0a00286e403f1db876848001e04ad7ef66d7eb7d794161d498dd5a12608b"
+  },
+  "raw/submission-56.json": {
+   "bytes": 2077,
+   "sha256": "f6f24e151d34da72206c0f1c87df685effa08a2c35f223724d40d75738b49a8c"
+  },
+  "references/id37.c": {
+   "bytes": 230754,
+   "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef"
+  },
+  "references/id42.c": {
+   "bytes": 247785,
+   "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457"
+  },
+  "references/id46.c": {
+   "bytes": 248679,
+   "sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7"
+  },
+  "references/id48.c": {
+   "bytes": 168695,
+   "sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661"
+  },
+  "references/id50.c": {
+   "bytes": 166755,
+   "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+  }
+ },
+ "gaps": [
+  "rv32im: the current champion's source (submission 52) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "thumbv6m: the current champion's source (submission 53) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "overall: the current champion's source (submission 56) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "no absolute S per call is published for any board or submission: the only published numbers are per-evaluation S ratios (candidate S / reference S at that moment) and, for former champions, nothing at all; published_absolute_S is therefore null everywhere",
+  "submissions withheld at this UTC instant: 52, 53, 54, 55, 56",
+  "public references retained and hash-matched: 37, 42, 46, 48, 50; each is a former champion that holds no board, so none of them is the current champion",
+  "consequence for final comparisons: the S ratio a candidate must beat (0.970x of the champion) cannot be computed from public data alone, because the champion's own source is withheld; it has to be measured locally against a locally built incumbent on the same inputs"
+ ],
+ "kind": "conjectures.io exact-integer-kernels public board/reference snapshot",
+ "promotions": {
+  "43": {
+   "attributed_hashes": [
+    "0bd00cf315ad60556c93925e736d2a6c21cf115f4f9b3ca0e308fdaa489c27aa"
+   ],
+   "hash_provenance": [
+    "raw/submission-37.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 43,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "44": {
+   "attributed_hashes": [
+    "18233f8f67420bdfdef1f7e046ad531d58366388f1a9539a02f917399c5262fa"
+   ],
+   "hash_provenance": [
+    "raw/submission-37.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 44,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "45": {
+   "attributed_hashes": [
+    "fc1b8f1fbf658363efd3c9ea7cc5418b644fe50baee06ed41dbeac9d49508d0a"
+   ],
+   "hash_provenance": [
+    "raw/submission-37.json#/evaluations/0/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 45,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "46": {
+   "attributed_hashes": [
+    "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef"
+   ],
+   "hash_provenance": [
+    "raw/submission-42.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 46,
+   "resolved_submission": 37,
+   "status": "resolved"
+  },
+  "47": {
+   "attributed_hashes": [
+    "e4a877697b895c6aadc0f1a85856142227b32718d8a1413d730d9058e49df765"
+   ],
+   "hash_provenance": [
+    "raw/submission-42.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 47,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "48": {
+   "attributed_hashes": [
+    "c199002ef13611f2ceb3447e2d047b89eb8c4d44ee11bccd006ad101527b74e8"
+   ],
+   "hash_provenance": [
+    "raw/submission-42.json#/evaluations/0/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 48,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "49": {
+   "attributed_hashes": [
+    "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457"
+   ],
+   "hash_provenance": [
+    "raw/submission-46.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 49,
+   "resolved_submission": 42,
+   "status": "resolved"
+  },
+  "50": {
+   "attributed_hashes": [
+    "70e32190a66ae401d47c7420c2572581a8ee72cf1407036d4ef7d52c9d03bc4a"
+   ],
+   "hash_provenance": [
+    "raw/submission-46.json#/evaluations/1/reference_hash",
+    "raw/submission-48.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 50,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "51": {
+   "attributed_hashes": [
+    "63e2b699effd10efca8f930384218c8945e12c56b2738e99e62fc027e68261e3"
+   ],
+   "hash_provenance": [
+    "raw/submission-46.json#/evaluations/0/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 51,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "52": {
+   "attributed_hashes": [
+    "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7"
+   ],
+   "hash_provenance": [
+    "raw/submission-48.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 52,
+   "resolved_submission": 46,
+   "status": "resolved"
+  },
+  "53": {
+   "attributed_hashes": [
+    "bd2b39b11a3756c7545fc8b56cadabcb150acb6b8465842985363404c45dfd42"
+   ],
+   "hash_provenance": [
+    "raw/submission-48.json#/evaluations/0/reference_hash",
+    "raw/submission-50.json#/evaluations/0/reference_hash",
+    "raw/submission-52.json#/evaluations/0/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 53,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "55": {
+   "attributed_hashes": [
+    "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661"
+   ],
+   "hash_provenance": [
+    "raw/submission-50.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 55,
+   "resolved_submission": 48,
+   "status": "resolved"
+  },
+  "56": {
+   "attributed_hashes": [
+    "8f8a23345b12abfe41040c6eca20ee06f4a4c50de69fbc6bdf8a9d758f129f37"
+   ],
+   "hash_provenance": [
+    "raw/submission-50.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": "declared reference hash matches no submission in this snapshot; not attributable to a submission from the public data fetched here",
+   "promotion_id": 56,
+   "resolved_submission": null,
+   "status": "unresolved"
+  },
+  "57": {
+   "attributed_hashes": [
+    "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+   ],
+   "hash_provenance": [
+    "raw/submission-52.json#/evaluations/1/reference_hash",
+    "raw/submission-53.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 57,
+   "resolved_submission": 50,
+   "status": "resolved"
+  },
+  "58": {
+   "attributed_hashes": [
+    "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+   ],
+   "hash_provenance": [
+    "raw/submission-52.json#/evaluations/2/reference_hash",
+    "raw/submission-53.json#/evaluations/2/reference_hash",
+    "raw/submission-54.json#/evaluations/2/reference_hash",
+    "raw/submission-55.json#/evaluations/2/reference_hash",
+    "raw/submission-56.json#/evaluations/2/reference_hash"
+   ],
+   "leaderboard_provenance": [],
+   "leaderboard_stated_submission": null,
+   "note": null,
+   "promotion_id": 58,
+   "resolved_submission": 50,
+   "status": "resolved"
+  },
+  "59": {
+   "attributed_hashes": [
+    "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d"
+   ],
+   "hash_provenance": [
+    "raw/leaderboard-rv32im.json#/reference/source_sha256",
+    "raw/submission-53.json#/evaluations/0/reference_hash",
+    "raw/submission-54.json#/evaluations/0/reference_hash",
+    "raw/submission-55.json#/evaluations/0/reference_hash",
+    "raw/submission-56.json#/evaluations/0/reference_hash"
+   ],
+   "leaderboard_provenance": [
+    "raw/leaderboard-rv32im.json#/reference/submission"
+   ],
+   "leaderboard_stated_submission": 52,
+   "note": null,
+   "promotion_id": 59,
+   "resolved_submission": 52,
+   "status": "resolved"
+  },
+  "60": {
+   "attributed_hashes": [
+    "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916"
+   ],
+   "hash_provenance": [
+    "raw/leaderboard-thumbv6m.json#/reference/source_sha256",
+    "raw/submission-54.json#/evaluations/1/reference_hash",
+    "raw/submission-55.json#/evaluations/1/reference_hash",
+    "raw/submission-56.json#/evaluations/1/reference_hash"
+   ],
+   "leaderboard_provenance": [
+    "raw/leaderboard-thumbv6m.json#/reference/submission"
+   ],
+   "leaderboard_stated_submission": 53,
+   "note": null,
+   "promotion_id": 60,
+   "resolved_submission": 53,
+   "status": "resolved"
+  },
+  "61": {
+   "attributed_hashes": [
+    "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d"
+   ],
+   "hash_provenance": [
+    "raw/leaderboard-overall.json#/reference/source_sha256"
+   ],
+   "leaderboard_provenance": [
+    "raw/leaderboard-overall.json#/reference/submission"
+   ],
+   "leaderboard_stated_submission": 56,
+   "note": null,
+   "promotion_id": 61,
+   "resolved_submission": 56,
+   "status": "resolved"
+  }
+ },
+ "requests": {
+  "boards": {
+   "bytes": 1330,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards",
+   "finished_utc": "2026-11-26T11:34:47.001938+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60895fd8bea5010-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:46 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "359",
+    "ratelimit-reset": "60",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qfaWKDLMOqcezvVi48H7Lwbt7lFmLurQBcHUBsFDjn0dsD7ibJjMaGbzx2jnvrKpyNUqOX5X3kVSzNo%2BzXwDcpcHHxoN%2BLnLDDyFakaWkM9LmZvmCn9v0m0zf6sMIOeKtsjL8%2BN74tZTlDxH8w%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "914809457fd94829"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/boards.json",
+   "sha256": "a22bfb2e3671e4db56f91f9fce70351af23b99e43226c222f80c615bfaf457e8",
+   "started_utc": "2026-11-26T11:34:46.552481+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards"
+  },
+  "leaderboard-overall": {
+   "bytes": 352,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=overall",
+   "finished_utc": "2026-11-26T11:34:48.772852+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608960889385a3b-FRA",
+    "connection": "close",
+    "content-length": "352",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:48 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "356",
+    "ratelimit-reset": "59",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=aiExaEDkT8iOmUsqtYdsJLyNSVppDxShcVPRgcfxYybYsf2M5jgYNJ0CROJMFyLMLkAwTkRW7HM43TOpJlVetamzcnsA1kEfbnmA7KgRYUxQy4s6oCkBhDNM638Dsa%2Fv%2F2T8oRXaePlHGDEjzA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "592b6193413346af"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/leaderboard-overall.json",
+   "sha256": "f2e9e75ac29e46c6bf2bc0be9f97aacedcc77c9c3626704822f08623d524c176",
+   "started_utc": "2026-11-26T11:34:48.273817+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=overall"
+  },
+  "leaderboard-rv32im": {
+   "bytes": 1677,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im",
+   "finished_utc": "2026-11-26T11:34:47.452707+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896017eac5d60-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:47 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "358",
+    "ratelimit-reset": "60",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3pL8W5W7mUxkH3Ejd6HrjjocZNU9%2F3ht5iHF1Hl6aDTox7AG62ge7foJAmWZ67vfKeZJUZnpK5Certf73iG6Zp%2Blq9GksHy9jWhw9h5m9RDA4ES79j3hCK59Gxr4dT1ey57uKCKoZUjsXArnkw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "143d51db11944d8a"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/leaderboard-rv32im.json",
+   "sha256": "c99f7b5887aade348c38fd34115d11c40acd1d6fab1e1f833aebe52babc366a4",
+   "started_utc": "2026-11-26T11:34:47.152816+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im"
+  },
+  "leaderboard-thumbv6m": {
+   "bytes": 1347,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=thumbv6m",
+   "finished_utc": "2026-11-26T11:34:48.123018+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896045dfaae0b-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:48 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "357",
+    "ratelimit-reset": "59",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vM2oJSGTiOkKXCv9Ak25%2FOamUH6aSEmb%2FgcwExH8AJrTIUdI12SVlhklyZyckGLJWOs1GVwOCKXozcDF%2FN6%2BTEBcFl5OEVKKklgT4Xk1yI77HDlMpKLI2kiMV5lje7IbZsFTl0gFrOKIwhPoow%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "662fcfe11fa7471a"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/leaderboard-thumbv6m.json",
+   "sha256": "36fcc3ab27a51097b2a35d7cded855b1189ff0d79726907afdc5c29e16ebecdc",
+   "started_utc": "2026-11-26T11:34:47.603586+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=thumbv6m"
+  },
+  "source-37": {
+   "bytes": 230754,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/37/source",
+   "finished_utc": "2026-11-26T11:34:54.791870+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608962c9f8fe7b5-FRA",
+    "connection": "close",
+    "content-disposition": "attachment; filename=\"entry.c\"",
+    "content-length": "230754",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "text/x-c; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:54 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "345",
+    "ratelimit-reset": "53",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=amJaBeiiK8oKdat1s2Kc%2BLOXWU3nFgM4R6gRzjWPlmGie%2BVBXHk4SZX210qQhqki%2FXf3sUodLRR%2BP7%2ByOpaSuuhA6iLqJigV8%2FF7XVf5pxqjR4y2M6nYy%2FmPq4jxZ8ZI3XnMxDeKdutxZWmqIA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "7ccf8c4a7d91439d"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "references/id37.c",
+   "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+   "started_utc": "2026-11-26T11:34:54.098248+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/37/source"
+  },
+  "source-42": {
+   "bytes": 247785,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/42/source",
+   "finished_utc": "2026-11-26T11:34:55.617088+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089631db105d57-FRA",
+    "connection": "close",
+    "content-disposition": "attachment; filename=\"entry.c\"",
+    "content-length": "247785",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "text/x-c; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:55 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "344",
+    "ratelimit-reset": "52",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jFD8Q%2FqDPtYEZ5Vw5zq3oZOPzzxjKBdjspwpT0SS915zBj%2B6rTZPe16vlFQKozg%2BoM4YTJ%2FgfxnPmf7SfrLF2T%2FnKO0qQPSGwB%2BXUeWHzzF548Ey3cyqg6K9G7SiFSgLnjCzdf%2B%2BUX7d0H4WeQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "df3ebcbdc55c4e2e"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "references/id42.c",
+   "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+   "started_utc": "2026-11-26T11:34:54.945901+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/42/source"
+  },
+  "source-46": {
+   "bytes": 248679,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/46/source",
+   "finished_utc": "2026-11-26T11:34:56.673209+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896373ddff0bf-CDG",
+    "connection": "close",
+    "content-disposition": "attachment; filename=\"entry.c\"",
+    "content-length": "248679",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "text/x-c; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:56 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "343",
+    "ratelimit-reset": "51",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=1wwgkkt332fpXl0Jatkq8Lm4Cd7XNscT0L8mCsj5eGCeX5OVOjOQRKw12cnMA%2FYpnNJ%2FFj%2BUMYFTKkfyO6OwgZx%2FJY3j0mvSgooXP3F897KyTSj2Eill%2BVRpPol2r%2BZLelnFP9TfK4EVclO0Nw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "a2c6c5c7d65e42ee"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "references/id46.c",
+   "sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+   "started_utc": "2026-11-26T11:34:55.768652+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/46/source"
+  },
+  "source-48": {
+   "bytes": 168695,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/48/source",
+   "finished_utc": "2026-11-26T11:34:57.353084+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608963dadc7d288-FRA",
+    "connection": "close",
+    "content-disposition": "attachment; filename=\"entry.c\"",
+    "content-length": "168695",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "text/x-c; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:57 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "342",
+    "ratelimit-reset": "50",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vuqCZpwL7leM%2FyKrQdga0SrjbnuXuvuQ%2BcKaQVRg4hgLE253QCejKDG5qCc%2BC963exScIL7kVBB51yfoStxR8csfZ2jm%2BPzv%2F7cazmcWwda8YPd%2B0R2cxLeHJhtHS3W6MwpYQ88H3NUQpYMeJg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "4b4bd1432b514369"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "references/id48.c",
+   "sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661",
+   "started_utc": "2026-11-26T11:34:56.825473+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/48/source"
+  },
+  "source-50": {
+   "bytes": 166755,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/50/source",
+   "finished_utc": "2026-11-26T11:34:58.026200+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cache-control": "no-store",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089641d8283927-FRA",
+    "connection": "close",
+    "content-disposition": "attachment; filename=\"entry.c\"",
+    "content-length": "166755",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "text/x-c; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:57 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "341",
+    "ratelimit-reset": "50",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wAZKtWp%2FyXfDL4aDmJLZixpluEPYtL9RtVFfGcO6Ca6PwIRufSq5%2BW1lu8ZytinXA2TsDApQgPhHgItLQcWaq9uDxtjbsRCDmPwj9ES1H58Nd1tz7K644ISqA%2F1J4lPYaWeSCpBNFykYpkLYYw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "3fc5c23622d645de"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "references/id50.c",
+   "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+   "started_utc": "2026-11-26T11:34:57.504382+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/50/source"
+  },
+  "source-52": {
+   "bytes": 168,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source",
+   "finished_utc": "2026-11-26T11:34:58.703176+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089646aa49d564-CDG",
+    "connection": "close",
+    "content-length": "168",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/problem+json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:58 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "340",
+    "ratelimit-reset": "49",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sqsrErbHCrBrlpjVwEzPkDpRIc9qJ2zHMX9I1Gu3Iq1BUffsT9HEx5ZKegoA2Zs6t5O9RiV4I2EfvG9ycIGI6waQBx2%2FF8x3hBo2el%2BLEsjHF%2B2vGYvB0vOvZn01PJSZ8mbmoYF4wTeiGG3C5w%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "9582888f78da40bb"
+   },
+   "http_status": 403,
+   "method": "GET",
+   "path": "raw/source-52.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "started_utc": "2026-11-26T11:34:58.180587+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+  },
+  "source-53": {
+   "bytes": 168,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source",
+   "finished_utc": "2026-11-26T11:34:59.084961+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608964a6d0300a8-CDG",
+    "connection": "close",
+    "content-length": "168",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/problem+json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:59 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "339",
+    "ratelimit-reset": "48",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VmI3OHXVvv6o96yhra9QH9tulORJnbMeE6IqI6u3KolrzamIkcs3ZqmxzpUh3fKk0Prd43zlKaHfCxAV8Iqeu7cWH3FxggrjpuIW1BGA0gKUtC%2FaRk8bcf70QWkJ62Xbr3jp46wOrxZ9xHmvmA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "d13f8e6ac0294ff6"
+   },
+   "http_status": 403,
+   "method": "GET",
+   "path": "raw/source-53.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "started_utc": "2026-11-26T11:34:58.860016+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source"
+  },
+  "source-54": {
+   "bytes": 168,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/54/source",
+   "finished_utc": "2026-11-26T11:34:59.493600+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608964cdce81c24-FRA",
+    "connection": "close",
+    "content-length": "168",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/problem+json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:59 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "338",
+    "ratelimit-reset": "48",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=e8bkNvd0ro76DCp2jXElKLgK%2B9%2BeLi7f0D0z2rOsbf2vH9pYIWLyn9IRB1Gn7B4b2%2Fppztbj%2F3asZ2soQTuLxirxVY2ky1fkRiXUsr9nlqanIhsMtfBjqk3io4%2Fy%2B1xR%2FH5C42THXOS84vGQ7g%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "d1b89d8f92d94543"
+   },
+   "http_status": 403,
+   "method": "GET",
+   "path": "raw/source-54.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "started_utc": "2026-11-26T11:34:59.236246+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/54/source"
+  },
+  "source-55": {
+   "bytes": 168,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/55/source",
+   "finished_utc": "2026-11-26T11:34:59.914252+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608964f88cdbb79-FRA",
+    "connection": "close",
+    "content-length": "168",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/problem+json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:59 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "337",
+    "ratelimit-reset": "48",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=czncKt82NHinjKoowbbtaFHDXvnh6de%2BvT3jlwxPT2dfN%2FTjHl7xgX8GhedKVhf5%2BBh3wnNkQVDFCu6WmVS1DhlAq2axPLCZ2PFAH%2BKuxte6T8O4Qkh6ONcWA8lzV85eneGt0IDGwAEzAyWHUA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "2443ed08160744f9"
+   },
+   "http_status": 403,
+   "method": "GET",
+   "path": "raw/source-55.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "started_utc": "2026-11-26T11:34:59.644987+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/55/source"
+  },
+  "source-56": {
+   "bytes": 168,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source",
+   "finished_utc": "2026-11-26T11:35:00.334105+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089651d8a6db0c-FRA",
+    "connection": "close",
+    "content-length": "168",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/problem+json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:35:00 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "336",
+    "ratelimit-reset": "47",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Ef7vPO5ex5Svkn0tXTtvj9PisWC%2BIgo0PA7UcY8UZwS22VUOMtufTN%2BZMs9X9dRfzMdVpcOlC3ZwFap3fa3m8gFGIvlQU1QNuQwD4I3FbEx5ydTEGAYfh0VwUrfbbSBknUifyBaLW1lfW%2BicBg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "fa9a46d4da6f4cf8"
+   },
+   "http_status": 403,
+   "method": "GET",
+   "path": "raw/source-56.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+   "started_utc": "2026-11-26T11:35:00.065922+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+  },
+  "submission-37": {
+   "bytes": 2076,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/37",
+   "finished_utc": "2026-11-26T11:34:49.495892+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608960d0c09dc8a-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:49 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "355",
+    "ratelimit-reset": "58",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=D2bHiquSA0m4VgqxoH5LuOlJ1mtPNki%2BPbJ0Zdmi9iM%2F3P%2FSpjD20HsRsMAypnaL3dvm9CNA53qWbE6qTFp5K7SiZo%2FhoVcr08il4HSjs5EWCDh9p6TeDG6TvYj1VSpih2T4SQiG0vFFjAtxYA%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "dcf55159ef9b4ffc"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-37.json",
+   "sha256": "5ca62ddf0a886c64ac62a70c91d9feb860325ea9af4f6504761e9ad6db044dc7",
+   "started_utc": "2026-11-26T11:34:48.923560+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/37"
+  },
+  "submission-42": {
+   "bytes": 2076,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/42",
+   "finished_utc": "2026-11-26T11:34:49.886436+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089610dc8c22c5-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:49 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "354",
+    "ratelimit-reset": "58",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=RLt%2FVK1Tt4Q9VXhuf0Oz2BU7KSI2%2F0iOyrYdRR%2Fmnq4iXG6pqr9l2Xovex5unT%2FHynlBSIXgBAyamFBlmYJBuW1nRYQ%2FUvWgfGiOv51AOz%2Faxfz20sPt0V5FpURxt3k1FTmw4sn%2Buxqr4mXt7A%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "91f20da4d93d4c8d"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-42.json",
+   "sha256": "a51df3b4ebafe187c53e57dbf912353191ef6c64eccd8822a3ab1be289eb694e",
+   "started_utc": "2026-11-26T11:34:49.648184+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/42"
+  },
+  "submission-46": {
+   "bytes": 2075,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/46",
+   "finished_utc": "2026-11-26T11:34:50.299584+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896136892d365-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:50 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "353",
+    "ratelimit-reset": "57",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8Zc7t%2Bw3SWZnCKWaeGPaOXlGN5ynS%2BXoKFP4aWxF3XLAHniCKMVs37A4u4%2FITx0XnADteYAwZzDZqLRlxmoJKr8sGfx3WhVlx87LxfbZy%2FZNUCQMweF5wOKLhQyEYA4J28A9sQlv%2BMi8S5uHQQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "4779fcbd8d754659"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-46.json",
+   "sha256": "605db0c543744b8b96fc818235fd52ee0818084d7854ca08ed17a70a54ea19c0",
+   "started_utc": "2026-11-26T11:34:50.037374+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/46"
+  },
+  "submission-48": {
+   "bytes": 2059,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/48",
+   "finished_utc": "2026-11-26T11:34:50.680547+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089615cbe98cea-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:50 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "352",
+    "ratelimit-reset": "57",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ORoayznd2DiF9s99PbgkrZWV93STqlJy9TNHSR5iMvUyK3P8mBYX9le%2BAyS5WPwVUZpNfwoJN8VbIv5zWbo2vgWpLIFLwO6Yir9umgIw6wcVYggEZ78v2IRVtuhBT4Ihf2s%2FZZ6qRZ%2ByPcNNfw%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "eba5c44cfc8c4f36"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-48.json",
+   "sha256": "2ddd9f81e6bcb433e21e9a3b31647dfd5f3dee513c3a4603c0961300aef4d571",
+   "started_utc": "2026-11-26T11:34:50.450448+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/48"
+  },
+  "submission-50": {
+   "bytes": 2059,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/50",
+   "finished_utc": "2026-11-26T11:34:51.305413+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608961868b71a1b-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:51 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "351",
+    "ratelimit-reset": "56",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2emb98fHcZnSacJxQn5ka0yZMLzl1QQbkUvHtMbxt6qSSBYVIJprHt6c%2Fm5Ea6GIDnLxjz39%2FWMKFMKKdJ%2FPkmk%2B5s7lk8XOhAcxB9FeBpo%2FhcjDHeXHSfI0F7BEVlM6v1GBjJ58kyquhZuszQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "21e971c4fcf4458e"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-50.json",
+   "sha256": "f419deffe85653504c7b1827b3a18f52320744848b7ceb81c6095dddb662e77e",
+   "started_utc": "2026-11-26T11:34:50.831363+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/50"
+  },
+  "submission-52": {
+   "bytes": 2062,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52",
+   "finished_utc": "2026-11-26T11:34:51.883398+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a608961c1aeb3740-CDG",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:51 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "350",
+    "ratelimit-reset": "56",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=EcnmLlYemZUa5L%2F6w6%2BPDwDjK7bkYu3v7Ng%2FFBaOmx%2B5S722OQaY%2B8Ni4ZAC5w9R%2FNIrsxvpKnxMlNET0hcy7Kproi4uUE8Iuthed1zCCsS2NDJwsFOhnPUCzI%2FSM5OPyaiok7gwuaIGnab8QQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "3b539ee9712e40e2"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-52.json",
+   "sha256": "15b5ce881658f0ee5b952e4c976629d4b4626510969a8bd39f16887159346b97",
+   "started_utc": "2026-11-26T11:34:51.456388+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52"
+  },
+  "submission-53": {
+   "bytes": 2077,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53",
+   "finished_utc": "2026-11-26T11:34:52.588625+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896206808d29d-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:52 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "349",
+    "ratelimit-reset": "55",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=X5avN39iY%2BAHrkqdK%2BwfjWYkmH6u%2BK20PQpYG%2BjUv%2FrfnNnKT%2F4Y64dAsF9pTVaqIfD0GA4KTBBT7DS6ug9Bfrj%2B3vCkZL3zIvPszE1ScdZr5RVdNx9AAqSHx63qloy654B0cg2FA6spdLqWow%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "b0cd68dfd5984cf2"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-53.json",
+   "sha256": "a5ac7584b8e8f83028c47c0cad1754682bf7fa5c5c5998a0619bab00dc39699f",
+   "started_utc": "2026-11-26T11:34:52.035276+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53"
+  },
+  "submission-54": {
+   "bytes": 2094,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/54",
+   "finished_utc": "2026-11-26T11:34:52.975719+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896243f55dc9c-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:52 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "348",
+    "ratelimit-reset": "55",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Mlox%2FkZF%2BZ%2FjCBQD40XRRg8Av%2F9Aw8R0t8j0GuUwySvFXG6oFPt27eQVpGBHb%2B8SQJFb5T6Sc9nm6XVP9Dd5Wi6aCZErigo6jB0nDQE%2BqoXPRpKrITEoSR%2BocojcsuB3ui1Z0UGE%2BdqYAKL90g%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "4f7440592d1443c0"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-54.json",
+   "sha256": "6c27fd93ae6702b9651b6470de6f25c18d4ebf28cc41e3695c94af87cc7fa9e7",
+   "started_utc": "2026-11-26T11:34:52.739675+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/54"
+  },
+  "submission-55": {
+   "bytes": 2092,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/55",
+   "finished_utc": "2026-11-26T11:34:53.347018+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a60896268878d2e3-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:53 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "347",
+    "ratelimit-reset": "54",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=HL4mhc%2Bi9Vkw1%2BgFfE3ltqMNP2n4SOhOaMU3MHt5zUg9yqkrixzE1gMHyaT5KMuQoXhacYk%2FQzq5EBQk2qsarrNjoetmP4fgCX3oLYP0klpsk2QwBXTcftApNzQKNW8g6StDsnHAO%2BTZu%2Bv2Fg%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "a603b018ce2e4ef3"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-55.json",
+   "sha256": "1b7a0a00286e403f1db876848001e04ad7ef66d7eb7d794161d498dd5a12608b",
+   "started_utc": "2026-11-26T11:34:53.126559+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/55"
+  },
+  "submission-56": {
+   "bytes": 2077,
+   "error": null,
+   "final_url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56",
+   "finished_utc": "2026-11-26T11:34:53.944669+00:00",
+   "headers": {
+    "alt-svc": "h3=\":443\"; ma=86400",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a6089628ef363654-FRA",
+    "connection": "close",
+    "content-security-policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; sandbox",
+    "content-type": "application/json",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "cross-origin",
+    "date": "Thu, 26 Nov 2026 11:34:53 GMT",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "permissions-policy": "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+    "ratelimit-limit": "360",
+    "ratelimit-remaining": "346",
+    "ratelimit-reset": "54",
+    "referrer-policy": "no-referrer",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=AOwvsiOShuIZEUZEqTnYnP7Sw2dhw8unn1VSaL7XYjB8Nq%2FLhjTh2H0NkWCw7bZpZjBOnFlT3%2FQsV%2F6u3RT7jnuxV0CbWdmk2lHDVDGWWMQm97AfVgcxZL0A7Bj0%2BVO%2B3O%2BXy6LZhx%2BRzdJyKQ%3D%3D\"}]}",
+    "server": "cloudflare",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "vary": "accept-encoding",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-request-id": "151f9483ff894fb8"
+   },
+   "http_status": 200,
+   "method": "GET",
+   "path": "raw/submission-56.json",
+   "sha256": "f6f24e151d34da72206c0f1c87df685effa08a2c35f223724d40d75738b49a8c",
+   "started_utc": "2026-11-26T11:34:53.504851+00:00",
+   "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56"
+  }
+ },
+ "scores": {
+  "overall": {
+   "champion_declared_source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+   "champion_over_public_reference": {
+    "S_champion_over_baseline": 0.96815183298679,
+    "baseline_status": "published",
+    "baseline_submission": 50,
+    "candidate_bar_over_baseline": 0.939107277997187,
+    "caveat": "indicative only: the validator scored these ratios on its own inputs, while the goal's local comparisons run on local seeds, so this product shows how far the champion sits above the public reference, it does not replace measuring it",
+    "chain": [
+     {
+      "evaluation_id": 168,
+      "provenance": "raw/submission-56.json#/evaluations/2/decision/score",
+      "ratio": 0.9681518329867902,
+      "reference_promotion_id": 58,
+      "reference_submission": 50,
+      "submission": 56
+     }
+    ],
+    "derived": true,
+    "not_published": "a product of published takeover ratios, computed here; the API publishes no such number and no absolute S",
+    "open_reason": null
+   },
+   "champion_promotion_id": 61,
+   "champion_submission": 56,
+   "champion_takeover": [
+    {
+     "evaluation_id": 168,
+     "provenance": "raw/submission-56.json#/evaluations/2",
+     "ratio": 0.9681518329867902,
+     "reference_promotion_id": 58,
+     "reference_submission": 50
+    }
+   ],
+   "published_absolute_S": null,
+   "published_absolute_S_note": "the public API publishes no absolute S per call for this board; only S ratios recorded at takeover time, which are relative to the champion of that moment and not comparable across the season",
+   "ratio_records": [
+    {
+     "completed_at": "2026-11-21T15:48:21.076690Z",
+     "evaluation_id": 111,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-37.json#/evaluations/2",
+     "ratio": 0.9638721091245174,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "0bd00cf315ad60556c93925e736d2a6c21cf115f4f9b3ca0e308fdaa489c27aa",
+     "reference_promotion_id": 43,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 37
+    },
+    {
+     "completed_at": "2026-11-22T06:34:50.044830Z",
+     "evaluation_id": 126,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-42.json#/evaluations/2",
+     "ratio": 0.9686072046227919,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+     "reference_promotion_id": 46,
+     "reference_submission": 37,
+     "state": "completed",
+     "submission": 42
+    },
+    {
+     "completed_at": "2026-11-23T09:42:14.805618Z",
+     "evaluation_id": 138,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-46.json#/evaluations/2",
+     "ratio": 0.969609043972894,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457",
+     "reference_promotion_id": 49,
+     "reference_submission": 42,
+     "state": "completed",
+     "submission": 46
+    },
+    {
+     "completed_at": "2026-11-24T08:19:08.776738Z",
+     "evaluation_id": 144,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-48.json#/evaluations/2",
+     "ratio": 0.9584408110293896,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7",
+     "reference_promotion_id": 52,
+     "reference_submission": 46,
+     "state": "completed",
+     "submission": 48
+    },
+    {
+     "completed_at": "2026-11-24T23:25:46.343136Z",
+     "evaluation_id": 150,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-50.json#/evaluations/2",
+     "ratio": 0.9541865406069578,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661",
+     "reference_promotion_id": 55,
+     "reference_submission": 48,
+     "state": "completed",
+     "submission": 50
+    },
+    {
+     "completed_at": "2026-11-25T01:54:11.528748Z",
+     "evaluation_id": 156,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-52.json#/evaluations/2",
+     "ratio": 0.9953888317067958,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9954 > 0.97",
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 58,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 52
+    },
+    {
+     "completed_at": "2026-11-25T07:51:42.353524Z",
+     "evaluation_id": 159,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-53.json#/evaluations/2",
+     "ratio": 0.9856127029159292,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9856 > 0.97",
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 58,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 53
+    },
+    {
+     "completed_at": "2026-11-25T23:39:12.454040Z",
+     "evaluation_id": 162,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-54.json#/evaluations/2",
+     "ratio": 0.9726412058063566,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9726 > 0.97",
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 58,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 54
+    },
+    {
+     "completed_at": "2026-11-26T01:54:10.797260Z",
+     "evaluation_id": 165,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-55.json#/evaluations/2",
+     "ratio": 0.9743615583488797,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9744 > 0.97",
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 58,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 55
+    },
+    {
+     "completed_at": "2026-11-26T02:25:38.963603Z",
+     "evaluation_id": 168,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-56.json#/evaluations/2",
+     "ratio": 0.9681518329867902,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 58,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 56
+    }
+   ],
+   "ratios_against_current_champion": []
+  },
+  "rv32im": {
+   "champion_declared_source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+   "champion_over_public_reference": {
+    "S_champion_over_baseline": null,
+    "baseline_status": null,
+    "baseline_submission": null,
+    "candidate_bar_over_baseline": null,
+    "caveat": "indicative only: the validator scored these ratios on its own inputs, while the goal's local comparisons run on local seeds, so this product shows how far the champion sits above the public reference, it does not replace measuring it",
+    "chain": [
+     {
+      "evaluation_id": 154,
+      "provenance": "raw/submission-52.json#/evaluations/0/decision/score",
+      "ratio": 0.9663356577371272,
+      "reference_promotion_id": 53,
+      "reference_submission": null,
+      "submission": 52
+     }
+    ],
+    "derived": true,
+    "not_published": "a product of published takeover ratios, computed here; the API publishes no such number and no absolute S",
+    "open_reason": "promotion 53 does not resolve to any submission in this snapshot, so no published ratio ties this board's champion to a public reference"
+   },
+   "champion_promotion_id": 59,
+   "champion_submission": 52,
+   "champion_takeover": [
+    {
+     "evaluation_id": 154,
+     "provenance": "raw/submission-52.json#/evaluations/0",
+     "ratio": 0.9663356577371272,
+     "reference_promotion_id": 53,
+     "reference_submission": null
+    }
+   ],
+   "published_absolute_S": null,
+   "published_absolute_S_note": "the public API publishes no absolute S per call for this board; only S ratios recorded at takeover time, which are relative to the champion of that moment and not comparable across the season",
+   "ratio_records": [
+    {
+     "completed_at": "2026-11-21T15:41:34.353303Z",
+     "evaluation_id": 109,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-37.json#/evaluations/0",
+     "ratio": 0.9901920153337643,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9902 > 0.97",
+     "reference_hash": "fc1b8f1fbf658363efd3c9ea7cc5418b644fe50baee06ed41dbeac9d49508d0a",
+     "reference_promotion_id": 45,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 37
+    },
+    {
+     "completed_at": "2026-11-22T06:27:46.823170Z",
+     "evaluation_id": 124,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-42.json#/evaluations/0",
+     "ratio": 0.9867430139465682,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9867 > 0.97",
+     "reference_hash": "c199002ef13611f2ceb3447e2d047b89eb8c4d44ee11bccd006ad101527b74e8",
+     "reference_promotion_id": 48,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 42
+    },
+    {
+     "completed_at": "2026-11-23T09:35:30.483221Z",
+     "evaluation_id": 136,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-46.json#/evaluations/0",
+     "ratio": 0.9955251882999907,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9955 > 0.97",
+     "reference_hash": "63e2b699effd10efca8f930384218c8945e12c56b2738e99e62fc027e68261e3",
+     "reference_promotion_id": 51,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 46
+    },
+    {
+     "completed_at": "2026-11-24T08:12:13.520262Z",
+     "evaluation_id": 142,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-48.json#/evaluations/0",
+     "ratio": 1.0018055940686381,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 1.0018 > 0.97",
+     "reference_hash": "bd2b39b11a3756c7545fc8b56cadabcb150acb6b8465842985363404c45dfd42",
+     "reference_promotion_id": 53,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 48
+    },
+    {
+     "completed_at": "2026-11-24T23:18:57.642607Z",
+     "evaluation_id": 148,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-50.json#/evaluations/0",
+     "ratio": 0.9750513074393652,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9751 > 0.97",
+     "reference_hash": "bd2b39b11a3756c7545fc8b56cadabcb150acb6b8465842985363404c45dfd42",
+     "reference_promotion_id": 53,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 50
+    },
+    {
+     "completed_at": "2026-11-25T02:00:59.404940Z",
+     "evaluation_id": 154,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-52.json#/evaluations/0",
+     "ratio": 0.9663356577371272,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "bd2b39b11a3756c7545fc8b56cadabcb150acb6b8465842985363404c45dfd42",
+     "reference_promotion_id": 53,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 52
+    },
+    {
+     "completed_at": "2026-11-25T07:51:42.251321Z",
+     "evaluation_id": 157,
+     "leaderboard_ratio": 1.0125371510611774,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-53.json#/evaluations/0",
+     "ratio": 1.0125371510611774,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 1.0125 > 0.97",
+     "reference_hash": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+     "reference_promotion_id": 59,
+     "reference_submission": 52,
+     "state": "completed",
+     "submission": 53
+    },
+    {
+     "completed_at": "2026-11-25T23:39:12.173176Z",
+     "evaluation_id": 160,
+     "leaderboard_ratio": 0.9993680614241021,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-54.json#/evaluations/0",
+     "ratio": 0.9993680614241021,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9994 > 0.97",
+     "reference_hash": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+     "reference_promotion_id": 59,
+     "reference_submission": 52,
+     "state": "completed",
+     "submission": 54
+    },
+    {
+     "completed_at": "2026-11-26T01:54:10.521837Z",
+     "evaluation_id": 163,
+     "leaderboard_ratio": 1.000794058187049,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-55.json#/evaluations/0",
+     "ratio": 1.000794058187049,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 1.0008 > 0.97",
+     "reference_hash": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+     "reference_promotion_id": 59,
+     "reference_submission": 52,
+     "state": "completed",
+     "submission": 55
+    },
+    {
+     "completed_at": "2026-11-26T02:18:43.534656Z",
+     "evaluation_id": 166,
+     "leaderboard_ratio": 0.9864692898698344,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-56.json#/evaluations/0",
+     "ratio": 0.9864692898698344,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9865 > 0.97",
+     "reference_hash": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+     "reference_promotion_id": 59,
+     "reference_submission": 52,
+     "state": "completed",
+     "submission": 56
+    }
+   ],
+   "ratios_against_current_champion": [
+    157,
+    160,
+    163,
+    166
+   ]
+  },
+  "thumbv6m": {
+   "champion_declared_source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+   "champion_over_public_reference": {
+    "S_champion_over_baseline": 0.968438842462306,
+    "baseline_status": "published",
+    "baseline_submission": 50,
+    "candidate_bar_over_baseline": 0.939385677188437,
+    "caveat": "indicative only: the validator scored these ratios on its own inputs, while the goal's local comparisons run on local seeds, so this product shows how far the champion sits above the public reference, it does not replace measuring it",
+    "chain": [
+     {
+      "evaluation_id": 158,
+      "provenance": "raw/submission-53.json#/evaluations/1/decision/score",
+      "ratio": 0.9684388424623065,
+      "reference_promotion_id": 57,
+      "reference_submission": 50,
+      "submission": 53
+     }
+    ],
+    "derived": true,
+    "not_published": "a product of published takeover ratios, computed here; the API publishes no such number and no absolute S",
+    "open_reason": null
+   },
+   "champion_promotion_id": 60,
+   "champion_submission": 53,
+   "champion_takeover": [
+    {
+     "evaluation_id": 158,
+     "provenance": "raw/submission-53.json#/evaluations/1",
+     "ratio": 0.9684388424623065,
+     "reference_promotion_id": 57,
+     "reference_submission": 50
+    }
+   ],
+   "published_absolute_S": null,
+   "published_absolute_S_note": "the public API publishes no absolute S per call for this board; only S ratios recorded at takeover time, which are relative to the champion of that moment and not comparable across the season",
+   "ratio_records": [
+    {
+     "completed_at": "2026-11-21T15:41:34.481037Z",
+     "evaluation_id": 110,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-37.json#/evaluations/1",
+     "ratio": 0.9715221058376715,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9715 > 0.97",
+     "reference_hash": "18233f8f67420bdfdef1f7e046ad531d58366388f1a9539a02f917399c5262fa",
+     "reference_promotion_id": 44,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 37
+    },
+    {
+     "completed_at": "2026-11-22T06:27:46.961809Z",
+     "evaluation_id": 125,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-42.json#/evaluations/1",
+     "ratio": 0.9876365156638058,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9876 > 0.97",
+     "reference_hash": "e4a877697b895c6aadc0f1a85856142227b32718d8a1413d730d9058e49df765",
+     "reference_promotion_id": 47,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 42
+    },
+    {
+     "completed_at": "2026-11-23T09:35:30.632627Z",
+     "evaluation_id": 137,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-46.json#/evaluations/1",
+     "ratio": 0.9844080852582479,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9844 > 0.97",
+     "reference_hash": "70e32190a66ae401d47c7420c2572581a8ee72cf1407036d4ef7d52c9d03bc4a",
+     "reference_promotion_id": 50,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 46
+    },
+    {
+     "completed_at": "2026-11-24T08:19:08.258754Z",
+     "evaluation_id": 143,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-48.json#/evaluations/1",
+     "ratio": 0.9304733828876379,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "70e32190a66ae401d47c7420c2572581a8ee72cf1407036d4ef7d52c9d03bc4a",
+     "reference_promotion_id": 50,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 48
+    },
+    {
+     "completed_at": "2026-11-24T23:25:45.711929Z",
+     "evaluation_id": 149,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-50.json#/evaluations/1",
+     "ratio": 0.9687911871149875,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "8f8a23345b12abfe41040c6eca20ee06f4a4c50de69fbc6bdf8a9d758f129f37",
+     "reference_promotion_id": 56,
+     "reference_submission": null,
+     "state": "completed",
+     "submission": 50
+    },
+    {
+     "completed_at": "2026-11-25T01:54:11.414427Z",
+     "evaluation_id": 155,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-52.json#/evaluations/1",
+     "ratio": 1.0,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 1.0000 > 0.97",
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 57,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 52
+    },
+    {
+     "completed_at": "2026-11-25T07:58:44.063082Z",
+     "evaluation_id": 158,
+     "leaderboard_ratio": null,
+     "measured_against_current_champion": false,
+     "outcome": "qualifies",
+     "provenance": "raw/submission-53.json#/evaluations/1",
+     "ratio": 0.9684388424623065,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": null,
+     "reference_hash": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+     "reference_promotion_id": 57,
+     "reference_submission": 50,
+     "state": "completed",
+     "submission": 53
+    },
+    {
+     "completed_at": "2026-11-25T23:39:12.320386Z",
+     "evaluation_id": 161,
+     "leaderboard_ratio": 0.9882167054173765,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-54.json#/evaluations/1",
+     "ratio": 0.9882167054173765,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9882 > 0.97",
+     "reference_hash": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+     "reference_promotion_id": 60,
+     "reference_submission": 53,
+     "state": "completed",
+     "submission": 54
+    },
+    {
+     "completed_at": "2026-11-26T01:54:10.668575Z",
+     "evaluation_id": 164,
+     "leaderboard_ratio": 0.988441568315744,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-55.json#/evaluations/1",
+     "ratio": 0.988441568315744,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9884 > 0.97",
+     "reference_hash": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+     "reference_promotion_id": 60,
+     "reference_submission": 53,
+     "state": "completed",
+     "submission": 55
+    },
+    {
+     "completed_at": "2026-11-26T02:18:43.669458Z",
+     "evaluation_id": 167,
+     "leaderboard_ratio": 0.9919291949869329,
+     "measured_against_current_champion": true,
+     "outcome": "above-bar",
+     "provenance": "raw/submission-56.json#/evaluations/1",
+     "ratio": 0.9919291949869329,
+     "ratio_kind": "takeover-ratio: S_submission / S_reference_at_that_time",
+     "reason": "S ratio 0.9919 > 0.97",
+     "reference_hash": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+     "reference_promotion_id": 60,
+     "reference_submission": 53,
+     "state": "completed",
+     "submission": 56
+    }
+   ],
+   "ratios_against_current_champion": [
+    161,
+    164,
+    167
+   ]
+  }
+ },
+ "snapshot_sha256": "081500cf4d5d8dd708a8ec04c2afa1c23a5c9bfbc871d25e4d7e4b8e99d8d0f2",
+ "snapshot_utc": "2026-11-26T11:35:00.491983+00:00",
+ "status": {
+  "means": "every board, board reference, referenced submission and source request the public API names was fetched and recorded; a source the API withholds is recorded as withheld with its raw 403 body, so this is a complete record, not a complete set of published sources",
+  "snapshot": "complete",
+  "summary": {
+   "boards": 3,
+   "published_absolute_S": 0,
+   "sources_error": 0,
+   "sources_hash_mismatch": 0,
+   "sources_published": 5,
+   "sources_withheld": 5,
+   "submissions_requested": 10
+  }
+ },
+ "workspace": {
+  "files": {
+   "eik-work/baselines/former-50/entry.c": {
+    "bytes": 166755,
+    "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+   },
+   "entry.c": {
+    "bytes": 166756,
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+   }
+  },
+  "former_50_local_baseline_matches_published_reference": true
+ }
+}

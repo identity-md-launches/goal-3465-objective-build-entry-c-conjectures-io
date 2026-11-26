@@ -1,0 +1,326 @@
+{
+ "artifacts": [
+  {
+   "bytes": 93517,
+   "path": "snapshot.json",
+   "sha256": "79efcad37326119d484c93cb5b2aeb2484ab2f05f4d2e4b87d4de6bfc601dcc3"
+  },
+  {
+   "bytes": 1330,
+   "path": "raw/boards.json",
+   "sha256": "a22bfb2e3671e4db56f91f9fce70351af23b99e43226c222f80c615bfaf457e8"
+  },
+  {
+   "bytes": 352,
+   "path": "raw/leaderboard-overall.json",
+   "sha256": "f2e9e75ac29e46c6bf2bc0be9f97aacedcc77c9c3626704822f08623d524c176"
+  },
+  {
+   "bytes": 1677,
+   "path": "raw/leaderboard-rv32im.json",
+   "sha256": "c99f7b5887aade348c38fd34115d11c40acd1d6fab1e1f833aebe52babc366a4"
+  },
+  {
+   "bytes": 1347,
+   "path": "raw/leaderboard-thumbv6m.json",
+   "sha256": "36fcc3ab27a51097b2a35d7cded855b1189ff0d79726907afdc5c29e16ebecdc"
+  },
+  {
+   "bytes": 44369,
+   "path": "raw/requests.json",
+   "sha256": "3ba21f2b0850a87b4198f141fb1829c1dd392c0c5e537dbe24a1e25bc05b85f2"
+  },
+  {
+   "bytes": 168,
+   "path": "raw/source-52.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+   "bytes": 168,
+   "path": "raw/source-53.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+   "bytes": 168,
+   "path": "raw/source-54.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+   "bytes": 168,
+   "path": "raw/source-55.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+   "bytes": 168,
+   "path": "raw/source-56.json",
+   "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+   "bytes": 2076,
+   "path": "raw/submission-37.json",
+   "sha256": "5ca62ddf0a886c64ac62a70c91d9feb860325ea9af4f6504761e9ad6db044dc7"
+  },
+  {
+   "bytes": 2076,
+   "path": "raw/submission-42.json",
+   "sha256": "a51df3b4ebafe187c53e57dbf912353191ef6c64eccd8822a3ab1be289eb694e"
+  },
+  {
+   "bytes": 2075,
+   "path": "raw/submission-46.json",
+   "sha256": "605db0c543744b8b96fc818235fd52ee0818084d7854ca08ed17a70a54ea19c0"
+  },
+  {
+   "bytes": 2059,
+   "path": "raw/submission-48.json",
+   "sha256": "2ddd9f81e6bcb433e21e9a3b31647dfd5f3dee513c3a4603c0961300aef4d571"
+  },
+  {
+   "bytes": 2059,
+   "path": "raw/submission-50.json",
+   "sha256": "f419deffe85653504c7b1827b3a18f52320744848b7ceb81c6095dddb662e77e"
+  },
+  {
+   "bytes": 2062,
+   "path": "raw/submission-52.json",
+   "sha256": "15b5ce881658f0ee5b952e4c976629d4b4626510969a8bd39f16887159346b97"
+  },
+  {
+   "bytes": 2077,
+   "path": "raw/submission-53.json",
+   "sha256": "a5ac7584b8e8f83028c47c0cad1754682bf7fa5c5c5998a0619bab00dc39699f"
+  },
+  {
+   "bytes": 2094,
+   "path": "raw/submission-54.json",
+   "sha256": "6c27fd93ae6702b9651b6470de6f25c18d4ebf28cc41e3695c94af87cc7fa9e7"
+  },
+  {
+   "bytes": 2092,
+   "path": "raw/submission-55.json",
+   "sha256": "1b7a0a00286e403f1db876848001e04ad7ef66d7eb7d794161d498dd5a12608b"
+  },
+  {
+   "bytes": 2077,
+   "path": "raw/submission-56.json",
+   "sha256": "f6f24e151d34da72206c0f1c87df685effa08a2c35f223724d40d75738b49a8c"
+  },
+  {
+   "bytes": 230754,
+   "path": "references/id37.c",
+   "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef"
+  },
+  {
+   "bytes": 247785,
+   "path": "references/id42.c",
+   "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457"
+  },
+  {
+   "bytes": 248679,
+   "path": "references/id46.c",
+   "sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7"
+  },
+  {
+   "bytes": 168695,
+   "path": "references/id48.c",
+   "sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661"
+  },
+  {
+   "bytes": 166755,
+   "path": "references/id50.c",
+   "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+  },
+  {
+   "bytes": 29725,
+   "path": "fetch_snapshot.py",
+   "sha256": "020bbb42285f76b95390c4e92fcb00ef2a2e69252df37b73f493dc0ecdb1c30e"
+  },
+  {
+   "bytes": 34739,
+   "path": "verify.py",
+   "sha256": "971b3253e869a7d0507c45fb116254cb5fbec07a9cd99db10ec400e6d4123756"
+  },
+  {
+   "bytes": 6868,
+   "path": "README.md",
+   "sha256": "b842e953781deb825c0b8f2024ed84cc526a3425a338d900e0ffbf6edc15e832"
+  }
+ ],
+ "batch": "e04-evidence-finalisation",
+ "check": {
+  "command": "python3 eik-work/final-validation/boards/verify.py",
+  "expected_exit": 0,
+  "offline": true,
+  "self_tests": "tampered copies must all be rejected"
+ },
+ "commands": [
+  {
+   "command": "python3 eik-work/final-validation/boards/fetch_snapshot.py",
+   "exit": 0,
+   "note": "24 anonymous GETs; wrote snapshot.json, raw/, references/ and this file"
+  },
+  {
+   "command": "python3 eik-work/final-validation/boards/verify.py",
+   "exit": 0,
+   "note": "offline replay of every recorded fact from the raw bodies; tamper self-tests"
+  }
+ ],
+ "gaps": [
+  "rv32im: the current champion's source (submission 52) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "thumbv6m: the current champion's source (submission 53) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "overall: the current champion's source (submission 56) is not public (SOURCE_WITHHELD); no public reference bytes exist for this board, so local comparisons must use the former-champion references",
+  "no absolute S per call is published for any board or submission: the only published numbers are per-evaluation S ratios (candidate S / reference S at that moment) and, for former champions, nothing at all; published_absolute_S is therefore null everywhere",
+  "submissions withheld at this UTC instant: 52, 53, 54, 55, 56",
+  "public references retained and hash-matched: 37, 42, 46, 48, 50; each is a former champion that holds no board, so none of them is the current champion",
+  "consequence for final comparisons: the S ratio a candidate must beat (0.970x of the champion) cannot be computed from public data alone, because the champion's own source is withheld; it has to be measured locally against a locally built incumbent on the same inputs"
+ ],
+ "generated_utc": "2026-11-26T11:35:00.491983+00:00",
+ "item": "board-snapshot",
+ "measured_facts": {
+  "boards": {
+   "overall": {
+    "config_hash": "06897c371a250b616e35121c39975bbd6f2da774175b47033f8d22ff09381bc9",
+    "measurement_identity": [
+     "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+    ],
+    "promotion_id": 61,
+    "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+    "source_status": "withheld",
+    "submission": 56
+   },
+   "rv32im": {
+    "config_hash": "10709b4d5460b0ddf6768b25c7f0e48a7dd657b92cac8701d7e3491254f54bbf",
+    "measurement_identity": [
+     "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+    ],
+    "promotion_id": 59,
+    "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+    "source_status": "withheld",
+    "submission": 52
+   },
+   "thumbv6m": {
+    "config_hash": "688d360c2dfaa6c9c8f7e5519b4bc97ebedcbe41e55f38d1e907286079e6dbdf",
+    "measurement_identity": [
+     "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+    ],
+    "promotion_id": 60,
+    "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+    "source_status": "withheld",
+    "submission": 53
+   }
+  },
+  "champion_over_public_reference": {
+   "overall": {
+    "S_champion_over_baseline": 0.96815183298679,
+    "baseline_submission": 50,
+    "candidate_bar_over_baseline": 0.939107277997187,
+    "derived": true,
+    "open_reason": null
+   },
+   "rv32im": {
+    "S_champion_over_baseline": null,
+    "baseline_submission": null,
+    "candidate_bar_over_baseline": null,
+    "derived": true,
+    "open_reason": "promotion 53 does not resolve to any submission in this snapshot, so no published ratio ties this board's champion to a public reference"
+   },
+   "thumbv6m": {
+    "S_champion_over_baseline": 0.968438842462306,
+    "baseline_submission": 50,
+    "candidate_bar_over_baseline": 0.939385677188437,
+    "derived": true,
+    "open_reason": null
+   }
+  },
+  "former_50_local_baseline_matches_published_reference": true,
+  "promotions_resolved": {
+   "46": 37,
+   "49": 42,
+   "52": 46,
+   "55": 48,
+   "57": 50,
+   "58": 50,
+   "59": 52,
+   "60": 53,
+   "61": 56
+  },
+  "public_references": [
+   37,
+   42,
+   46,
+   48,
+   50
+  ],
+  "published_absolute_S": {
+   "overall": null,
+   "rv32im": null,
+   "thumbv6m": null
+  },
+  "ratios_against_current_champion": {
+   "overall": [],
+   "rv32im": [
+    {
+     "evaluation_id": 157,
+     "ratio": 1.0125371510611774,
+     "submission": 53
+    },
+    {
+     "evaluation_id": 160,
+     "ratio": 0.9993680614241021,
+     "submission": 54
+    },
+    {
+     "evaluation_id": 163,
+     "ratio": 1.000794058187049,
+     "submission": 55
+    },
+    {
+     "evaluation_id": 166,
+     "ratio": 0.9864692898698344,
+     "submission": 56
+    }
+   ],
+   "thumbv6m": [
+    {
+     "evaluation_id": 161,
+     "ratio": 0.9882167054173765,
+     "submission": 54
+    },
+    {
+     "evaluation_id": 164,
+     "ratio": 0.988441568315744,
+     "submission": 55
+    },
+    {
+     "evaluation_id": 167,
+     "ratio": 0.9919291949869329,
+     "submission": 56
+    }
+   ]
+  },
+  "withheld_sources": [
+   52,
+   53,
+   54,
+   55,
+   56
+  ]
+ },
+ "source": {
+  "access": "anonymous GET, no credentials, no registration",
+  "api_base": "https://conjectures.io/v1/competitions/exact-integer-kernels/",
+  "snapshot_path": "snapshot.json",
+  "snapshot_sha256": "081500cf4d5d8dd708a8ec04c2afa1c23a5c9bfbc871d25e4d7e4b8e99d8d0f2",
+  "snapshot_utc": "2026-11-26T11:35:00.491983+00:00"
+ },
+ "status": "pass",
+ "tool": {
+  "fetch": "fetch_snapshot.py",
+  "network_during_verify": false,
+  "platform": "linux",
+  "python": "3.12.3",
+  "standard_library_only": true,
+  "verify": "verify.py"
+ },
+ "what": "one dated, unauthenticated snapshot of the public conjectures.io exact-integer-kernels boards, resolved to submission ids and source requests, with raw responses, declared and downloaded source hashes, and a withheld-source record for each champion source"
+}
