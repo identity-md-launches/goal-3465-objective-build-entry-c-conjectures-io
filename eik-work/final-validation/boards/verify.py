@@ -132,7 +132,7 @@ def check_requests(root, snap):
         body = http_body(root, r)
         need(len(body) == r["bytes"], f"{key}: body length differs from the record")
         need(digest(body) == r["sha256"], f"{key}: body hash differs from the record")
-        need(r["sha256"] in snap["files"].get(r["path"], {}).get("sha256", ""),
+        need(r["sha256"] == snap["files"].get(r["path"], {}).get("sha256"),
              f"{key}: body hash is not the declared file hash")
     return reqs
 
@@ -399,6 +399,8 @@ def check_status(root, snap):
         "published_absolute_S": sum(1 for b in BOARDS if snap["scores"][b]["published_absolute_S"] is not None),
     }
     need(summary == expect, f"status summary {summary} does not match the evidence {expect}")
+    need(not (summary["sources_hash_mismatch"] or summary["sources_error"]),
+         "complete snapshot includes a failed source request or hash mismatch")
     gaps = " ".join(snap["gaps"])
     for b in BOARDS:
         sub = snap["board_references"][b]["submission"]
@@ -426,7 +428,9 @@ def check_result(root, snap):
     need(res["tool"]["standard_library_only"] is True and res["tool"]["network_during_verify"] is False,
          "result.json does not claim an offline standard-library check")
     declared = {a["path"]: a for a in res["artifacts"]}
-    need("snapshot.json" in declared and "verify.py" in declared, "result.json does not hash its evidence")
+    expected = set(snap["files"]) | {SNAPSHOT, "fetch_snapshot.py", "verify.py", "README.md"}
+    need(set(declared) == expected and len(declared) == len(res["artifacts"]),
+         "result.json artifact ledger differs from the expected file set")
     for path, a in declared.items():
         f = Path(root) / path
         need(f.is_file(), f"result.json cites a missing file {path}")
@@ -453,7 +457,7 @@ def validate(root="."):
     root = Path(root)
     snap = load(root)
     for k in ("snapshot_utc", "workspace", "api_base", "environment", "configuration", "boards",
-              "board_references", "promotions", "entries", "scores", "requests", "files", "gaps", "status"):
+              "board_references", "per_board", "promotions", "entries", "scores", "requests", "files", "gaps", "status"):
         need(k in snap, f"snapshot has no {k}")
     need(snap["snapshot_sha256"] == canonical(snap), "snapshot_sha256 is not the digest of this snapshot")
     dt = datetime.fromisoformat(snap["snapshot_utc"])
@@ -473,12 +477,17 @@ def validate(root="."):
     for b in BOARDS:
         ids.add(leaders[b]["reference"]["submission"])
         ids |= {c["submission"] for c in leaders[b].get("challengers") or []}
-    expected_urls = {API + "boards"} | {API + f"leaderboard?board={b}" for b in BOARDS} \
-        | {API + f"submissions/{i}" for i in ids} | {API + f"submissions/{i}/source" for i in ids}
-    need({r["url"] for r in reqs.values()} == expected_urls,
-         "request set is not exactly the boards, three leaderboards, and each submission and its source")
-    for i in ids:
-        need(reqs[f"submission-{i}"]["http_status"] == 200, f"submission {i} did not answer 200")
+    endpoints = {"boards": "boards"} | {f"leaderboard-{b}": f"leaderboard?board={b}" for b in BOARDS} \
+        | {f"submission-{i}": f"submissions/{i}" for i in ids} \
+        | {f"source-{i}": f"submissions/{i}/source" for i in ids}
+    need({key: r["url"] for key, r in reqs.items()} ==
+         {key: API + endpoint for key, endpoint in endpoints.items()},
+         "request keys do not match their official endpoint URLs")
+    for key in endpoints:
+        if not key.startswith("source-"):
+            need(reqs[key]["path"] == f"raw/{key}.json", f"{key}: wrong response path")
+            need(reqs[key]["http_status"] == 200 and reqs[key]["error"] is None,
+                 f"{key}: expected HTTP 200")
 
     # -- boards and leaderboards ----------------------------------------------------------
     need(set(boards) == set(BOARDS), f"board set {sorted(boards)} is not {sorted(BOARDS)}")
@@ -517,6 +526,8 @@ def validate(root="."):
     need({str(i): e for i, e in entries.items()} == snap["entries"],
          "entries differ from a replay over the raw bodies")
     for i, e in entries.items():
+        need(DIGEST.fullmatch(e["declared_source_sha256"] or "") is not None,
+             f"submission {i}: malformed declared source hash")
         if e["source_available_flag"] is False:
             need(e["status"] != "published", f"submission {i}: marked unavailable but kept as a reference")
         if e["status"] == "published":
@@ -533,6 +544,32 @@ def validate(root="."):
     # -- scores ----------------------------------------------------------------------------
     scores = expected_scores(reqs, boards, leaders, metas, promotions, entries)
     need(snap["scores"] == scores, "scores differ from a replay over the raw bodies")
+    need(set(snap["per_board"]) == set(BOARDS), "wrong board set in per_board")
+    for b in BOARDS:
+        ref = leaders[b]["reference"]
+        entry = entries[ref["submission"]]
+        published = entry["status"] == "published"
+        row = {
+            "board": b,
+            "champion_submission": ref["submission"],
+            "current_promotion_id": ref["promotion_id"],
+            "promotion_resolution": promotions[str(ref["promotion_id"])]["status"],
+            "declared_source_sha256": ref["source_sha256"],
+            "source_response_sha256": entry["downloaded_sha256"],
+            "source_status": entry["status"],
+            "source_reason_code": entry["reason_code"],
+            "source_response": entry["path"],
+            "reference_path": entry["path"] if published else None,
+            "reference_sha256": entry["downloaded_sha256"] if published else None,
+            "measurement_identity": snap["boards"][b]["measurement_identity"],
+            "config_hash": boards[b].get("config_hash"),
+            "promotion_bar": boards[b].get("promotion_bar"),
+            "reward_share": boards[b].get("reward_share"),
+            "published_absolute_S": scores[b]["published_absolute_S"],
+            "ratios_against_current_champion": len(scores[b]["ratios_against_current_champion"]),
+            "champion_over_public_reference": scores[b]["champion_over_public_reference"]["S_champion_over_baseline"],
+        }
+        need(snap["per_board"][b] == row, f"{b}: per-board summary differs from the raw evidence")
     check_semantics(snap, metas)
     check_no_absolute_fields(root, reqs)
     check_status(root, snap)
@@ -558,6 +595,9 @@ def validate(root="."):
 
 # ---------------------------------------------------------------- negatives
 TAMPERS = [
+    ("edited fetcher", lambda r: _flip(Path(r) / "fetch_snapshot.py")),
+    ("invented current reference path",
+     lambda r: _patch(r, lambda s: s["per_board"]["rv32im"].__setitem__("reference_path", "references/id50.c"))),
     ("flipped reference byte",
      lambda r: _flip(Path(r) / "references/id50.c")),
     ("edited ratio",
@@ -595,7 +635,15 @@ def _patch(root, fn):
     snap = json.loads(p.read_text())
     fn(snap)
     snap["snapshot_sha256"] = canonical(snap)                 # a tamperer can re-seal the digest
-    p.write_text(json.dumps(snap, indent=1, sort_keys=True) + "\n")
+    body = (json.dumps(snap, indent=1, sort_keys=True) + "\n").encode()
+    p.write_bytes(body)
+    result_path = Path(root) / "result.json"
+    result = jload(result_path)
+    result["source"]["snapshot_sha256"] = snap["snapshot_sha256"]
+    for artifact in result["artifacts"]:
+        if artifact["path"] == SNAPSHOT:
+            artifact.update(sha256=digest(body), bytes=len(body))
+    result_path.write_text(json.dumps(result, indent=1, sort_keys=True) + "\n")
 
 
 def self_test():
@@ -637,8 +685,8 @@ def main():
     for b in BOARDS:
         s = snap["scores"][b]
         c = s["champion_over_public_reference"]
-        print(f"  {b}: champion over public reference "
-              f"{c['S_champion_over_baseline']} (bar for a 3% win: {c['candidate_bar_over_baseline']})"
+        print(f"  {b}: historical champion-over-reference ratio "
+              f"{c['S_champion_over_baseline']} (historical ratio × 0.97: {c['candidate_bar_over_baseline']})"
               if c["S_champion_over_baseline"] is not None else
               f"  {b}: champion over public reference unavailable — {c['open_reason']}")
     print("verify: pass")

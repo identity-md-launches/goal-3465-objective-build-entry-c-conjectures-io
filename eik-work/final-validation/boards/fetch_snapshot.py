@@ -126,7 +126,7 @@ def write_result(snapshot):
                   "offline": True, "self_tests": "tampered copies must all be rejected"},
         "commands": [
             {"command": "python3 eik-work/final-validation/boards/fetch_snapshot.py", "exit": 0,
-             "note": "24 anonymous GETs; wrote snapshot.json, raw/, references/ and this file"},
+             "note": f"{len(snapshot['requests'])} anonymous GETs; wrote snapshot.json, raw/, references/ and this file"},
             {"command": "python3 eik-work/final-validation/boards/verify.py", "exit": 0,
              "note": "offline replay of every recorded fact from the raw bodies; tamper self-tests"},
         ],
@@ -454,6 +454,7 @@ def main():
             "current_promotion_id": ref["promotion_id"],
             "promotion_resolution": promotions[str(ref["promotion_id"])]["status"],
             "declared_source_sha256": ref["source_sha256"],
+            "source_response_sha256": e["downloaded_sha256"],
             "source_status": e["status"],
             "source_reason_code": e["reason_code"],
             "source_response": e["path"],
@@ -492,6 +493,7 @@ def main():
                        "environments": boards[b].get("environments")}
                    for b in BOARDS},
         "board_references": {b: leaders[b]["reference"] for b in BOARDS},
+        "per_board": per_board,
         "promotions": promotions,
         "entries": {str(i): entries[i] for i in submission_ids},
         "scores": scores,
@@ -545,8 +547,8 @@ def main():
         f"each is a former champion that holds no board, so none of them is the current champion")
     snapshot["gaps"].append(
         "consequence for final comparisons: the S ratio a candidate must beat (0.970x of the champion) "
-        "cannot be computed from public data alone, because the champion's own source is withheld; it "
-        "has to be measured locally against a locally built incumbent on the same inputs")
+        "requires the champion and candidate to be measured on the same inputs; historical "
+        "ratios and comparisons with former champions provide context only")
 
     snap_sha = digest_bytes(json.dumps(snapshot, sort_keys=True, separators=(",", ":")).encode())
     snapshot["snapshot_sha256"] = snap_sha

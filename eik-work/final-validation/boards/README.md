@@ -26,6 +26,10 @@ three sources answered `403 SOURCE_WITHHELD`, as the rules say a current champio
 published. Submissions 37, 42, 46, 48 and 50 are published; each was kept only because its bytes hash
 to the `source_sha256` the API declares for it.
 
+`snapshot.json` provides a `per_board` summary with the promotion and submission IDs, declared source
+hash, source response hash, publication status, reference path or null, measurement identity and
+published absolute score or null. The verifier rebuilds each row from the saved responses.
+
 ## Promotion → submission resolution
 
 Resolved from evidence, never assumed:
@@ -60,10 +64,9 @@ Two things are therefore kept apart in `scores.<board>`:
 Where the walk cannot close, the value is `null` and `open_reason` says why. At the 2026-11-26
 snapshot: rv32im is open (the champion took the board from promotion 53, which resolves to no
 submission), while thumbv6m closes at submission 50 through promotion 57 and overall closes at
-submission 50 through promotion 58. Those two are the only honest public statements about how far
-today's champion sits above the last public reference, and they imply that a candidate must reach
-roughly `0.97 x 0.9684 ≈ 0.9394` of that reference on thumbv6m, and `≈0.9391` on overall, to take the
-board — not `0.97`. Re-measure locally; do not treat the product as a score.
+submission 50 through promotion 58. Applying the 0.97 multiplier to those historical ratios gives
+indicative ratios of about 0.9394 for thumbv6m and 0.9391 for overall relative to submission 50.
+The official takeover test requires a direct comparison with the current champion on the same inputs.
 
 ## Refreshing
 
@@ -90,7 +93,7 @@ downloaded source only on a declared-hash match. `verify.py` never touches the n
   403 body with `SOURCE_WITHHELD`, and no reference file exists for a withheld submission;
 * the status counts, the gaps, and `result.json`'s hashes, commands and measured facts match the
   evidence;
-* ten tampered copies (edited ratio, withheld source promoted to published, flipped reference byte,
+* twelve tampered copies (edited fetcher, invented current reference path, edited ratio, withheld source promoted to published, flipped reference byte,
   deleted body, invented absolute S, altered promotion resolution, rewritten status, extra file,
   dropped board, inflated counts) are each rejected.
 
@@ -104,8 +107,8 @@ point-in-time identity, so a later change to `entry.c` prints a note rather than
 
 ## Gaps
 
-* No current champion's source is public, so the 0.970x bar cannot be computed from public data: it
-  has to be measured locally against a locally built incumbent on the same inputs.
+* The API withholds all three current champions' sources, so a direct same-input comparison against
+  any current champion is unavailable from this snapshot.
 * No absolute S is published for any board, so every score comparison that can be made from the API
   is a ratio, and only against the reference in force when it was taken.
 * `ratio_records` cover only the submissions this snapshot fetched; older promotions that resolve to
