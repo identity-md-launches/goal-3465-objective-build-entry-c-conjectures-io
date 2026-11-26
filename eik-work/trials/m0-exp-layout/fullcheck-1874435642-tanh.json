@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/trials/m0-exp-layout/entry.c",
+    "--function",
+    "tanh",
+    "--quick",
+    "--seed",
+    "1874435642"
+  ],
+  "exit_code": 0,
+  "seconds": 23.965,
+  "source_sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "bdc1a36c1a43016b3e62d131735644caca6e87fda63d44aed3832bc600ca5c15"
+}

@@ -1,0 +1,685 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "6a3abcacab6a5c08a7fbae3ebeae71bb7dce0894b6081323204719fe7f5a4b46",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 34.66019769446229,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 42.11833747689283
+    },
+    "S_thumbv7em_reported_only": 40.8167589347728,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "6a3abcacab6a5c08a7fbae3ebeae71bb7dce0894b6081323204719fe7f5a4b46",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 80,
+        "means": {
+         "hard": 41.486666666666665,
+         "typical": 30.5635,
+         "uniform": 13.297,
+         "wide": 24.738
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 22584,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 57.763333333333335,
+         "typical": 47.767,
+         "uniform": 20.052,
+         "wide": 35.793
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 182,
+        "means": {
+         "hard": 49.43,
+         "typical": 38.008,
+         "uniform": 18.584,
+         "wide": 29.552
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 123,
+        "means": {
+         "hard": 77.93333333333334,
+         "typical": 37.23,
+         "uniform": 14.698,
+         "wide": 20.749
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1595708224112489,
+      "stack": 64,
+      "stack_bound": 320,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 23298,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.846666666666664,
+         "typical": 41.746,
+         "uniform": 21.178,
+         "wide": 33.517
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 161,
+        "means": {
+         "hard": 48.693333333333335,
+         "typical": 37.77,
+         "uniform": 20.228,
+         "wide": 29.965
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 110,
+        "means": {
+         "hard": 71.41333333333333,
+         "typical": 35.9565,
+         "uniform": 16.627,
+         "wide": 21.459
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1642591067190005,
+      "stack": 48,
+      "stack_bound": 296,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 34.56858515403925,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 41.903766813630675
+    },
+    "S_thumbv7em_reported_only": 40.62198760030839,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "6a3abcacab6a5c08a7fbae3ebeae71bb7dce0894b6081323204719fe7f5a4b46",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 43.09,
+         "typical": 30.327,
+         "uniform": 13.322,
+         "wide": 24.847
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.561
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 22584,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 60.45,
+         "typical": 47.5425,
+         "uniform": 20.354,
+         "wide": 35.811
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 191,
+        "means": {
+         "hard": 47.406666666666666,
+         "typical": 37.5065,
+         "uniform": 18.768,
+         "wide": 29.284
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 123,
+        "means": {
+         "hard": 76.32,
+         "typical": 36.827,
+         "uniform": 14.364,
+         "wide": 21.082
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1595708224112489,
+      "stack": 64,
+      "stack_bound": 320,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 23298,
+      "functions": {
+       "exp": {
+        "hard_p999": 148,
+        "means": {
+         "hard": 56.38666666666666,
+         "typical": 41.521,
+         "uniform": 21.479,
+         "wide": 33.465
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 168,
+        "means": {
+         "hard": 46.76,
+         "typical": 37.1785,
+         "uniform": 20.463,
+         "wide": 29.943
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 110,
+        "means": {
+         "hard": 70.21,
+         "typical": 35.633,
+         "uniform": 16.293,
+         "wide": 21.735
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1642591067190005,
+      "stack": 48,
+      "stack_bound": 296,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee"
+ },
+ "kind": "trial",
+ "note": "Thumb exp high-word layout: the 512 aux words of t_eps rows 0..511 (stride-16 interleaved) copied unchanged into contiguous uint32_t t_hb[512]; the 8 stride-16 loads in t_mt, t_mn, t_exp_res, t_exp_den and the two xrow/xkm/xkq table loads in t_eik_exp now index t_hb. t_eps is untouched, so aliases (t_xrow, t_xkm, t_xkq, t_dkn, tanh/sigmoid row pointers, dead NaN-branch t_eps casts) keep their data. Result: thumbv6m +2084 bytes, S worse; rv32im identical code (EIK_SEL selects the _r path).",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.0195917007045177,
+   "rv32im": 1.0,
+   "thumbv6m": 1.0395672361455304
+  },
+  "1947282751": {
+   "overall": 1.0196652876104688,
+   "rv32im": 1.0,
+   "thumbv6m": 1.0397172987577399
+  }
+ },
+ "runs": {
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout check check eik-work/trials/m0-exp-layout/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "dc3436e40127a2bb59be7b643bd30a3034715f0e49f67ef8705dfb701a845930",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "38cf4dae70469e7708e75398b6aa9caaa157107cd83f8a8e6c5294f62b787fa3"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "515a93aa170339c55deb6acef0871968b04286bc3e6d2356b5678cfb0a97b673",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1874435642-exp fullcheck eik-work/trials/m0-exp-layout/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "ec1e93c2c5851b6b2853e035c1958a37f15f6336f6c1ae90bf628edf9ee0a1ff",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "9a3852948ac654fb9a5dad7b7a934bb8965456d08e72c766faebda18e91a7cc0"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1874435642-sigmoid fullcheck eik-work/trials/m0-exp-layout/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "85fe674f157c216af24cdbaf15f1caab0ddbda9054eaf539c1a0c30118dccb77",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "78aa3ae2cebcca71d4d3e110bed6b54734c737556d028dd71e4ce46097150c68"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1874435642-tanh fullcheck eik-work/trials/m0-exp-layout/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "5eada0b4e8007e48e3930ea26b69fc39784603fb09a8a913df8e1889c6bcf0bf",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "bdc1a36c1a43016b3e62d131735644caca6e87fda63d44aed3832bc600ca5c15"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1947282751-exp fullcheck eik-work/trials/m0-exp-layout/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "4ce32c4f35dd59444b2fcaeb833b6f6f58cff1afbd24149ce4e9ae63ad2060d5",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "b42940569b8261664347df6a778231015a7bdd4ecdb756aa1946252c953159b7"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1947282751-sigmoid fullcheck eik-work/trials/m0-exp-layout/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "eb9eae796787813a4075bcb24f2f04e5dca81c5a65a12cfbb468079170d3d6fe",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "6da563a61510f65e486b27fbbd145e52267eeb87e0e74430f6dda6b359fc2538"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout fullcheck-1947282751-tanh fullcheck eik-work/trials/m0-exp-layout/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "c15aa6899ef904d4f13bb6bf07dea65ea17663b4baa9043632a82eda412777b3",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "7c83944626adfda5b7e1d052b5cec468684c9aa3ddeb7ff4b51c488320026ada"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout gate gate eik-work/trials/m0-exp-layout/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "cfc02279c502b79c5d3b77198625275c6b0283a14d6f780cc06285f08496d8c8",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "b933aa977856233a960b9cbbdfd1cee995944f96b18c500e102f16a67514283d"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout measure-1874435642 measure eik-work/trials/m0-exp-layout/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "238f316a294c1c62402eb442850eb3ca3c48ac80e9e80b75d1f0c9afd2954b85",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "2abd7428eae1ab0d84fe5823c5747a1817d9d2582af1ed2ebcb360f50673694d"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout measure-1947282751 measure eik-work/trials/m0-exp-layout/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "3dff77f9e52db903cba97e85a6ae19bc00ab36ae60757937d066c1577550c80c",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "bb9adb899125c65b7c86f834d1b1823717c0e26cb637aafec643a8155589e347"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "b91ea1912d6cc18770f52121edd69418aeb0f93f4b142b44dc2baf9c85b416ab",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "tc-rv32im-exp-1016": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-rv32im-exp-1016 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target rv32im --chunks 1016:1017 --jobs 1 --out test/scratch/eik/reports/rv32im-exp-1016.json",
+   "exit_code": 0,
+   "files": {
+    "tc-rv32im-exp-1016.json": "3fae7724f3415cc7d833feecdb6f928eb5c0842f8f59c8aeedf0d5f354350bf8",
+    "tc-rv32im-exp-1016.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-rv32im-exp-1016.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-exp-0-2048": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-exp-0-2048 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target thumbv6m --chunks 0:2048 --jobs 8 --out test/scratch/eik/reports/thumbv6m-exp-0-2048.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-exp-0-2048.json": "c9635175153fefb5faa0aa846b1a0f31958f1574e60a50783a097b494ba8ff21",
+    "tc-thumbv6m-exp-0-2048.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-exp-0-2048.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-exp-1016": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-exp-1016 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target thumbv6m --chunks 1016:1017 --jobs 1 --out test/scratch/eik/reports/thumbv6m-exp-1016.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-exp-1016.json": "1fa63b528332985ebd6bfc6665038cfeaff52456cfe6bdd091d34752ea5fb438",
+    "tc-thumbv6m-exp-1016.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-exp-1016.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-exp-2048-4096": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-exp-2048-4096 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target thumbv6m --chunks 2048:4096 --jobs 8 --out test/scratch/eik/reports/thumbv6m-exp-2048-4096.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-exp-2048-4096.json": "dbe1fd2ef9aa5ebdd5175d3a62eeeef812e8afc9f8644c2ac446b40af43323aa",
+    "tc-thumbv6m-exp-2048-4096.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-exp-2048-4096.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-sigmoid-0-2048": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-sigmoid-0-2048 targetcheck eik-work/trials/m0-exp-layout/entry.c --function sigmoid --target thumbv6m --chunks 0:2048 --jobs 8 --out test/scratch/eik/reports/thumbv6m-sigmoid-0-2048.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-sigmoid-0-2048.json": "95a2c33c89c4360a3a44a590abc4acfb683e6daf2b76ac8071f32ba958e22a61",
+    "tc-thumbv6m-sigmoid-0-2048.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-sigmoid-0-2048.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-sigmoid-2048-4096": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-sigmoid-2048-4096 targetcheck eik-work/trials/m0-exp-layout/entry.c --function sigmoid --target thumbv6m --chunks 2048:4096 --jobs 8 --out test/scratch/eik/reports/thumbv6m-sigmoid-2048-4096.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-sigmoid-2048-4096.json": "641e1227562f45f827a0b77fe2bda06dea267852e53aa035d11d15dae8e2da1c",
+    "tc-thumbv6m-sigmoid-2048-4096.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-sigmoid-2048-4096.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-tanh-0-2048": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-tanh-0-2048 targetcheck eik-work/trials/m0-exp-layout/entry.c --function tanh --target thumbv6m --chunks 0:2048 --jobs 8 --out test/scratch/eik/reports/thumbv6m-tanh-0-2048.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-tanh-0-2048.json": "5d6e08a18da6cfe9ddae27e81bf28baec3732a02f4e72a3498c0a1942e7d75e5",
+    "tc-thumbv6m-tanh-0-2048.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-tanh-0-2048.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv6m-tanh-2048-4096": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv6m-tanh-2048-4096 targetcheck eik-work/trials/m0-exp-layout/entry.c --function tanh --target thumbv6m --chunks 2048:4096 --jobs 8 --out test/scratch/eik/reports/thumbv6m-tanh-2048-4096.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv6m-tanh-2048-4096.json": "ed6b1cc40a65605d27ef8ce211bb29a093e632ef276e0421d950e3c7e6e7cd48",
+    "tc-thumbv6m-tanh-2048-4096.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv6m-tanh-2048-4096.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv7em-exp-0-2048": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv7em-exp-0-2048 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target thumbv7em --chunks 0:2048 --jobs 8 --out test/scratch/eik/reports/thumbv7em-exp-0-2048.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv7em-exp-0-2048.json": "def59f69bb33bccb1ebcb80bc5d49d33cb12c21567067e9574e029d26567dfb4",
+    "tc-thumbv7em-exp-0-2048.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv7em-exp-0-2048.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "tc-thumbv7em-exp-2048-4096": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik m0-exp-layout tc-thumbv7em-exp-2048-4096 targetcheck eik-work/trials/m0-exp-layout/entry.c --function exp --target thumbv7em --chunks 2048:4096 --jobs 8 --out test/scratch/eik/reports/thumbv7em-exp-2048-4096.json",
+   "exit_code": 0,
+   "files": {
+    "tc-thumbv7em-exp-2048-4096.json": "342d2d01e91e0f9f2da4d729c15a74ba5a2269340e3555d0ac16097adebce9c2",
+    "tc-thumbv7em-exp-2048-4096.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tc-thumbv7em-exp-2048-4096.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/m0-exp-layout/entry.c",
+  "sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee"
+ },
+ "status": "measured",
+ "target": "m0-exp-layout"
+}

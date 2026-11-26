@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "gate",
+    "$REPO/eik-work/trials/m0-exp-layout/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 3.868,
+  "source_sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "b933aa977856233a960b9cbbdfd1cee995944f96b18c500e102f16a67514283d"
+}

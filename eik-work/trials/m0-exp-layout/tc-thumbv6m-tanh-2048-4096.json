@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/m0-exp-layout/entry.c",
+    "--function",
+    "tanh",
+    "--target",
+    "thumbv6m",
+    "--chunks",
+    "2048:4096",
+    "--jobs",
+    "8",
+    "--out",
+    "$REPO/test/scratch/eik/reports/thumbv6m-tanh-2048-4096.json"
+  ],
+  "exit_code": 0,
+  "seconds": 23.642,
+  "source_sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
