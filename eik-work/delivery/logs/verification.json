@@ -1,0 +1,72 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/boards/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "self-test: clean copy accepted, 12 tampered copies rejected\nsnapshot f43b36a94db2cf9395b84b848ed6981d3fbad41d3ca8f6933dc1faacb0e3eaf6 taken 2026-11-26T11:42:15.926163+00:00\n  boards: rv32im=submission 52 (promotion 59), thumbv6m=submission 53 (promotion 60), overall=submission 56 (promotion 61)\n  public references (hash-matched): 37, 42, 46, 48, 50\n  withheld (documented, not bypassed): 52, 53, 54, 55, 56\n  rv32im: champion over public reference unavailable \u2014 promotion 53 does not resolve to any submission in this snapshot, so no published ratio ties this board's champion to a public reference\n  thumbv6m: historical champion-over-reference ratio 0.968438842462306 (historical ratio \u00d7 0.97: 0.939385677188437)\n  overall: historical champion-over-reference ratio 0.96815183298679 (historical ratio \u00d7 0.97: 0.939107277997187)\nverify: pass\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/review/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS source review \u00b7 1437 evidence files \u00b7 9 packets \u00b7 2 variants\nFrozen m0-tanh-refine is the least-regressing original trial. No board at 0.970\u00d7 id50.\n36 shared-small-sigmoid target shards verified outside the original packet.\nLive takeover unknown. Committed runtime export incomplete.\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/merged/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "verify: PASS: 12 cells; 49,152 unique chunks; 51,539,607,552 inputs; kit merge passed\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/scores/heldout-1/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "verify: OK status=incomplete seed=849230117 inputs=30c46675a8f6 rv32im: cand 28.335213 / id50 28.335213 = 1.000000 thumbv6m: cand 40.152571 / id50 40.139826 = 1.000318 overall: cand 33.730278 / id50 33.724924 = 1.000159 ; current references: none available (ratios null, eligibility undetermined)\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/scores/heldout-2/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "heldout-2: verified seed 2715043869, paired candidate and former-50 scores, all current-board eligibility undetermined\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/scores/heldout-3/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "verify: OK: seed 396172055, paired candidate/id50 scores, current eligibility undetermined\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/offline-runtime/verify.py"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "Retained payloads and replay evidence verified. Export replay status: incomplete.\n"
+  }
+]

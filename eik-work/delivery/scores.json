@@ -1,0 +1,301 @@
+{
+  "board_refresh": {
+    "boards": {
+      "overall": {
+        "reference_at_measurement": {
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "reference_at_packaging": {
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "required_remeasurement": null,
+        "stale": false
+      },
+      "rv32im": {
+        "reference_at_measurement": {
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "reference_at_packaging": {
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "required_remeasurement": null,
+        "stale": false
+      },
+      "thumbv6m": {
+        "reference_at_measurement": {
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "reference_at_packaging": {
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "required_remeasurement": null,
+        "stale": false
+      }
+    },
+    "refreshed_utc": "2026-11-26T12:22:43.393286+00:00",
+    "snapshot": "eik-work/delivery/public-refresh/snapshot.json"
+  },
+  "current_takeover_status": "undetermined",
+  "historical_reference": {
+    "bytes": 166755,
+    "path": "eik-work/baselines/former-50/entry.c",
+    "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+  },
+  "note": "The chosen entry slightly regresses against id50. Local-incumbent and historical ratios are not live takeover evidence.",
+  "reported_only": [
+    {
+      "candidate_S": 39.677310386989056,
+      "candidate_over_id50": 1.0002185997335566,
+      "id50_S": 39.66863883310958,
+      "scored_board": false,
+      "seed": 849230117,
+      "target": "thumbv7em"
+    },
+    {
+      "candidate_S": 39.762614186699714,
+      "candidate_over_id50": 1.0002972916611095,
+      "id50_S": 39.750796606346185,
+      "scored_board": false,
+      "seed": 2715043869,
+      "target": "thumbv7em"
+    },
+    {
+      "candidate_S": 39.80142344131311,
+      "candidate_over_id50": 1.0002710311576863,
+      "id50_S": 39.79063893837657,
+      "scored_board": false,
+      "seed": 396172055,
+      "target": "thumbv7em"
+    }
+  ],
+  "rows": [
+    {
+      "board": "rv32im",
+      "candidate_S": 28.33521329473907,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0,
+      "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 59,
+        "shipped": false,
+        "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+        "submission": 52
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 28.33521329473907,
+      "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+      "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 849230117,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "thumbv6m",
+      "candidate_S": 40.15257092025335,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.000317523909357,
+      "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 60,
+        "shipped": false,
+        "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+        "submission": 53
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 40.139825565918756,
+      "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+      "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 849230117,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "overall",
+      "candidate_S": 33.730278109697174,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0001587493539998,
+      "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 61,
+        "shipped": false,
+        "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+        "submission": 56
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 33.724924299750896,
+      "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+      "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 849230117,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "rv32im",
+      "candidate_S": 28.39553195515181,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0,
+      "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 59,
+        "shipped": false,
+        "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+        "submission": 52
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 28.39553195515181,
+      "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+      "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 2715043869,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "thumbv6m",
+      "candidate_S": 40.299877643125264,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0003388560481488,
+      "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 60,
+        "shipped": false,
+        "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+        "submission": 53
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 40.286226411648585,
+      "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+      "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 2715043869,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "overall",
+      "candidate_S": 33.82804255945164,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.000169413673578,
+      "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 61,
+        "shipped": false,
+        "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+        "submission": 56
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 33.82231259722564,
+      "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+      "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 2715043869,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "rv32im",
+      "candidate_S": 28.381597262180406,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0,
+      "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 59,
+        "shipped": false,
+        "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+        "submission": 52
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 28.381597262180406,
+      "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+      "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 396172055,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "thumbv6m",
+      "candidate_S": 40.33389513534784,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.000345557016387,
+      "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 60,
+        "shipped": false,
+        "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+        "submission": 53
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 40.31996228947825,
+      "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+      "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 396172055,
+      "stale_current_comparison": false
+    },
+    {
+      "board": "overall",
+      "candidate_S": 33.834011996014596,
+      "candidate_over_current": null,
+      "candidate_over_id50": 1.0001727635845652,
+      "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+      "current_S": null,
+      "current_le_0_970": null,
+      "current_reference": {
+        "promotion_id": 61,
+        "shipped": false,
+        "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+        "submission": 56
+      },
+      "eligibility": "undetermined",
+      "historical_le_0_970": false,
+      "id50_S": 33.82816772049993,
+      "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+      "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+      "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+      "seed": 396172055,
+      "stale_current_comparison": false
+    }
+  ],
+  "schema": 1,
+  "takeover_ratio": 0.97,
+  "verified_current_takeovers": []
+}

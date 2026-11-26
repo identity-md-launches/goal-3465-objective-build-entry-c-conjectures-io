@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "clean_accepted": true,
+  "mutations_rejected": 11,
+  "records": [
+    {
+      "case": "clean repository-local evidence replay",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 0,
+      "stdout": "verify: PASS: 2120 files hash-verified; exact frozen source copies; 9 held-out score rows; 12 complete coverage cells.\nHistorical result: ties id50 on RV32IM; slightly regresses on Thumbv6-M and overall.\nCompetition status: incomplete; current-champion S/ratios null, eligibility undetermined; no 3% gain claimed.\nGaps retained: reduced runtime omits 3 payloads; host-exp binary provenance; cross-ABI/C11 review; private-source novelty; evaluate timeouts.\n",
+      "stderr": ""
+    },
+    {
+      "case": "delivered source changed, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: source copies differ\n"
+    },
+    {
+      "case": "missing raw score evidence",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: incomplete inventory or unexpected evidence files\n"
+    },
+    {
+      "case": "tampered raw score evidence",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: missing/tampered evidence: eik-work/final-validation/scores/heldout-3/raw/candidate.stdout\n"
+    },
+    {
+      "case": "fabricated candidate score, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: scores projection differs from raw arithmetic\n"
+    },
+    {
+      "case": "fabricated current denominator, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: scores projection differs from raw arithmetic\n"
+    },
+    {
+      "case": "unsupported success status, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: unsupported result success\n"
+    },
+    {
+      "case": "unsupported 3 percent gain, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: unsupported claims or suppressed gaps\n"
+    },
+    {
+      "case": "suppressed gaps, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: unsupported claims or suppressed gaps\n"
+    },
+    {
+      "case": "coverage missing a cell, inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: authoritative evidence pin changed: eik-work/final-validation/merged/coverage-matrix.json\n"
+    },
+    {
+      "case": "report falsified without inventory update",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: missing/tampered evidence: eik-work/delivery/REPORT.md\n"
+    },
+    {
+      "case": "raw score falsified, delivery inventory refreshed",
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/verify.py"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "verify: FAIL: raw S arithmetic conflict\n"
+    }
+  ]
+}

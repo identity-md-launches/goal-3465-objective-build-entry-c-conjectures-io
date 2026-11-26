@@ -1,0 +1,14 @@
+{
+  "gcc_probe": {
+    "argv": [
+      "gcc",
+      "--version"
+    ],
+    "exit_code": 127,
+    "stderr": "gcc not available in packaging container; no new compiler run",
+    "stdout": ""
+  },
+  "machine": "x86_64",
+  "python": "3.12.3",
+  "system": "Linux"
+}

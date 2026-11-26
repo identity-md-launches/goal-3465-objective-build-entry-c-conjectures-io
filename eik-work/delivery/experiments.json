@@ -1,0 +1,2995 @@
+{
+  "additional_measured_variants": {
+    "v2": {
+      "S": {
+        "overall": 36.844800264050235,
+        "rv32im": 31.108404818511552,
+        "thumbv6m": 43.63898806183501,
+        "thumbv7em": 41.81737237793494
+      },
+      "change": "Affine guard for biased exponents 90\u2013114, F nonzero, no table",
+      "hard_pool": {
+        "samples": 67108864,
+        "sizes": {
+          "exp": 445,
+          "sigmoid": 560,
+          "tanh": 186
+        },
+        "source": "hardscan",
+        "threshold_log2_ulps": -18
+      },
+      "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+      "ratio_vs_id50": {
+        "overall": 1.083855692183294,
+        "rv32im": 1.0906537349186212,
+        "thumbv6m": 1.077100021635905,
+        "thumbv7em": 1.0465766870618298
+      },
+      "scope": "single seed, measured target sample, no retained quick host or targetcheck packet",
+      "score_log": "eik-work/trials/shared-small-sigmoid/evidence/experiments/v2/measure-1874435642.stdout",
+      "seed": 1874435642,
+      "source": {
+        "path": "eik-work/trials/shared-small-sigmoid/evidence/experiments/v2/entry.c.txt",
+        "sha256": "7bccce9570d46af928aea6fceb1793a25bdeaf962e41ee0e7b00165df383bf57"
+      },
+      "target_measurements": {
+        "rv32im": {
+          "image_bytes": 19060,
+          "peak_stack": 0,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 176,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        },
+        "thumbv6m": {
+          "image_bytes": 20568,
+          "peak_stack": 60,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 312,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        },
+        "thumbv7em": {
+          "image_bytes": 21318,
+          "peak_stack": 40,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 280,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        }
+      },
+      "verdict": "measure-only regression"
+    },
+    "v3": {
+      "S": {
+        "overall": 36.62959183625808,
+        "rv32im": 30.912174324023862,
+        "thumbv6m": 43.404484719411066,
+        "thumbv7em": 41.442100539358364
+      },
+      "change": "Narrow v2 to biased exponents 103\u2013114",
+      "hard_pool": {
+        "samples": 67108864,
+        "sizes": {
+          "exp": 445,
+          "sigmoid": 560,
+          "tanh": 186
+        },
+        "source": "hardscan",
+        "threshold_log2_ulps": -18
+      },
+      "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+      "ratio_vs_id50": {
+        "overall": 1.0775249514058516,
+        "rv32im": 1.0837739375466078,
+        "thumbv6m": 1.0713119966056128,
+        "thumbv7em": 1.0371846393258914
+      },
+      "scope": "single seed, measured target sample, no retained quick host or targetcheck packet",
+      "score_log": "eik-work/trials/shared-small-sigmoid/evidence/experiments/v3/measure-1874435642.stdout",
+      "seed": 1874435642,
+      "source": {
+        "path": "eik-work/trials/shared-small-sigmoid/evidence/experiments/v3/entry.c.txt",
+        "sha256": "ce4def04706a3af9421589ce839237f694c1ed90071dc4a0d97ea9d1dc5acc2b"
+      },
+      "target_measurements": {
+        "rv32im": {
+          "image_bytes": 19060,
+          "peak_stack": 0,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 176,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        },
+        "thumbv6m": {
+          "image_bytes": 20560,
+          "peak_stack": 60,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 312,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        },
+        "thumbv7em": {
+          "image_bytes": 21318,
+          "peak_stack": 40,
+          "sample_mismatches": 0,
+          "scored_outputs": 12900,
+          "static_stack_bound": 280,
+          "target_sample_words": 98304,
+          "wrong_outputs": 0
+        }
+      },
+      "verdict": "measure-only regression"
+    }
+  },
+  "boards_at_0_970_vs_id50": [],
+  "combination": null,
+  "control": {
+    "packet": {
+      "path": "eik-work/trials/paired-control/packet.json",
+      "sha256": "ea18583016b27a89de86695abb5444a5d277d6cc1e5bd05ae8f87041857fcd78"
+    },
+    "rows": {
+      "1874435642": {
+        "S": {
+          "overall": 33.99419362722625,
+          "rv32im": 28.52271424241966,
+          "thumbv6m": 40.515260593492414,
+          "thumbv7em": 39.95633850332885
+        },
+        "hard_pool": {
+          "samples": 67108864,
+          "sizes": {
+            "exp": 445,
+            "sigmoid": 560,
+            "tanh": 186
+          },
+          "source": "hardscan",
+          "threshold_log2_ulps": -18
+        },
+        "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+        "quick_host_words_per_function": 134217728,
+        "score_log": "eik-work/trials/paired-control/measure-1874435642.stdout",
+        "seed": 1874435642,
+        "target_measurements": {
+          "rv32im": {
+            "image_bytes": 18960,
+            "peak_stack": 0,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 176,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          },
+          "thumbv6m": {
+            "image_bytes": 20500,
+            "peak_stack": 60,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 312,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          },
+          "thumbv7em": {
+            "image_bytes": 21254,
+            "peak_stack": 40,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 280,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          }
+        }
+      },
+      "1947282751": {
+        "S": {
+          "overall": 33.90189464529962,
+          "rv32im": 28.517414314250885,
+          "thumbv6m": 40.30303897386101,
+          "thumbv7em": 39.74954420309734
+        },
+        "hard_pool": {
+          "samples": 67108864,
+          "sizes": {
+            "exp": 408,
+            "sigmoid": 571,
+            "tanh": 198
+          },
+          "source": "hardscan",
+          "threshold_log2_ulps": -18
+        },
+        "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+        "quick_host_words_per_function": 134217728,
+        "score_log": "eik-work/trials/paired-control/measure-1947282751.stdout",
+        "seed": 1947282751,
+        "target_measurements": {
+          "rv32im": {
+            "image_bytes": 18960,
+            "peak_stack": 8,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 176,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          },
+          "thumbv6m": {
+            "image_bytes": 20500,
+            "peak_stack": 60,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 312,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          },
+          "thumbv7em": {
+            "image_bytes": 21254,
+            "peak_stack": 40,
+            "sample_mismatches": 0,
+            "scored_outputs": 12900,
+            "static_stack_bound": 280,
+            "target_sample_words": 98304,
+            "wrong_outputs": 0
+          }
+        }
+      }
+    },
+    "source": {
+      "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+      "path": "eik-work/toolkit/sources/id50.c",
+      "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+    }
+  },
+  "original_rank": [
+    "m0-tanh-refine",
+    "m0-exp-reduction",
+    "rv-exp-loads",
+    "m0-exp-layout",
+    "m0-sigmoid-cell",
+    "rv-tanh-quadratic",
+    "rv-exp-interval"
+  ],
+  "rank_with_shared_target_evidence": [
+    "m0-tanh-refine",
+    "m0-exp-reduction",
+    "rv-exp-loads",
+    "m0-exp-layout",
+    "m0-sigmoid-cell",
+    "rv-tanh-quadratic",
+    "rv-exp-interval",
+    "shared-small-sigmoid"
+  ],
+  "recorded_evaluate_attempts_without_scores": [
+    {
+      "evidence": {
+        "path": "eik-work/trials/paired-control/evaluate-attempts.json",
+        "sha256": "db4c04aca6a73704fe97d66e85a84666c6eb3ee596256eaf007ed8ab549ea6f7"
+      },
+      "records": {
+        "attempts": [
+          {
+            "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 evaluate-1874435642 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1874435642",
+            "ended": "2026-11-26T10:37:35+01:00",
+            "exit_code": 124,
+            "parallel_with": "the same command for seed 1947282751 in case control-1947282751",
+            "progress": "fresh hard pools for both seeds were written by 10:28:26; the measurement pool was still running at the cap",
+            "run_record": "none (run.py writes LABEL.json only after the evaluator exits)",
+            "started": "2026-11-26T10:27:50+01:00",
+            "stderr": "",
+            "stdout": "",
+            "wrapper": "timeout 585"
+          },
+          {
+            "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 evaluate-1947282751 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1947282751",
+            "ended": "2026-11-26T10:37:35+01:00",
+            "exit_code": 124,
+            "run_record": "none",
+            "started": "2026-11-26T10:27:50+01:00",
+            "stderr": "",
+            "stdout": "",
+            "wrapper": "timeout 585"
+          },
+          {
+            "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 evaluate-1874435642 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1874435642",
+            "ended": "2026-11-26T10:47:57+01:00",
+            "exit_code": 124,
+            "run_record": "none",
+            "started": "2026-11-26T10:38:07+01:00",
+            "stderr": "",
+            "stdout": "",
+            "wrapper": "timeout 590, through a scratch shim around run.runner that only raised EIK_THREADS from 2 to 5 (worker pool size; not part of the fingerprint). The shim is not used for any recorded run."
+          }
+        ],
+        "replacement": "Each seed is measured by the stages evaluate is built from (kit/eik/evaluate.py: compare -> _measure_many for the entry, host_check -> fullcheck quick with the evaluation seed): measure-SEED = `eik measure SRC --seed SEED`, fullcheck-SEED-FN = `eik fullcheck SRC --function FN --quick --seed SEED`, all through unmodified run.py with its default settings.",
+        "why": "eik evaluate re-measures the locally registered champion (the exact-c incumbent, ~1e5 instructions per call, counted by a Python block hook) on every scored input of rv32im and thumbv6m. That job alone did not finish within the 10-minute cap this worker's sandbox puts on one command, and background processes are killed when a command ends. The incumbent re-measurement only produces the printed incumbent ratio; it does not enter the entry's S. The entry part of the same evaluation (measure stage, every target, with sample) took 9 s."
+      }
+    },
+    {
+      "evidence": {
+        "path": "eik-work/trials/rv-exp-loads/incumbent-evaluate-attempts.json",
+        "sha256": "26903f05de4e9883b30d2dc4c5d4e70c9b81288bd08e620513ef764914390476"
+      },
+      "records": [
+        {
+          "argv": [
+            "timeout",
+            "570",
+            "python3",
+            "eik-work/toolkit/run.py",
+            "test/scratch/rv-exp-loads",
+            "incumbent-1874435642",
+            "evaluate-1874435642",
+            "evaluate",
+            "eik-work/trials/rv-exp-loads/entry.c",
+            "--quick",
+            "--json",
+            "--seed",
+            "1874435642"
+          ],
+          "exit_code": 124,
+          "files": {
+            "incumbent-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "incumbent-1874435642.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "source_sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+        },
+        {
+          "argv": [
+            "timeout",
+            "570",
+            "python3",
+            "eik-work/toolkit/run.py",
+            "test/scratch/rv-exp-loads",
+            "incumbent-1947282751",
+            "evaluate-1947282751",
+            "evaluate",
+            "eik-work/trials/rv-exp-loads/entry.c",
+            "--quick",
+            "--json",
+            "--seed",
+            "1947282751"
+          ],
+          "exit_code": 124,
+          "files": {
+            "incumbent-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "incumbent-1947282751.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "source_sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+        }
+      ]
+    },
+    {
+      "evidence": {
+        "path": "eik-work/trials/rv-exp-interval/evaluate-attempt-1874435642.attempt.json",
+        "sha256": "3143bc01d5040f372dadf526a098bd7be42df63d1b4480a27e7b343264e275d2"
+      },
+      "records": {
+        "command": [
+          "python3",
+          "eik-work/toolkit/run.py",
+          "test/scratch/rv-exp-interval",
+          "rv-exp-interval",
+          "evaluate-attempt-1874435642",
+          "evaluate",
+          "eik-work/trials/rv-exp-interval/entry.c",
+          "--quick",
+          "--json",
+          "--seed",
+          "1874435642"
+        ],
+        "completed_evaluate_report": false,
+        "exit_code": -9,
+        "kit_verdict": null,
+        "observation": "The wrapper terminated the run group at its stated cap without a completed evaluator report; the pinned compare stage includes slow local incumbent remeasurement. This is a timeout observation, not a source rejection.",
+        "reason": "Local incumbent remeasurement did not finish within the trial budget; use unchanged measure/fullcheck stages for absolute S and paired id50 ratios.",
+        "scores": null,
+        "seconds": 180.105,
+        "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": true,
+        "timeout_seconds": 180
+      }
+    },
+    {
+      "evidence": {
+        "path": "eik-work/trials/rv-exp-interval/evaluate-attempt-1947282751.attempt.json",
+        "sha256": "74564b44d1c2bd4ce6a000fab1216642424dbe5089fc20dc5586a50c5279d161"
+      },
+      "records": {
+        "command": [
+          "python3",
+          "eik-work/toolkit/run.py",
+          "test/scratch/rv-exp-interval",
+          "rv-exp-interval",
+          "evaluate-attempt-1947282751",
+          "evaluate",
+          "eik-work/trials/rv-exp-interval/entry.c",
+          "--quick",
+          "--json",
+          "--seed",
+          "1947282751"
+        ],
+        "completed_evaluate_report": false,
+        "exit_code": -9,
+        "kit_verdict": null,
+        "observation": "The wrapper terminated the run group at its stated cap without a completed evaluator report; the pinned compare stage includes slow local incumbent remeasurement. This is a timeout observation, not a source rejection.",
+        "reason": "Local incumbent remeasurement did not finish within the trial budget; use unchanged measure/fullcheck stages for absolute S and paired id50 ratios.",
+        "scores": null,
+        "seconds": 180.023,
+        "source_sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "timed_out": true,
+        "timeout_seconds": 180
+      }
+    }
+  ],
+  "shared_small_sigmoid_supplement": {
+    "distinct_reported_image_hashes": {
+      "rv32im": 12,
+      "thumbv6m": 12,
+      "thumbv7em": 12
+    },
+    "full_host": [
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/hostfull/host-sigmoid-full.json",
+          "sha256": "82a194b7eba818232b93270d55b133c9ce843d0ad242e0c2340a1dffefb401ab"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/full-host-sigmoid.json",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "tanh",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/hostfull/host-tanh-full.json",
+          "sha256": "8efcbf5913431d4e2273298477a2cb98f4b2354ff886698d60362ade56122cef"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/full-host-tanh.json",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "exp",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/hostfull/host-exp-full.json",
+          "sha256": "70245c4469e89ac46be4af7ce40c68a0586abe1a4d3e5cb753cffb18af0b6b4f"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/full-host-exp.json",
+        "words_checked": 4294967296
+      }
+    ],
+    "sigmoid_words_per_target": 12582912,
+    "target_shards": [
+      {
+        "chunk_hi": 1,
+        "chunk_lo": 0,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "2ffbaa0216a9869ba1d8cb391766689a42b41ba81afd05d9691eacbd5089f7ac",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-0.json",
+          "sha256": "8eff76c05b6d028beb9522add78d21eb258375cc7884597e8ef239fb62e7464c"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-0.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 824,
+        "chunk_lo": 823,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "ebb0a71cdba467a2d0b8aacddf6263d776d14f8a2af6be6f933c260ae4da5b18",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-823.json",
+          "sha256": "3acc65ee97805824bfe735b4b3167dc4861084a6c0374b0ce6b75a24839b1451"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-823.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 825,
+        "chunk_lo": 824,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "f1d3abfbdb8c3727cb11cebcfde5ec57743818adc3266b9b64abfa0d0e2566ec",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-824.json",
+          "sha256": "1400865c799c350dae4d1ce115d2eb77d246b730caf80e8fee292c8c535a85d2"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-824.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 953,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "4358f8c0c234436222bc0d057bab1953b4acc0a7b49173d87db7521ab33a2f7a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-952.json",
+          "sha256": "01474f70e8c6981946a3ddcfd43917998cdceaa626efe0c3b91092943b2469f0"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-952.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 959,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "d21e24c6af1b55ad9778031baef14feedf409e03342a7cbdd40eebb94a58f1e2",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-959.json",
+          "sha256": "c7d1a543cb9c29981eb132f3db9360f72f01ebf9b767ce374f9697be223e8bd9"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-959.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 961,
+        "chunk_lo": 960,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "d2d9ae156d065de3e048aa2c73cc6046aab471af7c3398fde7381bbe199b25c7",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-960.json",
+          "sha256": "e1626e8668cc7bb51b974b6560ac87d55bbffd0edb44e840b796ecfbec9d9ad8"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-960.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2049,
+        "chunk_lo": 2048,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "af11fb882ee90a1df5ffa15bc0a1559fa6bedbeb97a235a58e37b841ead6fe0e",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-2048.json",
+          "sha256": "39a4f8b4620e19f5280eef9e5a966dcacf152dc6dfb7d9badf7291c7c21e8397"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-2048.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2872,
+        "chunk_lo": 2871,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "b8191aa2e2e3941750f830134cf91ee2337a8ccf36aa4ca2fab3263f067fe9bd",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-2871.json",
+          "sha256": "4866768b1d7c241a07d879ba14d7e91338986844a81abc5e791dccb4e21cfb7a"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-2871.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2873,
+        "chunk_lo": 2872,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "bbcd59a14e6852c2ffac140b6f3f227a7e71440c9a65c0ef9d15b91a251919c3",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-2872.json",
+          "sha256": "4d77f5b57b5afcb0bdfaf05a97c28a32c0c941ebab8d435f4478be22accbb9e9"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-2872.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3001,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "09f5fbc35a4b20634f0885156f108847c703601ae2b5959171bff0b951923b26",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-3000.json",
+          "sha256": "c22de9a2203ac33f135791dfac046e528c019cd78e8ebb76f0a3e4c6c4dbe3ea"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-3000.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3007,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "be68c0d613e866b4f7ff8388607534897d91daf93863fade598fff84460a84cf",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-3007.json",
+          "sha256": "a9e3459bcc04531bd665f550c638d18df59044bd6852c1a7c9b24511b5db3b19"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-3007.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3009,
+        "chunk_lo": 3008,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "e8b009eb23764e47618e66109165f87985b355f905620a46aa6afc6a297f007e",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/rv32im-sigmoid-3008.json",
+          "sha256": "0b3940a3f449ae3bc898f255ec3e0f1191426b11ca3539ad97dda5d92024fd93"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-rv32im-3008.json",
+        "target": "rv32im",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 1,
+        "chunk_lo": 0,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "214c1b6e840042b825044a133590457789cb485659853c6480cead990cdc507d",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-0.json",
+          "sha256": "3d2cecdd1f8edc99b6b21c701f461954cd1581ecb0ea2825df0cf74c7f117598"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-0.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 824,
+        "chunk_lo": 823,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "8cadbd31c475155032f3abaed1f33b241a7ef0198f9ac6e06072718e5b8a490a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-823.json",
+          "sha256": "8e3764286cfb78d80af6b1332931fc442d004b363f4fcc9784d562503b04f6e5"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-823.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 825,
+        "chunk_lo": 824,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "306f102f7a2f8bbe1d74d1c0beeb753333084a792a6e61ebdf77c9badbda4ee2",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-824.json",
+          "sha256": "6981d29d5e6379b20c90eef1ace41062ea2ec37583e27ed817cd4aa7e8157147"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-824.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 953,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "133e5cf36d18c1b85dcae7754d1d472f0afffce4d6f9ecb11bbad93dbefaf70a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-952.json",
+          "sha256": "4fc18f0b550265fda30d3063cf2a7fe2189a0288009e4c6ba5806f9b8aaa4e36"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-952.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 959,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "9a77abc883e3accf491627e50b4b2f5f2fd03f63bd390ac04d74e1ff2c60b6d2",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-959.json",
+          "sha256": "009a023d002064ac0120a1bdaa309de66e7bc79f536273b2d1a16aaca2622db8"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-959.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 961,
+        "chunk_lo": 960,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "cb18c0e8d784c3a11dfd1580ea35b28a323cc89c4a66ed3e870cfaaf5f6c9b6b",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-960.json",
+          "sha256": "0ae06eafd4923366a2bdc552782feedc57f27732b77039533adb9197660dcd60"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-960.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2049,
+        "chunk_lo": 2048,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "e52ebfcebb787ad68360721c8e5fd443a8c980ff24749969d0f2f266b4b55d9c",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-2048.json",
+          "sha256": "e4e9deb972b2edf620ff04ee550b870bfa3560fa6785c599ba3a5d94d9cd7c32"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-2048.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2872,
+        "chunk_lo": 2871,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "15ff7f77498e19273030fead8249070aae7abb1012f18a64cd5f2c4dfeb02533",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-2871.json",
+          "sha256": "6e22d3817f318f10c9d487aace682f0a4d28425f390ab47bad7b11aa3a9be7c5"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-2871.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2873,
+        "chunk_lo": 2872,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "d4fcddb9374ed05f563efeff146248e65d0985d565d6ca94626f0c80d4742f1d",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-2872.json",
+          "sha256": "0ee5c57baa25d8ec317c525422b9552497d2b6678784d84b158172f1e4c4b94b"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-2872.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3001,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "b3593c58de64a7f686cc8ae31fd8b51aef6e5ad98fd2bade82b92e2116b151e8",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-3000.json",
+          "sha256": "19a69b0ce8385b9777280827d8fd8f84700265163a9feedf283e11b47f2b4f38"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-3000.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3007,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "1f0efebd7a8130b9349a3ca7729cf63820a880f4a5c1eed5eb361ad2a6a8b516",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-3007.json",
+          "sha256": "dd7238bf854312be28312926f48e91f718b686ede2e664846e320b714e7c5544"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-3007.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3009,
+        "chunk_lo": 3008,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "56a551e15db17f93570a01043af7fe2fc0f0dcbc2bd3063cc66a9b3e1235ad21",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv6m-sigmoid-3008.json",
+          "sha256": "13efff032fbd2c4fe3c062fc8075180be7874d31a122b19593bfa12b0822ec3e"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv6m-3008.json",
+        "target": "thumbv6m",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 1,
+        "chunk_lo": 0,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "1f8567ea7394129e2c8a85f9c8a59a2d93167b788524ea1f0412b1d28d6c7422",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-0.json",
+          "sha256": "8c5a3288a4bb13335b31451971933dd1b0f354884aa318b360aea14979c6476b"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-0.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 824,
+        "chunk_lo": 823,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "3d8b1fdd39060ca4d10b47bd9baae4d78072853c24947f37edb67c6d9611e688",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-823.json",
+          "sha256": "cadb00dd0d0764524445621e35f80e34964916fa817a11d81574bfe5d59c0559"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-823.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 825,
+        "chunk_lo": 824,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "9389411d5687fe18e0796f366c1a75038e254c636a411a9449f00f5f93fd91e1",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-824.json",
+          "sha256": "7673b52bef9442675ab735c84044ab9b101d021c64736235ee1b07cd027cda12"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-824.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 953,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "378a4dc5594b269f84450c3141c85b7dfe42615131bb70fa12fc2cb26ea2ec8e",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-952.json",
+          "sha256": "d4b2dd29b63023618e8c33b84055113090abaef927ff6c4f2bf55998e764b466"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-952.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 959,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "80217cf5bb75cbb995b3ee6adae405114557153db2af1585cc562ca238a19a2f",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-959.json",
+          "sha256": "a3263c80eda0e4195ecc40ea524674b051d0814e91e69834091a9f9ad3f16462"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-959.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 961,
+        "chunk_lo": 960,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "f820168e3f7c76e518fdf93c288b64bddeb75d2a6ca86289b88f63c64e208d73",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-960.json",
+          "sha256": "829ff98c438e922d1f023b74d98cef22cc0e38a61ce88376ecc9c60137723af5"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-960.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2049,
+        "chunk_lo": 2048,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "b8103159e86fa87e12fdee89d778120f1d646f1ac56347daa3200fed68dd0f20",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-2048.json",
+          "sha256": "55d46a445878982615d9a78a08d107763685204697a6fc73eefe282e5e248dd1"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-2048.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2872,
+        "chunk_lo": 2871,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "39c3d1e3cdb12ded8a779dd3f082ae0755bd1eabbe0608f6b6e5eab11c9a7033",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-2871.json",
+          "sha256": "918c355867f7defca5782cd8a01464646a11552c535961c046811405e62578e5"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-2871.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 2873,
+        "chunk_lo": 2872,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "bc76b1ffcedda6537c8ab65e3d2abd158d3fa83a63851e4b93c127540d4f0616",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-2872.json",
+          "sha256": "4a8bfcd2162e399273546003140f8fbcb892512a302ce9fc7156898ee19d03a7"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-2872.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3001,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "d8b9abe35c903e3df185c807a3cac5155c02ac8cd874ac6c85c7e928f20e33d9",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-3000.json",
+          "sha256": "9714a587511ebd815b8771a60498ea4f597cadbbdaf1b1d0e1737e0b3d4b6168"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-3000.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3007,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "4c05489674f1403d512fa0b5649757892b1124681e48303f97e319b2611722d9",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-3007.json",
+          "sha256": "5de15a59bb0356bec788a8b046f7f892812722610a791a6ad4fe4d04733b3c37"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-3007.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      },
+      {
+        "chunk_hi": 3009,
+        "chunk_lo": 3008,
+        "complete": false,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "62d624324a9047e14db5262af0cc3d01ad574ee47a610a339c2de1b792336fda",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/shared-small-sigmoid/evidence/targetcheck/thumbv7em-sigmoid-3008.json",
+          "sha256": "d93e9ab191837a66d3f4ebed375fef8bada3485d485f13f090ebf8cb323a9553"
+        },
+        "run": "eik-work/trials/shared-small-sigmoid/evidence/runlogs/tc-thumbv7em-3008.json",
+        "target": "thumbv7em",
+        "words_checked": 1048576
+      }
+    ]
+  },
+  "trials": {
+    "m0-exp-layout": {
+      "change": "Thumb exp high-word layout: the 512 aux words of t_eps rows 0..511 (stride-16 interleaved) copied unchanged into contiguous uint32_t t_hb[512]; the 8 stride-16 loads in t_mt, t_mn, t_exp_res, t_exp_den and the two xrow/xkm/xkq table loads in t_eik_exp now index t_hb. t_eps is untouched, so aliases (t_xrow, t_xkm, t_xkq, t_dkn, tanh/sigmoid row pointers, dead NaN-branch t_eps casts) keep their data. Result: thumbv6m +2084 bytes, S worse; rv32im identical code (EIK_SEL selects the _r path).",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/m0-exp-layout/packet.json",
+        "sha256": "1d595efaaae17c1343854df26f55197ccbaadbfa008dc5ce28f0db067dd45df4"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 1017,
+          "chunk_lo": 1016,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "157ffdc2dc894f11c0b74366d49512c24c67f629130af7eddb2c564cf36f780e",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/rv32im-exp-1016.json",
+            "sha256": "206d2eeda152c8e6280a4fa8402846af165e3726b75e8f795e7bc4066e0daa14"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-rv32im-exp-1016.json",
+          "target": "rv32im",
+          "words_checked": 1048576
+        },
+        {
+          "chunk_hi": 2048,
+          "chunk_lo": 0,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-exp-0-2048.json",
+            "sha256": "6430556e54ec16d7b8b0be8d44244b3073054c99c828d0578d948547a42939d7"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-exp-0-2048.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 1017,
+          "chunk_lo": 1016,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-exp-1016.json",
+            "sha256": "d07c70aa8158bd03a53e75d3db5626b619306751762e99c4b49785039f133648"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-exp-1016.json",
+          "target": "thumbv6m",
+          "words_checked": 1048576
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 2048,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-exp-2048-4096.json",
+            "sha256": "84916a5485259ba12bad9d5316299f26ea8a53d42f9fd99c786a0751483fb088"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-exp-2048-4096.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 2048,
+          "chunk_lo": 0,
+          "complete": false,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-sigmoid-0-2048.json",
+            "sha256": "17f044588b0a289fb9b2c1c65da85bfb77bd7ee6e76f454cf9383285ab73b2eb"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-sigmoid-0-2048.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 2048,
+          "complete": false,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-sigmoid-2048-4096.json",
+            "sha256": "6dcc0acf7774c0f355469fa22f67546125ea92f516a9256abef7022f96c3f883"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-sigmoid-2048-4096.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 2048,
+          "chunk_lo": 0,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-tanh-0-2048.json",
+            "sha256": "09bf2309b2e21c43ca7358c764118fbf6d931b02a0eae7a0cfdedf681fc1008d"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-tanh-0-2048.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 2048,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "840eec8270ddc405b5d9ac87e523130bf1ae63026273a045ab9f19fa17e79ef5",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv6m-tanh-2048-4096.json",
+            "sha256": "7c1e987f7e095afc4a6f2d39f60922021230d49d996d097f6df253129ac8feee"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv6m-tanh-2048-4096.json",
+          "target": "thumbv6m",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 2048,
+          "chunk_lo": 0,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "3cbba7cedf2a714288eb1b168056df2ad855bf56c3a3aa4f6f2df8f4da6f3cb4",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv7em-exp-0-2048.json",
+            "sha256": "17375f6d8fc7ca6290891823e139c68236b1e0d05467f89e2b3e77f13274c11b"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv7em-exp-0-2048.json",
+          "target": "thumbv7em",
+          "words_checked": 2147483648
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 2048,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "3cbba7cedf2a714288eb1b168056df2ad855bf56c3a3aa4f6f2df8f4da6f3cb4",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-layout/targetcheck-reports/thumbv7em-exp-2048-4096.json",
+            "sha256": "8cebd44ca1eb171898eda03caf557f11ff3840f7951cef81f9d22939976306f7"
+          },
+          "run": "eik-work/trials/m0-exp-layout/tc-thumbv7em-exp-2048-4096.json",
+          "target": "thumbv7em",
+          "words_checked": 2147483648
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 34.66019769446229,
+            "rv32im": 28.52271424241966,
+            "thumbv6m": 42.11833747689283,
+            "thumbv7em": 40.8167589347728
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0195917007045177,
+            "rv32im": 1.0,
+            "thumbv6m": 1.0395672361455304,
+            "thumbv7em": 1.0215340159702637
+          },
+          "score_log": "eik-work/trials/m0-exp-layout/measure-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 22584,
+              "peak_stack": 64,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 320,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 23298,
+              "peak_stack": 48,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 296,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 34.56858515403925,
+            "rv32im": 28.517414314250885,
+            "thumbv6m": 41.903766813630675,
+            "thumbv7em": 40.62198760030839
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0196652876104688,
+            "rv32im": 1.0,
+            "thumbv6m": 1.0397172987577399,
+            "thumbv7em": 1.0219485132396329
+          },
+          "score_log": "eik-work/trials/m0-exp-layout/measure-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 22584,
+              "peak_stack": 64,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 320,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 23298,
+              "peak_stack": 48,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 296,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0196652876104688
+      ],
+      "source": {
+        "normalised_sha256": "6a3abcacab6a5c08a7fbae3ebeae71bb7dce0894b6081323204719fe7f5a4b46",
+        "path": "eik-work/trials/m0-exp-layout/entry.c",
+        "sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0196652876104688,
+        "rv32im": 1.0,
+        "thumbv6m": 1.0397172987577399
+      }
+    },
+    "m0-exp-reduction": {
+      "change": "One exact specialization of negative exp reduction for row 10. Thumbv6-M regressed on both seeds; RV32IM text and scores are identical. Exhaustive host and all-target checks passed.",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/m0-exp-reduction/packet.json",
+        "sha256": "2dc9e89716636ca2c5a1ec55f18a4a6fc31f4d0a6ba5ee9c8691360a2b6b9010"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "98cd73989a14297bf9e10e8a20b9ea2d991b56867e80cf5052453a75a31252b9",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-exp.stdout",
+            "sha256": "998339dc569a7cf5e6af0b55626879eafe02288625c0da448a7bd70fa39abcc2"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-exp.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "98cd73989a14297bf9e10e8a20b9ea2d991b56867e80cf5052453a75a31252b9",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-sigmoid.stdout",
+            "sha256": "876b89ae5fb674f778ef6a943ac6208438b823e686627195b20b26b3bfb77f9d"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-sigmoid.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "98cd73989a14297bf9e10e8a20b9ea2d991b56867e80cf5052453a75a31252b9",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-tanh.stdout",
+            "sha256": "5c8b52836d043b216f755ba9f9ef1ae0944fed449be8b2e7511d8cc0c3e31125"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-rv32im-tanh.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "ef361f8548eb87c814ce12585719c695dab3a850feb309c02dbb07d49d9c2abd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-exp.stdout",
+            "sha256": "21f57786b75f517938c11811efb2d08b170c315dc15bc4ef07fd592eb09be5ec"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-exp.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "ef361f8548eb87c814ce12585719c695dab3a850feb309c02dbb07d49d9c2abd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-sigmoid.stdout",
+            "sha256": "938a39d909d4af24eb90f3aa9c8411816156cf4308a2781f7ea12dfce1c2a353"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-sigmoid.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "ef361f8548eb87c814ce12585719c695dab3a850feb309c02dbb07d49d9c2abd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-tanh.stdout",
+            "sha256": "be3b0a82ffee213188280f825ed24a6310be09afc9b3e39b98af9f35589862bc"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv6m-tanh.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "9cf8fe2798a61bfa944473c0c11f7e521d9ccacc2742c03077ae627e01f55672",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-exp.stdout",
+            "sha256": "6cad42a876296826f6f0ee60221f1c1232cb74af7ed3fb3c7c5297d82c52e020"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-exp.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "9cf8fe2798a61bfa944473c0c11f7e521d9ccacc2742c03077ae627e01f55672",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-sigmoid.stdout",
+            "sha256": "d1400e8516ec08308cf43cf313cde5b7fe1df8a65099ec061d668f9b857afc9b"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-sigmoid.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "9cf8fe2798a61bfa944473c0c11f7e521d9ccacc2742c03077ae627e01f55672",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-tanh.stdout",
+            "sha256": "4306961983c4f86c761c2da3f291d9e2db9f59aa0f69946a8c276e6607d34291"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/exhaustive-thumbv7em-tanh.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 3081,
+          "chunk_lo": 3071,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "ef361f8548eb87c814ce12585719c695dab3a850feb309c02dbb07d49d9c2abd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-exp-reduction/targetcheck-thumbv6m-exp.stdout",
+            "sha256": "e432c7b4631ced889a2df702d476842ae381e06be7a7cbf3c76e4bc32448e0bf"
+          },
+          "run": "eik-work/trials/m0-exp-reduction/targetcheck-thumbv6m-exp.json",
+          "target": "thumbv6m",
+          "words_checked": 10485760
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 34.2460624086769,
+            "rv32im": 28.52271424241966,
+            "thumbv6m": 41.11785367027895,
+            "thumbv7em": 40.54918546512849
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.007409170642863,
+            "rv32im": 1.0,
+            "thumbv6m": 1.0148732370953408,
+            "thumbv7em": 1.014837369589064
+          },
+          "score_log": "eik-work/trials/m0-exp-reduction/evaluate-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20548,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21310,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 34.16017983509542,
+            "rv32im": 28.517414314250885,
+            "thumbv6m": 40.91948426694916,
+            "thumbv7em": 40.360758210766214
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0076186063492356,
+            "rv32im": 1.0,
+            "thumbv6m": 1.015295255861176,
+            "thumbv7em": 1.0153766293406015
+          },
+          "score_log": "eik-work/trials/m0-exp-reduction/evaluate-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20548,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21310,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0076186063492356
+      ],
+      "source": {
+        "normalised_sha256": "3e4f5ac106825a160e3680290b31dd567d0c2045ed927e65a42c2cb8cd9a4951",
+        "path": "eik-work/trials/m0-exp-reduction/entry.c",
+        "sha256": "c33bec89f7767b513aeaa81a54fd1945b3cba077d57d55b9733adad4c9424c88"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0076186063492356,
+        "rv32im": 1.0,
+        "thumbv6m": 1.015295255861176
+      }
+    },
+    "m0-sigmoid-cell": {
+      "change": "Use directly addressable narrow coefficients for the 91 negative Thumb sigmoid cells. The original shared table and rounding path are preserved. Both Thumb targets regress, and RV32IM emits identical scored text and rodata.",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/m0-sigmoid-cell/packet.json",
+        "sha256": "67b1acfe436a6b56e0fc0242a525f565c5e9e3dcf2aee22ae8765cbe8f4ca85a"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 3079,
+          "chunk_lo": 3071,
+          "complete": false,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "ffbba570df5e3e534fed1d81205ddb9ba3d00541c38424079158d02351c2e123",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-sigmoid-cell/targetcheck-negative.stdout",
+            "sha256": "6a6310e5d9b1cd617a3f6388a484afc76521ce6a4bd632f2c61ce311aeec2082"
+          },
+          "run": "eik-work/trials/m0-sigmoid-cell/targetcheck-negative.json",
+          "target": "thumbv6m",
+          "words_checked": 8388608
+        },
+        {
+          "chunk_hi": 3079,
+          "chunk_lo": 3071,
+          "complete": false,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "f32d732198b6e7a2bf42403bae835b8ad3f6608140d0af2c3bd37c1c44eae62c",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-sigmoid-cell/targetcheck-negative-m4.stdout",
+            "sha256": "1697830cdb15697007cb382f1b994305be5f4693f40c666784dd0355bde61643"
+          },
+          "run": "eik-work/trials/m0-sigmoid-cell/targetcheck-negative-m4.json",
+          "target": "thumbv7em",
+          "words_checked": 8388608
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 34.68856549118808,
+            "rv32im": 28.52271424241966,
+            "thumbv6m": 42.18730958103816,
+            "thumbv7em": 41.13372413819077
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0204261901775395,
+            "rv32im": 1.0,
+            "thumbv6m": 1.041269609600248,
+            "thumbv7em": 1.0294668049917495
+          },
+          "score_log": "eik-work/trials/m0-sigmoid-cell/evaluate-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 22084,
+              "peak_stack": 68,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 336,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 22890,
+              "peak_stack": 48,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 296,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 34.59995867710441,
+            "rv32im": 28.517414314250885,
+            "thumbv6m": 41.97986280471026,
+            "thumbv7em": 40.919461778176895
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0205907085461836,
+            "rv32im": 1.0,
+            "thumbv6m": 1.041605394370801,
+            "thumbv7em": 1.02943222616848
+          },
+          "score_log": "eik-work/trials/m0-sigmoid-cell/evaluate-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 22084,
+              "peak_stack": 68,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 336,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 22890,
+              "peak_stack": 48,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 296,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0205907085461836
+      ],
+      "source": {
+        "normalised_sha256": "d3562c25ef2c1fd48d1708f48bfe30e739bffb42f5c645f3e3f132973d92ad92",
+        "path": "eik-work/trials/m0-sigmoid-cell/entry.c",
+        "sha256": "f8c2ac2d2752bfec1febb2d6d0789d2b7776fe64bc551e668965d58732d0de90"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0205907085461836,
+        "rv32im": 1.0,
+        "thumbv6m": 1.041605394370801
+      }
+    },
+    "m0-tanh-refine": {
+      "change": "Lower the fast rounding cutoff in the biased-exponent-119 Thumb tanh path using a certified one-sided residual. Both signs and all changed cells are covered. The extra guard cost offsets the refinements saved.",
+      "original_disposition": "selected fallback",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/m0-tanh-refine/packet.json",
+        "sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 3008,
+          "chunk_lo": 3000,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-negative.stdout",
+            "sha256": "d3f42c881ed4738aea168a80474c6aad5b7095988623276308643904965fabe4"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-negative.json",
+          "target": "thumbv6m",
+          "words_checked": 8388608
+        },
+        {
+          "chunk_hi": 960,
+          "chunk_lo": 952,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-positive.stdout",
+            "sha256": "368b0b4a632be80144722d1b9b20592e095ca634ebcea6d33092236abb37dfa1"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-positive.json",
+          "target": "thumbv6m",
+          "words_checked": 8388608
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-exp-all.stdout",
+            "sha256": "334556d2b3bfc1d2533aae73e72b3594370276b477219a0b43381627d3ddb35c"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-exp-all.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-sigmoid-all.stdout",
+            "sha256": "1f30254711be0eb38446837da6855567fd5e6e97362811aeadfcde3afc64cee8"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-sigmoid-all.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.stdout",
+            "sha256": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.json",
+          "target": "rv32im",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-all.stdout",
+            "sha256": "3ac1c782783b0aa1a94efd3994885bd89bc9cded3a086d0c830bc67726111e3f"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-all.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "77bdc033b39f49e57c688715e4e8ecda69b75fc87a4d29a734741b95bad2bb29",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-exp-all.stdout",
+            "sha256": "fde3c89f59494fef8f248a621c4ab15184b0269ab8ad206702ae83268e3ffdf4"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-exp-all.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "77bdc033b39f49e57c688715e4e8ecda69b75fc87a4d29a734741b95bad2bb29",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-sigmoid-all.stdout",
+            "sha256": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-sigmoid-all.json",
+          "target": "thumbv6m",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.stdout",
+            "sha256": "7c3baa949ce7aacecd328a5cd32958032bd7d79665edc4880d3d6a58e1b90c27"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.stdout",
+            "sha256": "abcf746ab835fc73ee1b1937a5695ff3c53420e7df4f85004b3eecde30f119ad"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        },
+        {
+          "chunk_hi": 3008,
+          "chunk_lo": 3000,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-negative.stdout",
+            "sha256": "6aad4421af6a5553cef170de1510000698a7da35ed7f689bf55ed14fdb63338d"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-negative.json",
+          "target": "thumbv7em",
+          "words_checked": 8388608
+        },
+        {
+          "chunk_hi": 960,
+          "chunk_lo": 952,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-positive.stdout",
+            "sha256": "d47d275b222c0fe0ad227bcec7bda80a3d57c6aa3b4d2d76bffc7a2e7962c367"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-positive.json",
+          "target": "thumbv7em",
+          "words_checked": 8388608
+        },
+        {
+          "chunk_hi": 4096,
+          "chunk_lo": 0,
+          "complete": true,
+          "exit_code": 0,
+          "function": "sigmoid",
+          "image_sha256": "1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stdout",
+            "sha256": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85"
+          },
+          "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.json",
+          "target": "thumbv7em",
+          "words_checked": 4294967296
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 34.00061523046087,
+            "rv32im": 28.52271424241966,
+            "thumbv6m": 40.53056894320931,
+            "thumbv7em": 39.96971754896375
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.000188902943398,
+            "rv32im": 1.0,
+            "thumbv6m": 1.000377841571118,
+            "thumbv7em": 1.0003348416330435
+          },
+          "score_log": "eik-work/trials/m0-tanh-refine/evaluate-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20508,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 33.90743967053243,
+            "rv32im": 28.517414314250885,
+            "thumbv6m": 40.316224056689975,
+            "thumbv7em": 39.759604645232244
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0001635609245687,
+            "rv32im": 1.0,
+            "thumbv6m": 1.0003271486013132,
+            "thumbv7em": 1.0002530957860423
+          },
+          "score_log": "eik-work/trials/m0-tanh-refine/evaluate-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 18960,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20508,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.000188902943398
+      ],
+      "source": {
+        "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+        "path": "eik-work/trials/m0-tanh-refine/entry.c",
+        "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.000188902943398,
+        "rv32im": 1.0,
+        "thumbv6m": 1.000377841571118
+      }
+    },
+    "rv-exp-interval": {
+      "change": "Single early unsigned word-range check in eik_exp_r for [0xBF800001,0xC0800000], jumping to the identical original cubic cell and refinement arithmetic. RV32 regresses by about 15.2%; Thumb allocated sections and scores are unchanged under the preserved id50 selector. No takeover recommendation. Full-population stage scores paired with unchanged id50, two-seed quick sanitizer checks, complete all-input host checks and selected object checks retained; bounded evaluate attempts documented separately.",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/rv-exp-interval/packet.json",
+        "sha256": "260ff6637a981fe2b741544bc94ff8503b42c22bd66dc06039c93e402ca45577"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 3082,
+          "chunk_lo": 3063,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "e9c57e9ce1539262fd23417896965495524305b5a7b7f46618a5b631c5ba1fd9",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-interval/targetcheck-rv32im-exp-3063-3082.stdout",
+            "sha256": "fc6c4ecc5a67dffdb74dca23ccf17c786bc3798d8c746ce08a703bdaf1363ab1"
+          },
+          "run": "eik-work/trials/rv-exp-interval/targetcheck-rv32im-exp-3063-3082.json",
+          "target": "rv32im",
+          "words_checked": 19922944
+        },
+        {
+          "chunk_hi": 3082,
+          "chunk_lo": 3063,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "b0df87dbca06ba03bf9f099d5c213a4f1dbf7ef3e68763f519ab99f51dec28b7",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-interval/targetcheck-thumbv6m-exp-3063-3082.stdout",
+            "sha256": "ac1cdfff0f1ae05a2f47a91bb9c4955332ffe70d6bab16c579f52983e1ab2c0b"
+          },
+          "run": "eik-work/trials/rv-exp-interval/targetcheck-thumbv6m-exp-3063-3082.json",
+          "target": "thumbv6m",
+          "words_checked": 19922944
+        },
+        {
+          "chunk_hi": 3082,
+          "chunk_lo": 3063,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "bbfcd757aadc9a048beb37647ddfd5b46843111fbcc0c70c724dc0031246290a",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-interval/targetcheck-thumbv7em-exp-3063-3082.stdout",
+            "sha256": "8fe2fe9578acf90cf7fc7c5982ddddd8f6f3c29251e56861724cccaa0636d0d1"
+          },
+          "run": "eik-work/trials/rv-exp-interval/targetcheck-thumbv7em-exp-3063-3082.json",
+          "target": "thumbv7em",
+          "words_checked": 19922944
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 36.507508925017504,
+            "rv32im": 32.896202279994895,
+            "thumbv6m": 40.515260593492414,
+            "thumbv7em": 39.95633850332885
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0739336642413637,
+            "rv32im": 1.153333515190882,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-exp-interval/measure-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19060,
+              "peak_stack": 24,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 192,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 36.3786812099431,
+            "rv32im": 32.83644311370611,
+            "thumbv6m": 40.30303897386101,
+            "thumbv7em": 39.74954420309734
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0730574674529845,
+            "rv32im": 1.1514523284566125,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-exp-interval/measure-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19060,
+              "peak_stack": 28,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 192,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0739336642413637
+      ],
+      "source": {
+        "normalised_sha256": "332cb47966adb4e07c1485aa843f5aee6a191a29da3dd7f718ef477dd2b5713d",
+        "path": "eik-work/trials/rv-exp-interval/entry.c",
+        "sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0739336642413637,
+        "rv32im": 1.153333515190882,
+        "thumbv6m": 1.0
+      }
+    },
+    "rv-exp-loads": {
+      "change": "Typed table-row indexing in the two RV32IM positive exp reductions. Same-input comparison with former submission 50. RV32IM regressed and both Thumb images were byte-identical.",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/rv-exp-loads/packet.json",
+        "sha256": "eebe1015dd1e28a79bb40ee3f52957cc63ba78a484ef09ab9a7ef56d3f919125"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 1042,
+          "chunk_lo": 1039,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "ee0478016978374d887cf6fb260626bb80ac9e291a83ad5f8e83bba5c8d8db29",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-1039.stdout",
+            "sha256": "5589c12724449f463abe24e3c277631f9f548d7f4cc89f7ce571fe56df7f9da8"
+          },
+          "run": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-1039.json",
+          "target": "rv32im",
+          "words_checked": 3145728
+        },
+        {
+          "chunk_hi": 1068,
+          "chunk_lo": 1066,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "784863b444d4456ec46c9e6bf150106741bf21231881161813970ac9229c04ba",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-1066.stdout",
+            "sha256": "51ec4292b17f81d5e0ca68dc1d01ccd411d9c681e6b0b262a179304500fcfb9b"
+          },
+          "run": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-1066.json",
+          "target": "rv32im",
+          "words_checked": 2097152
+        },
+        {
+          "chunk_hi": 3117,
+          "chunk_lo": 3064,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "f8bb7cb53890b1de14abf6f285c77b39687ebe99a54a8ba4bf30c582f06eaa3c",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-3064.stdout",
+            "sha256": "1f261bb46a40b2cb594fcee5101e26cc4c41c8cedfca6de6aecebcd52c46ec08"
+          },
+          "run": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-3064.json",
+          "target": "rv32im",
+          "words_checked": 55574528
+        },
+        {
+          "chunk_hi": 953,
+          "chunk_lo": 951,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "ff210b24a77ba85dae58669b8ca2d2293987a78a71c1828751e7f82cb39d9887",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-951.stdout",
+            "sha256": "1e431bcd32f4963ed6a51e3036747aaf378649c3af176b179045f21f700ceb3b"
+          },
+          "run": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-951.json",
+          "target": "rv32im",
+          "words_checked": 2097152
+        },
+        {
+          "chunk_hi": 1067,
+          "chunk_lo": 952,
+          "complete": false,
+          "exit_code": 0,
+          "function": "exp",
+          "image_sha256": "83acf066dae508d3436be1f382bdc13c867166f3f3b3011b9f2c73ac09857ccc",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-952.stdout",
+            "sha256": "e2d470c077cdb672f846b78513a7011cdb88e5985693ca9ff4c3c00f87dca4be"
+          },
+          "run": "eik-work/trials/rv-exp-loads/targetcheck-rv32im-exp-952.json",
+          "target": "rv32im",
+          "words_checked": 120586240
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 34.274676534308036,
+            "rv32im": 28.995332482697528,
+            "thumbv6m": 40.515260593492414,
+            "thumbv7em": 39.95633850332885
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0082509063211649,
+            "rv32im": 1.01656989009745,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-exp-loads/evaluate-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19088,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 34.183701733224666,
+            "rv32im": 28.993482723323357,
+            "thumbv6m": 40.30303897386101,
+            "thumbv7em": 39.74954420309734
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0083124288737684,
+            "rv32im": 1.0166939542213183,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-exp-loads/evaluate-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19088,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0083124288737684
+      ],
+      "source": {
+        "normalised_sha256": "9dbc0c8490b6d6d90b79ab719ef09656e53980afb16fd9cbe35fa986664a40f9",
+        "path": "eik-work/trials/rv-exp-loads/entry.c",
+        "sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0083124288737684,
+        "rv32im": 1.0166939542213183,
+        "thumbv6m": 1.0
+      }
+    },
+    "rv-tanh-quadratic": {
+      "change": "Guarded quadratic (degree-reduced) fast path in eik_tanh_r cells_ for tld_r rows 0..27 (t in [0x7B201000,0x7C..), c1!=0): drops the c3*t cubic term via per-row precomputed c2' = c2 + mulhsx(c3, cell-centre t) (new 28-entry int32 table tq_r, 112 bytes), keeps the high-half multiply formulation, returns w-(Vq>>8) only when Vq mod 256 lies in an exhaustively proven window (even rows [4,213], odd rows [44,253]) so the cubic would return the identical value; otherwise falls through to the unchanged cubic/refinement. Result: rv32im S regresses (see ratios); thumbv6m code generation unchanged.",
+      "original_disposition": "eligible loss",
+      "original_eligible": true,
+      "packet": {
+        "path": "eik-work/trials/rv-tanh-quadratic/packet.json",
+        "sha256": "e25858b127e75153efdfb3d47d776240de3f58ca5d0393f2d2baa987b488f0a3"
+      },
+      "packet_target_reports": [
+        {
+          "chunk_hi": 3040,
+          "chunk_lo": 3033,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "a9cd1a328698ef51c54509e06c802903e16229f16c75e38784c2c4107c8eab62",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-tanh-quadratic/targetcheck-tanh-rv32im-3033-3040.stdout",
+            "sha256": "1324207981a3d6683a3cb9db939d67d9df98d2aa0719065d5172d30dd8226adf"
+          },
+          "run": "eik-work/trials/rv-tanh-quadratic/targetcheck-tanh-rv32im-3033-3040.json",
+          "target": "rv32im",
+          "words_checked": 7340032
+        },
+        {
+          "chunk_hi": 992,
+          "chunk_lo": 985,
+          "complete": false,
+          "exit_code": 0,
+          "function": "tanh",
+          "image_sha256": "a9cd1a328698ef51c54509e06c802903e16229f16c75e38784c2c4107c8eab62",
+          "kind": "targetcheck",
+          "mismatches": 0,
+          "report": {
+            "path": "eik-work/trials/rv-tanh-quadratic/targetcheck-tanh-rv32im-985-992.stdout",
+            "sha256": "02d6112e31de1da307bc5e3989c45230604956bfd00bfb254b0a39f5b05b6d30"
+          },
+          "run": "eik-work/trials/rv-tanh-quadratic/targetcheck-tanh-rv32im-985-992.json",
+          "target": "rv32im",
+          "words_checked": 7340032
+        }
+      ],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 35.263388616728896,
+            "rv32im": 30.692301086523873,
+            "thumbv6m": 40.515260593492414,
+            "thumbv7em": 39.95633850332885
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0373356404161367,
+            "rv32im": 1.0760652308775562,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-tanh-quadratic/measure-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19216,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 35.19762097934098,
+            "rv32im": 30.738935677005138,
+            "thumbv6m": 40.30303897386101,
+            "thumbv7em": 39.74954420309734
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0382198796733328,
+            "rv32im": 1.07790051854891,
+            "thumbv6m": 1.0,
+            "thumbv7em": 1.0
+          },
+          "score_log": "eik-work/trials/rv-tanh-quadratic/measure-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19216,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20500,
+              "peak_stack": 60,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 312,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21254,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0,
+        1.0382198796733328
+      ],
+      "source": {
+        "normalised_sha256": "a3572243f68fb6f8a3afff8b77362ca9d546d79d3f4383aa77ffd5cac18e93c9",
+        "path": "eik-work/trials/rv-tanh-quadratic/entry.c",
+        "sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.0382198796733328,
+        "rv32im": 1.07790051854891,
+        "thumbv6m": 1.0
+      }
+    },
+    "shared-small-sigmoid": {
+      "change": "Negative trial vs id50 (eligible, distinct normalised source; not a duplicate): one target-independent pre-selector fast path in eik_sigmoid for |x| < 2^-7: returns 0.5 for |x| < 2^-24, else floor(a+1/2) of the affine term a = x*2^22 (x>0, ulp 2^-24) or |x|*2^23 (x<0, ulp 2^-25) in Q15, fast return only when the Q15 fraction exceeds a per-exponent floor of the x^3/48 bound, otherwise the unchanged id50 selector and kernels. Correct on all 2^32 inputs of all three functions (host UBSan/ASan) and on 12 affected sigmoid chunks per target, but S regresses on both boards (rv32im ~1.08x, thumbv6m ~1.12x): the range test runs before id50's first branch on every call (rv32im 4 extra instructions before bltz; thumbv6m ~8 before the original lsls/bmi), and the fast body (~22-26 instr) is slower than id50's own rv32 affine path. See README.md.",
+      "original_disposition": "rejected: no packet-indexed targetcheck",
+      "original_eligible": false,
+      "packet": {
+        "path": "eik-work/trials/shared-small-sigmoid/packet.json",
+        "sha256": "ba420076203917437e45abfd27a225df62c50917debd48b4a0763bfbbc176815"
+      },
+      "packet_target_reports": [],
+      "rows": {
+        "1874435642": {
+          "S": {
+            "overall": 37.39233426846292,
+            "rv32im": 30.74556592260963,
+            "thumbv6m": 45.47604248247939,
+            "thumbv7em": 40.876179395484385
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 445,
+              "sigmoid": 560,
+              "tanh": 186
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.0999623841206536,
+            "rv32im": 1.0779326841512191,
+            "thumbv6m": 1.1224423048579326,
+            "thumbv7em": 1.0230211507513107
+          },
+          "score_log": "eik-work/trials/shared-small-sigmoid/measure-1874435642.stdout",
+          "seed": 1874435642,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19132,
+              "peak_stack": 0,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20704,
+              "peak_stack": 76,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 328,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21374,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        },
+        "1947282751": {
+          "S": {
+            "overall": 37.38421204748982,
+            "rv32im": 30.820392303525246,
+            "thumbv6m": 45.34592865165533,
+            "thumbv7em": 40.704955283999155
+          },
+          "hard_pool": {
+            "samples": 67108864,
+            "sizes": {
+              "exp": 408,
+              "sigmoid": 571,
+              "tanh": 198
+            },
+            "source": "hardscan",
+            "threshold_log2_ulps": -18
+          },
+          "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+          "quick_host_words_per_function": 134217728,
+          "ratio_vs_id50": {
+            "overall": 1.1027174864008082,
+            "rv32im": 1.0807569004642719,
+            "thumbv6m": 1.125124303431931,
+            "thumbv7em": 1.0240357744989532
+          },
+          "score_log": "eik-work/trials/shared-small-sigmoid/measure-1947282751.stdout",
+          "seed": 1947282751,
+          "target_measurements": {
+            "rv32im": {
+              "image_bytes": 19132,
+              "peak_stack": 8,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 176,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv6m": {
+              "image_bytes": 20704,
+              "peak_stack": 76,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 328,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            },
+            "thumbv7em": {
+              "image_bytes": 21374,
+              "peak_stack": 40,
+              "sample_mismatches": 0,
+              "scored_outputs": 12900,
+              "static_stack_bound": 280,
+              "target_sample_words": 98304,
+              "wrong_outputs": 0
+            }
+          }
+        }
+      },
+      "selection_metric": [
+        1.0807569004642719,
+        1.1027174864008082
+      ],
+      "source": {
+        "normalised_sha256": "666165f9b81aeb43c191257587d78cf6ad3da6e7ca78af387e977e8eab0d0775",
+        "path": "eik-work/trials/shared-small-sigmoid/entry.c",
+        "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262"
+      },
+      "worst_ratio_vs_id50": {
+        "overall": 1.1027174864008082,
+        "rv32im": 1.0807569004642719,
+        "thumbv6m": 1.125124303431931
+      }
+    }
+  }
+}

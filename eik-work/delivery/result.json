@@ -1,0 +1,614 @@
+{
+  "artifacts": {
+    "CHECKS.md": {
+      "bytes": 7295,
+      "path": "eik-work/delivery/CHECKS.md",
+      "sha256": "14c5ff8bba5836622d08db9418e706399cea53083b2c76883141a095d9581c91"
+    },
+    "PROVENANCE.md": {
+      "bytes": 3200,
+      "path": "eik-work/delivery/PROVENANCE.md",
+      "sha256": "947c027a4d7891c9d8329fc5a01a71d017dff11dc720a44a2cb8df0a63cdc79f"
+    },
+    "REPLAY.md": {
+      "bytes": 4169,
+      "path": "eik-work/delivery/REPLAY.md",
+      "sha256": "f881c505fc4b68a8c774075a489e8a0a2d528a976a7d5803ae5f63a976b5d19f"
+    },
+    "REPORT.md": {
+      "bytes": 5230,
+      "path": "eik-work/delivery/REPORT.md",
+      "sha256": "99f1b22d307cc4cbe91175b4748d7551341d7a42d62ec13fbac89967a418e498"
+    },
+    "change-note.md": {
+      "bytes": 1477,
+      "path": "eik-work/delivery/change-note.md",
+      "sha256": "07eedc6329e3b54517727b5bf2bb4045b6970def3153c1f60f70d420a6715d87"
+    },
+    "entry.c": {
+      "bytes": 166756,
+      "path": "eik-work/delivery/entry.c",
+      "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+    },
+    "experiment-log.md": {
+      "bytes": 17138,
+      "path": "eik-work/delivery/experiment-log.md",
+      "sha256": "dba627dd438f1a1e6174e4de133bed0a723fa0065a5036a54a16ba29d58de559"
+    },
+    "experiments.json": {
+      "bytes": 114082,
+      "path": "eik-work/delivery/experiments.json",
+      "sha256": "1a270a443283db6d9d3d538d4cd5e48e6f1d9707d81cec61154d212381c331b4"
+    },
+    "logs/environment.json": {
+      "bytes": 261,
+      "path": "eik-work/delivery/logs/environment.json",
+      "sha256": "aae0f73d7a79faadf9575523841b6d851b1702b9d66a21140dceb97d3f058721"
+    },
+    "logs/negative-tests.json": {
+      "bytes": 3998,
+      "path": "eik-work/delivery/logs/negative-tests.json",
+      "sha256": "38a4308dffab782f1d790089206b2046bee7c22ef238ae1a38cbe021a8234dde"
+    },
+    "logs/verification.json": {
+      "bytes": 3041,
+      "path": "eik-work/delivery/logs/verification.json",
+      "sha256": "e8957653143befea30d38cd99b48ea929d8ea94fa12b65cd3c33ae46611e98f5"
+    },
+    "next-steps.md": {
+      "bytes": 1603,
+      "path": "eik-work/delivery/next-steps.md",
+      "sha256": "62296843b79070e3f8f86e512605071aa0d2ad4a790d447f0ac79abf05dbe35d"
+    },
+    "public-refresh/snapshot.json": {
+      "bytes": 5251,
+      "path": "eik-work/delivery/public-refresh/snapshot.json",
+      "sha256": "fbc309b0079a0546cf8fe37a95a272c9935facb0e85770c792828fc02f358bb0"
+    },
+    "scores.csv": {
+      "bytes": 1782,
+      "path": "eik-work/delivery/scores.csv",
+      "sha256": "b15aa4ba00c8ce37bf2669389aad63e5e88fd705377a46d925dd5243942db378"
+    },
+    "scores.json": {
+      "bytes": 11537,
+      "path": "eik-work/delivery/scores.json",
+      "sha256": "6428b4458fa126eda3c063e2725d348c8f634db4f58bb36b8b80ea7dd7c4746b"
+    }
+  },
+  "claims": {
+    "cold_offline_evaluator_replay_complete": false,
+    "complete_host_binary_provenance": false,
+    "current_takeover_status": "undetermined",
+    "historical_result": "ties id50 on rv32im; slightly regresses on thumbv6m and overall",
+    "private_source_duplicate_check_complete": false,
+    "selected_exhaustive_reports_complete": true,
+    "strict_C11_portability_proven": false,
+    "three_percent_current_gain_demonstrated": false,
+    "verified_current_takeovers": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/boards/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "self-test: clean copy accepted, 12 tampered copies rejected\nsnapshot f43b36a94db2cf9395b84b848ed6981d3fbad41d3ca8f6933dc1faacb0e3eaf6 taken 2026-11-26T11:42:15.926163+00:00\n  boards: rv32im=submission 52 (promotion 59), thumbv6m=submission 53 (promotion 60), overall=submission 56 (promotion 61)\n  public references (hash-matched): 37, 42, 46, 48, 50\n  withheld (documented, not bypassed): 52, 53, 54, 55, 56\n  rv32im: champion over public reference unavailable \u2014 promotion 53 does not resolve to any submission in this snapshot, so no published ratio ties this board's champion to a public reference\n  thumbv6m: historical champion-over-reference ratio 0.968438842462306 (historical ratio \u00d7 0.97: 0.939385677188437)\n  overall: historical champion-over-reference ratio 0.96815183298679 (historical ratio \u00d7 0.97: 0.939107277997187)\nverify: pass\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/review/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "PASS source review \u00b7 1437 evidence files \u00b7 9 packets \u00b7 2 variants\nFrozen m0-tanh-refine is the least-regressing original trial. No board at 0.970\u00d7 id50.\n36 shared-small-sigmoid target shards verified outside the original packet.\nLive takeover unknown. Committed runtime export incomplete.\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/merged/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "verify: PASS: 12 cells; 49,152 unique chunks; 51,539,607,552 inputs; kit merge passed\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/scores/heldout-1/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "verify: OK status=incomplete seed=849230117 inputs=30c46675a8f6 rv32im: cand 28.335213 / id50 28.335213 = 1.000000 thumbv6m: cand 40.152571 / id50 40.139826 = 1.000318 overall: cand 33.730278 / id50 33.724924 = 1.000159 ; current references: none available (ratios null, eligibility undetermined)\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/scores/heldout-2/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "heldout-2: verified seed 2715043869, paired candidate and former-50 scores, all current-board eligibility undetermined\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/final-validation/scores/heldout-3/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "verify: OK: seed 396172055, paired candidate/id50 scores, current eligibility undetermined\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/offline-runtime/verify.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "Retained payloads and replay evidence verified. Export replay status: incomplete.\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "eik-work/delivery/refresh.py"
+      ],
+      "evidence": "eik-work/delivery/public-refresh/snapshot.json",
+      "exit_code": 0,
+      "purpose": "one packaging refresh; 10 anonymous GETs; all board identities unchanged"
+    },
+    {
+      "argv": [
+        "gcc",
+        "--version"
+      ],
+      "exit_code": 127,
+      "stderr": "gcc not available in packaging container; no new compiler run",
+      "stdout": ""
+    }
+  ],
+  "evidence_verification": {
+    "command": "python3 eik-work/delivery/verify.py",
+    "does_not_rerun_kernels": true,
+    "offline": true
+  },
+  "gaps": [
+    "Current champions withhold their sources and publish no same-input absolute S. All nine current S/ratio/threshold fields are null; eligibility is undetermined. No 3% current-champion gain is demonstrated.",
+    "Cold offline evaluator replay is incomplete: the committed runtime omits the pinned Zig wheel, Unicorn wheel and QEMU upstream source archive. Historical successful runs restored exact payloads in scratch. Offline evidence verification needs none of them.",
+    "Host exp uses an audited historical exhaustive report; original host checker and sanitizer-library byte hashes were not retained. Host sigmoid and tanh have fresh reruns. No claim of complete binary/runtime provenance for all host cells is made.",
+    "The inherited wide-character selector compiles to different host/RV32IM and Thumb arms. Host ASan/UBSan coverage does not exercise the Thumb arm; selected full target runs cover its outputs.",
+    "Strict C11 table-subobject byte offsets and incompatible struct views remain source-review concerns. Empirical zero-mismatch checks and a local rounding certificate are not a general portability proof.",
+    "Novelty is checked against five public former champions only; duplicate status against private sources is undetermined.",
+    "Heldout-3 evaluate timed out (exit 124) at the 600-second incumbent-comparison cap. Standalone paired measurements and quick host checks completed. Heldout-2 retains earlier timeouts and fallback stages as well as its completed coordinator evaluate.",
+    "Shared-small-sigmoid has 36 external target shards absent from its original packet index, with missing original report-output binding and unavailable shard executables. The review inventories these limits; including the supplement does not change the frozen choice."
+  ],
+  "manifest": "eik-work/delivery/manifest.json",
+  "measured_facts": {
+    "board_refresh": {
+      "boards": {
+        "overall": {
+          "reference_at_measurement": {
+            "promotion_id": 61,
+            "shipped": false,
+            "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+            "submission": 56
+          },
+          "reference_at_packaging": {
+            "promotion_id": 61,
+            "shipped": false,
+            "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+            "submission": 56
+          },
+          "required_remeasurement": null,
+          "stale": false
+        },
+        "rv32im": {
+          "reference_at_measurement": {
+            "promotion_id": 59,
+            "shipped": false,
+            "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+            "submission": 52
+          },
+          "reference_at_packaging": {
+            "promotion_id": 59,
+            "shipped": false,
+            "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+            "submission": 52
+          },
+          "required_remeasurement": null,
+          "stale": false
+        },
+        "thumbv6m": {
+          "reference_at_measurement": {
+            "promotion_id": 60,
+            "shipped": false,
+            "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+            "submission": 53
+          },
+          "reference_at_packaging": {
+            "promotion_id": 60,
+            "shipped": false,
+            "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+            "submission": 53
+          },
+          "required_remeasurement": null,
+          "stale": false
+        }
+      },
+      "refreshed_utc": "2026-11-26T12:22:43.393286+00:00",
+      "snapshot": "eik-work/delivery/public-refresh/snapshot.json"
+    },
+    "code_table_bytes": {
+      "rv32im": 18960,
+      "thumbv6m": 20508,
+      "thumbv7em": 21254
+    },
+    "coverage": {
+      "cells_passed": 12,
+      "chunks_covered": 49152,
+      "merged_verdict": "passed",
+      "mismatches": 0,
+      "sanitizer_failures": 0,
+      "words_checked": 51539607552
+    },
+    "heldout_rows": [
+      {
+        "board": "rv32im",
+        "candidate_S": 28.33521329473907,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0,
+        "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 28.33521329473907,
+        "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+        "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 849230117,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "thumbv6m",
+        "candidate_S": 40.15257092025335,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.000317523909357,
+        "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 40.139825565918756,
+        "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+        "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 849230117,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "overall",
+        "candidate_S": 33.730278109697174,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0001587493539998,
+        "candidate_report": "eik-work/final-validation/scores/heldout-1/raw/cand/historical-compare-id50.stdout#/measure",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 33.724924299750896,
+        "id50_report": "eik-work/final-validation/scores/heldout-1/raw/id50/measure-849230117.stdout",
+        "inputs_sha256": "30c46675a8f6b6fd8238b30b25bde12fe102e8f9648acd6463be79f4cc104aca",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 849230117,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "rv32im",
+        "candidate_S": 28.39553195515181,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0,
+        "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 28.39553195515181,
+        "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+        "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 2715043869,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "thumbv6m",
+        "candidate_S": 40.299877643125264,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0003388560481488,
+        "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 40.286226411648585,
+        "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+        "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 2715043869,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "overall",
+        "candidate_S": 33.82804255945164,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.000169413673578,
+        "candidate_report": "eik-work/final-validation/scores/heldout-2/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 33.82231259722564,
+        "id50_report": "eik-work/final-validation/scores/heldout-2/raw/id50.stdout",
+        "inputs_sha256": "c1ebd15dd9e5dd3dd6ffd4ff0cef1dce46cf86797481c4f8e28039dcf4f82095",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 2715043869,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "rv32im",
+        "candidate_S": 28.381597262180406,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0,
+        "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 28.381597262180406,
+        "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+        "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 396172055,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "thumbv6m",
+        "candidate_S": 40.33389513534784,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.000345557016387,
+        "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 40.31996228947825,
+        "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+        "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 396172055,
+        "stale_current_comparison": false
+      },
+      {
+        "board": "overall",
+        "candidate_S": 33.834011996014596,
+        "candidate_over_current": null,
+        "candidate_over_id50": 1.0001727635845652,
+        "candidate_report": "eik-work/final-validation/scores/heldout-3/raw/candidate.stdout",
+        "current_S": null,
+        "current_le_0_970": null,
+        "current_reference": {
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "eligibility": "undetermined",
+        "historical_le_0_970": false,
+        "id50_S": 33.82816772049993,
+        "id50_report": "eik-work/final-validation/scores/heldout-3/raw/id50.stdout",
+        "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+        "reason": "SOURCE_WITHHELD; no same-input current-champion S",
+        "seed": 396172055,
+        "stale_current_comparison": false
+      }
+    ],
+    "static_stack_bound_bytes": {
+      "rv32im": 176,
+      "thumbv6m": 312,
+      "thumbv7em": 280
+    }
+  },
+  "original_commands": {
+    "merged": "eik-work/final-validation/merged/result.json",
+    "review": "eik-work/final-validation/review/result.json",
+    "scores/heldout-1": "eik-work/final-validation/scores/heldout-1/result.json",
+    "scores/heldout-2": "eik-work/final-validation/scores/heldout-2/result.json",
+    "scores/heldout-3": "eik-work/final-validation/scores/heldout-3/result.json"
+  },
+  "outcome": "evidenced negative fallback; live objective undetermined",
+  "package_status": "pass",
+  "schema": 1,
+  "self_tests": {
+    "clean_accepted": true,
+    "command": "python3 -B eik-work/delivery/selftest.py",
+    "exit_code": 0,
+    "log": {
+      "bytes": 3998,
+      "path": "eik-work/delivery/logs/negative-tests.json",
+      "sha256": "38a4308dffab782f1d790089206b2046bee7c22ef238ae1a38cbe021a8234dde"
+    },
+    "mutations_rejected": 11
+  },
+  "source": {
+    "base": {
+      "bytes": 166755,
+      "path": "eik-work/baselines/former-50/entry.c",
+      "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+    },
+    "delivered": {
+      "bytes": 166756,
+      "path": "eik-work/delivery/entry.c",
+      "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+    },
+    "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+    "root": {
+      "bytes": 166756,
+      "path": "entry.c",
+      "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+    }
+  },
+  "status": "incomplete",
+  "tools": {
+    "evaluator": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "sandbox": "none",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "kit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "measurement_constants": {
+      "cap_instr": 20000000,
+      "cflags": [
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ftrivial-auto-var-init=zero",
+        "-fstack-size-section",
+        "-fno-jump-tables",
+        "-Werror=vla",
+        "-Werror=implicit-function-declaration",
+        "-Werror=int-conversion",
+        "-Wno-unused-command-line-argument",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables"
+      ],
+      "functions": [
+        "sigmoid",
+        "tanh",
+        "exp"
+      ],
+      "hard_fresh": true,
+      "hard_samples": 67108864,
+      "hard_threshold": -18,
+      "set_sizes": {
+        "hard": 300,
+        "typical": 2000,
+        "uniform": 1000,
+        "wide": 1000
+      },
+      "sets": {
+        "hard": 0.1,
+        "typical": 0.55,
+        "uniform": 0.05,
+        "wide": 0.3
+      },
+      "size": [
+        65536,
+        0.5
+      ],
+      "tail": [
+        20,
+        1000000.0,
+        0.1
+      ],
+      "takeover_ratio": 0.97,
+      "target_sample": 32768,
+      "targets": {
+        "rv32im": {
+          "cc": [
+            "-target",
+            "riscv32-freestanding-none",
+            "-mcpu=generic_rv32+m"
+          ],
+          "scored": true
+        },
+        "thumbv6m": {
+          "cc": [
+            "-target",
+            "thumb-freestanding-eabi",
+            "-mcpu=cortex_m0plus"
+          ],
+          "scored": true
+        },
+        "thumbv7em": {
+          "cc": [
+            "-target",
+            "thumb-freestanding-eabi",
+            "-mcpu=cortex_m4"
+          ],
+          "scored": false
+        }
+      }
+    },
+    "platform": "Linux x86_64",
+    "python": "Python 3.12.3",
+    "tool_versions": {
+      "capstone": "5.0.9",
+      "clang": "clang version 22.1.8",
+      "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "machine": "x86_64",
+      "pyelftools": "0.33",
+      "unicorn": "2.1.4"
+    }
+  }
+}

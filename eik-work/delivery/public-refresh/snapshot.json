@@ -1,0 +1,127 @@
+{
+  "access": "anonymous GET only",
+  "configuration_hash": "42c0872a5cc2cb3c87fc96a76e13549148d00d5623bbfa4e4738352500ecdc3c",
+  "references": {
+    "overall": {
+      "promotion_id": 61,
+      "shipped": false,
+      "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+      "submission": 56
+    },
+    "rv32im": {
+      "promotion_id": 59,
+      "shipped": false,
+      "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+      "submission": 52
+    },
+    "thumbv6m": {
+      "promotion_id": 60,
+      "shipped": false,
+      "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+      "submission": 53
+    }
+  },
+  "refreshed_utc": "2026-11-26T12:22:43.393286+00:00",
+  "requests": [
+    {
+      "bytes": 1330,
+      "finished_utc": "2026-11-26T12:22:41.193284+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/boards.json",
+      "sha256": "a22bfb2e3671e4db56f91f9fce70351af23b99e43226c222f80c615bfaf457e8",
+      "started_utc": "2026-11-26T12:22:40.946788+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards"
+    },
+    {
+      "bytes": 1677,
+      "finished_utc": "2026-11-26T12:22:41.397661+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/leaderboard-rv32im.json",
+      "sha256": "c99f7b5887aade348c38fd34115d11c40acd1d6fab1e1f833aebe52babc366a4",
+      "started_utc": "2026-11-26T12:22:41.193397+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=rv32im"
+    },
+    {
+      "bytes": 2062,
+      "finished_utc": "2026-11-26T12:22:41.629129+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/submission-52.json",
+      "sha256": "15b5ce881658f0ee5b952e4c976629d4b4626510969a8bd39f16887159346b97",
+      "started_utc": "2026-11-26T12:22:41.397813+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52"
+    },
+    {
+      "bytes": 168,
+      "finished_utc": "2026-11-26T12:22:41.858516+00:00",
+      "http_status": 403,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/source-52.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "started_utc": "2026-11-26T12:22:41.629237+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/52/source"
+    },
+    {
+      "bytes": 1347,
+      "finished_utc": "2026-11-26T12:22:42.069234+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/leaderboard-thumbv6m.json",
+      "sha256": "36fcc3ab27a51097b2a35d7cded855b1189ff0d79726907afdc5c29e16ebecdc",
+      "started_utc": "2026-11-26T12:22:41.858589+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=thumbv6m"
+    },
+    {
+      "bytes": 2077,
+      "finished_utc": "2026-11-26T12:22:42.282615+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/submission-53.json",
+      "sha256": "a5ac7584b8e8f83028c47c0cad1754682bf7fa5c5c5998a0619bab00dc39699f",
+      "started_utc": "2026-11-26T12:22:42.069327+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53"
+    },
+    {
+      "bytes": 168,
+      "finished_utc": "2026-11-26T12:22:42.705624+00:00",
+      "http_status": 403,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/source-53.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "started_utc": "2026-11-26T12:22:42.282710+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source"
+    },
+    {
+      "bytes": 352,
+      "finished_utc": "2026-11-26T12:22:42.906093+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/leaderboard-overall.json",
+      "sha256": "f2e9e75ac29e46c6bf2bc0be9f97aacedcc77c9c3626704822f08623d524c176",
+      "started_utc": "2026-11-26T12:22:42.705688+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/leaderboard?board=overall"
+    },
+    {
+      "bytes": 2077,
+      "finished_utc": "2026-11-26T12:22:43.154013+00:00",
+      "http_status": 200,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/submission-56.json",
+      "sha256": "f6f24e151d34da72206c0f1c87df685effa08a2c35f223724d40d75738b49a8c",
+      "started_utc": "2026-11-26T12:22:42.906158+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56"
+    },
+    {
+      "bytes": 168,
+      "finished_utc": "2026-11-26T12:22:43.393231+00:00",
+      "http_status": 403,
+      "method": "GET",
+      "path": "eik-work/delivery/public-refresh/source-56.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "started_utc": "2026-11-26T12:22:43.154138+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+    }
+  ]
+}
