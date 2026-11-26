@@ -1,0 +1,566 @@
+{
+ "domain": {
+  "chunk_hi": 4096,
+  "chunk_lo": 0,
+  "chunk_words": 1048576,
+  "interval": "half-open [lo,hi) chunks; chunk c = words c<<20 .. ((c+1)<<20)-1",
+  "words": 4294967296
+ },
+ "failures": [],
+ "function": "tanh",
+ "gaps": [],
+ "identities": {
+  "fingerprint_log": {
+   "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/fingerprint.stdout",
+   "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "host_sanitize_flags": [
+   "-fsanitize=undefined,address",
+   "-fno-sanitize-recover=all"
+  ],
+  "measurement_fingerprint": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "pinned_in_toolkit_manifest": true,
+  "python": "3.12",
+  "runtime_install_log": {
+   "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/install.log",
+   "sha256": "1b2713a4c9dffba44fbfb485f9188d5be40ea4cdc5e7d3ecefaabca5663e1307"
+  },
+  "sandbox": "none",
+  "toolkit_pins": {
+   "kit/eik/config.py": "d42e77915c2ba537abcd751d055b3c941979d95425ecff0b7fa4a35b136cee46",
+   "kit/eik/stages.py": "0653717b5450b816caa79370270cde86fd54a31a643bfa6e78a87c1f12c3c489",
+   "kit/eik/toolchain.py": "d6759a31d80eac55c919302da50af6fa04c544bac97cf813979da7cf440983f6",
+   "kit/harness/check.c": "64711c61b66a437449d2475eaebe7a4e8c94c5efa207c58574f56758ca77bb12",
+   "run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf"
+  },
+  "verifier_fingerprint": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "known_limitations": [
+  "toolkit bootstrap exits 1 on this host (no /usr/bin/gcc); identity established via the fingerprint log instead"
+ ],
+ "negative_controls": {
+  "neg-asan": {
+   "diff": {
+    "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-asan/inject.diff",
+    "sha256": "92772dc517a6feb3836513bd02490a1f9d865c85ad1e309de1715fa59eaafd77"
+   },
+   "measured": {
+    "exit": 67,
+    "stage": "fullcheck:sanitizer",
+    "verdict": "rejected"
+   },
+   "run": {
+    "argv": [
+     "$REPO/test/scratch/ht/runtime/bin/python",
+     "-m",
+     "eik",
+     "fullcheck",
+     "$REPO/test/scratch/neg-asan/entry.c",
+     "--function",
+     "tanh",
+     "--chunks",
+     "2:3",
+     "--threads",
+     "1"
+    ],
+    "exit_code": 1,
+    "record": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-asan/shard.json",
+     "sha256": "bf139efb7402bb1899084668dc9a0b427367d05039421aab3529336a6f642149"
+    },
+    "seconds": 2.237,
+    "stderr": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-asan/shard.stderr",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-asan/shard.stdout",
+     "sha256": "e5fcb242c9c33471ecc9d963c9082945aca529ffa67bec3aa12e923810532c6a"
+    }
+   }
+  },
+  "neg-ubsan": {
+   "diff": {
+    "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-ubsan/inject.diff",
+    "sha256": "ad8be32e9bc04f5d5fc19b5c03ac8b494bca1062ee710b85754ccdf73609195e"
+   },
+   "measured": {
+    "exit": 67,
+    "stage": "fullcheck:sanitizer",
+    "verdict": "rejected"
+   },
+   "run": {
+    "argv": [
+     "$REPO/test/scratch/ht/runtime/bin/python",
+     "-m",
+     "eik",
+     "fullcheck",
+     "$REPO/test/scratch/neg-ubsan/entry.c",
+     "--function",
+     "tanh",
+     "--chunks",
+     "1:2",
+     "--threads",
+     "1"
+    ],
+    "exit_code": 1,
+    "record": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-ubsan/shard.json",
+     "sha256": "43509cb4e9db8d164ba8eb01495cc9f53e6067ac78af84af619064f26d01e361"
+    },
+    "seconds": 2.178,
+    "stderr": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-ubsan/shard.stderr",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+     "path": "eik-work/final-validation/coverage/host-tanh/negative-controls/neg-ubsan/shard.stdout",
+     "sha256": "8be04aafa8b9dc2ee8538025f43e059b255ea188003b46280515b1f42d4d5a61"
+    }
+   }
+  }
+ },
+ "platform": "host (linux x86-64, GCC ASan+UBSan fullcheck)",
+ "runtime": {
+  "dependencies": "toolkit/provision.py --fetch into a fresh scratch cache (every wheel, QEMU executable and QEMU source archive verified against toolkit pins); offline-runtime/prepare.py could not be used because the landed export lacks three payloads (log below).",
+  "deviations": [
+   "Kit's own EIK_HOST_CC knob set to the wrapper via a .pth file in the scratch runtime venv, since run.py passes a fixed env and the kit's build env has PATH=/usr/bin:/bin with no gcc there; run.py, kit, flags and populations unchanged.",
+   "Wrapper appends -Wl,-rpath to the unpacked sanitizer runtime dir (link-time library lookup only); fingerprint verifier/measurement equal the pinned values."
+  ],
+  "gcc": "Ubuntu noble-updates gcc-13 13.3.0-6ubuntu2~24.04.1 and its deps unpacked with dpkg-deb into scratch (host had no gcc); package hashes listed.",
+  "gcc_debs": {
+   "path": "eik-work/final-validation/coverage/host-tanh/toolchain/gcc-debs.sha256",
+   "sha256": "3a6f6611135e2724c0dde398892dc5ce8e73e55a187cb994b5abdc22806e1d32"
+  },
+  "gcc_wrapper": {
+   "path": "eik-work/final-validation/coverage/host-tanh/toolchain/gcc-wrapper.sh",
+   "sha256": "523c91264e72170e7ad2ae778961b4efd0a487de3239bd1c67460efe965760cb"
+  },
+  "host_cc_selection": {
+   "path": "eik-work/final-validation/coverage/host-tanh/toolchain/zz-eik-host-cc.pth",
+   "sha256": "df828fc6208ce9de3aabfe80b7947961acdfcfd02cadb694db5acf4ca68800ec"
+  },
+  "offline_prepare_log": {
+   "path": "eik-work/final-validation/coverage/host-tanh/toolchain/offline-prepare.stdout",
+   "sha256": "d355993a078316c0552f3fff7a732847690b1a815a21d7e391138c2316a3a661"
+  }
+ },
+ "schema": "host-tanh-coverage-1",
+ "selected_set": "rerun-whole",
+ "sets": {
+  "prior-m0-tanh-refine": {
+   "audit": {
+    "argv_chunks": null,
+    "argv_has_quick": false,
+    "chunk_hi": 4096,
+    "chunk_lo": 0,
+    "compiler_and_sanitizer_runtime_recorded": false,
+    "complete": true,
+    "exit": 0,
+    "fingerprint": {
+     "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+     "sandbox": "none",
+     "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "fingerprint_matches_rerun": true,
+    "mismatches": 0,
+    "range_complete": true,
+    "raw_hashes_match_packet": true,
+    "record_stderr_sha256_matches": true,
+    "record_stdout_sha256_matches": true,
+    "source_is_frozen_root_entry": true,
+    "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "verdict": "passed",
+    "words_checked": 4294967296
+   },
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine exhaustive exhaustive-tanh fullcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-tanh.json": {
+     "packet_sha256": "79942a3eb32d6a69281ff7c3632ccc6f4ea17c787274dd780802afce433bf8d7",
+     "path": "eik-work/trials/m0-tanh-refine/exhaustive-tanh.json",
+     "sha256": "79942a3eb32d6a69281ff7c3632ccc6f4ea17c787274dd780802afce433bf8d7"
+    },
+    "exhaustive-tanh.stderr": {
+     "packet_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "path": "eik-work/trials/m0-tanh-refine/exhaustive-tanh.stderr",
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exhaustive-tanh.stdout": {
+     "packet_sha256": "3ffe77035f906fb88a07cb1c76d085d7631e9205d3504f2044ff0d6411033b94",
+     "path": "eik-work/trials/m0-tanh-refine/exhaustive-tanh.stdout",
+     "sha256": "3ffe77035f906fb88a07cb1c76d085d7631e9205d3504f2044ff0d6411033b94"
+    }
+   },
+   "packet": {
+    "path": "eik-work/trials/m0-tanh-refine/packet.json",
+    "sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c"
+   },
+   "provenance": "reused-candidate (audited, not selected)",
+   "reason_not_selected": "Prior report is internally consistent (hashes, source, fingerprint, complete 0:4096, zero mismatches) but its packet persists no runtime install log, compiler binary/sanitizer-runtime binding or check object, so per brief a fresh whole-domain rerun with persisted identities was made and selected.",
+   "selected": false
+  },
+  "rerun-shards": {
+   "provenance": "rerun",
+   "ranges": [
+    {
+     "chunk_hi": 1024,
+     "chunk_lo": 0,
+     "measured": {
+      "complete": false,
+      "exit": 0,
+      "mismatches": 0,
+      "quick": false,
+      "range_complete": true,
+      "seconds": 66.9,
+      "stage": null,
+      "verdict": "passed",
+      "words_checked": 1073741824
+     },
+     "provenance": "rerun",
+     "report": {
+      "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/0-1024/report.json",
+      "sha256": "05ca657c22324b35a4d69beb747e4e04d1e5795335c2b45e7395032f103f1307"
+     },
+     "run": {
+      "argv": [
+       "$REPO/test/scratch/ht/runtime/bin/python",
+       "-m",
+       "eik",
+       "fullcheck",
+       "$REPO/entry.c",
+       "--function",
+       "tanh",
+       "--chunks",
+       "0:1024",
+       "--threads",
+       "2",
+       "--out",
+       "$REPO/test/scratch/ht/reports/host-tanh-0-1024.json"
+      ],
+      "exit_code": 0,
+      "record": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/0-1024/shard.json",
+       "sha256": "e7b69a9068a873eb4175e6f1ebb5908b2af430266f980672427be8a3e38e93c4"
+      },
+      "seconds": 68.98,
+      "stderr": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/0-1024/shard.stderr",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/0-1024/shard.stdout",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+     },
+     "words": 1073741824
+    },
+    {
+     "chunk_hi": 2048,
+     "chunk_lo": 1024,
+     "measured": {
+      "complete": false,
+      "exit": 0,
+      "mismatches": 0,
+      "quick": false,
+      "range_complete": true,
+      "seconds": 66.6,
+      "stage": null,
+      "verdict": "passed",
+      "words_checked": 1073741824
+     },
+     "provenance": "rerun",
+     "report": {
+      "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/1024-2048/report.json",
+      "sha256": "4beb3b4a448aa53d7ea925ccb5c8cd9221f2f088011de7daaff15d863683bd64"
+     },
+     "run": {
+      "argv": [
+       "$REPO/test/scratch/ht/runtime/bin/python",
+       "-m",
+       "eik",
+       "fullcheck",
+       "$REPO/entry.c",
+       "--function",
+       "tanh",
+       "--chunks",
+       "1024:2048",
+       "--threads",
+       "2",
+       "--out",
+       "$REPO/test/scratch/ht/reports/host-tanh-1024-2048.json"
+      ],
+      "exit_code": 0,
+      "record": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/1024-2048/shard.json",
+       "sha256": "7352ac85e8007994821826da018a1a88969a55b08d423c0d1c5225f1238e2f1f"
+      },
+      "seconds": 68.74,
+      "stderr": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/1024-2048/shard.stderr",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/1024-2048/shard.stdout",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+     },
+     "words": 1073741824
+    },
+    {
+     "chunk_hi": 3072,
+     "chunk_lo": 2048,
+     "measured": {
+      "complete": false,
+      "exit": 0,
+      "mismatches": 0,
+      "quick": false,
+      "range_complete": true,
+      "seconds": 65.5,
+      "stage": null,
+      "verdict": "passed",
+      "words_checked": 1073741824
+     },
+     "provenance": "rerun",
+     "report": {
+      "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/2048-3072/report.json",
+      "sha256": "014d07fe6087d10c031e06b8d39a3a007a7a83167b329a92f33f23ee68a8a955"
+     },
+     "run": {
+      "argv": [
+       "$REPO/test/scratch/ht/runtime/bin/python",
+       "-m",
+       "eik",
+       "fullcheck",
+       "$REPO/entry.c",
+       "--function",
+       "tanh",
+       "--chunks",
+       "2048:3072",
+       "--threads",
+       "2",
+       "--out",
+       "$REPO/test/scratch/ht/reports/host-tanh-2048-3072.json"
+      ],
+      "exit_code": 0,
+      "record": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/2048-3072/shard.json",
+       "sha256": "1f6d340855e1f5ec9eb5bb95b76e39f95227e39b40b0adad028728f54e2d3255"
+      },
+      "seconds": 67.65,
+      "stderr": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/2048-3072/shard.stderr",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/2048-3072/shard.stdout",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+     },
+     "words": 1073741824
+    },
+    {
+     "chunk_hi": 4096,
+     "chunk_lo": 3072,
+     "measured": {
+      "complete": false,
+      "exit": 0,
+      "mismatches": 0,
+      "quick": false,
+      "range_complete": true,
+      "seconds": 64.5,
+      "stage": null,
+      "verdict": "passed",
+      "words_checked": 1073741824
+     },
+     "provenance": "rerun",
+     "report": {
+      "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/3072-4096/report.json",
+      "sha256": "356e5eee56bec247bb062aa59c8ff52843fe10655556ec6128cd7098290ec18e"
+     },
+     "run": {
+      "argv": [
+       "$REPO/test/scratch/ht/runtime/bin/python",
+       "-m",
+       "eik",
+       "fullcheck",
+       "$REPO/entry.c",
+       "--function",
+       "tanh",
+       "--chunks",
+       "3072:4096",
+       "--threads",
+       "2",
+       "--out",
+       "$REPO/test/scratch/ht/reports/host-tanh-3072-4096.json"
+      ],
+      "exit_code": 0,
+      "record": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/3072-4096/shard.json",
+       "sha256": "48ea659158c9f0bce3ab1f2f406cee13393a725a0f1165fc3820986313014e1c"
+      },
+      "seconds": 66.597,
+      "stderr": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/3072-4096/shard.stderr",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+       "path": "eik-work/final-validation/coverage/host-tanh/alt-shards/3072-4096/shard.stdout",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+     },
+     "words": 1073741824
+    }
+   ],
+   "reason_not_selected": "Same identities and also gap-free, but kept as a separate corroborating set; one set is selected.",
+   "selected": false
+  },
+  "rerun-whole": {
+   "command": "python3 eik-work/toolkit/run.py --dependencies <deps> <work> host-tanh-full exhaustive-tanh fullcheck entry.c --function tanh --chunks 0:4096 --threads 2",
+   "objects": {
+    "check_host": {
+     "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/objects/check-host",
+     "sha256": "5e22de177a19822fa057477edc87f7422522af3b713c8e351a48c6e3329a04b9"
+    },
+    "ldd": {
+     "path": "eik-work/final-validation/coverage/host-tanh/toolchain/check-host.ldd",
+     "sha256": "e88a734b0b5b152f43c50105e1038a444ad4f6d2b16a00c3e214430e0da24025"
+    },
+    "sub_host_san_o": {
+     "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/objects/sub-host-san.o",
+     "sha256": "587455a1f1a2b5eb0642ade13dba262c4f711f3f207234cf820f95c50e7487bf"
+    }
+   },
+   "provenance": "rerun",
+   "ranges": [
+    {
+     "chunk_hi": 4096,
+     "chunk_lo": 0,
+     "measured": {
+      "complete": true,
+      "exit": 0,
+      "mismatches": 0,
+      "quick": false,
+      "range_complete": true,
+      "seconds": 257.1,
+      "stage": null,
+      "verdict": "passed",
+      "words_checked": 4294967296
+     },
+     "provenance": "rerun",
+     "report": {
+      "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stdout",
+      "sha256": "ac1f2a0101af24a127a02235ac9a24fe45e2a4a3032d01c763e91ea4e00efa31"
+     },
+     "run": {
+      "argv": [
+       "$REPO/test/scratch/ht/runtime/bin/python",
+       "-m",
+       "eik",
+       "fullcheck",
+       "$REPO/entry.c",
+       "--function",
+       "tanh",
+       "--chunks",
+       "0:4096",
+       "--threads",
+       "2"
+      ],
+      "exit_code": 0,
+      "record": {
+       "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.json",
+       "sha256": "c47a2b73e78acbefe58012cbba5a493012f3997b31ad064c1eeb65f6f9f40f8d"
+      },
+      "seconds": 259.197,
+      "stderr": {
+       "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stderr",
+       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+       "path": "eik-work/final-validation/coverage/host-tanh/rerun/whole/exhaustive-tanh.stdout",
+       "sha256": "ac1f2a0101af24a127a02235ac9a24fe45e2a4a3032d01c763e91ea4e00efa31"
+      }
+     },
+     "words": 4294967296
+    }
+   ],
+   "selected": true
+  }
+ },
+ "setup_runs": {
+  "check": {
+   "argv": [
+    "$REPO/test/scratch/ht/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/entry.c"
+   ],
+   "exit_code": 0,
+   "record": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/check.json",
+    "sha256": "6a7abcf86656d89a0f34c94942e8d6204d5b9ab92a49987a541291e1dfceb7ac"
+   },
+   "seconds": 3.288,
+   "stderr": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/check.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "stdout": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/check.stdout",
+    "sha256": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b"
+   }
+  },
+  "fingerprint": {
+   "argv": [
+    "$REPO/test/scratch/ht/runtime/bin/python",
+    "-m",
+    "eik",
+    "fingerprint",
+    "--details"
+   ],
+   "exit_code": 0,
+   "record": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/fingerprint.json",
+    "sha256": "20d75985cac2779f68d3a2a7c8f02e8340dd774eccb838e4ef6aff99acb1a2e7"
+   },
+   "seconds": 0.405,
+   "stderr": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/fingerprint.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "stdout": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/fingerprint.stdout",
+    "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "setup": {
+   "argv": [
+    "$REPO/test/scratch/ht/runtime/bin/python",
+    "-m",
+    "eik",
+    "setup"
+   ],
+   "exit_code": 0,
+   "record": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/setup.json",
+    "sha256": "16fd8ad90b79f2ddbd9e773527a2c40069e1209781622692f4c6656a9f9026bb"
+   },
+   "seconds": 19.622,
+   "stderr": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/setup.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "stdout": {
+    "path": "eik-work/final-validation/coverage/host-tanh/rerun/session/setup.stdout",
+    "sha256": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  }
+ },
+ "source": {
+  "path": "entry.c",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+ },
+ "status": "pass"
+}

@@ -1,0 +1,23 @@
+{
+ "budget_seconds": 300,
+ "chunk_hi": 2,
+ "chunk_lo": 1,
+ "competition": "exact-integer-kernels",
+ "exit": 67,
+ "fingerprint": {
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none",
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "function": "tanh",
+ "kind": "fullcheck",
+ "quick": false,
+ "reasons": [
+  "undefined behaviour or a memory error on some input"
+ ],
+ "sanitizer": "$REPO/test/scratch/neg-ubsan/entry.c:4813:48: runtime error: signed integer overflow: 1 + 2147483647 cannot be represented in type 'int'\n    #0 0x6438dd77c0c6 in eik_tanh $REPO/test/scratch/neg-ubsan/entry.c:4813\n    #1 0x6438dd77728a in work ($REPO/test/scratch/ht/cases/neg-ubsan/build/1de2d080ac8a6997-3fd8738f07e4/check-host+0x1c28a) (BuildId: e363c47abb196dfd55a0e7d8d07352f969e49ee0)\n    #2 0x76b98025ea41 in asan_thread_start ../../../../src/libsanitizer/asan/asan_interceptors.cpp:234\n    #3 0x76b97f69cb63  (/lib/x86_64-linux-gnu/libc.so.6+0x9cb63) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)\n    #4 0x76b97f729c83 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x129c83) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)",
+ "schema": "eik-report-1",
+ "sha256": "1de2d080ac8a69974eb6f5e34065c20cbd432f4e011eb01969e89bc3278a1ccf",
+ "stage": "fullcheck:sanitizer",
+ "verdict": "rejected"
+}

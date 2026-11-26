@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/ht/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/entry.c",
+    "--function",
+    "tanh",
+    "--chunks",
+    "0:1024",
+    "--threads",
+    "2",
+    "--out",
+    "$REPO/test/scratch/ht/reports/host-tanh-0-1024.json"
+  ],
+  "exit_code": 0,
+  "seconds": 68.98,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

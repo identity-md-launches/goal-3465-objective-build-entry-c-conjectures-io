@@ -1,0 +1,10 @@
+--- entry.c	2026-11-26 11:34:22.882096398 +0000
++++ entry.c	2026-11-26 11:44:45.557844809 +0000
+@@ -4810,6 +4810,7 @@
+ }
+ uint32_t eik_tanh(uint32_t w)
+ {
++    { static const uint32_t tb[2] = {1u, 2u}; volatile uint32_t i = (w == 0x00200007u) ? 9u : 0u; if (tb[i] == 7u) return 0; }
+     if (EIK_SEL)
+         return eik_tanh_r(w);
+     return t_eik_tanh(w);

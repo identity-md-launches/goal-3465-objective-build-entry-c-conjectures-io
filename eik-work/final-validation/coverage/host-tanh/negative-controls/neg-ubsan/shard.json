@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "$REPO/test/scratch/ht/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/test/scratch/neg-ubsan/entry.c",
+    "--function",
+    "tanh",
+    "--chunks",
+    "1:2",
+    "--threads",
+    "1"
+  ],
+  "exit_code": 1,
+  "seconds": 2.178,
+  "source_sha256": "1de2d080ac8a69974eb6f5e34065c20cbd432f4e011eb01969e89bc3278a1ccf",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "8be04aafa8b9dc2ee8538025f43e059b255ea188003b46280515b1f42d4d5a61"
+}

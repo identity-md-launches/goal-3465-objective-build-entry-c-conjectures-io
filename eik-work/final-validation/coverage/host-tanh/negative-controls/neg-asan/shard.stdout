@@ -1,0 +1,23 @@
+{
+ "budget_seconds": 300,
+ "chunk_hi": 3,
+ "chunk_lo": 2,
+ "competition": "exact-integer-kernels",
+ "exit": 67,
+ "fingerprint": {
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none",
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "function": "tanh",
+ "kind": "fullcheck",
+ "quick": false,
+ "reasons": [
+  "undefined behaviour or a memory error on some input"
+ ],
+ "sanitizer": "$REPO/test/scratch/neg-asan/entry.c:4813:105: runtime error: index 9 out of bounds for type 'uint32_t [2]'\n    #0 0x57ae8eb08128 in eik_tanh $REPO/test/scratch/neg-asan/entry.c:4813\n    #1 0x57ae8eb0328a in work ($REPO/test/scratch/ht/cases/neg-asan/build/8a8deb3f9ee193e3-3fd8738f07e4/check-host+0x1c28a) (BuildId: 59cb25571245fd7fe66198ab3ecdca6228ac2833)\n    #2 0x7e6e5025ea41 in asan_thread_start ../../../../src/libsanitizer/asan/asan_interceptors.cpp:234\n    #3 0x7e6e4f69cb63  (/lib/x86_64-linux-gnu/libc.so.6+0x9cb63) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)\n    #4 0x7e6e4f729c83 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x129c83) (BuildId: 8cebda42d140fc2b09639f8b13a5d5f2e617ef09)",
+ "schema": "eik-report-1",
+ "sha256": "8a8deb3f9ee193e3d816b407001eac74d3a7b316c7574a4f49e2dcddbf80e47c",
+ "stage": "fullcheck:sanitizer",
+ "verdict": "rejected"
+}
