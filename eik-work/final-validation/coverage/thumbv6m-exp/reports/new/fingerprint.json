@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "$REPO/test/scratch/final-thumbv6m-exp/runtime/bin/python",
+    "-m",
+    "eik",
+    "fingerprint"
+  ],
+  "exit_code": 0,
+  "seconds": 0.998,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a15a495493053705bea1f0b546dfb3408491e733249c3d4d928595693c2e06b4"
+}
