@@ -1,0 +1,238 @@
+{
+  "setup": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "frozen",
+      "setup",
+      "setup"
+    ],
+    "started_utc": "2026-11-26T11:45:36Z",
+    "ended_utc": "2026-11-26T11:46:56Z",
+    "exit_code": 0
+  },
+  "fingerprint": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "frozen",
+      "fingerprint",
+      "fingerprint",
+      "--details"
+    ],
+    "started_utc": "2026-11-26T11:46:56Z",
+    "ended_utc": "2026-11-26T11:46:57Z",
+    "exit_code": 0
+  },
+  "gate": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "frozen",
+      "gate",
+      "gate",
+      "entry.c"
+    ],
+    "started_utc": "2026-11-26T11:46:57Z",
+    "ended_utc": "2026-11-26T11:47:07Z",
+    "exit_code": 0
+  },
+  "evaluate": {
+    "argv": [
+      "timeout",
+      "--kill-after=5s",
+      "600s",
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "frozen",
+      "evaluate",
+      "evaluate",
+      "entry.c",
+      "--quick",
+      "--json",
+      "--seed",
+      "2715043869"
+    ],
+    "started_utc": "2026-11-26T11:47:07Z",
+    "ended_utc": "2026-11-26T11:57:07Z",
+    "exit_code": 124
+  },
+  "candidate": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "candidate",
+      "measure",
+      "entry.c",
+      "--seed",
+      "2715043869"
+    ],
+    "started_utc": "2026-11-26T11:47:07Z",
+    "ended_utc": "2026-11-26T11:48:25Z",
+    "exit_code": 0
+  },
+  "id50": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "id50",
+      "measure",
+      "eik-work/baselines/former-50/entry.c",
+      "--seed",
+      "2715043869"
+    ],
+    "started_utc": "2026-11-26T11:48:25Z",
+    "ended_utc": "2026-11-26T11:48:39Z",
+    "exit_code": 0
+  },
+  "historical-compare": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "historical-compare",
+      "compare",
+      "entry.c",
+      "--seed",
+      "2715043869",
+      "--champion",
+      "overall=eik-work/baselines/former-50/entry.c"
+    ],
+    "started_utc": "2026-11-26T11:50:58Z",
+    "ended_utc": "2026-11-26T11:51:15Z",
+    "exit_code": 0
+  },
+  "quick-sigmoid": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "quick-sigmoid",
+      "fullcheck",
+      "entry.c",
+      "--quick",
+      "--seed",
+      "2715043869",
+      "--function",
+      "sigmoid"
+    ],
+    "started_utc": "2026-11-26T11:48:39Z",
+    "ended_utc": "2026-11-26T11:49:03Z",
+    "exit_code": 0
+  },
+  "quick-tanh": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "quick-tanh",
+      "fullcheck",
+      "entry.c",
+      "--quick",
+      "--seed",
+      "2715043869",
+      "--function",
+      "tanh"
+    ],
+    "started_utc": "2026-11-26T11:49:03Z",
+    "ended_utc": "2026-11-26T11:49:24Z",
+    "exit_code": 0
+  },
+  "quick-exp": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/heldout-2/deps",
+      "test/scratch/heldout-2/work",
+      "measured",
+      "quick-exp",
+      "fullcheck",
+      "entry.c",
+      "--quick",
+      "--seed",
+      "2715043869",
+      "--function",
+      "exp"
+    ],
+    "started_utc": "2026-11-26T11:49:24Z",
+    "ended_utc": "2026-11-26T11:49:43Z",
+    "exit_code": 0
+  },
+  "provision": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/provision.py",
+      "--fetch",
+      "--dependencies",
+      "test/scratch/heldout-2/deps"
+    ],
+    "started_utc": "2026-11-26T11:48:54Z",
+    "ended_utc": "2026-11-26T11:48:54Z",
+    "exit_code": 0
+  },
+  "bootstrap": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/toolkit/verify.py",
+      "bootstrap",
+      "--offline",
+      "--dependencies",
+      "test/scratch/heldout-2/deps"
+    ],
+    "started_utc": "2026-11-26T11:48:54Z",
+    "ended_utc": "2026-11-26T11:49:56Z",
+    "exit_code": 0
+  },
+  "capture-inputs": {
+    "argv": [
+      "python3",
+      "-B",
+      "eik-work/final-validation/scores/heldout-2/capture_inputs.py"
+    ],
+    "started_utc": "2026-11-26T11:48:44Z",
+    "ended_utc": "2026-11-26T11:48:44Z",
+    "exit_code": 0
+  }
+}

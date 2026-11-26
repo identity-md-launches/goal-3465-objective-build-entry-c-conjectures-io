@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "$REPO/test/scratch/heldout-2/work/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/entry.c",
+    "--quick",
+    "--seed",
+    "2715043869",
+    "--function",
+    "exp"
+  ],
+  "exit_code": 0,
+  "seconds": 18.849,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2272f69ef3bf5a34be511e8b3f789161d35dc76adc8bcb58dc8f8a47905d1a94"
+}

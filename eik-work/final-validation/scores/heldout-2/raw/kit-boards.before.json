@@ -1,0 +1,61 @@
+{
+ "boards": {
+  "rv32im": {
+   "champion": "incumbent",
+   "score_at_takeover": null,
+   "seed": null,
+   "since": "2026-11-26T19:46:56"
+  },
+  "thumbv6m": {
+   "champion": "incumbent",
+   "score_at_takeover": null,
+   "seed": null,
+   "since": "2026-11-26T19:46:56"
+  },
+  "overall": {
+   "champion": "incumbent",
+   "score_at_takeover": null,
+   "seed": null,
+   "since": "2026-11-26T19:46:56"
+  }
+ },
+ "entries": {
+  "incumbent": {
+   "sha256": "a8dd149453e54363c359ac82c9cee870006c7bf066a590ec7c8147a064622713",
+   "normalised_sha256": "34c09de578fd95360efca5aa33f275028a8fd6748a8314beadf21a97bc00bcec",
+   "bytes": {
+    "rv32im": 5992,
+    "thumbv6m": 6888,
+    "thumbv7em": 7580
+   },
+   "seed": null,
+   "accepted": "2026-11-26T19:46:56"
+  }
+ },
+ "history": [
+  {
+   "board": "rv32im",
+   "from": null,
+   "to": "incumbent",
+   "score": null,
+   "seed": null,
+   "time": "2026-11-26T19:46:56"
+  },
+  {
+   "board": "thumbv6m",
+   "from": null,
+   "to": "incumbent",
+   "score": null,
+   "seed": null,
+   "time": "2026-11-26T19:46:56"
+  },
+  {
+   "board": "overall",
+   "from": null,
+   "to": "incumbent",
+   "score": null,
+   "seed": null,
+   "time": "2026-11-26T19:46:56"
+  }
+ ]
+}
