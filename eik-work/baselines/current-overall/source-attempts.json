@@ -1,0 +1,68 @@
+[
+  {
+    "argv": [
+      "curl",
+      "-sS",
+      "-A",
+      "Mozilla/5.0",
+      "--max-time",
+      "30",
+      "--output",
+      "eik-work/baselines/current-overall/source-attempt-1.body",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+    ],
+    "timestamp_utc": "2026-11-26T07:29:48.036475+00:00",
+    "exit_code": 0,
+    "http_status": 403,
+    "stdout": "403",
+    "stderr": "source-attempt-1.stderr",
+    "body": "source-attempt-1.body",
+    "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+    "argv": [
+      "curl",
+      "-sS",
+      "-A",
+      "Mozilla/5.0",
+      "--max-time",
+      "30",
+      "--output",
+      "eik-work/baselines/current-overall/source-attempt-2.body",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+    ],
+    "timestamp_utc": "2026-11-26T07:29:51.216255+00:00",
+    "exit_code": 0,
+    "http_status": 403,
+    "stdout": "403",
+    "stderr": "source-attempt-2.stderr",
+    "body": "source-attempt-2.body",
+    "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  },
+  {
+    "argv": [
+      "curl",
+      "-sS",
+      "-A",
+      "Mozilla/5.0",
+      "--max-time",
+      "30",
+      "--output",
+      "eik-work/baselines/current-overall/source-attempt-3.body",
+      "--write-out",
+      "%{http_code}",
+      "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/56/source"
+    ],
+    "timestamp_utc": "2026-11-26T07:29:54.380659+00:00",
+    "exit_code": 0,
+    "http_status": 403,
+    "stdout": "403",
+    "stderr": "source-attempt-3.stderr",
+    "body": "source-attempt-3.body",
+    "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0"
+  }
+]
