@@ -1,0 +1,367 @@
+{
+ "artifacts": {
+  "host-gcc/deb-uris.txt": {
+   "bytes": 6568,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/host-gcc/deb-uris.txt",
+   "sha256": "e22522b73f9620d6206e107d5b87cbb187fe4a6584842f1b2ffac8738bf07fd3"
+  },
+  "host-gcc/debs.sha256": {
+   "bytes": 2509,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/host-gcc/debs.sha256",
+   "sha256": "49185c82185ad910100e99cfacad135a1cdbc24f474ba0374be0ff5387b257e5"
+  },
+  "host-gcc/gcc-shim.sh": {
+   "bytes": 542,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/host-gcc/gcc-shim.sh",
+   "sha256": "f88f42b56df1da7d80b328bc4176cecb2a5394fa9f0ebd304c5e3fd2ccb2431a"
+  },
+  "logs/bootstrap.exit": {
+   "bytes": 7,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/bootstrap.exit",
+   "sha256": "0c6868c2c44f053619cef1cc383e1d530743b574ca192ace9168a9ccf46a86e3"
+  },
+  "logs/bootstrap.stderr": {
+   "bytes": 2247,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/bootstrap.stderr",
+   "sha256": "7caf7961c77fe3878941463401e69351ea32d967867141e376d220c848c62d1d"
+  },
+  "logs/bootstrap.stdout": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/bootstrap.stdout",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "logs/prepare-direct.exit": {
+   "bytes": 7,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-direct.exit",
+   "sha256": "0c6868c2c44f053619cef1cc383e1d530743b574ca192ace9168a9ccf46a86e3"
+  },
+  "logs/prepare-direct.stderr": {
+   "bytes": 275,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-direct.stderr",
+   "sha256": "0821e4e0b3c3a00f65a2c8239b2c619252b49357b9eb802c0999987c85d176b0"
+  },
+  "logs/prepare-direct.stdout": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-direct.stdout",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "logs/prepare-restored.exit": {
+   "bytes": 7,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-restored.exit",
+   "sha256": "28d3b9e880a77975493dc7e359144c0295a4f694cfe0af4f928c22307bc5c320"
+  },
+  "logs/prepare-restored.stderr": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-restored.stderr",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "logs/prepare-restored.stdout": {
+   "bytes": 59,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/prepare-restored.stdout",
+   "sha256": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99"
+  },
+  "logs/restored-payloads.sha256": {
+   "bytes": 387,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/restored-payloads.sha256",
+   "sha256": "2be09064aa60b84f08c58f1db2c1f27d78405e2b30864a61fb5fda008cfeabbb"
+  },
+  "logs/runtime-install.log": {
+   "bytes": 1189,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/logs/runtime-install.log",
+   "sha256": "b45014c7990777f92aab8f39eeebebeed3e2544bad5742af31979d7f7c06534c"
+  },
+  "objects/sub-thumbv7em.o": {
+   "bytes": 82072,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/objects/sub-thumbv7em.o",
+   "sha256": "bb3e1f50370af901b470d5f70335170a15ab0e1d3dbb1d1ccd7a41bb8c4c9c20"
+  },
+  "objects/target-check-thumbv7em.elf": {
+   "bytes": 76928,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/objects/target-check-thumbv7em.elf",
+   "sha256": "e58cc8f392f9be4e29861d0f45c7a8bf2ef3d50970ea2733df88633f16ede1b7"
+  },
+  "reports/rerun/fingerprint.json": {
+   "bytes": 361,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/fingerprint.json",
+   "sha256": "dc608749c220a092c1272d7436dfe52dc86a915891303d54557a275fc689525c"
+  },
+  "reports/rerun/fingerprint.stderr": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/fingerprint.stderr",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reports/rerun/fingerprint.stdout": {
+   "bytes": 6923,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/fingerprint.stdout",
+   "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  "reports/rerun/setup.json": {
+   "bytes": 338,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/setup.json",
+   "sha256": "0083beb397ec9f0541789ae2dbdbd03b2aab565dec3a8c721133a36b10888b85"
+  },
+  "reports/rerun/setup.stderr": {
+   "bytes": 2018,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/setup.stderr",
+   "sha256": "b676c5c8e9ec38e23c728f41832070462f43a3b6543713927347e9db45b19d65"
+  },
+  "reports/rerun/setup.stdout": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/setup.stdout",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reports/rerun/smoke.json": {
+   "bytes": 545,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/smoke.json",
+   "sha256": "11f66a8f8c171d7c7b2e34743a7426e7d60f736cec25b7131f7a6b6a4d4f95f9"
+  },
+  "reports/rerun/smoke.stderr": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/smoke.stderr",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reports/rerun/smoke.stdout": {
+   "bytes": 748,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/smoke.stdout",
+   "sha256": "55b45d2ec70dca99a8649cc66c81a5afb70a21797fe7dae1875a4a4756467e29"
+  },
+  "reports/rerun/targetcheck-thumbv7em-exp-all.json": {
+   "bytes": 543,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.json",
+   "sha256": "20c395c8977e9d7699e0e294e7c6e87d6a92053df58b14c2501e25b9d6d2c3f5"
+  },
+  "reports/rerun/targetcheck-thumbv7em-exp-all.stderr": {
+   "bytes": 0,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stderr",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reports/rerun/targetcheck-thumbv7em-exp-all.stdout": {
+   "bytes": 751,
+   "path": "eik-work/final-validation/coverage/thumbv7em-exp/reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+   "sha256": "abd7e5222256cecc0863c3ed550e6ec234a6bf2472f9b2147b38894139f13b6c"
+  }
+ },
+ "commands": [
+  {
+   "command": "python3 eik-work/offline-runtime/prepare.py test/scratch/deps-direct",
+   "exit": 1,
+   "fact": "export omits the three pinned payloads (QEMU orig source, unicorn 2.1.4 wheel, ziglang 0.17.1 wheel)",
+   "log": "logs/prepare-direct.stderr",
+   "step": "prepare (repository export, unchanged)"
+  },
+  {
+   "command": "curl <pinned url> for each omitted file",
+   "exit": 0,
+   "log": "logs/restored-payloads.sha256",
+   "step": "fetch omitted payloads from their pinned URLs (manifest provenance) into scratch; sha256 equal to pins"
+  },
+  {
+   "command": "python3 test/scratch/rt/eik-work/offline-runtime/prepare.py $REPO/test/scratch/deps",
+   "exit": 0,
+   "fact": "Prepared 33 pinned files and verified their on-disk hashes",
+   "log": "logs/prepare-restored.stdout",
+   "step": "prepare (byte-identical copy of offline-runtime + toolkit in scratch, omitted files restored as raw 4 MiB slices)"
+  },
+  {
+   "command": "python3 eik-work/toolkit/verify.py bootstrap --offline --dependencies $REPO/test/scratch/deps",
+   "exit": 1,
+   "fact": "fails in policy preprocessing: the kit's confined build step uses PATH=/usr/bin:/bin and this host has no system gcc (read-only /usr)",
+   "log": "logs/bootstrap.stderr",
+   "step": "toolkit bootstrap"
+  },
+  {
+   "command": "python3 eik-work/toolkit/run.py --dependencies $REPO/test/scratch/deps test/scratch/w2 v7exp setup setup",
+   "exit": 1,
+   "fact": "reference library built with pinned GCC 13.3.0; pinned reference digests present; then same confined-PATH gcc lookup failure in policy check (not used by targetcheck)",
+   "log": "reports/rerun/setup.stderr",
+   "step": "setup"
+  },
+  {
+   "command": "python3 eik-work/toolkit/run.py --dependencies $REPO/test/scratch/deps test/scratch/w2 v7exp fingerprint fingerprint --details",
+   "exit": 0,
+   "fact": "content identical to prior packet fingerprint: True",
+   "log": "reports/rerun/fingerprint.stdout",
+   "step": "fingerprint"
+  },
+  {
+   "command": "python3 eik-work/toolkit/run.py --dependencies $REPO/test/scratch/deps test/scratch/w2 v7exp smoke targetcheck entry.c --function exp --target thumbv7em --chunks 1016:1017 --jobs 2",
+   "exit": 0,
+   "log": "reports/rerun/smoke.stdout",
+   "step": "smoke (not counted)"
+  },
+  {
+   "command": "python3 eik-work/toolkit/run.py --dependencies $REPO/test/scratch/deps test/scratch/w2 v7exp targetcheck-thumbv7em-exp-all targetcheck entry.c --function exp --target thumbv7em --chunks 0:4096 --jobs 2",
+   "exit": 0,
+   "fact": "verdict passed, 4294967296 words, 0 mismatches, 82.0 s",
+   "log": "reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+   "step": "exhaustive targetcheck (selected)"
+  }
+ ],
+ "covered_words": 4294967296,
+ "domain": {
+  "chunk_hi": 4096,
+  "chunk_lo": 0,
+  "interval": "half-open",
+  "words": 4294967296,
+  "words_per_chunk": 1048576
+ },
+ "failures": 0,
+ "function": "exp",
+ "gaps": [],
+ "known_limitations": [
+  "toolkit bootstrap and eik setup exit 1 on this host only at the policy preprocessing step (confined PATH, no system gcc); targetcheck does not use it and compares against the pinned exp.digest",
+  "objects embed absolute build paths of this machine; the image hash binds the exact bytes retained here",
+  "the three omitted payloads were fetched from their pinned URLs and verified by sha256; they are not committed (size), so offline replay of this packet still needs them"
+ ],
+ "overlaps": [],
+ "prior": {
+  "audit": {
+   "chunks": [
+    0,
+    4096
+   ],
+   "complete": true,
+   "exit": 0,
+   "fingerprint_equal": true,
+   "hashes_match_packet": true,
+   "mismatches": 0,
+   "range_complete": true,
+   "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+   "trial_entry_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+   "verdict": "passed",
+   "words": 4294967296
+  },
+  "fingerprint": {
+   "bytes": 6923,
+   "path": "eik-work/trials/m0-tanh-refine/fingerprint.stdout",
+   "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+  },
+  "packet": {
+   "bytes": 26028,
+   "path": "eik-work/trials/m0-tanh-refine/packet.json",
+   "sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c"
+  },
+  "packet_command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine thumbv7em-complete targetcheck-thumbv7em-exp-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function exp --target thumbv7em --jobs 1",
+  "packet_exit": 0,
+  "reason": "prior image_sha256 1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a is not retained anywhere (frozen guest-thumbv7em.elf is 48de0ea1940bc91803ca63d9e819a1b55026409e02089883d408de353363ace8, rerun image e58cc8f392f9be4e29861d0f45c7a8bf2ef3d50970ea2733df88633f16ede1b7); its runtime lived in test/scratch and is gone, so image identity cannot be bound. Kept separate as corroboration only.",
+  "record": {
+   "bytes": 557,
+   "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.json",
+   "sha256": "8d15346ea22c0d388e3e38de870e305e47a879a0da44894eaf1b711efbe8970a"
+  },
+  "report": {
+   "bytes": 752,
+   "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.stdout",
+   "sha256": "abcf746ab835fc73ee1b1937a5695ff3c53420e7df4f85004b3eecde30f119ad"
+  },
+  "reused": false,
+  "stderr": {
+   "bytes": 0,
+   "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.stderr",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ },
+ "ranges": [
+  {
+   "chunk_hi": 4096,
+   "chunk_lo": 0,
+   "complete": true,
+   "image": "objects/target-check-thumbv7em.elf",
+   "image_sha256": "e58cc8f392f9be4e29861d0f45c7a8bf2ef3d50970ea2733df88633f16ede1b7",
+   "mismatches": 0,
+   "object": "objects/sub-thumbv7em.o",
+   "provenance": "rerun",
+   "range_complete": true,
+   "record": "reports/rerun/targetcheck-thumbv7em-exp-all.json",
+   "report": "reports/rerun/targetcheck-thumbv7em-exp-all.stdout",
+   "verdict": "passed",
+   "words": 4294967296
+  }
+ ],
+ "runtime": {
+  "dependencies": "pinned wheels/QEMU reconstructed by unchanged prepare.py from export + omitted payloads fetched from pinned URLs (sha256 verified)",
+  "fingerprint": {
+   "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+   "sandbox": "none",
+   "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "fingerprint_details_identical_to_prior": true,
+  "fingerprint_report": "reports/rerun/fingerprint.stdout",
+  "host_gcc": "Ubuntu gcc-13 13.3.0-6ubuntu2~24.04.1 extracted from .debs into scratch (host /usr read-only, no system gcc); shim on runner PATH, see host-gcc/",
+  "python": "3.12.3",
+  "reference": {
+   "digests.sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3",
+   "exp.digest": "9d44e4100c4f0340f9b825393cc64bd64eae6ccdde8ece146df9464bd4a5c0c2"
+  }
+ },
+ "schema": "thumbv7em-exp-coverage-1",
+ "source": {
+  "path": "entry.c",
+  "required_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+ },
+ "status": "pass",
+ "target": "thumbv7em",
+ "toolkit": {
+  "dependencies.json": {
+   "bytes": 7851,
+   "path": "eik-work/toolkit/dependencies.json",
+   "sha256": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015"
+  },
+  "files.json": {
+   "bytes": 25807,
+   "path": "eik-work/toolkit/files.json",
+   "sha256": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9"
+  },
+  "kit/RULES.md": {
+   "bytes": 11477,
+   "path": "eik-work/toolkit/kit/RULES.md",
+   "sha256": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e"
+  },
+  "kit/reference/digests.sha256": {
+   "bytes": 266,
+   "path": "eik-work/toolkit/kit/reference/digests.sha256",
+   "sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3"
+  },
+  "kit/reference/exp.digest": {
+   "bytes": 131072,
+   "path": "eik-work/toolkit/kit/reference/exp.digest",
+   "sha256": "9d44e4100c4f0340f9b825393cc64bd64eae6ccdde8ece146df9464bd4a5c0c2"
+  },
+  "kit/requirements.txt": {
+   "bytes": 1070,
+   "path": "eik-work/toolkit/kit/requirements.txt",
+   "sha256": "5046651c864a509c18bcf84c6a45f90fb203a65b32c970662d083812632e369d"
+  },
+  "manifest.json": {
+   "bytes": 32046,
+   "path": "eik-work/toolkit/manifest.json",
+   "sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a"
+  },
+  "offline-runtime/manifest.json": {
+   "bytes": 29308,
+   "path": "eik-work/offline-runtime/manifest.json",
+   "sha256": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950"
+  },
+  "offline-runtime/prepare.py": {
+   "bytes": 7264,
+   "path": "eik-work/offline-runtime/prepare.py",
+   "sha256": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b"
+  },
+  "provision.py": {
+   "bytes": 5154,
+   "path": "eik-work/toolkit/provision.py",
+   "sha256": "3ef691e90ae45a1602039ca6838d228ec43b0569c129f59937eea0e90cac5e8f"
+  },
+  "run.py": {
+   "bytes": 11571,
+   "path": "eik-work/toolkit/run.py",
+   "sha256": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf"
+  },
+  "verify.py": {
+   "bytes": 20315,
+   "path": "eik-work/toolkit/verify.py",
+   "sha256": "9df81243de7430ca3949ecc4ad97b337e8886d4deb594a90dc0f89a02180f807"
+  }
+ }
+}

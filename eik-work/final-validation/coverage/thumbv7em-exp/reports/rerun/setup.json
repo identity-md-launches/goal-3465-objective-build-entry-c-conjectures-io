@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "$REPO/test/scratch/w2/runtime/bin/python",
+    "-m",
+    "eik",
+    "setup"
+  ],
+  "exit_code": 1,
+  "seconds": 1.248,
+  "source_sha256": null,
+  "stderr_sha256": "b676c5c8e9ec38e23c728f41832070462f43a3b6543713927347e9db45b19d65",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
