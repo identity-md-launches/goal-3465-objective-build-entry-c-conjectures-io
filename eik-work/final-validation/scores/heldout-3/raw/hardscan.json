@@ -1,0 +1,44 @@
+{
+  "exp": {
+    "argv": [
+      "hardscan-209ca1edd0b6",
+      "exp",
+      "67108864",
+      "-18",
+      "16359749073864334147"
+    ],
+    "cache_file": "hardscan-209ca1edd0b6-67108864-396172055-exp.txt",
+    "pool_mtime_utc": "2026-11-26T11:47:20.515863+00:00",
+    "pool_sha256": "2343fc8ae5e6e1a2a84c3410b87f7bc65e89bd85a04439ecf214d84fe7683f69",
+    "pool_words": 454,
+    "scanner_sha256": "89c323f69b375a71e3d7177fba68554f17a6e3991657b29b6ebd463c9f370a33"
+  },
+  "sigmoid": {
+    "argv": [
+      "hardscan-209ca1edd0b6",
+      "sigmoid",
+      "67108864",
+      "-18",
+      "2741056117586660633"
+    ],
+    "cache_file": "hardscan-209ca1edd0b6-67108864-396172055-sigmoid.txt",
+    "pool_mtime_utc": "2026-11-26T11:47:01.042886+00:00",
+    "pool_sha256": "d563a170a9c729640663454818276fc667a7676596d53ac24779b9b373ca60ab",
+    "pool_words": 566,
+    "scanner_sha256": "89c323f69b375a71e3d7177fba68554f17a6e3991657b29b6ebd463c9f370a33"
+  },
+  "tanh": {
+    "argv": [
+      "hardscan-209ca1edd0b6",
+      "tanh",
+      "67108864",
+      "-18",
+      "3975682205025928743"
+    ],
+    "cache_file": "hardscan-209ca1edd0b6-67108864-396172055-tanh.txt",
+    "pool_mtime_utc": "2026-11-26T11:47:11.374873+00:00",
+    "pool_sha256": "c3abdb173df1a85df20dd9f154610fb8c3b51be97b2c7698e5815a7afbae43a4",
+    "pool_words": 186,
+    "scanner_sha256": "89c323f69b375a71e3d7177fba68554f17a6e3991657b29b6ebd463c9f370a33"
+  }
+}

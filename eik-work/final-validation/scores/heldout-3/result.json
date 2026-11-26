@@ -1,0 +1,455 @@
+{
+  "artifacts": {
+    "README.md": "ba8eea35c87d15c12f952b57ee5fa189a65426a3009a6a165610dbf6d6a28e26",
+    "cap_evaluate.py": "257773f8abfbb354068e99cb7a5be0cb52e1172ee6a0c6d00f5495a74eb89eb8",
+    "collect.py": "1b27b071fe44886ed1c487c97e55e023e294e2718f1a6e0c3ff7fa8acb297696",
+    "raw-sha256.json": "9a0b0450fe084f1228433bbccf9b503782580636ce0e22856ca3fdf408a536f3",
+    "raw/boards-after.json": "e4524034197d5c2ab93e2af42af62d3be4b50b5c1d133299e4c9da13df354b6e",
+    "raw/boards-before.json": "e4524034197d5c2ab93e2af42af62d3be4b50b5c1d133299e4c9da13df354b6e",
+    "raw/bootstrap.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "raw/bootstrap.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/bootstrap.stdout": "d788abbfb43acb29c0b706380516af85a14b1ad806f2e30eefa976ea537ee766",
+    "raw/candidate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/candidate.stdout": "d9bdb985007b4ff834df4f84bdc70b7ca22a36d8daa21ed681ccdcf62d084d42",
+    "raw/commands.json": "24490d121438f7b95c85dc0391871b609731daad564583e19d00883f9e72491d",
+    "raw/evaluate.stderr": "bf80db4af0504aeb3c5ec8e5ddaa086a5047db14f6e2d1184add03d3a53e06b5",
+    "raw/evaluate.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+    "raw/gcc.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/gcc.stdout": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048",
+    "raw/hardscan.json": "dd65602e60a4cc1a46924173a341dbf758ecc4bd7a1c1a426cdf104627967696",
+    "raw/id50.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/id50.stdout": "0c3a698af3bab2be75fc9f5814f1c540916e989692f364ef4d5ad8a144c83749",
+    "raw/install.log": "a673a685b969c235965723753c59a2f5c9de41cdf982bb11e360b1d8182fcae2",
+    "raw/pool-exp.txt": "2343fc8ae5e6e1a2a84c3410b87f7bc65e89bd85a04439ecf214d84fe7683f69",
+    "raw/pool-sigmoid.txt": "d563a170a9c729640663454818276fc667a7676596d53ac24779b9b373ca60ab",
+    "raw/pool-tanh.txt": "c3abdb173df1a85df20dd9f154610fb8c3b51be97b2c7698e5815a7afbae43a4",
+    "raw/prepare.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "raw/prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/prepare.stdout": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99",
+    "raw/quick-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/quick-exp.stdout": "80ad29986de1e55e38b85c5d00cbb3a579a0fc2a55b60d979b75bfd95fcdd70e",
+    "raw/quick-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/quick-sigmoid.stdout": "f5c13a9af4da7590de27082fcd02adea4146846a250ea0975c65844035f7b3bb",
+    "raw/quick-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/quick-tanh.stdout": "9e848d5ca54651449b4159aa834084f67cfe65bff0fd2ac885a3e1f3077495c1",
+    "raw/setup.json": "bd8f8ee5cf097a3335b5ed9dd6b60668e73509114b940bef175bc8329f1a85bd",
+    "raw/setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+    "raw/uname.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/uname.stdout": "e0109ce4bb09317acfe73f0503e7a62845d527bbceef3fd629b64be2778a1c7c",
+    "restore_payloads.py": "e2031214dbfdf0cc9a7dd292acdc61e7da62e2fd070cacbeedcf73a44c9b5640",
+    "scores.json": "67edb09fff3ba22d4c5186530153812d4541b47066f9f11652bb720498a31606",
+    "scores.md": "25433060d6687552ac63b49015aa689c3ab6d9f5ed14d85dc8ddd87df6f5f79f",
+    "verify.py": "3d71342200c29b8289d14366d697d51a50751ebf6bebc00640f7463658c868ff"
+  },
+  "commands": {
+    "bootstrap": {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "bootstrap",
+        "--offline",
+        "--dependencies",
+        "test/scratch/heldout-3/deps"
+      ],
+      "exit_code": 0
+    },
+    "candidate": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "measure",
+        "$REPO/entry.c",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 0,
+      "seconds": 12.346,
+      "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+      "started_utc": "2026-11-26T11:57:29.760223+00:00"
+    },
+    "evaluate": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "$REPO/eik-work/final-validation/scores/heldout-3/cap_evaluate.py",
+        "evaluate",
+        "$REPO/entry.c",
+        "--quick",
+        "--json",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 124,
+      "seconds": 643.371,
+      "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+      "started_utc": "2026-11-26T11:46:46.387845+00:00"
+    },
+    "fingerprint": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "fingerprint",
+        "--details"
+      ],
+      "exit_code": 0,
+      "seconds": 0.593,
+      "source_sha256": null,
+      "started_utc": "2026-11-26T11:46:45.794049+00:00"
+    },
+    "gcc": {
+      "argv": [
+        "gcc",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.002,
+      "source_sha256": null,
+      "started_utc": "2026-11-26T11:46:45.791951+00:00"
+    },
+    "id50": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "measure",
+        "$REPO/eik-work/baselines/former-50/entry.c",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 0,
+      "seconds": 13.946,
+      "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+      "started_utc": "2026-11-26T11:57:42.106973+00:00"
+    },
+    "prepare": {
+      "argv": [
+        "python3",
+        "test/scratch/heldout-3/offline-runtime/prepare.py",
+        "test/scratch/heldout-3/deps"
+      ],
+      "exit_code": 0
+    },
+    "quick-exp": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "fullcheck",
+        "$REPO/entry.c",
+        "--quick",
+        "--function",
+        "exp",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 0,
+      "seconds": 24.224,
+      "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+      "started_utc": "2026-11-26T11:58:46.706003+00:00"
+    },
+    "quick-sigmoid": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "fullcheck",
+        "$REPO/entry.c",
+        "--quick",
+        "--function",
+        "sigmoid",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 0,
+      "seconds": 26.68,
+      "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+      "started_utc": "2026-11-26T11:57:56.065482+00:00"
+    },
+    "quick-tanh": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "fullcheck",
+        "$REPO/entry.c",
+        "--quick",
+        "--function",
+        "tanh",
+        "--seed",
+        "396172055"
+      ],
+      "exit_code": 0,
+      "seconds": 23.958,
+      "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+      "started_utc": "2026-11-26T11:58:22.747047+00:00"
+    },
+    "setup": {
+      "argv": [
+        "$REPO/test/scratch/heldout-3/work/runtime/bin/python",
+        "-m",
+        "eik",
+        "setup"
+      ],
+      "exit_code": 0,
+      "seconds": 26.594,
+      "source_sha256": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+    },
+    "uname": {
+      "argv": [
+        "uname",
+        "-sm"
+      ],
+      "exit_code": 0,
+      "seconds": 0.002,
+      "source_sha256": null,
+      "started_utc": "2026-11-26T11:46:45.789523+00:00"
+    }
+  },
+  "fingerprint": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "sandbox": "none",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "gaps": [
+    "The completed board snapshot withholds all current reference sources (HTTP 403). No explicit current champion compare is possible and eligibility is undetermined.",
+    "The held-out host checks are sampled. Exhaustive correctness is outside this evidence item.",
+    "Evaluate timed out during the kit incumbent comparison. Standalone measure and quick fullcheck stages supply the evidence."
+  ],
+  "kind": "held-out score comparison",
+  "measured_facts": {
+    "boards": {
+      "overall": {
+        "candidate_S": 33.834011996014596,
+        "current_S": null,
+        "current_ratio": null,
+        "current_ratio_le_0_970": null,
+        "current_reference": {
+          "availability": "SOURCE_WITHHELD",
+          "promotion_id": 61,
+          "shipped": false,
+          "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+          "submission": 56
+        },
+        "eligibility": "undetermined",
+        "id50_S": 33.82816772049993,
+        "id50_ratio": 1.0001727635845652,
+        "id50_ratio_le_0_970": false
+      },
+      "rv32im": {
+        "candidate_S": 28.381597262180406,
+        "current_S": null,
+        "current_ratio": null,
+        "current_ratio_le_0_970": null,
+        "current_reference": {
+          "availability": "SOURCE_WITHHELD",
+          "promotion_id": 59,
+          "shipped": false,
+          "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+          "submission": 52
+        },
+        "eligibility": "undetermined",
+        "id50_S": 28.381597262180406,
+        "id50_ratio": 1.0,
+        "id50_ratio_le_0_970": false
+      },
+      "thumbv6m": {
+        "candidate_S": 40.33389513534784,
+        "current_S": null,
+        "current_ratio": null,
+        "current_ratio_le_0_970": null,
+        "current_reference": {
+          "availability": "SOURCE_WITHHELD",
+          "promotion_id": 60,
+          "shipped": false,
+          "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+          "submission": 53
+        },
+        "eligibility": "undetermined",
+        "id50_S": 40.31996228947825,
+        "id50_ratio": 1.000345557016387,
+        "id50_ratio_le_0_970": false
+      }
+    },
+    "checks": {
+      "candidate": {
+        "rv32im": {
+          "code_table_bytes": 18960,
+          "guest_sha256": "9d139d612193ce822f895a8b7fbc1ddefbb821b87c9d79793563b51fe16f96a6",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv6m": {
+          "code_table_bytes": 20508,
+          "guest_sha256": "e70b928223ac5e4223d833b4c285b0faf0315ceff54f7bf0fe8d8139a99b3b18",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv7em": {
+          "code_table_bytes": 21254,
+          "guest_sha256": "399fdd29b1bc1795e27e9b3ca03e102354c3958ee7c50e9fd2ba648dc3380186",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        }
+      },
+      "id50": {
+        "rv32im": {
+          "code_table_bytes": 18960,
+          "guest_sha256": "a1d06567de63e071be1141204d57d2980f910924bb520f1b0b31b836de978b09",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv6m": {
+          "code_table_bytes": 20500,
+          "guest_sha256": "34bf59cbdf15b4c2ff1010ca155d34511f1f3c327caacf4e82bb188ca11f0f50",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        },
+        "thumbv7em": {
+          "code_table_bytes": 21254,
+          "guest_sha256": "10f681d17370e44de07956d5b1bb2daccf3371cebec8741b1df29be6721f4fcc",
+          "scored_wrong_outputs": 0,
+          "target_sample": {
+            "examples": [],
+            "mismatches": 0,
+            "words": 98304
+          }
+        }
+      }
+    },
+    "eligibility_requires_exhaustive_correctness": true,
+    "evaluate": {
+      "cap_seconds": 600,
+      "mode": "standalone measure and quick fullcheck fallback",
+      "outcome": "incumbent_timeout"
+    },
+    "fingerprint": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "sandbox": "none",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "hard_pool": {
+      "samples": 67108864,
+      "sizes": {
+        "exp": 454,
+        "sigmoid": 566,
+        "tanh": 186
+      },
+      "source": "hardscan",
+      "threshold_log2_ulps": -18
+    },
+    "inputs_sha256": "e095c381105991140bfc9c5b011090c4fff17878bcfe639b9b08da843a5e8c7d",
+    "kit_index_sha256": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+    "populations_per_function": {
+      "hard": 300,
+      "typical": 2000,
+      "uniform": 1000,
+      "wide": 1000
+    },
+    "quick_host_checks": {
+      "exp": {
+        "complete": false,
+        "mismatches": 0,
+        "seconds": 23.6,
+        "words_checked": 134217728
+      },
+      "sigmoid": {
+        "complete": false,
+        "mismatches": 0,
+        "seconds": 23.6,
+        "words_checked": 134217728
+      },
+      "tanh": {
+        "complete": false,
+        "mismatches": 0,
+        "seconds": 23.3,
+        "words_checked": 134217728
+      }
+    },
+    "reported_only": {
+      "thumbv7em": {
+        "candidate_S": 39.80142344131311,
+        "id50_S": 39.79063893837657
+      }
+    },
+    "seed": 396172055,
+    "takeover_ratio": 0.97,
+    "target_sample_inputs_sha256": "7d7fb82cb0010ffc2f3caf347c0248f6864ecfa234ebf60355e111a3f0de002b"
+  },
+  "pins": {
+    "eik-work/final-validation/boards/snapshot.json": "9c6628300f95c89b0c5bbaf9bf60469e0070c82cc7a6d7091309045032164676",
+    "eik-work/offline-runtime/manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+    "eik-work/offline-runtime/prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b",
+    "eik-work/toolkit/dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+    "eik-work/toolkit/files.json": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9"
+  },
+  "restored_runtime_payloads": {
+    "qemu/source/qemu_7.2+dfsg.orig.tar.xz": "91aca71520040edc40b8d437aa3004dae614f58e286cf653ee8996c07af2962f",
+    "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239",
+    "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl": "ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54"
+  },
+  "runtime_settings": {
+    "EIK_HARD_FRESH": true,
+    "EIK_SCALE": 1,
+    "EIK_THREADS": 2,
+    "host_sanitizers": [
+      "undefined",
+      "address"
+    ],
+    "mode": "development"
+  },
+  "seed": 396172055,
+  "sources": {
+    "candidate": {
+      "path": "entry.c",
+      "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+    },
+    "id50": {
+      "path": "eik-work/baselines/former-50/entry.c",
+      "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+    },
+    "incumbent": {
+      "path": "eik-work/toolkit/kit/examples/incumbent.c",
+      "sha256": "a8dd149453e54363c359ac82c9cee870006c7bf066a590ec7c8147a064622713"
+    }
+  },
+  "status": "incomplete",
+  "tool_identities": {
+    "clang": "clang version 22.1.8",
+    "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "machine": "x86_64",
+    "packages": {
+      "capstone": "5.0.9",
+      "pyelftools": "0.33",
+      "unicorn": "2.1.4",
+      "ziglang": "0.17.1"
+    },
+    "python": "3.12.3",
+    "zig": "0.17.1"
+  }
+}
