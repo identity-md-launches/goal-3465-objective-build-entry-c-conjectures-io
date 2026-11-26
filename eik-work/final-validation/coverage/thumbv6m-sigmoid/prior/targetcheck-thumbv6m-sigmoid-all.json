@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "$REPO/test/scratch/m0-tanh-refine/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/m0-tanh-refine/entry.c",
+    "--function",
+    "sigmoid",
+    "--target",
+    "thumbv6m",
+    "--jobs",
+    "1"
+  ],
+  "exit_code": 0,
+  "seconds": 288.188,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+}

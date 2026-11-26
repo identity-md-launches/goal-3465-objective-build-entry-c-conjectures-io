@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "python3",
+    "eik-work/offline-runtime/prepare.py",
+    "test/scratch/thumbv6m-sigmoid/dependencies"
+  ],
+  "exit_code": 1
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "eik-coverage-result-1",
+  "status": "incomplete",
+  "function": "sigmoid",
+  "runtime": "thumbv6m",
+  "coverage": "coverage.json",
+  "artifacts": {
+    "coverage.json": {
+      "sha256": "a6a208bab6b1559df442e1a41a70669b09f8b3699e9eada79161cab7b141c72d",
+      "bytes": 2507
+    },
+    "host-probe.json": {
+      "sha256": "7a9fda70ceeb82ef433df5f31cc47dd7a9ae1c1af6e33e9a4198e42cbf52f57f",
+      "bytes": 148
+    },
+    "host-probe.stderr": {
+      "sha256": "3a57f67d7d50af2efbda7c4ae693acc2e3ca1d6a8a4c4f06d7e8b6dabb21a571",
+      "bytes": 37
+    },
+    "host-probe.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "objects/guest-thumbv6m.elf": {
+      "sha256": "21368c7e26d748d024bf0e8b55d47a1cd0fa8b85538ec2c82bcc198bdf3bfc5c",
+      "bytes": 84360
+    },
+    "objects/sub-thumbv6m.o": {
+      "sha256": "29698ab6852ac8a248b8396a9fcf4203d9f5a0c19cfc76bc5d12aad8147431ef",
+      "bytes": 91968
+    },
+    "prepare.json": {
+      "sha256": "73bfd966e8c91a026762daade74b9b206be882357963ca768558b2ad121870b3",
+      "bytes": 145
+    },
+    "prepare.stderr": {
+      "sha256": "0821e4e0b3c3a00f65a2c8239b2c619252b49357b9eb802c0999987c85d176b0",
+      "bytes": 275
+    },
+    "prepare.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "prior/fingerprint.json": {
+      "sha256": "954577a72da0cf9d44a64e3e887c68deff975b6f929e23982cf33d0cf41fa35f",
+      "bytes": 372
+    },
+    "prior/fingerprint.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "prior/fingerprint.stdout": {
+      "sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+      "bytes": 6923
+    },
+    "prior/packet.json": {
+      "sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c",
+      "bytes": 26028
+    },
+    "prior/targetcheck-thumbv6m-sigmoid-all.json": {
+      "sha256": "41da3067a709c00dd51972582de24c782a7002aa86b8b7cf11918a5a6ce977d5",
+      "bytes": 560
+    },
+    "prior/targetcheck-thumbv6m-sigmoid-all.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "prior/targetcheck-thumbv6m-sigmoid-all.stdout": {
+      "sha256": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e",
+      "bytes": 755
+    }
+  },
+  "source_tool_identities": {
+    "entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "eik-work/trials/m0-tanh-refine/entry.c": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "eik-work/toolkit/run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf",
+    "eik-work/toolkit/provision.py": "3ef691e90ae45a1602039ca6838d228ec43b0569c129f59937eea0e90cac5e8f",
+    "eik-work/toolkit/dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+    "eik-work/offline-runtime/prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b",
+    "eik-work/offline-runtime/manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+    "eik-work/toolkit/kit/RULES.md": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "eik-work/toolkit/kit/eik/config.py": "d42e77915c2ba537abcd751d055b3c941979d95425ecff0b7fa4a35b136cee46",
+    "eik-work/toolkit/kit/eik/fingerprint.py": "0cc7e6e5e94b05220f5e8d5d3ed70715b005851ba69a5a994d7256a1d8ebddda",
+    "eik-work/toolkit/kit/reference/digests.sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "eik-work/offline-runtime/prepare.py",
+        "test/scratch/thumbv6m-sigmoid/dependencies"
+      ],
+      "exit_code": 1
+    },
+    {
+      "argv": [
+        "bash",
+        "-c",
+        "gcc --version"
+      ],
+      "exit_code": 127,
+      "python": "3.12.3",
+      "system": "Linux",
+      "machine": "x86_64"
+    }
+  ],
+  "measured_facts": {
+    "historical_words": 4294967296,
+    "historical_mismatches": 0,
+    "credited_words": 0,
+    "image_binding": "unproven"
+  },
+  "gaps": [
+    [
+      0,
+      4096
+    ]
+  ],
+  "check_semantics": "Exit zero validates an honest incomplete evidence packet, not exhaustive correctness."
+}
