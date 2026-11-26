@@ -1,0 +1,613 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "a3572243f68fb6f8a3afff8b77362ca9d546d79d3f4383aa77ffd5cac18e93c9",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 35.263388616728896,
+     "rv32im": 30.692301086523873,
+     "thumbv6m": 40.515260593492414
+    },
+    "S_thumbv7em_reported_only": 39.95633850332885,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "a3572243f68fb6f8a3afff8b77362ca9d546d79d3f4383aa77ffd5cac18e93c9",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19216,
+      "functions": {
+       "exp": {
+        "hard_p999": 80,
+        "means": {
+         "hard": 41.486666666666665,
+         "typical": 30.5635,
+         "uniform": 13.297,
+         "wide": 24.738
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 108,
+        "means": {
+         "hard": 57.38333333333333,
+         "typical": 34.7875,
+         "uniform": 9.436,
+         "wide": 16.533
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1371951858080476,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 178,
+        "means": {
+         "hard": 48.50333333333333,
+         "typical": 37.908,
+         "uniform": 18.579,
+         "wide": 29.537
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 75.93333333333334,
+         "typical": 37.149,
+         "uniform": 14.698,
+         "wide": 20.731
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 164,
+        "means": {
+         "hard": 49.23,
+         "typical": 37.824,
+         "uniform": 20.233,
+         "wide": 29.983
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.41333333333333,
+         "typical": 35.997,
+         "uniform": 16.627,
+         "wide": 21.468
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 35.19762097934098,
+     "rv32im": 30.738935677005138,
+     "thumbv6m": 40.30303897386101
+    },
+    "S_thumbv7em_reported_only": 39.74954420309734,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "a3572243f68fb6f8a3afff8b77362ca9d546d79d3f4383aa77ffd5cac18e93c9",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19216,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 43.09,
+         "typical": 30.327,
+         "uniform": 13.322,
+         "wide": 24.847
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.561
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 108,
+        "means": {
+         "hard": 58.18,
+         "typical": 34.635,
+         "uniform": 9.248,
+         "wide": 17.187
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1371951858080476,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 187,
+        "means": {
+         "hard": 46.58,
+         "typical": 37.4395,
+         "uniform": 18.766,
+         "wide": 29.272
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.36,
+         "typical": 36.761,
+         "uniform": 14.364,
+         "wide": 21.07
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 171,
+        "means": {
+         "hard": 47.22,
+         "typical": 37.216,
+         "uniform": 20.47,
+         "wide": 29.959
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.19,
+         "typical": 35.666,
+         "uniform": 16.293,
+         "wide": 21.741
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745"
+ },
+ "kind": "trial",
+ "note": "Guarded quadratic (degree-reduced) fast path in eik_tanh_r cells_ for tld_r rows 0..27 (t in [0x7B201000,0x7C..), c1!=0): drops the c3*t cubic term via per-row precomputed c2' = c2 + mulhsx(c3, cell-centre t) (new 28-entry int32 table tq_r, 112 bytes), keeps the high-half multiply formulation, returns w-(Vq>>8) only when Vq mod 256 lies in an exhaustively proven window (even rows [4,213], odd rows [44,253]) so the cubic would return the identical value; otherwise falls through to the unchanged cubic/refinement. Result: rv32im S regresses (see ratios); thumbv6m code generation unchanged.",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.0373356404161367,
+   "rv32im": 1.0760652308775562,
+   "thumbv6m": 1.0
+  },
+  "1947282751": {
+   "overall": 1.0382198796733328,
+   "rv32im": 1.07790051854891,
+   "thumbv6m": 1.0
+  }
+ },
+ "runs": {
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic check check eik-work/trials/rv-tanh-quadratic/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "f8cd0fde66a5a11ed1c15106b4d84810d46ebf4ff4006803c6b58b243d731195",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "d2d060da603450d630a570eafecb875995aa932a92acf0d93c1c78b9f4f72d44"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "2d2c55470471329e9b5f37d04b43b1cd2becb0d7c45aa3b6f73f68101a5e963d",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1874435642-exp fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "9754378608125159abbdea63dcce6c4cb751bda4e1ac90484da94fb1d439c5b9",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "49d3bbd7e4d7225ebd48ea06c6d6c01de39f0085f5c9039565a6a6d30e974f4a"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1874435642-sigmoid fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "e4b38433ebc91002836ed8ab63c13068353b8396c18f9a2f91aa8ecbd9fa9534",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "3a4896e93d9760bbfc8a4b5456a0e39459847cfd385de34b0e02b6e6b9e85f85"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1874435642-tanh fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "28921311b74037b129e77b1a077aa161775a406dcd3e4088696d460966f97b07",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "142939cdead03991485ea20cdfad2699523a422ad4f679a2706ee8d58f387a1c"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1947282751-exp fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "0c3b32561f92ee21859e46ec62235c8a7d3e156357d197bcdace3181181dd385",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "90720eba15a131a683b1e0a171b2c8d030a09cdb6deeac09209a958bbd804a6e"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1947282751-sigmoid fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "43ac8c6c93bbd03af1b55bf1059c76b8257da51fb4dc51dfb9aee4a6d44f8ce4",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "f6ac7961c1958022f78e52aff9a2c8d8fbc9bdc58cce25c4604301ae655b041d"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic fullcheck-1947282751-tanh fullcheck eik-work/trials/rv-tanh-quadratic/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "3eda5dbc42f0a76734e9e0870d2e8bdac33f3ac611218ee8a7fdd533b0c2cf52",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "d17ab4be76a4b10edb534fd1d0854df109dac50e27c050bfc216957d727515de"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic gate gate eik-work/trials/rv-tanh-quadratic/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "05cb3d9be554600735e132f1dbfd5fecafa6d861af480a719ddb3cbccb4c56ac",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "4a35c717e0e6295117fc980b8f24e8d14dfb0c0a2db912f78b05de15c3585139"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic measure-1874435642 measure eik-work/trials/rv-tanh-quadratic/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "351c9ac382b1049e356f8abc3a3a1cd88fb4776f79f5d53ed2d342a2b236f11a",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "a5864411859c5fc59ce8fad94cd6909a84a960e008adf7b8e4237b7aae5fedc2"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic measure-1947282751 measure eik-work/trials/rv-tanh-quadratic/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "13bad7beff4517eb3fd7a91ea9e0a281abd0a838e0d1cd06a7a3b87ed997bba4",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "a9f30a3defd6206e53770daf9e5c1fc9d29b4e77ac49c5c90b78356e06638733"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "08c4a81b4cc938b76625f12dacdaf9a489abeffa0cb5928888ffc4dd172d3046",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  "targetcheck-tanh-rv32im-3033-3040": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic targetcheck-tanh-rv32im-3033-3040 targetcheck eik-work/trials/rv-tanh-quadratic/entry.c --function tanh --target rv32im --chunks 3033:3040",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-tanh-rv32im-3033-3040.json": "70ed450c76f7a3d8a45657bcd47133da1e704a1ae7bebef00105f06afab35a64",
+    "targetcheck-tanh-rv32im-3033-3040.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-tanh-rv32im-3033-3040.stdout": "1324207981a3d6683a3cb9db939d67d9df98d2aa0719065d5172d30dd8226adf"
+   }
+  },
+  "targetcheck-tanh-rv32im-985-992": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik rv-tanh-quadratic targetcheck-tanh-rv32im-985-992 targetcheck eik-work/trials/rv-tanh-quadratic/entry.c --function tanh --target rv32im --chunks 985:992",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-tanh-rv32im-985-992.json": "55e48402cca3d7e03e22967c3cbfa86c003d3e3662ab868cf001529c62632d2d",
+    "targetcheck-tanh-rv32im-985-992.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-tanh-rv32im-985-992.stdout": "02d6112e31de1da307bc5e3989c45230604956bfd00bfb254b0a39f5b05b6d30"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/rv-tanh-quadratic/entry.c",
+  "sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745"
+ },
+ "status": "measured",
+ "target": "rv-tanh-quadratic"
+}

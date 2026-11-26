@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/rv-tanh-quadratic/entry.c",
+    "--function",
+    "tanh",
+    "--target",
+    "rv32im",
+    "--chunks",
+    "3033:3040"
+  ],
+  "exit_code": 0,
+  "seconds": 0.965,
+  "source_sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "1324207981a3d6683a3cb9db939d67d9df98d2aa0719065d5172d30dd8226adf"
+}

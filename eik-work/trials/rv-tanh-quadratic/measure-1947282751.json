@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "measure",
+    "$REPO/eik-work/trials/rv-tanh-quadratic/entry.c",
+    "--seed",
+    "1947282751"
+  ],
+  "exit_code": 0,
+  "seconds": 7.478,
+  "source_sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a9f30a3defd6206e53770daf9e5c1fc9d29b4e77ac49c5c90b78356e06638733"
+}

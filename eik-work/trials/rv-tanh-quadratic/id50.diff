@@ -1,0 +1,32 @@
+--- eik-work/baselines/former-50/entry.c	2026-11-26 10:03:53.154348959 +0000
++++ eik-work/trials/rv-tanh-quadratic/entry.c	2026-11-26 10:08:40.439331518 +0000
+@@ -1235,6 +1235,9 @@
+     0x9a33b6c6u, 0x9b2a0558u, 0x9c20b642u, 0x9d180000u, 0x9d17c050u, 0x9e0f1b9cu, 0x9f06c150u, 0x0a000000u,
+     0x96f219f4u, 0x97eb1680u, 0x98e469aau, 0x99de09b2u
+ };
++static const int32_t tq_r[28] = {
++    36789, 38462, 38795, 40462, 40796, 42458, 42790, 44450, 44781, 46434, 46767, 48416, 48745, 50390, 50720, 52359, 52686, 54320, 54646, 56277, 56600, 58225, 58549, 60167, 60490, 62101, 62423, 64029
++};
+ inline static uint32_t eik_tanh_r(uint32_t w)
+ {
+   uint32_t a1;
+@@ -1257,8 +1260,18 @@
+   }
+   cells_:
+   {
+-    const struct rl_r *r = &tld_r[(t >> 19) - 0xF64u];
++    uint32_t qi_ = (t >> 19) - 0xF64u;
++    const struct rl_r *r = &tld_r[qi_];
+     th_ = w << 13;
++    if (qi_ < 28u)
++    {
++      int32_t qs_ = r->c1 + mulhs_r(tq_r[qi_], (int32_t) th_);
++      uint32_t Vq_ = r->c0 + (uint32_t) mulhs_r(qs_, (int32_t) th_);
++      if ((((Vq_ - 4u) - 40u * (th_ >> 31)) & 255u) < 210u)
++      {
++        return w - (Vq_ >> 8);
++      }
++    }
+     uint32_t V = rt_cell_r(r, t, (int32_t) th_);
+     uint32_t c3_ = (uint32_t) r->c3;
+     uint32_t c0_ = r->c0;
