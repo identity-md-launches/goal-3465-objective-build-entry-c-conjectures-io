@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "$REPO/test/scratch/pc/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/baselines/former-50/entry.c",
+    "--function",
+    "sigmoid",
+    "--quick",
+    "--seed",
+    "1947282751"
+  ],
+  "exit_code": 0,
+  "seconds": 24.056,
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "f17f273e80ea5507d6a7e8e8221790cad45d3e842cc53a7f004c70e3b813ee6a"
+}

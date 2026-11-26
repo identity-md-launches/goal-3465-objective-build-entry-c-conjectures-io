@@ -1,0 +1,18 @@
+{
+ "why": "eik evaluate re-measures the locally registered champion (the exact-c incumbent, ~1e5 instructions per call, counted by a Python block hook) on every scored input of rv32im and thumbv6m. That job alone did not finish within the 10-minute cap this worker's sandbox puts on one command, and background processes are killed when a command ends. The incumbent re-measurement only produces the printed incumbent ratio; it does not enter the entry's S. The entry part of the same evaluation (measure stage, every target, with sample) took 9 s.",
+ "attempts": [
+  {"command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 evaluate-1874435642 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1874435642",
+   "parallel_with": "the same command for seed 1947282751 in case control-1947282751",
+   "wrapper": "timeout 585", "started": "2026-11-26T10:27:50+01:00", "ended": "2026-11-26T10:37:35+01:00",
+   "exit_code": 124, "stdout": "", "stderr": "", "run_record": "none (run.py writes LABEL.json only after the evaluator exits)",
+   "progress": "fresh hard pools for both seeds were written by 10:28:26; the measurement pool was still running at the cap"},
+  {"command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 evaluate-1947282751 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1947282751",
+   "wrapper": "timeout 585", "started": "2026-11-26T10:27:50+01:00", "ended": "2026-11-26T10:37:35+01:00",
+   "exit_code": 124, "stdout": "", "stderr": "", "run_record": "none"},
+  {"command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 evaluate-1874435642 evaluate eik-work/baselines/former-50/entry.c --quick --json --seed 1874435642",
+   "wrapper": "timeout 590, through a scratch shim around run.runner that only raised EIK_THREADS from 2 to 5 (worker pool size; not part of the fingerprint). The shim is not used for any recorded run.",
+   "started": "2026-11-26T10:38:07+01:00", "ended": "2026-11-26T10:47:57+01:00",
+   "exit_code": 124, "stdout": "", "stderr": "", "run_record": "none"}
+ ],
+ "replacement": "Each seed is measured by the stages evaluate is built from (kit/eik/evaluate.py: compare -> _measure_many for the entry, host_check -> fullcheck quick with the evaluation seed): measure-SEED = `eik measure SRC --seed SEED`, fullcheck-SEED-FN = `eik fullcheck SRC --function FN --quick --seed SEED`, all through unmodified run.py with its default settings."
+}

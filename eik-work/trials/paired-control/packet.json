@@ -1,0 +1,605 @@
+{
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 33.99419362722625,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 40.515260593492414
+    },
+    "S_thumbv7em_reported_only": 39.95633850332885,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 80,
+        "means": {
+         "hard": 41.486666666666665,
+         "typical": 30.5635,
+         "uniform": 13.297,
+         "wide": 24.738
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 178,
+        "means": {
+         "hard": 48.50333333333333,
+         "typical": 37.908,
+         "uniform": 18.579,
+         "wide": 29.537
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 75.93333333333334,
+         "typical": 37.149,
+         "uniform": 14.698,
+         "wide": 20.731
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 164,
+        "means": {
+         "hard": 49.23,
+         "typical": 37.824,
+         "uniform": 20.233,
+         "wide": 29.983
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.41333333333333,
+         "typical": 35.997,
+         "uniform": 16.627,
+         "wide": 21.468
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 33.90189464529962,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 40.30303897386101
+    },
+    "S_thumbv7em_reported_only": 39.74954420309734,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 43.09,
+         "typical": 30.327,
+         "uniform": 13.322,
+         "wide": 24.847
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.561
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 187,
+        "means": {
+         "hard": 46.58,
+         "typical": 37.4395,
+         "uniform": 18.766,
+         "wide": 29.272
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.36,
+         "typical": 36.761,
+         "uniform": 14.364,
+         "wide": 21.07
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 171,
+        "means": {
+         "hard": 47.22,
+         "typical": 37.216,
+         "uniform": 20.47,
+         "wide": 29.959
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.19,
+         "typical": 35.666,
+         "uniform": 16.293,
+         "wide": 21.741
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "kind": "control",
+ "note": "Unchanged id50 (eik-work/baselines/former-50/entry.c) measured on the two trial seeds through eik-work/toolkit/run.py in stage form (eik measure + eik fullcheck --quick per function); eik evaluate could not finish here because re-measuring the local incumbent champion exceeds the 10-minute per-command cap (see evaluate-attempts.json).",
+ "runs": {
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 check check eik-work/baselines/former-50/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "3c88b6a82a9dfbe4e21fc60790649e13b6437f4727a4ec1718dcf7a020385c48",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "57861896bd76b4c7e11cc89c116de88c6290fbd357b6a477f8a6059d54ca91bd"
+   }
+  },
+  "check@control-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 check check eik-work/baselines/former-50/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check@control-1947282751.json": "61c9030be2e4429972ab7c434c63ce62f1642dec3f40a3422900c88b078f6f8a",
+    "check@control-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check@control-1947282751.stdout": "57861896bd76b4c7e11cc89c116de88c6290fbd357b6a477f8a6059d54ca91bd"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "d74ee996ebee2ac9fb6daa0c709c610bcc890c96696117e12ff6ae2374c285dc",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fingerprint@control-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint@control-1947282751.json": "69ee102b033d2e375845cf9ba88eade7e2ab1c4ee3bd5bd9dd3410a54c90e487",
+    "fingerprint@control-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint@control-1947282751.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 fullcheck-1874435642-exp fullcheck eik-work/baselines/former-50/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "4b2e92deae0ffbad2aafd48bb931808d539cd6292fc1e6d0d2707301e6949f78",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "b046bb360dc74be2832b24f8d95e709d52b4e944da5386b82adb48037515b4c5"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 fullcheck-1874435642-sigmoid fullcheck eik-work/baselines/former-50/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "3b8e978acb9daf93a0b64069495fffc4b8ccab78606b14e3c1f07b247dc974bd",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "e51dbd24396d61488b037456a188ec01de8fc7bdb64248ec39ef08b6d060816b"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 fullcheck-1874435642-tanh fullcheck eik-work/baselines/former-50/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "50543442ee5faa778740c8e4eeb2b11d021904df482e3f060c898317a977c35d",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "c6eadcbe60a27f39afec9c1aab75da309095628c461a7675bc0c1c5e8a4b4af7"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 fullcheck-1947282751-exp fullcheck eik-work/baselines/former-50/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "e04f42134bf67fcedc18b62031aa8be88275d320cad2eb2ab00c60eadedeaac7",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "99d3c9b8e8a584b4312075b19de0b706e694d6c79f2a54ec0db779a964208d2b"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 fullcheck-1947282751-sigmoid fullcheck eik-work/baselines/former-50/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "cd71f4100b9bab0e6c6623d92f3bc11324bb88b359d8ccbea4e03c017303a1b1",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "f17f273e80ea5507d6a7e8e8221790cad45d3e842cc53a7f004c70e3b813ee6a"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 fullcheck-1947282751-tanh fullcheck eik-work/baselines/former-50/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "a3e636241871f1a6b728d51ac4b575a1733adf2b6be03fd53f16669b55d13412",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "defed76e5f0ce6a52732d5a538caf64d7c39732a5a60110a488e6f0ca436ff95"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 gate gate eik-work/baselines/former-50/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "f9e980cfb5946b1eba5e0b8bd7a003bfeed8e9440b7cd39fe79ed882ed85902b",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "c970030c30dd219e93f653cf445d617552744f9e895a9346b8da064347e3d369"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 measure-1874435642 measure eik-work/baselines/former-50/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "ce378bce4c6635a9a1febfee4aad20204e31c77147b5d8f1fc29db625b04ab69",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "212977ac2dd524d447fdfdadc555195040ec5484c65be3a8272e465efa053285"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 measure-1947282751 measure eik-work/baselines/former-50/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "708ee60741d5a058caee0eb3cda6eb309481a5acdbd4d67d4b1981b2b5affc22",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "79dd124581ed774c265685737f1b9f81b0292196450c7e4a2661681056160ac6"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1874435642 setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "62804825eb8671d694bb8c7eb1a29ecfe2dd8abfd6b38b7a64c8d594b4c5ba84",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "setup@control-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/pc control-1947282751 setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup@control-1947282751.json": "1cfaa5695c34874c5afba84a6cb1b7b63dc01ed13d8dbfd4686f44c1a7675755",
+    "setup@control-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup@control-1947282751.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "status": "measured",
+ "target": "paired-control"
+}
