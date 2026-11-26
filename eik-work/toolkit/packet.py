@@ -43,6 +43,8 @@ def main():
                 packet.update(status="measured", scores=rows, techniques=args.techniques)
         args.directory.mkdir(parents=True, exist_ok=True)
         require(not (args.directory / "packet.json").exists(), "packet.json already exists")
+        if args.logs is not None and (args.logs / "fingerprint.json").exists():
+            labels.append("fingerprint")
         for label in labels:
             for ext in ("json", "stdout", "stderr"):
                 name = f"{label}.{ext}"

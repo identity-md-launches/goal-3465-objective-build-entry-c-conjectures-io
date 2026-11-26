@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-replay/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/toolkit/sources/id50.c",
+    "--function",
+    "exp",
+    "--threads",
+    "1",
+    "--chunks",
+    "1016:1017",
+    "--out",
+    "$REPO/test/scratch/eik-replay/reports/host-exp-1016.json"
+  ],
+  "exit_code": 0,
+  "seconds": 1.206,
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

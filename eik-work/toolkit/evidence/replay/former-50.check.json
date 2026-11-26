@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-replay/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/eik-work/toolkit/sources/id50.c"
+  ],
+  "exit_code": 0,
+  "seconds": 1.048,
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "57861896bd76b4c7e11cc89c116de88c6290fbd357b6a477f8a6059d54ca91bd"
+}

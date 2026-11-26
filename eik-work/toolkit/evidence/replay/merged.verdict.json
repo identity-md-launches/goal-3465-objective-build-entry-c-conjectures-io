@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-replay/runtime/bin/python",
+    "-m",
+    "eik",
+    "merge",
+    "$REPO/test/scratch/eik-replay/reports/host-exp-1016.json",
+    "$REPO/test/scratch/eik-replay/reports/rv32im-exp-1016.json",
+    "$REPO/test/scratch/eik-replay/reports/thumbv6m-exp-1016.json",
+    "$REPO/test/scratch/eik-replay/reports/thumbv7em-exp-1016.json",
+    "--require-targets",
+    "rv32im,thumbv6m,thumbv7em"
+  ],
+  "exit_code": 1,
+  "seconds": 0.109,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "fd54ee06e8bdba79eeb1a7648593513a79f8ba3d08302f0c7f56f07dbb518c01"
+}

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Run the pinned local evaluator with an offline runtime and case-local state."""
 import argparse
+import base64
+import csv
 import fcntl
 from hashlib import sha256
 import json
@@ -11,6 +13,7 @@ import shutil
 import subprocess
 import sys
 import time
+import zipfile
 
 sys.dont_write_bytecode = True
 from provision import DEFAULT, checked, stage
@@ -27,6 +30,116 @@ def write_json(path, value):
 
 def portable(text):
     return text.replace(str(REPO), "$REPO")
+
+
+def python312():
+    """A Python 3.12 interpreter; the evaluator pins that minor version."""
+    if sys.version_info[:2] == (3, 12):
+        return sys.executable
+    found = shutil.which("python3.12", path="/usr/local/bin:/usr/bin:/bin")
+    if found is None:
+        raise ValueError("Python 3.12 is required")
+    return found
+
+
+def requirements():
+    """Parse the kit's hash-pinned requirements into {name: (version, {sha256, ...})}."""
+    text = (ROOT / "kit/requirements.txt").read_text().replace("\\\n", " ")
+    pins = {}
+    for line in text.splitlines():
+        line = line.split("#")[0].strip()
+        if not line:
+            continue
+        spec, *options = line.split()
+        name, sep, version = spec.partition("==")
+        hashes = {o.removeprefix("--hash=sha256:") for o in options if o.startswith("--hash=sha256:")}
+        if not sep or not hashes or len(hashes) != len(options):
+            raise ValueError(f"requirement is not hash-pinned: {line}")
+        pins[name.lower()] = (version, hashes)
+    return pins
+
+
+def unpack_wheel(wheel, site, scripts):
+    """Install one binary wheel without pip: check every member against RECORD, then unpack it."""
+    with zipfile.ZipFile(wheel) as archive:
+        names = [i.filename for i in archive.infolist() if not i.is_dir()]
+        info = {n.split("/")[0] for n in names if n.split("/")[0].endswith(".dist-info")}
+        if len(info) != 1:
+            raise ValueError(f"{wheel.name}: expected one dist-info directory")
+        info = info.pop()
+        data = info.removesuffix(".dist-info") + ".data"
+        record = {}
+        for row in csv.reader(archive.read(f"{info}/RECORD").decode().splitlines()):
+            if row:
+                record[row[0]] = row[1]
+        count = 0
+        for member in archive.infolist():
+            name = member.filename
+            if member.is_dir():
+                continue
+            mode = member.external_attr >> 16
+            if name.startswith("/") or ".." in name.split("/") or (mode & 0o170000) not in (0, 0o100000):
+                raise ValueError(f"{wheel.name}: unsafe member {name}")
+            content = archive.read(member)
+            expected = record.get(name, "")
+            if expected.startswith("sha256="):
+                actual = base64.urlsafe_b64encode(sha256(content).digest()).rstrip(b"=").decode()
+                if actual != expected.removeprefix("sha256="):
+                    raise ValueError(f"{wheel.name}: RECORD mismatch for {name}")
+            elif not (name == f"{info}/RECORD" or name.startswith(f"{info}/RECORD.")):
+                raise ValueError(f"{wheel.name}: {name} is not covered by RECORD")
+            parts = name.split("/")
+            if parts[0] == data:
+                if len(parts) < 3 or parts[1] not in {"purelib", "platlib", "scripts"}:
+                    raise ValueError(f"{wheel.name}: unsupported data member {name}")
+                target = (scripts if parts[1] == "scripts" else site).joinpath(*parts[2:])
+            else:
+                target = site.joinpath(*parts)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(content)
+            target.chmod(0o755 if mode & 0o111 else 0o644)
+            count += 1
+        (site / info / "INSTALLER").write_text("eik-toolkit\n")
+        return count
+
+
+def install_runtime(runtime, links, env, log_path):
+    """Create the isolated interpreter and unpack the pinned wheels; needs neither pip nor a network."""
+    def note(text):
+        with log_path.open("a") as log:
+            log.write(portable(text) + "\n")
+
+    if runtime.exists():
+        shutil.rmtree(runtime)
+    command = [python312(), "-m", "venv", "--without-pip", str(runtime)]
+    result = subprocess.run(command, env=env, capture_output=True, text=True)
+    note(f"{command!r} -> {result.returncode}\n{result.stdout}{result.stderr}".rstrip())
+    if result.returncode:
+        raise ValueError("could not create the Python 3.12 environment")
+    python = runtime / "bin/python"
+    site = Path(subprocess.run([str(python), "-I", "-c", "import sysconfig; print(sysconfig.get_path('purelib'))"],
+                               env=env, capture_output=True, text=True, check=True).stdout.strip())
+    if not site.is_relative_to(runtime):
+        raise ValueError("environment site-packages is outside the runtime")
+    for name, (version, hashes) in requirements().items():
+        prefix = f"{name}-{version}-"
+        found = [p for link in links if link.is_dir() for p in sorted(link.glob("*.whl"))
+                 if p.name.lower().startswith(prefix) and sha256(p.read_bytes()).hexdigest() in hashes]
+        if not found:
+            raise ValueError(f"no wheel with a pinned hash for {name}=={version}")
+        wheel = found[0]
+        count = unpack_wheel(wheel, site, runtime / "bin")
+        note(f"installed {name}=={version} from {wheel} sha256={sha256(wheel.read_bytes()).hexdigest()} "
+             f"({count} files, every member checked against RECORD)")
+    probe = ("import json; from importlib import metadata as m; import unicorn, capstone, elftools, ziglang; "
+             "print(json.dumps({n: m.version(n) for n in ('capstone', 'pyelftools', 'unicorn', 'ziglang')}))")
+    result = subprocess.run([str(python), "-I", "-c", probe], env=env, capture_output=True, text=True)
+    note(f"import probe -> {result.returncode}\n{result.stdout}{result.stderr}".rstrip())
+    if result.returncode:
+        raise ValueError("installed packages do not import")
+    wanted = {name: version for name, (version, _) in requirements().items()}
+    if json.loads(result.stdout) != wanted:
+        raise ValueError("installed package versions differ from the pins")
 
 
 def runner(work, case_name, label, args, dependencies=DEFAULT):
@@ -72,20 +185,14 @@ def runner(work, case_name, label, args, dependencies=DEFAULT):
         fcntl.flock(lock, fcntl.LOCK_EX)
         if not (runtime / "ready").exists():
             stage(dependencies)
-            commands = [
-                ["python3.12", "-m", "venv", "--without-pip", str(runtime)],
-                ["python3.12", "-m", "pip", "--isolated", "--python", str(python),
-                 "install", "--no-index", "--only-binary=:all:", "--require-hashes",
-                 "--find-links", str(ROOT / "wheels"),
-                 "--find-links", str(dependencies / "wheels"),
-                 "-r", str(ROOT / "kit/requirements.txt")],
-            ]
-            for command in commands:
-                result = subprocess.run(command, env=env, capture_output=True, text=True)
-                with (work / "install.log").open("a") as log:
-                    log.write(portable(f"{command!r} -> {result.returncode}\n{result.stdout}{result.stderr}"))
-                if result.returncode:
-                    raise RuntimeError("offline runtime installation failed; see install.log")
+            log_path = work / "install.log"
+            try:
+                install_runtime(runtime, [ROOT / "wheels", dependencies / "wheels"], env, log_path)
+            except (ValueError, OSError, KeyError, zipfile.BadZipFile, subprocess.SubprocessError) as exc:
+                with log_path.open("a") as log:
+                    log.write(portable(f"installation failed: {exc}\n"))
+                raise RuntimeError(f"offline runtime installation failed ({portable(str(exc))}); "
+                                   "see install.log") from exc
             (runtime / "ready").touch()
     with (case / "case.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)

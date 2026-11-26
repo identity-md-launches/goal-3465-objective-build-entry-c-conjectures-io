@@ -1,7 +1,7 @@
 {
   "architecture": "Linux x86-64",
   "host_prerequisites": [
-    "Python 3.12 with pip and venv",
+    "Python 3.12 with the standard venv module (pip, ensurepip and dpkg are not needed)",
     "GCC with ASan and UBSan runtime",
     "GNU build tools and libc headers"
   ],

@@ -2,14 +2,15 @@
 """Stage and verify the exact evaluator assets omitted from the source upload."""
 import argparse
 import fcntl
+import io
 from hashlib import file_digest
 import json
 from pathlib import Path
 import shutil
-import subprocess
 import sys
 import tarfile
 import tempfile
+import time
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parent
@@ -27,8 +28,17 @@ def checked(path, item):
 
 
 def download(destination, item):
-    with urlopen(item["url"], timeout=45) as response, destination.open("wb") as output:
-        shutil.copyfileobj(response, output)
+    error = None
+    for attempt in range(3):
+        try:
+            with urlopen(item["url"], timeout=60) as response, destination.open("wb") as output:
+                shutil.copyfileobj(response, output)
+            break
+        except OSError as exc:
+            error = exc
+            time.sleep(2 * (attempt + 1))
+    else:
+        raise ValueError(f"could not download {item['url']}: {error}")
     checked(destination, item)
 
 
@@ -74,27 +84,38 @@ def install(staged, destination):
     staged.replace(destination)
 
 
+def deb_data(package):
+    """Return the data tar member of a Debian package (an ar archive), without dpkg."""
+    with package.open("rb") as stream:
+        if stream.read(8) != b"!<arch>\n":
+            raise ValueError("QEMU package is not an ar archive")
+        while True:
+            header = stream.read(60)
+            if len(header) < 60:
+                raise ValueError("QEMU package has no data archive")
+            name = header[:16].decode().strip().rstrip("/")
+            size = int(header[48:58].decode().strip())
+            if name.startswith("data.tar"):
+                return name, stream.read(size)
+            stream.seek(size + size % 2, 1)
+
+
 def extract(package, needed, tmp, cache):
-    with subprocess.Popen(["dpkg-deb", "--fsys-tarfile", str(package)],
-                          stdout=subprocess.PIPE) as proc:
-        try:
-            with tarfile.open(fileobj=proc.stdout, mode="r|") as tar:
-                for member in tar:
-                    item = needed.get(member.name.removeprefix("./"))
-                    if item is None:
-                        continue
-                    if not member.isfile():
-                        raise ValueError(f"unexpected archive member type for {member.name}")
-                    staged = tmp / Path(item["path"]).name
-                    with tar.extractfile(member) as source, staged.open("wb") as output:
-                        shutil.copyfileobj(source, output)
-                    checked(staged, item)
-                    staged.chmod(0o755)
-            if proc.wait() != 0:
-                raise ValueError("could not read QEMU package")
-        finally:
-            if proc.poll() is None:
-                proc.kill()
+    name, payload = deb_data(package)
+    if not name.endswith((".tar", ".tar.xz", ".tar.gz", ".tar.bz2")):
+        raise ValueError(f"unsupported QEMU package compression {name}")
+    with tarfile.open(fileobj=io.BytesIO(payload), mode="r:*") as tar:
+        for member in tar:
+            item = needed.get(member.name.removeprefix("./"))
+            if item is None:
+                continue
+            if not member.isfile():
+                raise ValueError(f"unexpected archive member type for {member.name}")
+            staged = tmp / Path(item["path"]).name
+            with tar.extractfile(member) as source, staged.open("wb") as output:
+                shutil.copyfileobj(source, output)
+            checked(staged, item)
+            staged.chmod(0o755)
     for item in needed.values():
         staged = tmp / Path(item["path"]).name
         checked(staged, item)

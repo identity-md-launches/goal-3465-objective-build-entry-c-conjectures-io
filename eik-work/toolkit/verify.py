@@ -50,6 +50,37 @@ def local(root, relative):
     return path
 
 
+def identity(component):
+    """The evaluator's identity hash of one fingerprint component (eik/fingerprint.py: _id)."""
+    return sha256(json.dumps(component, sort_keys=True, default=list).encode()).hexdigest()
+
+
+def same_evaluator(report, manifest):
+    """Compare a `fingerprint --details` report with the pinned identities.
+
+    Returns None when both identities are the pinned ones, or the local host compiler line when
+    that line is the only difference: every hashed file, constant, flag, target compiler, emulator
+    and package version must still be the pinned one. Scores come from the pinned clang and
+    emulator on inputs whose digest the manifest pins, so such reports stay comparable; the host
+    compiler only builds the reference checker and the hard-input scanner.
+    """
+    pinned = manifest["fingerprint"]
+    require(not report["production_problems"], f"evaluator problems: {report['production_problems']}")
+    for field in ("verifier", "measurement"):
+        require(identity(pinned["details"][field]) == pinned[field], f"manifest {field} details are inconsistent")
+        require(identity(report["details"][field]) == report[field], f"reported {field} details are inconsistent")
+    if all(report[f] == pinned[f] for f in ("verifier", "measurement")):
+        return None
+    local_cc = report["details"]["tools"]["host_cc"]
+    require(isinstance(local_cc, str) and local_cc.startswith("gcc "), "host compiler is not GCC")
+    for field in ("verifier", "measurement"):
+        part = json.loads(json.dumps(report["details"][field]))
+        require(part["tools"]["host_cc"] == local_cc, f"inconsistent host compiler in {field}")
+        part["tools"]["host_cc"] = pinned["details"][field]["tools"]["host_cc"]
+        require(identity(part) == pinned[field], f"{field} fingerprint differs beyond the host compiler line")
+    return local_cc
+
+
 def snapshot(m):
     require(m["schema"] == 1, "unknown manifest schema")
     require(m["kit"]["commit"] == "5a32428ad4aa23bce737d50a738ace24ddeeed2e", "wrong kit pin")
@@ -164,12 +195,14 @@ def bootstrap(m, dependencies, fetch):
         code, out, err = runner(work, "bootstrap", "fingerprint", ["fingerprint", "--details"], dependencies)
         require(code == 0, f"fingerprint failed ({code}): {err}")
         report = json.loads(out)
-        require(not report["production_problems"], f"evaluator problems: {report['production_problems']}")
-        for identity in ("verifier", "measurement"):
-            require(report[identity] == m["fingerprint"][identity], f"{identity} fingerprint differs")
+        local_cc = same_evaluator(report, m)
     count = sum(e["status"] == "available" for e in entries.values())
     print(f"bootstrap passed: offline setup, pinned fingerprints, {count} verified sources, "
           f"{len(entries) - count} evidenced unavailable sources, both QEMU binaries")
+    if local_cc is not None:
+        print(f"note: host compiler is '{local_cc}', pinned '{m['fingerprint']['details']['tools']['host_cc']}'; "
+              "all other evaluator components match. Baseline packets from this machine must include "
+              "a fingerprint log (run.py ... fingerprint fingerprint --details).")
 
 
 def logs(directory, name, command, source):
@@ -184,10 +217,19 @@ def logs(directory, name, command, source):
     return record, out.read_text()
 
 
-def fingerprints(report, manifest):
-    for field in ("verifier", "measurement"):
-        require(report["fingerprint"][field] == manifest["fingerprint"][field],
-                f"wrong report fingerprint {field}")
+def fingerprints(report, manifest, directory):
+    """Require the pinned identities, or a retained fingerprint log proving only the host GCC line differs."""
+    got = report["fingerprint"]
+    if all(got[f] == manifest["fingerprint"][f] for f in ("verifier", "measurement")):
+        return
+    record = read_json(local(directory, "fingerprint.json"))
+    out = local(directory, "fingerprint.stdout")
+    require(record["stdout_sha256"] == digest(out) and record["exit_code"] == 0
+            and record["argv"][1:] == ["-m", "eik", "fingerprint", "--details"], "invalid fingerprint log")
+    proof = json.loads(out.read_text())
+    require(same_evaluator(proof, manifest) is not None
+            and all(got[f] == proof[f] for f in ("verifier", "measurement")),
+            "report fingerprint is neither pinned nor explained by the fingerprint log")
 
 
 def verify_score(report, manifest, static, seed):
@@ -265,7 +307,7 @@ def baseline(m, directory):
     if status == "gate-rejected":
         gate, gate_out = logs(directory, "gate", "gate", entry["sha256"])
         rep = json.loads(gate_out)
-        fingerprints(rep, m)
+        fingerprints(rep, m, directory)
         require(gate["exit_code"] == 1 and rep["kind"] == "gate" and rep["schema"] == "eik-report-1"
                 and rep["verdict"] == "rejected" and rep["stage"] and rep["reasons"]
                 and rep["sha256"] == entry["sha256"], "invalid gate rejection evidence")
@@ -286,7 +328,7 @@ def baseline(m, directory):
                 f"missing or unsuccessful required evaluation for seed {seed}")
         rep = json.loads(score_out)
         require(rep["sha256"] == entry["sha256"], "score source hash differs")
-        fingerprints(rep, m)
+        fingerprints(rep, m, directory)
         verify_score(rep, m, static, seed)
         rows[str(seed)] = {b: rep["scores"][b]["S"] for b in sorted(BOARDS)}
     require(packet["scores"] == rows, "packet score rows differ")

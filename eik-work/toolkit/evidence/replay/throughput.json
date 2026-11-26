@@ -1,0 +1,250 @@
+{
+  "context": "id50 source, one job/thread per shard, sixteen shards and the two evaluations running at once on a 32-core host. shard_seconds is the evaluator's own figure and excludes builds; it was 0.5 for every target shard whether 1 or 16 chunks, so it looks quantised: treat words_per_second on target rows as an upper bound and command_wall_seconds (build included) for the 16-chunk rows (1000:1016) as the conservative sizing figure. Throughput depends on the entry: evidence/throughput.json holds the far slower figures recorded earlier for the kit's template entry under contention.",
+  "evaluate_quick_wall_seconds": {
+    "evaluate-180434352": 170.513,
+    "evaluate-2851275305": 175.698
+  },
+  "shards": {
+    "host-exp-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 2.373,
+      "function": "exp",
+      "kind": "fullcheck",
+      "mismatches": 0,
+      "shard_seconds": 1.2,
+      "target": "host",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 13981013.3
+    },
+    "host-exp-1016": {
+      "chunks": [
+        1016,
+        1017
+      ],
+      "command_wall_seconds": 1.249,
+      "function": "exp",
+      "kind": "fullcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.1,
+      "target": "host",
+      "verdict": "passed",
+      "words_checked": 1048576,
+      "words_per_second": 10485760.0
+    },
+    "host-sigmoid-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 2.312,
+      "function": "sigmoid",
+      "kind": "fullcheck",
+      "mismatches": 0,
+      "shard_seconds": 1.2,
+      "target": "host",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 13981013.3
+    },
+    "host-tanh-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 2.302,
+      "function": "tanh",
+      "kind": "fullcheck",
+      "mismatches": 0,
+      "shard_seconds": 1.2,
+      "target": "host",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 13981013.3
+    },
+    "rv32im-exp-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.467,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "rv32im",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "rv32im-exp-1016": {
+      "chunks": [
+        1016,
+        1017
+      ],
+      "command_wall_seconds": 3.575,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "rv32im",
+      "verdict": "passed",
+      "words_checked": 1048576,
+      "words_per_second": 2097152.0
+    },
+    "rv32im-sigmoid-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.43,
+      "function": "sigmoid",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "rv32im",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "rv32im-tanh-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.498,
+      "function": "tanh",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "rv32im",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv6m-exp-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.812,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv6m",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv6m-exp-1016": {
+      "chunks": [
+        1016,
+        1017
+      ],
+      "command_wall_seconds": 3.813,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv6m",
+      "verdict": "passed",
+      "words_checked": 1048576,
+      "words_per_second": 2097152.0
+    },
+    "thumbv6m-sigmoid-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.758,
+      "function": "sigmoid",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv6m",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv6m-tanh-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.742,
+      "function": "tanh",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv6m",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv7em-exp-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.802,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv7em",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv7em-exp-1016": {
+      "chunks": [
+        1016,
+        1017
+      ],
+      "command_wall_seconds": 3.782,
+      "function": "exp",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv7em",
+      "verdict": "passed",
+      "words_checked": 1048576,
+      "words_per_second": 2097152.0
+    },
+    "thumbv7em-sigmoid-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.742,
+      "function": "sigmoid",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv7em",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    },
+    "thumbv7em-tanh-1000-1016": {
+      "chunks": [
+        1000,
+        1016
+      ],
+      "command_wall_seconds": 3.718,
+      "function": "tanh",
+      "kind": "targetcheck",
+      "mismatches": 0,
+      "shard_seconds": 0.5,
+      "target": "thumbv7em",
+      "verdict": "passed",
+      "words_checked": 16777216,
+      "words_per_second": 33554432.0
+    }
+  },
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+}
