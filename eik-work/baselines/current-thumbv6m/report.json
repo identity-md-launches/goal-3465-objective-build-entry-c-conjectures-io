@@ -1,0 +1,151 @@
+{
+  "target": "current-thumbv6m",
+  "status": "unavailable",
+  "board_reference": {
+    "promotion_id": 60,
+    "shipped": false,
+    "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+    "submission": 53,
+    "board": "thumbv6m",
+    "snapshot": {
+      "curl_exit_code": 0,
+      "http_status": 200,
+      "path": "api/boards.json",
+      "sha256": "a22bfb2e3671e4db56f91f9fce70351af23b99e43226c222f80c615bfaf457e8",
+      "stderr": "",
+      "timestamp_utc": "2026-11-26T06:51:23.515647+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/boards"
+    },
+    "submission_metadata": {
+      "curl_exit_code": 0,
+      "http_status": 200,
+      "path": "api/submission-53.json",
+      "sha256": "a5ac7584b8e8f83028c47c0cad1754682bf7fa5c5c5998a0619bab00dc39699f",
+      "stderr": "",
+      "timestamp_utc": "2026-11-26T06:51:25.038564+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53"
+    }
+  },
+  "source": {
+    "manifest_request": {
+      "curl_exit_code": 0,
+      "http_status": 403,
+      "path": "api/source-53.json",
+      "sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "stderr": "",
+      "timestamp_utc": "2026-11-26T06:51:25.586788+00:00",
+      "url": "https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source"
+    },
+    "hash_provenance": "api/submission-53.json#/source_sha256",
+    "recheck": {
+      "timestamp_utc": "2026-11-26T07:30:01Z",
+      "http_status": 403,
+      "curl_exit_code": 0,
+      "body_sha256": "36fcf1e25e475897b3a07b4cc6565238f668bcd7a46d51b84b3a08083b67c2c0",
+      "body_path": "source-recheck.body",
+      "reason_code": "SOURCE_WITHHELD"
+    }
+  },
+  "hashes": {
+    "source_advertised_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+    "source_local_sha256": null,
+    "kit_commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "kit_tree": "cfc22d5a8c626c73d62472a71c0024a87f50cd44",
+    "manifest_sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+    "rules_sha256": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+    "reference_digest_list_sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3",
+    "pinned_measurement_sha256": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "local_measurement_sha256": null
+  },
+  "advertised_historical": {
+    "S": {
+      "overall": null,
+      "rv32im": null,
+      "thumbv6m": null
+    },
+    "ratios": [
+      {
+        "S_ratio": 1.0125371510611774,
+        "board": "rv32im",
+        "evaluation_id": 157,
+        "provenance": "api/submission-53.json#/evaluations/0/decision/score",
+        "reference_promotion_id": 59
+      },
+      {
+        "S_ratio": 0.9684388424623065,
+        "board": "thumbv6m",
+        "evaluation_id": 158,
+        "provenance": "api/submission-53.json#/evaluations/1/decision/score",
+        "reference_promotion_id": 57
+      },
+      {
+        "S_ratio": 0.9856127029159292,
+        "board": "overall",
+        "evaluation_id": 159,
+        "provenance": "api/submission-53.json#/evaluations/2/decision/score",
+        "reference_promotion_id": 58
+      }
+    ]
+  },
+  "local_measurements": [
+    {
+      "seed": 180434352,
+      "expected_inputs_sha256": "8a246cce2fff8e2e0e06c5ec32bdd1f2ce93fa0d093c6be123f332b07ce85e30",
+      "rv32im": null,
+      "thumbv6m": null,
+      "overall": null,
+      "thumbv7em_diagnostic": null,
+      "status": "not-run"
+    },
+    {
+      "seed": 2851275305,
+      "expected_inputs_sha256": "76dbea8d847ce16ba787857171f22e7cd84a6e40a3abe9204dc2ca97fe811555",
+      "rv32im": null,
+      "thumbv6m": null,
+      "overall": null,
+      "thumbv7em_diagnostic": null,
+      "status": "not-run"
+    }
+  ],
+  "local_diagnostics": {
+    "size_bytes": null,
+    "stack_bytes": null,
+    "per_function_class_means": null,
+    "tail": null,
+    "mismatches": null
+  },
+  "techniques": null,
+  "proposed_experiments": [
+    "On a separately available baseline, replace one hot fixed-point 64-bit product with a 16-bit-limb high-product implementation. Preserve carry and sticky bits. Compare Thumbv6M typical and hard instruction counts and confirm rounding on both shared seeds.",
+    "On a separately available baseline, isolate one exp range-reduction change. Test a finer power-of-two table and a one-degree-shorter residual polynomial as a paired size/speed tradeoff. Compare the size-adjusted S and hard-tail term on both shared seeds."
+  ],
+  "commands": [
+    {
+      "command": "curl -fsS 'https://api.imd.fun/goals/245c10e6-494e-43f3-a3bf-bc67925b46dd/board?batch=e01-baseline-foundation'",
+      "exitCode": 0
+    },
+    {
+      "command": "cat eik-work/toolkit/kit/RULES.md",
+      "exitCode": 0
+    },
+    {
+      "command": "curl --disable --silent --show-error --max-time 30 --output eik-work/baselines/current-thumbv6m/source-recheck.body --write-out '%{http_code}\\n' https://conjectures.io/v1/competitions/exact-integer-kernels/submissions/53/source",
+      "exitCode": 0,
+      "httpStatus": 403
+    },
+    {
+      "command": "python3 eik-work/toolkit/packet.py current-thumbv6m eik-work/baselines/current-thumbv6m",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 eik-work/toolkit/verify.py baseline eik-work/baselines/current-thumbv6m",
+      "exitCode": 0
+    }
+  ],
+  "limitations": [
+    "The public source endpoint withheld pinned submission 53. The exact entry and its tables, polynomial degrees, range reduction, fast paths, hard-case handling and target macros are unavailable.",
+    "Static check, both quick evaluations and exhaustive checks were not run. Size, stack, per-function/class instruction means, tail, and mismatch counts are unknown.",
+    "Historical ratios are tied to their recorded evaluations and reference promotions. This packet establishes no local or live-board takeover ratio."
+  ],
+  "next_action": "When the exact source becomes public, verify its SHA-256 against the pinned manifest and run the offline static check and both shared-seed quick evaluations. Use the separately owned former-champion packets for available-source experiments in the meantime."
+}
