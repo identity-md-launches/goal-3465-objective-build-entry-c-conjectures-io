@@ -1,0 +1,6 @@
+Global outward residual [-250889, -33522] in units of 2^-54
+Magnitude words in changed guard domain: 8388352
+New fast returns per sign: 5632
+Refinements retained per sign: 260608
+New fast returns by positive targetcheck chunk: {952: 768, 953: 256, 954: 1280, 955: 256, 956: 1536, 957: 512, 958: 1024}
+Negative chunks = positive chunks + 2048

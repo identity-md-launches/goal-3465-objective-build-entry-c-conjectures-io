@@ -1,0 +1,1122 @@
+{
+  "additional_local_commands": {
+    "bootstrap": {
+      "argv": [
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "bootstrap",
+        "--offline",
+        "--dependencies",
+        "test/scratch/source-review/deps"
+      ],
+      "exit_code": 0
+    },
+    "freeze": {
+      "argv": [
+        "python3",
+        "eik-work/freeze/verify.py"
+      ],
+      "exit_code": 0
+    },
+    "prepare": {
+      "argv": [
+        "python3",
+        "test/scratch/source-review/restore/offline-runtime/prepare.py",
+        "test/scratch/source-review/deps"
+      ],
+      "exit_code": 0
+    },
+    "prove-bound": {
+      "argv": [
+        "python3",
+        "eik-work/trials/m0-tanh-refine/prove-bound.py"
+      ],
+      "exit_code": 0
+    },
+    "recover_payloads": {
+      "argv": [
+        "python3",
+        "test/scratch/source-review/restore_payload.py"
+      ],
+      "exit_code": 0,
+      "retained_script": "eik-work/final-validation/review/restore-payload.py"
+    },
+    "runtime-export": {
+      "argv": [
+        "python3",
+        "eik-work/offline-runtime/verify.py"
+      ],
+      "exit_code": 0
+    }
+  },
+  "artifacts": {
+    "evidence-sha256.json": {
+      "path": "eik-work/final-validation/review/evidence-sha256.json",
+      "sha256": "f7aa26a8952910df85b0d71994cd2d8274a21085596bf488fb85a2c0c02b33c2"
+    },
+    "ledger.json": {
+      "path": "eik-work/final-validation/review/ledger.json",
+      "sha256": "1a270a443283db6d9d3d538d4cd5e48e6f1d9707d81cec61154d212381c331b4"
+    },
+    "live-sources.json": {
+      "path": "eik-work/trials/m0-tanh-refine/live-sources.json",
+      "sha256": "9cf240ea0fdab8797de08851dfb75e5961e8b33941992e2ab1df6f7c10ffbb5a"
+    },
+    "probe.py": {
+      "path": "eik-work/final-validation/review/probe.py",
+      "sha256": "098d0e7598a51586cf189df234d5a83bc606f4d227487a2a1fd33d1ea579c74b"
+    },
+    "restore-payload.py": {
+      "path": "eik-work/final-validation/review/restore-payload.py",
+      "sha256": "5a137a2f3858cc905f88a317307d5a49e2df97f8462f895e0c8a6b9f3537decc"
+    },
+    "restored-payloads.json": {
+      "path": "eik-work/final-validation/review/logs/restored-payloads.json",
+      "sha256": "a7868bf86064fabac3c7b38132bfcf1d695f2b98f25f6a4197cc7a18b734c7be"
+    },
+    "review.md": {
+      "path": "eik-work/final-validation/review/review.md",
+      "sha256": "0b6b02325753af2f07b7cac68320be67a8c9a6a1d929b84c16527095899cc3ea"
+    }
+  },
+  "available_accepted_sources": {
+    "id37": {
+      "normalised_sha256": "1e535a962adb23a1bd991c9b849bf723e01580928b14833b64f1b19c14b05c90",
+      "path": "eik-work/toolkit/sources/id37.c",
+      "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef"
+    },
+    "id42": {
+      "normalised_sha256": "ac9fec2dd7f63bf4e670d58beff50451704af4d9e648c00ff9366ac823c790fb",
+      "path": "eik-work/toolkit/sources/id42.c",
+      "sha256": "7b7706df0acfc396b6d6fb19f86d99b4f4beb2146a5b32dbca623f959461b457"
+    },
+    "id46": {
+      "normalised_sha256": "93df82764bfc56ce941e6dfe09ef2373c6536dfbc232a35bb682eabca77756c2",
+      "path": "eik-work/toolkit/sources/id46.c",
+      "sha256": "788bb4ef7d88df26ec558306b8c038ca141dfc66404aa1d7bba6bb50774ff4b7"
+    },
+    "id48": {
+      "normalised_sha256": "04826e97988da9b0d0d5430b58c911cb5173913910a3192c4bffb8ee5ae3b2ac",
+      "path": "eik-work/toolkit/sources/id48.c",
+      "sha256": "c858c54e3e0b07b469d4445028a5ddd7c7ce579932bf42d4575cc3044ef61661"
+    },
+    "id50": {
+      "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+      "path": "eik-work/toolkit/sources/id50.c",
+      "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+    }
+  },
+  "commands": {
+    "check": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "check",
+        "check",
+        "entry.c"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "fingerprint": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "fingerprint",
+        "fingerprint",
+        "--details"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "gate": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "gate",
+        "gate",
+        "entry.c"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "guard-thumbv6m-neg": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "guard-thumbv6m-neg",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "tanh",
+        "--target",
+        "thumbv6m",
+        "--chunks",
+        "3000:3008",
+        "--jobs",
+        "2"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "guard-thumbv6m-pos": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "guard-thumbv6m-pos",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "tanh",
+        "--target",
+        "thumbv6m",
+        "--chunks",
+        "952:960",
+        "--jobs",
+        "2"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "guard-thumbv7em-neg": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "guard-thumbv7em-neg",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "tanh",
+        "--target",
+        "thumbv7em",
+        "--chunks",
+        "3000:3008",
+        "--jobs",
+        "2"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "guard-thumbv7em-pos": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "guard-thumbv7em-pos",
+        "targetcheck",
+        "entry.c",
+        "--function",
+        "tanh",
+        "--target",
+        "thumbv7em",
+        "--chunks",
+        "952:960",
+        "--jobs",
+        "2"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "isolated-bootstrap": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/verify.py",
+        "bootstrap",
+        "--offline",
+        "--dependencies",
+        "test/scratch/source-review/deps"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "network": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "cat",
+        "/proc/net/dev"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    },
+    "probe": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "env",
+        "-i",
+        "PATH=/usr/bin:/bin",
+        "LANG=C.UTF-8",
+        "HOME=$REPO/test/scratch/source-review/work/cases/isolated/home",
+        "TMPDIR=$REPO/test/scratch/source-review/work/cases/isolated/tmp",
+        "PYTHONNOUSERSITE=1",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONPATH=$REPO/test/scratch/source-review/work/cases/isolated/kit",
+        "EIK_BUILD_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build",
+        "ZIG_GLOBAL_CACHE_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build/zig-cache",
+        "ZIG_LOCAL_CACHE_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build/zig-cache",
+        "$REPO/test/scratch/source-review/work/runtime/bin/python",
+        "$REPO/eik-work/final-validation/review/probe.py",
+        "$REPO"
+      ],
+      "cwd": "$REPO/test/scratch/source-review/work/cases/isolated/kit",
+      "exit_code": 0
+    },
+    "setup": {
+      "argv": [
+        "unshare",
+        "-Urn",
+        "--",
+        "python3",
+        "eik-work/toolkit/run.py",
+        "--dependencies",
+        "test/scratch/source-review/deps",
+        "test/scratch/source-review/work",
+        "isolated",
+        "setup",
+        "setup"
+      ],
+      "cwd": "$REPO",
+      "exit_code": 0
+    }
+  },
+  "gaps": {
+    "champions": "Same-input live ratios and duplicate checks against private sources are unavailable.",
+    "host_path": "The GCC exhaustive run exercises the signed wide-character selector arm. Thumb correctness depends on target evidence.",
+    "portability": "Inherited table subobject byte-offset and struct-view idioms need a strict C11 review. The pinned runs establish empirical behavior.",
+    "runtime_export": "Three pinned payloads absent from the committed export. Fresh runs used exact scratch-restored files.",
+    "shared_packet": "Freeze only indexed packet runs. The 36 external --out reports lack a historical output-report hash and have 12 different image hashes per target."
+  },
+  "historical_exhaustive": {
+    "host": [
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/exhaustive-sigmoid.stdout",
+          "sha256": "38274b64c8b908737c057d05c2d6e104d8de4f0292c0b5c3fba12ea8731f6ea7"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/exhaustive-sigmoid.json",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "tanh",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/exhaustive-tanh.stdout",
+          "sha256": "3ffe77035f906fb88a07cb1c76d085d7631e9205d3504f2044ff0d6411033b94"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/exhaustive-tanh.json",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "exp",
+        "kind": "fullcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/exhaustive-exp.stdout",
+          "sha256": "b83b0e0906ee6f0d9b25da40716ef958c373d9abd533cc9f5f465fe598837419"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/exhaustive-exp.json",
+        "words_checked": 4294967296
+      }
+    ],
+    "merged": {
+      "path": "eik-work/trials/m0-tanh-refine/exhaustive-merged.stdout",
+      "sha256": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+    },
+    "target": [
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-sigmoid-all.stdout",
+          "sha256": "1f30254711be0eb38446837da6855567fd5e6e97362811aeadfcde3afc64cee8"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-sigmoid-all.json",
+        "target": "rv32im",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.stdout",
+          "sha256": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.json",
+        "target": "rv32im",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "exp",
+        "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-exp-all.stdout",
+          "sha256": "334556d2b3bfc1d2533aae73e72b3594370276b477219a0b43381627d3ddb35c"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-exp-all.json",
+        "target": "rv32im",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "77bdc033b39f49e57c688715e4e8ecda69b75fc87a4d29a734741b95bad2bb29",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-sigmoid-all.stdout",
+          "sha256": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-sigmoid-all.json",
+        "target": "thumbv6m",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-all.stdout",
+          "sha256": "3ac1c782783b0aa1a94efd3994885bd89bc9cded3a086d0c830bc67726111e3f"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-all.json",
+        "target": "thumbv6m",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "exp",
+        "image_sha256": "77bdc033b39f49e57c688715e4e8ecda69b75fc87a4d29a734741b95bad2bb29",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-exp-all.stdout",
+          "sha256": "fde3c89f59494fef8f248a621c4ab15184b0269ab8ad206702ae83268e3ffdf4"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv6m-exp-all.json",
+        "target": "thumbv6m",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "sigmoid",
+        "image_sha256": "1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.stdout",
+          "sha256": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-sigmoid-all.json",
+        "target": "thumbv7em",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.stdout",
+          "sha256": "7c3baa949ce7aacecd328a5cd32958032bd7d79665edc4880d3d6a58e1b90c27"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.json",
+        "target": "thumbv7em",
+        "words_checked": 4294967296
+      },
+      {
+        "chunk_hi": 4096,
+        "chunk_lo": 0,
+        "complete": true,
+        "exit_code": 0,
+        "function": "exp",
+        "image_sha256": "1636778c87b4e1961744cd6456297b5daf81d090910398dab1cd15004b403e3a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.stdout",
+          "sha256": "abcf746ab835fc73ee1b1937a5695ff3c53420e7df4f85004b3eecde30f119ad"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-exp-all.json",
+        "target": "thumbv7em",
+        "words_checked": 4294967296
+      }
+    ]
+  },
+  "manifests": {
+    "freeze": {
+      "path": "eik-work/freeze/manifest.json",
+      "sha256": "7ed07bccda548cfc10ad76ed9bd22a836e1d6984f3d1c208a912fec86d7f990f"
+    },
+    "offline-runtime": {
+      "path": "eik-work/offline-runtime/manifest.json",
+      "sha256": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950"
+    },
+    "toolkit": {
+      "path": "eik-work/toolkit/manifest.json",
+      "sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a"
+    }
+  },
+  "normalised_source_novelty_scope": "Distinct from the five available accepted sources",
+  "object_facts": {
+    "rv32im": {
+      "guest_image": {
+        "exports": [],
+        "machine": 243,
+        "undefined": [],
+        "writable_allocated_bytes": 0
+      },
+      "object": {
+        "exports": [
+          "eik_exp",
+          "eik_sigmoid",
+          "eik_tanh"
+        ],
+        "machine": 243,
+        "undefined": [
+          "__udivdi3"
+        ],
+        "writable_allocated_bytes": 0
+      }
+    },
+    "thumbv6m": {
+      "guest_image": {
+        "exports": [],
+        "machine": 40,
+        "undefined": [],
+        "writable_allocated_bytes": 0
+      },
+      "object": {
+        "exports": [
+          "eik_exp",
+          "eik_sigmoid",
+          "eik_tanh"
+        ],
+        "machine": 40,
+        "undefined": [],
+        "writable_allocated_bytes": 0
+      }
+    },
+    "thumbv7em": {
+      "guest_image": {
+        "exports": [],
+        "machine": 40,
+        "undefined": [],
+        "writable_allocated_bytes": 0
+      },
+      "object": {
+        "exports": [
+          "eik_exp",
+          "eik_sigmoid",
+          "eik_tanh"
+        ],
+        "machine": 40,
+        "undefined": [],
+        "writable_allocated_bytes": 0
+      }
+    }
+  },
+  "offline_export": {
+    "scratch_restored_payloads": {
+      "qemu/source/qemu_7.2+dfsg.orig.tar.xz": "91aca71520040edc40b8d437aa3004dae614f58e286cf653ee8996c07af2962f",
+      "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239",
+      "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl": "ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54"
+    },
+    "status": "incomplete"
+  },
+  "retained_freeze_objects": {
+    "rv32im": {
+      "guest_image": {
+        "path": "eik-work/freeze/evidence/objects/guest-rv32im.elf",
+        "sections": {
+          ".rodata": {
+            "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+            "size": 13476
+          },
+          ".text": {
+            "sha256": "8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85",
+            "size": 7380
+          }
+        },
+        "sha256": "81d8958ee4a94a41dd30bce8c8d3a331a577b98962c3ea90e232020b1346d3c9"
+      },
+      "object": {
+        "path": "eik-work/freeze/evidence/objects/sub-rv32im.o",
+        "sections": {
+          ".rodata": {
+            "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+            "size": 13476
+          },
+          ".text": {
+            "sha256": "55d8b1bd88d62f23913dee50e2de08c6c505c8ef972198e9e976dbe5ed1bd633",
+            "size": 5484
+          }
+        },
+        "sha256": "e71da802c62bb10ef34e6ad6c33459ef08d9341c24b3ff05f9fa633aa24f1520"
+      }
+    },
+    "thumbv6m": {
+      "guest_image": {
+        "path": "eik-work/freeze/evidence/objects/guest-thumbv6m.elf",
+        "sections": {
+          ".ARM.exidx": {
+            "sha256": "02bcad70d338dfaf3cf25a8bfeff397b21b41e9afa93b038eafd67b642c48ac9",
+            "size": 112
+          },
+          ".rodata": {
+            "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4",
+            "size": 15760
+          },
+          ".text": {
+            "sha256": "01d706cdcbb125e98f9dc709b91588f88e50533558a2af8fa4ee70e608751766",
+            "size": 5064
+          }
+        },
+        "sha256": "21368c7e26d748d024bf0e8b55d47a1cd0fa8b85538ec2c82bcc198bdf3bfc5c"
+      },
+      "object": {
+        "path": "eik-work/freeze/evidence/objects/sub-thumbv6m.o",
+        "sections": {
+          ".ARM.exidx": {
+            "sha256": "186dec35758b51fe06bdcde75fc90f2bc36206315d9804c02e444bd41d7c2fd7",
+            "size": 104
+          },
+          ".rodata": {
+            "sha256": "8b1a7ba2ba463fc17d7a047baa7ece50cbe1681cc2751889e24d7f209b130963",
+            "size": 15740
+          },
+          ".rodata.cst16": {
+            "sha256": "d0170913d7eb1d4b13fbba99224294ea928a1b2b914c9fd2a042fa7fe97ec746",
+            "size": 16
+          },
+          ".rodata.cst4": {
+            "sha256": "d7173dd8a9e81deded3f2e4719ef149effbd21afd81da9d10ed50b5dff69a708",
+            "size": 4
+          },
+          ".text": {
+            "sha256": "b39dbbf25065cf4c8a0384a25b4107129b007c0379e2735570a9164c7d8b36ec",
+            "size": 4644
+          }
+        },
+        "sha256": "29698ab6852ac8a248b8396a9fcf4203d9f5a0c19cfc76bc5d12aad8147431ef"
+      }
+    },
+    "thumbv7em": {
+      "guest_image": {
+        "path": "eik-work/freeze/evidence/objects/guest-thumbv7em.elf",
+        "sections": {
+          ".ARM.exidx": {
+            "sha256": "4bc5cdbe7170df514edc47d8024fb953593b97a629bde9776fa5e5f560a424ad",
+            "size": 112
+          },
+          ".rodata": {
+            "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4",
+            "size": 15760
+          },
+          ".text": {
+            "sha256": "29cf36d7b5200d241597c9270675f91b68fe0e59650a54f58cecdacfb832c397",
+            "size": 5928
+          }
+        },
+        "sha256": "48de0ea1940bc91803ca63d9e819a1b55026409e02089883d408de353363ace8"
+      },
+      "object": {
+        "path": "eik-work/freeze/evidence/objects/sub-thumbv7em.o",
+        "sections": {
+          ".ARM.exidx": {
+            "sha256": "786bf2b84eedd5ef9b101581daf6553944c2618356c3e7492ccd5c5891661de6",
+            "size": 104
+          },
+          ".rodata": {
+            "sha256": "8b1a7ba2ba463fc17d7a047baa7ece50cbe1681cc2751889e24d7f209b130963",
+            "size": 15740
+          },
+          ".rodata.cst16": {
+            "sha256": "d0170913d7eb1d4b13fbba99224294ea928a1b2b914c9fd2a042fa7fe97ec746",
+            "size": 16
+          },
+          ".rodata.cst4": {
+            "sha256": "d7173dd8a9e81deded3f2e4719ef149effbd21afd81da9d10ed50b5dff69a708",
+            "size": 4
+          },
+          ".text": {
+            "sha256": "0e46edb79063b35a43fa7bcc05807514eebfbaff39594a7787d9a4fc046daf87",
+            "size": 5390
+          }
+        },
+        "sha256": "a3d16db18998114b0104013e65b7bb09e2b8631a720e55fbb0190f2aa1370828"
+      }
+    }
+  },
+  "review_verdict": "verified negative fallback",
+  "reviewed_commit": "dacbfa31d0b52d8536e93daa962b32855225106d",
+  "rounding_guard": {
+    "certificate": {
+      "path": "eik-work/trials/m0-tanh-refine/prove-bound.py",
+      "sha256": "4e2046808edaf6bd2b58721c343c9dc5a4b8fb0b3ab4869e26a64b105783adc9"
+    },
+    "changed_positive_chunks": {
+      "952": 768,
+      "953": 256,
+      "954": 1280,
+      "955": 256,
+      "956": 1536,
+      "957": 512,
+      "958": 1024
+    },
+    "domain_words_per_sign": 8388352,
+    "first_cell_bypasses_guard": 32768,
+    "fresh_thumb_checks": [
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "0331e646b52bfcd60b3205846a6bc46ea524d2ce72bd71d872caaccf1efd1072",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/final-validation/review/logs/guard-thumbv6m-pos.stdout",
+          "sha256": "7e5cd1e23ec9ae6522672683563bf623c9830f2dedae548c6cd3c7cf82d28798"
+        },
+        "run": "eik-work/final-validation/review/logs/guard-thumbv6m-pos.json",
+        "target": "thumbv6m",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "0331e646b52bfcd60b3205846a6bc46ea524d2ce72bd71d872caaccf1efd1072",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/final-validation/review/logs/guard-thumbv6m-neg.stdout",
+          "sha256": "d41e8c29ad19eb0734b76b8d4a7c021b3e442df79c63f7aed48399ee8549f379"
+        },
+        "run": "eik-work/final-validation/review/logs/guard-thumbv6m-neg.json",
+        "target": "thumbv6m",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "4311157487368f462ad2213ed97467345ca35768b1c53be628af4d08ab2a0c1f",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/final-validation/review/logs/guard-thumbv7em-pos.stdout",
+          "sha256": "38209279bf46c75a281d69814493d4686b91b24cb71f8f6be60ca54348edc6ec"
+        },
+        "run": "eik-work/final-validation/review/logs/guard-thumbv7em-pos.json",
+        "target": "thumbv7em",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "4311157487368f462ad2213ed97467345ca35768b1c53be628af4d08ab2a0c1f",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/final-validation/review/logs/guard-thumbv7em-neg.stdout",
+          "sha256": "35f7461a487abb540077b6ef435c9a044b9b5b0bf4c13cd5725dedd59b7316ef"
+        },
+        "run": "eik-work/final-validation/review/logs/guard-thumbv7em-neg.json",
+        "target": "thumbv7em",
+        "words_checked": 8388608
+      }
+    ],
+    "historical_guard_checks": [
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-positive.stdout",
+          "sha256": "368b0b4a632be80144722d1b9b20592e095ca634ebcea6d33092236abb37dfa1"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-positive.json",
+        "target": "thumbv6m",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "5b1450e24c8ce9713297edded657f39e10acef465ced58b40e514cdd9f523928",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-negative.stdout",
+          "sha256": "d3f42c881ed4738aea168a80474c6aad5b7095988623276308643904965fabe4"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-negative.json",
+        "target": "thumbv6m",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 960,
+        "chunk_lo": 952,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-positive.stdout",
+          "sha256": "d47d275b222c0fe0ad227bcec7bda80a3d57c6aa3b4d2d76bffc7a2e7962c367"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-positive.json",
+        "target": "thumbv7em",
+        "words_checked": 8388608
+      },
+      {
+        "chunk_hi": 3008,
+        "chunk_lo": 3000,
+        "complete": false,
+        "exit_code": 0,
+        "function": "tanh",
+        "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+        "kind": "targetcheck",
+        "mismatches": 0,
+        "report": {
+          "path": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-negative.stdout",
+          "sha256": "6aad4421af6a5553cef170de1510000698a7da35ed7f689bf55ed14fdb63338d"
+        },
+        "run": "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-negative.json",
+        "target": "thumbv7em",
+        "words_checked": 8388608
+      }
+    ],
+    "lower_margin_q54": 3063,
+    "negative_chunk_offset": 2048,
+    "new_cutoff": 253952,
+    "new_fast_per_sign": 5632,
+    "old_cutoff": 262144,
+    "residual_q54": [
+      -250889,
+      -33522
+    ],
+    "retained_refinements_per_sign": 260608,
+    "upper_margin_q54": 33523
+  },
+  "schema": "eik-source-review-1",
+  "selection": {
+    "boards_at_0_970_vs_id50": [],
+    "candidate_S": {
+      "1874435642": {
+        "overall": 34.00061523046087,
+        "rv32im": 28.52271424241966,
+        "thumbv6m": 40.53056894320931,
+        "thumbv7em": 39.96971754896375
+      },
+      "1947282751": {
+        "overall": 33.90743967053243,
+        "rv32im": 28.517414314250885,
+        "thumbv6m": 40.316224056689975,
+        "thumbv7em": 39.759604645232244
+      }
+    },
+    "chosen": "m0-tanh-refine",
+    "control_S": {
+      "1874435642": {
+        "overall": 33.99419362722625,
+        "rv32im": 28.52271424241966,
+        "thumbv6m": 40.515260593492414,
+        "thumbv7em": 39.95633850332885
+      },
+      "1947282751": {
+        "overall": 33.90189464529962,
+        "rv32im": 28.517414314250885,
+        "thumbv6m": 40.30303897386101,
+        "thumbv7em": 39.74954420309734
+      }
+    },
+    "live_takeover": null,
+    "original_order": [
+      "m0-tanh-refine",
+      "m0-exp-reduction",
+      "rv-exp-loads",
+      "m0-exp-layout",
+      "m0-sigmoid-cell",
+      "rv-tanh-quadratic",
+      "rv-exp-interval"
+    ],
+    "rank_with_shared_target_evidence": [
+      "m0-tanh-refine",
+      "m0-exp-reduction",
+      "rv-exp-loads",
+      "m0-exp-layout",
+      "m0-sigmoid-cell",
+      "rv-tanh-quadratic",
+      "rv-exp-interval",
+      "shared-small-sigmoid"
+    ],
+    "ratio_vs_id50": {
+      "1874435642": {
+        "overall": 1.000188902943398,
+        "rv32im": 1.0,
+        "thumbv6m": 1.000377841571118,
+        "thumbv7em": 1.0003348416330435
+      },
+      "1947282751": {
+        "overall": 1.0001635609245687,
+        "rv32im": 1.0,
+        "thumbv6m": 1.0003271486013132,
+        "thumbv7em": 1.0002530957860423
+      }
+    },
+    "ratio_vs_live_champions": {
+      "overall": null,
+      "rv32im": null,
+      "thumbv6m": null
+    }
+  },
+  "selector": {
+    "host": 1,
+    "rv32im": 1,
+    "thumbv6m": 0,
+    "thumbv7em": 0
+  },
+  "source": {
+    "bytes": 166756,
+    "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+    "path": "entry.c",
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  },
+  "special_and_threshold_probe": {
+    "path": "eik-work/final-validation/review/logs/probe.stdout",
+    "sha256": "693ad229ebfe1190972a1c2c5dec8308a9c327c2f5fde4821fd0bcaeea0c61d8"
+  },
+  "static": {
+    "bytes": {
+      "rv32im": 18960,
+      "thumbv6m": 20508,
+      "thumbv7em": 21254
+    },
+    "functions": 42,
+    "stack_bound": {
+      "rv32im": 176,
+      "thumbv6m": 312,
+      "thumbv7em": 280
+    }
+  },
+  "status": "incomplete",
+  "tools": {
+    "evaluator": {
+      "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+      "sandbox": "none",
+      "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+    },
+    "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "kit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+    "measurement_constants": {
+      "cap_instr": 20000000,
+      "cflags": [
+        "-std=c11",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ftrivial-auto-var-init=zero",
+        "-fstack-size-section",
+        "-fno-jump-tables",
+        "-Werror=vla",
+        "-Werror=implicit-function-declaration",
+        "-Werror=int-conversion",
+        "-Wno-unused-command-line-argument",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables"
+      ],
+      "functions": [
+        "sigmoid",
+        "tanh",
+        "exp"
+      ],
+      "hard_fresh": true,
+      "hard_samples": 67108864,
+      "hard_threshold": -18,
+      "set_sizes": {
+        "hard": 300,
+        "typical": 2000,
+        "uniform": 1000,
+        "wide": 1000
+      },
+      "sets": {
+        "hard": 0.1,
+        "typical": 0.55,
+        "uniform": 0.05,
+        "wide": 0.3
+      },
+      "size": [
+        65536,
+        0.5
+      ],
+      "tail": [
+        20,
+        1000000.0,
+        0.1
+      ],
+      "takeover_ratio": 0.97,
+      "target_sample": 32768,
+      "targets": {
+        "rv32im": {
+          "cc": [
+            "-target",
+            "riscv32-freestanding-none",
+            "-mcpu=generic_rv32+m"
+          ],
+          "scored": true
+        },
+        "thumbv6m": {
+          "cc": [
+            "-target",
+            "thumb-freestanding-eabi",
+            "-mcpu=cortex_m0plus"
+          ],
+          "scored": true
+        },
+        "thumbv7em": {
+          "cc": [
+            "-target",
+            "thumb-freestanding-eabi",
+            "-mcpu=cortex_m4"
+          ],
+          "scored": false
+        }
+      }
+    },
+    "platform": "Linux x86_64",
+    "python": "Python 3.12.3",
+    "tool_versions": {
+      "capstone": "5.0.9",
+      "clang": "clang version 22.1.8",
+      "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "machine": "x86_64",
+      "pyelftools": "0.33",
+      "unicorn": "2.1.4"
+    }
+  }
+}

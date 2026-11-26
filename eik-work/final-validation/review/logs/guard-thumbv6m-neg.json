@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/source-review/work/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/entry.c",
+    "--function",
+    "tanh",
+    "--target",
+    "thumbv6m",
+    "--chunks",
+    "3000:3008",
+    "--jobs",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 1.108,
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "d41e8c29ad19eb0734b76b8d4a7c021b3e442df79c63f7aed48399ee8549f379"
+}

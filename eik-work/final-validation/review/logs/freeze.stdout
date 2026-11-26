@@ -1,0 +1,6 @@
+seed 1874435642: S {"overall": 34.00061523046087, "rv32im": 28.52271424241966, "thumbv6m": 40.53056894320931} ratio/id50 {"overall": 1.000188902943398, "rv32im": 1.0, "thumbv6m": 1.000377841571118}
+seed 1947282751: S {"overall": 33.90743967053243, "rv32im": 28.517414314250885, "thumbv6m": 40.316224056689975} ratio/id50 {"overall": 1.0001635609245687, "rv32im": 1.0, "thumbv6m": 1.0003271486013132}
+chosen m0-tanh-refine entry.c sha256 593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b normalised adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8
+best board vs id50: rv32im worse-seed ratio 1.000000000 (overall 1.000188903); boards taken at 0.970: none
+manifest: eik-work/freeze/manifest.json
+PASS

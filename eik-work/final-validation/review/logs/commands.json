@@ -1,0 +1,227 @@
+{
+  "check": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "check",
+      "check",
+      "entry.c"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "fingerprint": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "fingerprint",
+      "fingerprint",
+      "--details"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "gate": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "gate",
+      "gate",
+      "entry.c"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "guard-thumbv6m-neg": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "guard-thumbv6m-neg",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "tanh",
+      "--target",
+      "thumbv6m",
+      "--chunks",
+      "3000:3008",
+      "--jobs",
+      "2"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "guard-thumbv6m-pos": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "guard-thumbv6m-pos",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "tanh",
+      "--target",
+      "thumbv6m",
+      "--chunks",
+      "952:960",
+      "--jobs",
+      "2"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "guard-thumbv7em-neg": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "guard-thumbv7em-neg",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "tanh",
+      "--target",
+      "thumbv7em",
+      "--chunks",
+      "3000:3008",
+      "--jobs",
+      "2"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "guard-thumbv7em-pos": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "guard-thumbv7em-pos",
+      "targetcheck",
+      "entry.c",
+      "--function",
+      "tanh",
+      "--target",
+      "thumbv7em",
+      "--chunks",
+      "952:960",
+      "--jobs",
+      "2"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "isolated-bootstrap": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/verify.py",
+      "bootstrap",
+      "--offline",
+      "--dependencies",
+      "test/scratch/source-review/deps"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "network": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "cat",
+      "/proc/net/dev"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  },
+  "probe": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "env",
+      "-i",
+      "PATH=/usr/bin:/bin",
+      "LANG=C.UTF-8",
+      "HOME=$REPO/test/scratch/source-review/work/cases/isolated/home",
+      "TMPDIR=$REPO/test/scratch/source-review/work/cases/isolated/tmp",
+      "PYTHONNOUSERSITE=1",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "PYTHONPATH=$REPO/test/scratch/source-review/work/cases/isolated/kit",
+      "EIK_BUILD_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build",
+      "ZIG_GLOBAL_CACHE_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build/zig-cache",
+      "ZIG_LOCAL_CACHE_DIR=$REPO/test/scratch/source-review/work/cases/isolated/build/zig-cache",
+      "$REPO/test/scratch/source-review/work/runtime/bin/python",
+      "$REPO/eik-work/final-validation/review/probe.py",
+      "$REPO"
+    ],
+    "cwd": "$REPO/test/scratch/source-review/work/cases/isolated/kit",
+    "exit_code": 0
+  },
+  "setup": {
+    "argv": [
+      "unshare",
+      "-Urn",
+      "--",
+      "python3",
+      "eik-work/toolkit/run.py",
+      "--dependencies",
+      "test/scratch/source-review/deps",
+      "test/scratch/source-review/work",
+      "isolated",
+      "setup",
+      "setup"
+    ],
+    "cwd": "$REPO",
+    "exit_code": 0
+  }
+}
