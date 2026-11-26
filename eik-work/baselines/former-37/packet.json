@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "180434352": {
+      "overall": 39.510106342429395,
+      "rv32im": 32.12646337706633,
+      "thumbv6m": 48.590736081595686
+    },
+    "2851275305": {
+      "overall": 39.53282357615615,
+      "rv32im": 32.07613564496676,
+      "thumbv6m": 48.72295581992033
+    }
+  },
+  "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+  "source": "id37",
+  "status": "measured",
+  "techniques": "Exact published source id37; dual _r (widening 32x32->64 multiply) and _t (16-bit-limb multiply) implementations selected by EIK_SEL=(L'\\0'-1<0), not target #ifdefs; EIK_STATS is optional. Uses extensive static anchor/coefficient tables including 256-entry paired exp tables and 32/64-cell tables. Sigmoid/tanh cell approximations are cubic; exp uses cubic cell polynomials after ln2-scaled power-of-two range reduction and table lookup. Fast paths classify sign/exponent, handle tiny/large/saturated inputs, and accept guarded rounded estimates; midpoint/hard cases use integer comparison/refinement routines plus sparse exceptional-word corrections. No source edits or optimization."
+}

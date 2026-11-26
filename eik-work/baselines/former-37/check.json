@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik-former37/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/eik-work/toolkit/sources/id37.c"
+  ],
+  "exit_code": 0,
+  "seconds": 8.35,
+  "source_sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "7d3d4256fb09b20abfaaad10d93946f31032f81a20245b6125bd6320c27567d1"
+}

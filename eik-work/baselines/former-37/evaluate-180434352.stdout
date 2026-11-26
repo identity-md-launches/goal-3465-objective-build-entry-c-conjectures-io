@@ -1,0 +1,466 @@
+{
+ "entry": "id37",
+ "file": "$REPO/eik-work/toolkit/sources/id37.c",
+ "seed": 180434352,
+ "started": "2026-11-26T08:31:09",
+ "status": "would-take-over-after-full-check",
+ "sha256": "4879a72cdbed7542ec2f55c9a5e595ce067dc2136b48158de7efa4d6afb3a1ef",
+ "fingerprint": {
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8",
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none"
+ },
+ "bytes": {
+  "rv32im": 19048,
+  "thumbv6m": 20018,
+  "thumbv7em": 20672
+ },
+ "normalised_sha256": "1e535a962adb23a1bd991c9b849bf723e01580928b14833b64f1b19c14b05c90",
+ "hard_pool": {
+  "source": "hardscan",
+  "samples": 67108864,
+  "threshold_log2_ulps": -18,
+  "sizes": {
+   "sigmoid": 575,
+   "tanh": 209,
+   "exp": 440
+  }
+ },
+ "inputs_sha256": "8a246cce2fff8e2e0e06c5ec32bdd1f2ce93fa0d093c6be123f332b07ce85e30",
+ "measurements": {
+  "rv32im": {
+   "target": "rv32im",
+   "functions": {
+    "sigmoid": {
+     "typical": {
+      "n": 2000,
+      "mean": 30.676,
+      "median": 29,
+      "p999": 91,
+      "max": 158
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 24.873,
+      "median": 21,
+      "p999": 190,
+      "max": 190
+     },
+     "hard": {
+      "n": 300,
+      "mean": 42.99,
+      "median": 21,
+      "p999": 197,
+      "max": 197
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 14.076,
+      "median": 12,
+      "p999": 59,
+      "max": 67
+     }
+    },
+    "tanh": {
+     "typical": {
+      "n": 2000,
+      "mean": 26.4725,
+      "median": 25,
+      "p999": 84,
+      "max": 89
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 15.635,
+      "median": 7,
+      "p999": 89,
+      "max": 89
+     },
+     "hard": {
+      "n": 300,
+      "mean": 69.05666666666667,
+      "median": 84,
+      "p999": 89,
+      "max": 89
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 9.305,
+      "median": 9,
+      "p999": 32,
+      "max": 32
+     }
+    },
+    "exp": {
+     "typical": {
+      "n": 2000,
+      "mean": 35.59,
+      "median": 28,
+      "p999": 105,
+      "max": 105
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 29.288,
+      "median": 24,
+      "p999": 161,
+      "max": 161
+     },
+     "hard": {
+      "n": 300,
+      "mean": 49.13333333333333,
+      "median": 34,
+      "p999": 161,
+      "max": 161
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 17.108,
+      "median": 16,
+      "p999": 87,
+      "max": 161
+     }
+    }
+   },
+   "wrong": [],
+   "sample": {
+    "words": 98304,
+    "mismatches": 0,
+    "examples": []
+   },
+   "stack": 8
+  },
+  "thumbv6m": {
+   "target": "thumbv6m",
+   "functions": {
+    "sigmoid": {
+     "typical": {
+      "n": 2000,
+      "mean": 48.8295,
+      "median": 41,
+      "p999": 175,
+      "max": 178
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 34.167,
+      "median": 23,
+      "p999": 212,
+      "max": 225
+     },
+     "hard": {
+      "n": 300,
+      "mean": 65.56333333333333,
+      "median": 23,
+      "p999": 228,
+      "max": 228
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 19.854,
+      "median": 19,
+      "p999": 161,
+      "max": 163
+     }
+    },
+    "tanh": {
+     "typical": {
+      "n": 2000,
+      "mean": 44.119,
+      "median": 40,
+      "p999": 178,
+      "max": 178
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 22.508,
+      "median": 10,
+      "p999": 171,
+      "max": 177
+     },
+     "hard": {
+      "n": 300,
+      "mean": 110.54333333333334,
+      "median": 129,
+      "p999": 178,
+      "max": 178
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 15.243,
+      "median": 17,
+      "p999": 47,
+      "max": 47
+     }
+    },
+    "exp": {
+     "typical": {
+      "n": 2000,
+      "mean": 50.975,
+      "median": 49,
+      "p999": 129,
+      "max": 129
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 41.173,
+      "median": 36,
+      "p999": 164,
+      "max": 164
+     },
+     "hard": {
+      "n": 300,
+      "mean": 74.52,
+      "median": 91,
+      "p999": 258,
+      "max": 258
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 21.081,
+      "median": 19,
+      "p999": 123,
+      "max": 164
+     }
+    }
+   },
+   "wrong": [],
+   "sample": {
+    "words": 98304,
+    "mismatches": 0,
+    "examples": []
+   },
+   "stack": 64
+  },
+  "thumbv7em": {
+   "target": "thumbv7em",
+   "functions": {
+    "sigmoid": {
+     "typical": {
+      "n": 2000,
+      "mean": 46.07,
+      "median": 42,
+      "p999": 163,
+      "max": 166
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 35.252,
+      "median": 29,
+      "p999": 202,
+      "max": 209
+     },
+     "hard": {
+      "n": 300,
+      "mean": 62.45666666666666,
+      "median": 29,
+      "p999": 209,
+      "max": 209
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 21.68,
+      "median": 20,
+      "p999": 150,
+      "max": 151
+     }
+    },
+    "tanh": {
+     "typical": {
+      "n": 2000,
+      "mean": 40.3155,
+      "median": 36,
+      "p999": 146,
+      "max": 146
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 23.402,
+      "median": 12,
+      "p999": 138,
+      "max": 146
+     },
+     "hard": {
+      "n": 300,
+      "mean": 92.96333333333334,
+      "median": 107,
+      "p999": 146,
+      "max": 146
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 18.422,
+      "median": 22,
+      "p999": 44,
+      "max": 44
+     }
+    },
+    "exp": {
+     "typical": {
+      "n": 2000,
+      "mean": 48.72,
+      "median": 47,
+      "p999": 118,
+      "max": 118
+     },
+     "wide": {
+      "n": 1000,
+      "mean": 39.446,
+      "median": 36,
+      "p999": 145,
+      "max": 145
+     },
+     "hard": {
+      "n": 300,
+      "mean": 67.90666666666667,
+      "median": 75,
+      "p999": 227,
+      "max": 227
+     },
+     "uniform": {
+      "n": 1000,
+      "mean": 20.688,
+      "median": 20,
+      "p999": 113,
+      "max": 145
+     }
+    }
+   },
+   "wrong": [],
+   "sample": {
+    "words": 98304,
+    "mismatches": 0,
+    "examples": []
+   },
+   "stack": 48
+  }
+ },
+ "scores": {
+  "rv32im": {
+   "S": 32.12646337706633,
+   "functions": {
+    "sigmoid": {
+     "geo_mean_instr": 28.65619074908464,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 23.61146705567933,
+     "tail_factor": 1.0
+    },
+    "exp": {
+     "geo_mean_instr": 33.42218918002756,
+     "tail_factor": 1.0
+    }
+   },
+   "size_factor": 1.136067521788428,
+   "bytes": 19048
+  },
+  "thumbv6m": {
+   "S": 48.590736081595686,
+   "functions": {
+    "sigmoid": {
+     "geo_mean_instr": 43.19324276262476,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 37.47589065680513,
+     "tail_factor": 1.0
+    },
+    "exp": {
+     "geo_mean_instr": 47.51733525444622,
+     "tail_factor": 1.0
+    }
+   },
+   "size_factor": 1.1425631008627597,
+   "bytes": 20018
+  },
+  "thumbv7em": {
+   "S": 46.91366321221009,
+   "functions": {
+    "sigmoid": {
+     "geo_mean_instr": 42.20811812264799,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 35.80004131658374,
+     "tail_factor": 1.0
+    },
+    "exp": {
+     "geo_mean_instr": 45.29153726531413,
+     "tail_factor": 1.0
+    }
+   },
+   "size_factor": 1.1469218314689105,
+   "bytes": 20672,
+   "reported_only": true
+  },
+  "overall": {
+   "S": 39.510106342429395
+  }
+ },
+ "comparison": {
+  "rv32im": {
+   "champion": "incumbent",
+   "champion_S": 153958.87963064067,
+   "entry_S": 32.12646337706633,
+   "ratio": 0.00020866911641693038,
+   "beats": true
+  },
+  "thumbv6m": {
+   "champion": "incumbent",
+   "champion_S": 135385.1721546632,
+   "entry_S": 48.590736081595686,
+   "ratio": 0.0003589073700485156,
+   "beats": true
+  },
+  "overall": {
+   "champion": "incumbent",
+   "champion_S": 144373.6451833691,
+   "entry_S": 39.510106342429395,
+   "ratio": 0.00027366564231475605,
+   "beats": true
+  }
+ },
+ "candidate_boards": [
+  "rv32im",
+  "thumbv6m",
+  "overall"
+ ],
+ "host_check": {
+  "ok": true,
+  "complete": false,
+  "quick": true,
+  "functions": {
+   "sigmoid": {
+    "verdict": "passed",
+    "complete": false,
+    "words_checked": 134217728,
+    "mismatches": 0,
+    "seconds": 15.0,
+    "examples": []
+   },
+   "tanh": {
+    "verdict": "passed",
+    "complete": false,
+    "words_checked": 134217728,
+    "mismatches": 0,
+    "seconds": 14.7,
+    "examples": []
+   },
+   "exp": {
+    "verdict": "passed",
+    "complete": false,
+    "words_checked": 134217728,
+    "mismatches": 0,
+    "seconds": 15.7,
+    "examples": []
+   }
+  }
+ },
+ "seconds": 534.1,
+ "boards": [
+  "rv32im",
+  "thumbv6m",
+  "overall"
+ ]
+}
