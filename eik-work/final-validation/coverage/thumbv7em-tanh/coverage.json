@@ -1,0 +1,161 @@
+{
+ "artifacts": {
+  "new/logs/bootstrap.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/logs/bootstrap.stdout": "d788abbfb43acb29c0b706380516af85a14b1ad806f2e30eefa976ea537ee766",
+  "new/logs/fingerprint.json": "595d7aafac5bb3b4d5af12dd8ec44470e8b1cc6451526685df8df117037e00c3",
+  "new/logs/fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/logs/fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+  "new/logs/install.log": "aef9fb4eb575e90aea2c5eee5d2c477392ef3978efbeb8e27299e40612a4ee6e",
+  "new/logs/prepare.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/logs/prepare.stdout": "48bf3f5558a02f0a7332f7b6919ada290d986338a7c15ea8a21496fb133c1e99",
+  "new/logs/setup.json": "56756c28725bd51d81f666d9f13e698ff0cde5bedde9c53a3b22c4625c090a93",
+  "new/logs/setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/logs/setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b",
+  "new/logs/targetcheck-thumbv7em-tanh-all.json": "1559df33f901c145156ea5388bc237cf287cdcd00d8a75e3e27c82fcc7705886",
+  "new/logs/targetcheck-thumbv7em-tanh-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/logs/targetcheck-thumbv7em-tanh-all.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "new/objects/sub-thumbv7em.o": "449a5b34a0fc578613bcd6e05b0fdb6ea4a1c85707740689d8da8f6104fe166a",
+  "new/objects/target-check-thumbv7em.elf": "afcd03fadde82c01d5c2da006e13548891ab2367a1f29cc454b54185453e23f9",
+  "new/reports/thumbv7em-tanh-0-4096.json": "ae671f190d05b1de33d58dba70c2b418f5120343fdf864e996dbc94d47afceec",
+  "prior/packet.json": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c",
+  "prior/targetcheck-thumbv7em-all.json": "207f70777a28ae806c35adf15b8d1de37f7e3a6be9ab4c0e42b6b4f2d4594408",
+  "prior/targetcheck-thumbv7em-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "prior/targetcheck-thumbv7em-all.stdout": "7c3baa949ce7aacecd328a5cd32958032bd7d79665edc4880d3d6a58e1b90c27"
+ },
+ "chunk_bits": 20,
+ "domain_chunks": [
+  0,
+  4096
+ ],
+ "domain_words": 4294967296,
+ "failures": [],
+ "function": "tanh",
+ "gaps": [],
+ "identities": {
+  "fingerprint": {
+   "matches_toolkit_manifest_pin": true,
+   "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+   "mode": "development",
+   "sandbox": "none",
+   "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "host": {
+   "arch": "Linux x86-64",
+   "cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+   "python": "3.12"
+  },
+  "offline_runtime": {
+   "manifest.json": "fe7340f53675006f4d258a6ef4fa20910a56dc4eb7fda0f1d9078586403fd950",
+   "prepare.py": "0142541f00c6bf3304eaec1481da27b7b95e4a282f7ebe23aef4753f9745f35b"
+  },
+  "root_entry_c": {
+   "path": "entry.c",
+   "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  },
+  "toolkit": {
+   "dependencies.json": "ea29b3e0e7ea1c14df66e20a6f1a733111f427a52f3fbf9a00849fa77f6f9015",
+   "files.json": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+   "kit/RULES.md": "d9a56849153fff88e3873f3550035e426b88d6fbcbe064e42c4456819b08352e",
+   "kit/reference/digests.sha256": "077f538699b29809164d297b313b777669c87e8e22e857d004a888e2654579c3",
+   "kit/requirements.txt": "5046651c864a509c18bcf84c6a45f90fb203a65b32c970662d083812632e369d",
+   "manifest.json": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a",
+   "provision.py": "3ef691e90ae45a1602039ca6838d228ec43b0569c129f59937eea0e90cac5e8f",
+   "run.py": "3ed70ea2276af80905800a24462d78d3c72f8a5604000da732744b6b61580fbf",
+   "verify.py": "9df81243de7430ca3949ecc4ad97b337e8886d4deb594a90dc0f89a02180f807"
+  },
+  "trial_entry_c": {
+   "path": "eik-work/trials/m0-tanh-refine/entry.c",
+   "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  }
+ },
+ "mismatches": 0,
+ "overlaps": [],
+ "prior": {
+  "audit": {
+   "argv_note": "argv omits --chunks (default whole domain); runtime was test/scratch/m0-tanh-refine/runtime, not retained",
+   "chunks": [
+    0,
+    4096
+   ],
+   "complete": true,
+   "exit_code": 0,
+   "fingerprint_matches_pin": true,
+   "image_sha256": "e18960229813f3a883c019585ceeee71c7712a3d5ce64fa9bc275bf1c93be74a",
+   "mismatches": 0,
+   "range_complete": true,
+   "raw_hashes_match_packet_index": true,
+   "record_stdout_stderr_hashes_match": true,
+   "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+   "verdict": "passed",
+   "words_checked": 4294967296
+  },
+  "credited": false,
+  "origin_paths": [
+   "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.json",
+   "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.stdout",
+   "eik-work/trials/m0-tanh-refine/targetcheck-thumbv7em-all.stderr"
+  ],
+  "packet": "prior/packet.json",
+  "packet_origin": "eik-work/trials/m0-tanh-refine/packet.json",
+  "reason": "Recorded image_sha256 e1896022... is not retained anywhere in the repository (frozen eik-work/freeze/evidence/objects/guest-thumbv7em.elf is 48de0ea1..., a different image), and the runtime is not retained, so image identity cannot be bound. Its coverage is kept as audited history only. The fresh rerun's object (449a5b34...) also differs from the frozen sub-thumbv7em.o (a3d16db1...), consistent with embedded build paths; no equivalence is claimed or needed.",
+  "record": "prior/targetcheck-thumbv7em-all.json",
+  "report": "prior/targetcheck-thumbv7em-all.stdout",
+  "stderr": "prior/targetcheck-thumbv7em-all.stderr"
+ },
+ "runtime": {
+  "dependencies": "prepared by unchanged offline-runtime/prepare.py logic",
+  "install_log": "new/logs/install.log",
+  "kit_python": "venv --without-pip, Python 3.12, wheels capstone 5.0.9, pyelftools 0.33, unicorn 2.1.4, ziglang 0.17.1",
+  "restored_payloads": [
+   {
+    "bytes": 23523172,
+    "matches_offline_runtime_manifest_pin": true,
+    "path": "qemu/source/qemu_7.2+dfsg.orig.tar.xz",
+    "sha256": "91aca71520040edc40b8d437aa3004dae614f58e286cf653ee8996c07af2962f",
+    "url": "https://deb.debian.org/debian/pool/main/q/qemu/qemu_7.2+dfsg.orig.tar.xz"
+   },
+   {
+    "bytes": 16436886,
+    "matches_offline_runtime_manifest_pin": true,
+    "path": "wheels/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "9d6e6dea140560de4ebd8446661f7ef84a357d428c14a3ef09dacd306ec8c239",
+    "url": "https://files.pythonhosted.org/packages/e7/df/ded5e3684c2d7600b30cc8a7530277b8cb36644a1a9d34cade7ebb45604c/unicorn-2.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+   },
+   {
+    "bytes": 101083562,
+    "matches_offline_runtime_manifest_pin": true,
+    "path": "wheels/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
+    "sha256": "ea6cc5d87b033cf0aedfbc8f9549a908cae6c50ac31f1698188fa48a74524b54",
+    "url": "https://files.pythonhosted.org/packages/59/e3/2a34676370a11c36b7cd04ffb2439c1089c0530cf4b01408c77cf7f8d9c3/ziglang-0.17.1-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl"
+   }
+  ]
+ },
+ "schema": "eik-coverage-1",
+ "selected": [
+  {
+   "chunks": [
+    0,
+    4096
+   ],
+   "first_word": 0,
+   "image": "new/objects/target-check-thumbv7em.elf",
+   "image_sha256": "afcd03fadde82c01d5c2da006e13548891ab2367a1f29cc454b54185453e23f9",
+   "last_word": 4294967295,
+   "mismatches": 0,
+   "object": "new/objects/sub-thumbv7em.o",
+   "object_sha256": "449a5b34a0fc578613bcd6e05b0fdb6ea4a1c85707740689d8da8f6104fe166a",
+   "provenance": "rerun",
+   "record": "new/logs/targetcheck-thumbv7em-tanh-all.json",
+   "report": "new/reports/thumbv7em-tanh-0-4096.json",
+   "verdict": "passed",
+   "words": 4294967296
+  }
+ ],
+ "selected_set": "rerun",
+ "source": {
+  "path": "entry.c",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+ },
+ "target": "thumbv7em",
+ "words_covered": 4294967296
+}

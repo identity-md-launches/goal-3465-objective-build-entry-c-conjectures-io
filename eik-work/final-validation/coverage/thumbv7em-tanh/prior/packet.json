@@ -1,0 +1,703 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 34.00061523046087,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 40.53056894320931
+    },
+    "S_thumbv7em_reported_only": 39.96971754896375,
+    "form": "evaluate",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "status": "would-take-over-after-full-check",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 80,
+        "means": {
+         "hard": 41.486666666666665,
+         "typical": 30.5635,
+         "uniform": 13.297,
+         "wide": 24.738
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20508,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 178,
+        "means": {
+         "hard": 48.50333333333333,
+         "typical": 37.908,
+         "uniform": 18.579,
+         "wide": 29.537
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 76.01333333333334,
+         "typical": 37.152,
+         "uniform": 14.704,
+         "wide": 20.788
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1458303740492088,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 164,
+        "means": {
+         "hard": 49.23,
+         "typical": 37.824,
+         "uniform": 20.233,
+         "wide": 29.983
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.57333333333334,
+         "typical": 36.0,
+         "uniform": 16.631,
+         "wide": 21.52
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 33.90743967053243,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 40.316224056689975
+    },
+    "S_thumbv7em_reported_only": 39.759604645232244,
+    "form": "evaluate",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+    "status": "would-take-over-after-full-check",
+    "targets": {
+     "rv32im": {
+      "bytes": 18960,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 43.09,
+         "typical": 30.327,
+         "uniform": 13.322,
+         "wide": 24.847
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.561
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1354763936890102,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20508,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 187,
+        "means": {
+         "hard": 46.58,
+         "typical": 37.4395,
+         "uniform": 18.766,
+         "wide": 29.272
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.40333333333334,
+         "typical": 36.7635,
+         "uniform": 14.37,
+         "wide": 21.121
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1458303740492088,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 171,
+        "means": {
+         "hard": 47.22,
+         "typical": 37.216,
+         "uniform": 20.47,
+         "wide": 29.959
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.27666666666667,
+         "typical": 35.669,
+         "uniform": 16.297,
+         "wide": 21.783
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+ },
+ "kind": "trial",
+ "note": "Lower the fast rounding cutoff in the biased-exponent-119 Thumb tanh path using a certified one-sided residual. Both signs and all changed cells are covered. The extra guard cost offsets the refinements saved.",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.000188902943398,
+   "rv32im": 1.0,
+   "thumbv6m": 1.000377841571118
+  },
+  "1947282751": {
+   "overall": 1.0001635609245687,
+   "rv32im": 1.0,
+   "thumbv6m": 1.0003271486013132
+  }
+ },
+ "runs": {
+  "base-gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine object-base base-gate gate eik-work/baselines/former-50/entry.c",
+   "exit_code": 0,
+   "files": {
+    "base-gate.json": "2a44f52faacd3c78bff49f148ae73fa8920d02a39f5dca2e376460f1786e3f51",
+    "base-gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "base-gate.stdout": "c970030c30dd219e93f653cf445d617552744f9e895a9346b8da064347e3d369"
+   }
+  },
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine trial check check eik-work/trials/m0-tanh-refine/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "f58d5f740180db390072dc2d5b31a6590662650ba47c46628a756a052dc81359",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b"
+   }
+  },
+  "evaluate-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine trial evaluate-1874435642 evaluate eik-work/trials/m0-tanh-refine/entry.c --quick --json --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "evaluate-1874435642.json": "2e483f1161573645ba1eb55e85013995a6d4312eae731c2598a54f510c9023a0",
+    "evaluate-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1874435642.stdout": "220ca60eb25eae72cd7886aeeeb5ccd808d7b1003ff4ce33b7b2677fada1618c"
+   }
+  },
+  "evaluate-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine trial-second evaluate-1947282751 evaluate eik-work/trials/m0-tanh-refine/entry.c --quick --json --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "evaluate-1947282751.json": "8d0dd797309217becaabd3c50135d97942528ce896b43f415bdd44e857a23a68",
+    "evaluate-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1947282751.stdout": "2dbd3f278dabd358d9abab2ef9a28cc9c3d2a403c385c28f502fc97ae61956d6"
+   }
+  },
+  "exhaustive-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine exhaustive exhaustive-exp fullcheck eik-work/trials/m0-tanh-refine/entry.c --function exp",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-exp.json": "3c6955588feded88fb826db69f86acfff3af46507a02122aeefc0e88840f46f0",
+    "exhaustive-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-exp.stdout": "b83b0e0906ee6f0d9b25da40716ef958c373d9abd533cc9f5f465fe598837419"
+   }
+  },
+  "exhaustive-merged": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine merged exhaustive-merged merge --require-targets rv32im,thumbv6m,thumbv7em test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-sigmoid.stdout test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-tanh.stdout test/scratch/m0-tanh-refine/cases/exhaustive/logs/exhaustive-exp.stdout test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-sigmoid-all.stdout test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-tanh-all.stdout test/scratch/m0-tanh-refine/cases/rv32im-complete/logs/targetcheck-rv32im-exp-all.stdout test/scratch/m0-tanh-refine/cases/thumbv6m-complete/logs/targetcheck-thumbv6m-sigmoid-all.stdout test/scratch/m0-tanh-refine/cases/thumbv6m-complete/logs/targetcheck-thumbv6m-exp-all.stdout test/scratch/m0-tanh-refine/cases/thumbv7em-complete/logs/targetcheck-thumbv7em-sigmoid-all.stdout test/scratch/m0-tanh-refine/cases/thumbv7em-complete/logs/targetcheck-thumbv7em-exp-all.stdout test/scratch/m0-tanh-refine/cases/target/logs/targetcheck-thumbv6m-all.stdout test/scratch/m0-tanh-refine/cases/target-m4/logs/targetcheck-thumbv7em-all.stdout",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-merged.json": "96059f2a194d6cc75ca1e849007bd181bc4ccfc4fc2c9b352b2f07b803a147da",
+    "exhaustive-merged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-merged.stdout": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+   }
+  },
+  "exhaustive-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine exhaustive exhaustive-sigmoid fullcheck eik-work/trials/m0-tanh-refine/entry.c --function sigmoid",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-sigmoid.json": "cbaefea0324c4ad1e244b8716a1eea2f705ded123533f647f72776baf8955b6d",
+    "exhaustive-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-sigmoid.stdout": "38274b64c8b908737c057d05c2d6e104d8de4f0292c0b5c3fba12ea8731f6ea7"
+   }
+  },
+  "exhaustive-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine exhaustive exhaustive-tanh fullcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-tanh.json": "79942a3eb32d6a69281ff7c3632ccc6f4ea17c787274dd780802afce433bf8d7",
+    "exhaustive-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-tanh.stdout": "3ffe77035f906fb88a07cb1c76d085d7631e9205d3504f2044ff0d6411033b94"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine trial fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "954577a72da0cf9d44a64e3e887c68deff975b6f929e23982cf33d0cf41fa35f",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine trial gate gate eik-work/trials/m0-tanh-refine/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "befb25092d160ccef4285d46b380d4978723967b45fc62a76b29a058f32f7219",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "680eb3f3cab414e464e67555c7bd277dd2ef207280c98627a1aa87b4e5611a15"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine setup-only setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "a5b84312ca2e1e0c966fca9ccbc35bf76596709bb6d33939e880caf829598622",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "targetcheck-negative": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target targetcheck-negative targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv6m --chunks 3000:3008 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-negative.json": "2e4e7fe9e762d4d5d5da670147ab61a64ca8ae958598e19fb32a343185267481",
+    "targetcheck-negative.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-negative.stdout": "d3f42c881ed4738aea168a80474c6aad5b7095988623276308643904965fabe4"
+   }
+  },
+  "targetcheck-positive": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target targetcheck-positive targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv6m --chunks 952:960 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-positive.json": "0b6c7698c4f51699f304b157b8cdb43848bb1ac44d70554b71b278b6383d5497",
+    "targetcheck-positive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-positive.stdout": "368b0b4a632be80144722d1b9b20592e095ca634ebcea6d33092236abb37dfa1"
+   }
+  },
+  "targetcheck-rv32im-exp-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine rv32im-complete targetcheck-rv32im-exp-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function exp --target rv32im --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-all.json": "98d9157eace9c122d12ba447d8925bf3becf64868daf51565043f12b63d2e502",
+    "targetcheck-rv32im-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-all.stdout": "334556d2b3bfc1d2533aae73e72b3594370276b477219a0b43381627d3ddb35c"
+   }
+  },
+  "targetcheck-rv32im-sigmoid-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine rv32im-complete targetcheck-rv32im-sigmoid-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function sigmoid --target rv32im --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-sigmoid-all.json": "1650a9b723e6e21187aea205430d9b38840b1a684475fbc5fe768158b8271e4d",
+    "targetcheck-rv32im-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-sigmoid-all.stdout": "1f30254711be0eb38446837da6855567fd5e6e97362811aeadfcde3afc64cee8"
+   }
+  },
+  "targetcheck-rv32im-tanh-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine rv32im-complete targetcheck-rv32im-tanh-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target rv32im --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-tanh-all.json": "90db00182499b1acb3a208cf19a7b807236b59dcc7d9d5a5d367ff27919c17a0",
+    "targetcheck-rv32im-tanh-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-tanh-all.stdout": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921"
+   }
+  },
+  "targetcheck-thumbv6m-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target targetcheck-thumbv6m-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv6m --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv6m-all.json": "9bc888caebafa4ccc760086943d0fe98df6cdc648aa9c5234a6d03657612a34d",
+    "targetcheck-thumbv6m-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-all.stdout": "3ac1c782783b0aa1a94efd3994885bd89bc9cded3a086d0c830bc67726111e3f"
+   }
+  },
+  "targetcheck-thumbv6m-exp-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine thumbv6m-complete targetcheck-thumbv6m-exp-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function exp --target thumbv6m --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv6m-exp-all.json": "a2c40439d12136b409e031afcabfef5e8e8585d9c852fb10111dc221be957467",
+    "targetcheck-thumbv6m-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-exp-all.stdout": "fde3c89f59494fef8f248a621c4ab15184b0269ab8ad206702ae83268e3ffdf4"
+   }
+  },
+  "targetcheck-thumbv6m-sigmoid-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine thumbv6m-complete targetcheck-thumbv6m-sigmoid-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function sigmoid --target thumbv6m --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv6m-sigmoid-all.json": "41da3067a709c00dd51972582de24c782a7002aa86b8b7cf11918a5a6ce977d5",
+    "targetcheck-thumbv6m-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-sigmoid-all.stdout": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+   }
+  },
+  "targetcheck-thumbv7em-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target-m4 targetcheck-thumbv7em-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv7em --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-all.json": "207f70777a28ae806c35adf15b8d1de37f7e3a6be9ab4c0e42b6b4f2d4594408",
+    "targetcheck-thumbv7em-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-all.stdout": "7c3baa949ce7aacecd328a5cd32958032bd7d79665edc4880d3d6a58e1b90c27"
+   }
+  },
+  "targetcheck-thumbv7em-exp-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine thumbv7em-complete targetcheck-thumbv7em-exp-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function exp --target thumbv7em --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-exp-all.json": "8d15346ea22c0d388e3e38de870e305e47a879a0da44894eaf1b711efbe8970a",
+    "targetcheck-thumbv7em-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-exp-all.stdout": "abcf746ab835fc73ee1b1937a5695ff3c53420e7df4f85004b3eecde30f119ad"
+   }
+  },
+  "targetcheck-thumbv7em-negative": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target-m4 targetcheck-thumbv7em-negative targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv7em --chunks 3000:3008 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-negative.json": "eb1a4bb968694f32d359c12c708108bb8caedeee8b75819551fc7911c690e33e",
+    "targetcheck-thumbv7em-negative.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-negative.stdout": "6aad4421af6a5553cef170de1510000698a7da35ed7f689bf55ed14fdb63338d"
+   }
+  },
+  "targetcheck-thumbv7em-positive": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine target-m4 targetcheck-thumbv7em-positive targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target thumbv7em --chunks 952:960 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-positive.json": "e3fe02d0be8ef80ed064f3c1961eea30368aaa559f7a6d8d44cdac0b343c91e6",
+    "targetcheck-thumbv7em-positive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-positive.stdout": "d47d275b222c0fe0ad227bcec7bda80a3d57c6aa3b4d2d76bffc7a2e7962c367"
+   }
+  },
+  "targetcheck-thumbv7em-sigmoid-all": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine thumbv7em-complete targetcheck-thumbv7em-sigmoid-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function sigmoid --target thumbv7em --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-thumbv7em-sigmoid-all.json": "ad3e6426c183cc27b546063862d54dd2c76c540b7a5a158bb7aef4feef9f3b74",
+    "targetcheck-thumbv7em-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-sigmoid-all.stdout": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/m0-tanh-refine/entry.c",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+ },
+ "status": "measured",
+ "target": "m0-tanh-refine"
+}
