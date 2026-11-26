@@ -1,0 +1,408 @@
+{
+ "failures": [
+  {
+   "effect": "reduced export lacks unicorn/ziglang wheels and QEMU orig source; provision.py --fetch used",
+   "exit_code": 1,
+   "log": "eik-work/final-validation/coverage/rv32im-tanh/host/prepare.stderr",
+   "step": "offline-runtime/prepare.py"
+  },
+  {
+   "effect": "bootstrap compiles with gcc under a fixed /usr/bin:/bin PATH; this host has no system gcc",
+   "exit_code": 1,
+   "log": "eik-work/final-validation/coverage/rv32im-tanh/host/bootstrap2.stderr",
+   "step": "toolkit/verify.py bootstrap --offline"
+  },
+  {
+   "effect": "same gcc PATH limitation; setup only prepares evaluate state and is not used by targetcheck",
+   "exit_code": 1,
+   "log": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/setup.stderr",
+   "step": "toolkit/run.py setup"
+  }
+ ],
+ "function": "tanh",
+ "gaps": [],
+ "image_identity": {
+  "image": "eik-work/final-validation/coverage/rv32im-tanh/rerun/objects/target-check-rv32im.elf",
+  "note": "Linked image hashes differ per case directory because .debug_*, .symtab and the section-header location embed paths; loaded segments (header fields locating the section table and non-load p_offset masked), alloc sections, entry point, kernel symbols and alloc relocations are equal.",
+  "object": {
+   "path": "eik-work/final-validation/coverage/rv32im-tanh/rerun/objects/sub-rv32im.o",
+   "sha256": "5a65863ffc60383a24ff581cc131bbcbcc17c762d38ea7561b7e11ff6e20bdf1",
+   "summary": {
+    "alloc_sections": [
+     {
+      "addr": 0,
+      "flags": 6,
+      "name": ".text",
+      "sha256": "55d8b1bd88d62f23913dee50e2de08c6c505c8ef972198e9e976dbe5ed1bd633",
+      "size": 5484,
+      "type": 1
+     },
+     {
+      "addr": 0,
+      "flags": 2,
+      "name": ".rodata",
+      "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+      "size": 13476,
+      "type": 1
+     }
+    ],
+    "dynamic": false,
+    "e_type": 1,
+    "elf_flags": 0,
+    "entry": 0,
+    "interp": false,
+    "loads": [],
+    "machine": 243,
+    "other_segments": [],
+    "relocation_sections": [
+     {
+      "applies_to": ".text",
+      "applies_to_alloc": true,
+      "name": ".rela.text",
+      "sha256": "858e74640bfcf80c709cea63becc96f429dc375577b3a7d9f1f4b748a9a36592",
+      "size": 528,
+      "type": 4
+     }
+    ],
+    "symbols": {
+     "eik_exp": {
+      "bind": 1,
+      "size": 2028,
+      "type": 2,
+      "value": 3264
+     },
+     "eik_sigmoid": {
+      "bind": 1,
+      "size": 2084,
+      "type": 2,
+      "value": 0
+     },
+     "eik_tanh": {
+      "bind": 1,
+      "size": 1180,
+      "type": 2,
+      "value": 2084
+     }
+    }
+   }
+  },
+  "reported_image_sha256": "06c856b3bc14bcf32fa380f9a8835bdf71c23a25fd57b783f950543108043e24",
+  "reproduction_probes": {
+   "repro-root": {
+    "chunks": [
+     0,
+     1
+    ],
+    "counts_toward_coverage": false,
+    "image_executable_view_equal": true,
+    "image_metadata_differences": [
+     ".debug_info",
+     ".debug_line",
+     ".debug_str",
+     ".symtab",
+     "ELF header e_shoff/e_shnum/e_shstrndx (section header table location)"
+    ],
+    "image_sha256": "61bd676b6c101e2450c837f8245647cb34bebd318bc3ea4284a89c942e2f10dd",
+    "mismatches": 0,
+    "object_executable_view_equal": true,
+    "object_metadata_differences": [
+     ".debug_str",
+     ".symtab"
+    ],
+    "object_sha256": "7fc46e48c195c789945ede1c24b686471da39cb9050a57fc0827cd56bff1dfd3",
+    "report": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/probe-root.stdout",
+    "reported_image_sha256": "61bd676b6c101e2450c837f8245647cb34bebd318bc3ea4284a89c942e2f10dd",
+    "source_path": "$REPO/entry.c",
+    "verdict": "passed"
+   },
+   "repro-trials": {
+    "chunks": [
+     0,
+     1
+    ],
+    "counts_toward_coverage": false,
+    "image_executable_view_equal": true,
+    "image_metadata_differences": [
+     ".debug_info",
+     ".debug_line",
+     ".debug_str",
+     ".symtab",
+     "ELF header e_shoff/e_shnum/e_shstrndx (section header table location)"
+    ],
+    "image_sha256": "d9c6b39291f26dbc70fd5f7953770c6a35d7326c383032684f9602768fdc736f",
+    "mismatches": 0,
+    "object_executable_view_equal": true,
+    "object_metadata_differences": [
+     ".debug_line",
+     ".debug_str",
+     ".rela.debug_line",
+     ".symtab"
+    ],
+    "object_sha256": "22b83d85b2091eb7a68357664000e95ab1d93cba2cdb2f59688d3f7e6ea4c07e",
+    "report": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/probe-trials.stdout",
+    "reported_image_sha256": "d9c6b39291f26dbc70fd5f7953770c6a35d7326c383032684f9602768fdc736f",
+    "source_path": "$REPO/eik-work/trials/m0-tanh-refine/entry.c",
+    "verdict": "passed"
+   }
+  },
+  "sha256": "06c856b3bc14bcf32fa380f9a8835bdf71c23a25fd57b783f950543108043e24",
+  "summary": {
+   "alloc_sections": [
+    {
+     "addr": 65780,
+     "flags": 2,
+     "name": ".rodata",
+     "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+     "size": 13476,
+     "type": 1
+    },
+    {
+     "addr": 83352,
+     "flags": 6,
+     "name": ".text",
+     "sha256": "5af8f623fc20f195a99eba5669b7cf7e957d76bdbc97b843140241c5a86d06fb",
+     "size": 7624,
+     "type": 1
+    },
+    {
+     "addr": 95072,
+     "flags": 3,
+     "name": ".bss",
+     "sha256": null,
+     "size": 4194304,
+     "type": 8
+    }
+   ],
+   "dynamic": false,
+   "e_type": 2,
+   "elf_flags": 0,
+   "entry": 88836,
+   "interp": false,
+   "loads": [
+    {
+     "align": 4096,
+     "filesz": 13720,
+     "flags": 4,
+     "memsz": 13720,
+     "paddr": 65536,
+     "sha256_masked_shdr_fields": "01672140e91c9b0a263edd4bff125bdc5541c240d89aa78591855f20f60e0a64",
+     "vaddr": 65536
+    },
+    {
+     "align": 4096,
+     "filesz": 7624,
+     "flags": 5,
+     "memsz": 7624,
+     "paddr": 83352,
+     "sha256_masked_shdr_fields": "5af8f623fc20f195a99eba5669b7cf7e957d76bdbc97b843140241c5a86d06fb",
+     "vaddr": 83352
+    },
+    {
+     "align": 4096,
+     "filesz": 0,
+     "flags": 6,
+     "memsz": 4194304,
+     "paddr": 95072,
+     "sha256_masked_shdr_fields": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "vaddr": 95072
+    }
+   ],
+   "machine": 243,
+   "other_segments": [
+    {
+     "filesz": 192,
+     "flags": 4,
+     "memsz": 192,
+     "sha256_masked": "0cd1cadc66699bccc29744313fa03d5450f5c349dcee91c47aac83449092c0ff",
+     "type": 6,
+     "vaddr": 65588
+    },
+    {
+     "filesz": 0,
+     "flags": 6,
+     "memsz": 16777216,
+     "sha256_masked": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "type": 1685382481,
+     "vaddr": 0
+    },
+    {
+     "filesz": 42,
+     "flags": 4,
+     "memsz": 42,
+     "sha256_masked": "c76c7db6c4aa3ed497749805ff4db1721b1cdd383f84b6f76cfd92939c43d831",
+     "type": 1879048195,
+     "vaddr": 0
+    }
+   ],
+   "relocation_sections": [],
+   "symbols": {
+    "_start": {
+     "bind": 1,
+     "size": 0,
+     "type": 0,
+     "value": 88836
+    },
+    "eik_exp": {
+     "bind": 1,
+     "size": 2028,
+     "type": 2,
+     "value": 86616
+    },
+    "eik_sigmoid": {
+     "bind": 1,
+     "size": 2084,
+     "type": 2,
+     "value": 83352
+    },
+    "eik_tanh": {
+     "bind": 1,
+     "size": 1180,
+     "type": 2,
+     "value": 85436
+    }
+   }
+  },
+  "zig_cache_objects": {
+   "compiler_rt_zcu.o": {
+    "bytes": 1791092,
+    "note": "zig's own compiler_rt build product (1.8 MB), identified by digest only; its linked contribution is inside the retained image's .text",
+    "retained": false,
+    "sha256": "e956502f7553ac888386a54deef0b4180ad30c91a70f84679080a740acda8a16",
+    "zig_cache_key": "4eda50aea6ab8ca237194d03449e0d6d"
+   },
+   "entry.o": {
+    "bytes": 85744,
+    "sha256": "1a1690716fe1b6cbbc816dfbb8b2c44929c128e9a39efa4cfe038ce424366fce",
+    "zig_cache_key": "0b20edb4866c0d356bec28c01974c714"
+   },
+   "guest.o": {
+    "bytes": 5844,
+    "sha256": "ab57374195f31c96daf880a164c4c3370017fdc76e38933b1a915e0c4adf6b96",
+    "zig_cache_key": "ee644e8108143678866f10d6336780b8"
+   },
+   "target_check.o": {
+    "bytes": 8504,
+    "sha256": "983869e7943c104c8abee95bd7b1f2f3035a1ea2ea5592016eb91bfe66cc58eb",
+    "zig_cache_key": "d9bde6a4f8c1676d5b940dbebcdedeb6"
+   }
+  }
+ },
+ "prior": {
+  "facts": {
+   "chunk_hi": 4096,
+   "chunk_lo": 0,
+   "complete": true,
+   "fingerprint": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "sandbox": "none",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "function": "tanh",
+   "image_sha256": "4c46aa4fafce593279c77bd8dc73332682101f13fefd7b61f9ced7a6a939b0bd",
+   "jobs": 1,
+   "mismatches": 0,
+   "range_complete": true,
+   "reasons": [],
+   "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+   "target": "rv32im",
+   "verdict": "passed",
+   "words_checked": 4294967296
+  },
+  "files": {
+   "targetcheck-rv32im-tanh-all.json": {
+    "packet_sha256": "90db00182499b1acb3a208cf19a7b807236b59dcc7d9d5a5d367ff27919c17a0",
+    "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.json",
+    "sha256": "90db00182499b1acb3a208cf19a7b807236b59dcc7d9d5a5d367ff27919c17a0"
+   },
+   "targetcheck-rv32im-tanh-all.stderr": {
+    "packet_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "targetcheck-rv32im-tanh-all.stdout": {
+    "packet_sha256": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921",
+    "path": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.stdout",
+    "sha256": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921"
+   }
+  },
+  "packet": "eik-work/trials/m0-tanh-refine/packet.json",
+  "packet_command": "python3 eik-work/toolkit/run.py test/scratch/m0-tanh-refine rv32im-complete targetcheck-rv32im-tanh-all targetcheck eik-work/trials/m0-tanh-refine/entry.c --function tanh --target rv32im --jobs 1",
+  "packet_exit_code": 0,
+  "reason": "Raw hashes, command/source binding, fingerprint, exit, verdict and range all check, but the recorded image 4c46aa4f... was linked under test/scratch (deleted) and no object or guest file was retained, so the image hash cannot be bound to bytes or proven equivalent. The fresh rerun is the selected set; old and new reports are kept separate.",
+  "report": "eik-work/trials/m0-tanh-refine/targetcheck-rv32im-tanh-all.stdout",
+  "status": "audited-not-reused"
+ },
+ "ranges": [
+  {
+   "chunk_hi": 4096,
+   "chunk_lo": 0,
+   "complete": true,
+   "fingerprint": {
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "sandbox": "none",
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "image": "eik-work/final-validation/coverage/rv32im-tanh/rerun/objects/target-check-rv32im.elf",
+   "image_sha256": "06c856b3bc14bcf32fa380f9a8835bdf71c23a25fd57b783f950543108043e24",
+   "mismatches": 0,
+   "provenance": "rerun",
+   "range_complete": true,
+   "record": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.json",
+   "record_sha256": "8c87b4a0d18a2d631c5e2c13214070ddf95d68895e7be3f97afd8c1b4f51ea68",
+   "report": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/targetcheck-rv32im-tanh-all.stdout",
+   "report_sha256": "07a8f30902b29f914775b2a72d29e440e8ba1023f36a48603b0ef8c943aa0469",
+   "verdict": "passed",
+   "words": 4294967296
+  }
+ ],
+ "runtime": {
+  "dependencies": "eik-work/toolkit/provision.py --fetch into a scratch cache: every wheel, both QEMU executables and the QEMU source archives verified against toolkit pins",
+  "fingerprint": {
+   "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+   "mode": "development",
+   "production_problems": [],
+   "sandbox": "none",
+   "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "fingerprint_log": "eik-work/final-validation/coverage/rv32im-tanh/rerun/logs/fingerprint.stdout",
+  "host_cc": "exact Ubuntu noble gcc-13 13.3.0-6ubuntu2~24.04.1 packages unpacked in scratch (SHA-512 from the apt index, see host/gcc-debs-uris.txt), reached as 'gcc' through host/gcc-wrapper.sh on the toolkit runner PATH; the rv32im targetcheck path compiles only with zig and runs QEMU, gcc is consulted for its --version line inside the fingerprint",
+  "kit": "eik-work/toolkit/kit (copied unchanged by toolkit/run.py into each case)",
+  "toolkit_manifest_fingerprint": {
+   "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+   "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+  },
+  "tools": {
+   "clang": "clang version 22.1.8",
+   "host_cc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+   "machine": "x86_64",
+   "packages": {
+    "capstone": "5.0.9",
+    "pyelftools": "0.33",
+    "unicorn": "2.1.4",
+    "ziglang": "0.17.1"
+   },
+   "python": "3.12.3",
+   "zig": "0.17.1"
+  }
+ },
+ "schema": "rv32im-tanh-coverage-1",
+ "selected_set": "rerun",
+ "source": {
+  "path": "entry.c",
+  "pinned_sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "trials_copy": {
+   "path": "eik-work/trials/m0-tanh-refine/entry.c",
+   "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+  }
+ },
+ "status": "pass",
+ "target": "rv32im",
+ "totals": {
+  "chunks": 4096,
+  "gaps": [],
+  "mismatches": 0,
+  "overlaps": [],
+  "words": 4294967296
+ }
+}

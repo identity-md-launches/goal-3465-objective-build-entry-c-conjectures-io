@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rvtanh/runtime/bin/python",
+    "-m",
+    "eik",
+    "setup"
+  ],
+  "exit_code": 1,
+  "seconds": 1.105,
+  "source_sha256": null,
+  "stderr_sha256": "46b8c464cde514aa86d54834d83c7532a831fae193aa9da1fabd8d952b3af884",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

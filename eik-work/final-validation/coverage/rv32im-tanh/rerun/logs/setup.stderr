@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/__main__.py", line 286, in <module>
+    main()
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/__main__.py", line 266, in main
+    setup(a.full)
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/__main__.py", line 68, in setup
+    info = P.check_all(src)
+           ^^^^^^^^^^^^^^^^
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/policy.py", line 483, in check_all
+    check_preprocessing(src)
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/policy.py", line 140, in check_preprocessing
+    streams = {b: _TOKEN.findall(text) for b, text in T.preprocessed_builds(src).items()}
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/toolchain.py", line 121, in preprocessed_builds
+    text = run_untrusted(cmd, src).stdout
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/toolchain.py", line 40, in run_untrusted
+    p = SB.run(cmd, ro=ro, rw=rw, timeout=K.BUILD_SECONDS, cpu_seconds=K.BUILD_SECONDS,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$REPO/test/scratch/rvtanh/cases/rv32im-tanh/kit/eik/sandbox.py", line 141, in run
+    return subprocess.run(argv, capture_output=True, text=True, timeout=timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'gcc'
