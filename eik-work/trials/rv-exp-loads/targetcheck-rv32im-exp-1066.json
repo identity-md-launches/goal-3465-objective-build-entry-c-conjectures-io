@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rv-exp-loads/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/rv-exp-loads/entry.c",
+    "--function",
+    "exp",
+    "--target",
+    "rv32im",
+    "--chunks",
+    "1066:1068",
+    "--jobs",
+    "1"
+  ],
+  "exit_code": 0,
+  "seconds": 54.743,
+  "source_sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "51ec4292b17f81d5e0ca68dc1d01ccd411d9c681e6b0b262a179304500fcfb9b"
+}

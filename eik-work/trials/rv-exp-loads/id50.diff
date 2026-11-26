@@ -1,0 +1,45 @@
+diff --git a/eik-work/baselines/former-50/entry.c b/eik-work/trials/rv-exp-loads/entry.c
+index b45faa2..4e17bea 100644
+--- a/eik-work/baselines/former-50/entry.c
++++ b/eik-work/trials/rv-exp-loads/entry.c
+@@ -1079,10 +1079,11 @@ inline static uint32_t eik_exp_r(uint32_t w)
+       ;
+ 
+       ;
+-      uint32_t Ct = rd_r(pb + 1536);
++      uint32_t row_offset = pb != (const uint8_t *) &ex8_r;
++      uint32_t Ct = ex8_r.row[row_offset];
+       uint32_t f = w << 9;
+       uint32_t X = f << (sp & 31u);
+-      uint32_t Bq = rd_r(pb + 1540);
++      uint32_t Bq = ex8_r.row[1u + row_offset];
+       uint32_t Y = (Ct + mulhu_r(f, Ct)) >> ((Bq - sp) & 31u);
+       uint32_t k2 = (Y >> 1) | 1u;
+       int32_t rho = (int32_t) (X - (k2 * Bq));
+@@ -1096,7 +1097,7 @@ inline static uint32_t eik_exp_r(uint32_t w)
+       }
+       cT = T;
+       ck = k2;
+-      cC = rd_r(pb + 1552);
++      cC = ex8_r.row[4u + row_offset];
+       cX = ((uint32_t) rho) + mulhu_r(k2, cC);
+       cV = V;
+       cE = qp;
+@@ -1116,13 +1117,14 @@ inline static uint32_t eik_exp_r(uint32_t w)
+       ;
+ 
+       ;
+-      uint32_t Ct = rd_r(pb + 1536);
++      uint32_t row_offset = pb != (const uint8_t *) &ex8_r;
++      uint32_t Ct = ex8_r.row[row_offset];
+       uint32_t f = w << 9;
+       uint32_t X = f << (sp & 31u);
+-      uint32_t Bq = rd_r(pb + 1540);
++      uint32_t Bq = ex8_r.row[1u + row_offset];
+       uint32_t Y = (Ct + mulhu_r(f, Ct)) >> ((Bq - sp) & 31u);
+       uint32_t k2 = (Y >> 1) | 1u;
+-      uint32_t C = rd_r(pb + 1552);
++      uint32_t C = ex8_r.row[4u + row_offset];
+       int32_t rho = (int32_t) ((X - (k2 * Bq)) + mulhu_r(k2, C));
+       uint32_t P = ((uint32_t) rho) + (((uint32_t) mulhs_r(rho, rho)) >> 9);
+       uint32_t T = rd_r(pb + (Y & 0x3FCu));

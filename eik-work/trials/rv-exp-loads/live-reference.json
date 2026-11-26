@@ -1,0 +1,53 @@
+{
+  "rv32im": {
+    "reference": {
+      "promotion_id": 59,
+      "submission": 52,
+      "source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+      "shipped": false
+    },
+    "source_response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "candidate_ratio": null
+  },
+  "thumbv6m": {
+    "reference": {
+      "promotion_id": 60,
+      "submission": 53,
+      "source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+      "shipped": false
+    },
+    "source_response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "candidate_ratio": null
+  },
+  "overall": {
+    "reference": {
+      "promotion_id": 61,
+      "submission": 56,
+      "source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+      "shipped": false
+    },
+    "source_response": {
+      "type": "about:blank",
+      "title": "Not permitted",
+      "status": 403,
+      "detail": "Source is published only for former champions that hold no board.",
+      "reason_code": "SOURCE_WITHHELD"
+    },
+    "same_seed_champion_S": null,
+    "candidate_ratio": null
+  }
+}

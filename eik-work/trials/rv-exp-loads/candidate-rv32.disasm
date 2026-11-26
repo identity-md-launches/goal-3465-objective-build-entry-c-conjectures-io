@@ -1,0 +1,540 @@
+eik_exp: 2156 bytes
+00cc0 bltz   a0, 0x20
+00cc4 srli   a1, a0, 0x17
+00cc8 addi   a4, a1, -0x77
+00ccc bgeu   a0, a4, 0x40
+00cd0 addi   a2, a1, -0x67
+00cd4 bgeu   a0, a2, 0x138
+00cd8 lui    a0, 0x3f800
+00cdc ret
+00ce0 lui    a1, 0xbf800
+00ce4 bltu   a1, a0, 0x68
+00ce8 lui    a1, 0xba7ff
+00cec bltu   a1, a0, 0x178
+00cf0 lui    a1, 0xb3c00
+00cf4 bltu   a1, a0, 0x350
+00cf8 lui    a1, 0xb3000
+00cfc bgeu   a1, a0, -0x24
+00d00 lui    a1, 0x3f800
+00d04 addi   a0, a1, -1
+00d08 ret
+00d0c lui    a1, 0x41000
+00d10 bltu   a1, a0, 0x138
+00d14 slli   a6, a0, 9
+00d18 lui    a2, 0                        26:ex8_r+0
+00d1c mv     a2, a2                       27:ex8_r+0
+00d20 lui    a0, 0                        26:ex8_r+0
+00d24 mv     a0, a0                       27:ex8_r+0
+00d28 xor    a1, a2, a0
+00d2c snez   a1, a1
+00d30 slli   a1, a1, 2
+00d34 add    a1, a0, a1
+00d38 lw     a3, 0x600(a1)
+00d3c sll    a1, a6, a4
+00d40 bne    a2, a0, 0x214
+00d44 addi   a5, zero, 4
+00d48 j      0x210
+00d4c lui    a1, 0xc0800
+00d50 bltu   a1, a0, 0x190
+00d54 slli   a3, a0, 0xf
+00d58 srli   a1, a0, 0xd
+00d5c lui    a2, 0                        26:ext_r+-393216
+00d60 mv     a2, a2                       27:ext_r+-393216
+00d64 andi   a1, a1, -0x10
+00d68 add    a4, a2, a1
+00d6c lw     a5, 0x690(a4)
+00d70 lh     a6, 0x684(a4)
+00d74 lw     a1, 0x684(a4)
+00d78 lw     a2, 0x688(a4)
+00d7c lw     a4, 0x68c(a4)
+00d80 mulhsu a6, a6, a3
+00d84 add    a5, a5, a6
+00d88 mulhsu a5, a5, a3
+00d8c add    a4, a4, a5
+00d90 mulhu  a5, a4, a3
+00d94 add    a5, a2, a5
+00d98 slli   a3, a5, 0x18
+00d9c bgeu   a3, a2, 0x29c
+00da0 bltz   a2, 0x11c
+00da4 srli   a5, a5, 8
+00da8 srli   a2, a0, 0x17
+00dac addi   a4, a2, -0x177
+00db0 lui    a2, 0                        26:ex8_r+0
+00db4 mv     a2, a2                       27:ex8_r+0
+00db8 lw     a7, 0x604(a2)
+00dbc lw     a3, 0x60c(a2)
+00dc0 slli   a0, a0, 9
+00dc4 lui    t0, 0x17184
+00dc8 sll    t1, a0, a4
+00dcc sub    a4, a3, a4
+00dd0 mulhsu a0, a3, a0
+00dd4 add    a0, a4, a0
+00dd8 sra    a0, a0, a4
+00ddc ori    t2, a0, 1
+00de0 andi   a0, a0, 0x1fe
+00de4 add    a6, a2, a0
+00de8 mul    a4, t2, t0
+00dec mulh   t0, t2, t0
+00df0 add    a0, a6, a0
+00df4 lw     a3, 0(a0)
+00df8 mul    a0, t2, a7
+00dfc add    a0, a0, t1
+00e00 sub    a0, t0, a0
+00e04 sub    a1, a1, a5
+00e08 j      0x3c8
+00e0c addi   a2, zero, 0x74
+00e10 bltu   a2, a1, 0x1b0
+00e14 xori   a2, a1, 0x1f
+00e18 lui    a4, 0x3f800
+00e1c or     a1, a0, a4
+00e20 slli   a3, a1, 8
+00e24 srl    a0, a3, a2
+00e28 mulhu  a5, a0, a0
+00e2c add    a0, a0, a5
+00e30 addi   a5, a0, 0x82
+00e34 andi   a0, a5, 0xfe
+00e38 beqz   a0, 0x3f8
+00e3c srli   a1, a5, 8
+00e40 xor    a0, a1, a4
+00e44 ret
+00e48 lui    a1, 0x42b17
+00e4c addi   a1, a1, 0x217
+00e50 bgeu   a1, a0, 0x1b4
+00e54 lui    a1, 0x7f800
+00e58 bltu   a1, a0, 0x2a8
+00e5c mv     a0, a1
+00e60 ret
+00e64 lui    a1, 0xbe800
+00e68 bgeu   a1, a0, 0x230
+00e6c slli   a3, a0, 0xd
+00e70 srli   a1, a0, 0xf
+00e74 lui    a2, 0                        26:ext_r+-98304
+00e78 mv     a2, a2                       27:ext_r+-98304
+00e7c andi   a1, a1, -0x10
+00e80 add    a4, a2, a1
+00e84 lw     a5, 0x390(a4)
+00e88 lh     a6, 0x384(a4)
+00e8c lw     a1, 0x384(a4)
+00e90 lw     a2, 0x388(a4)
+00e94 lw     a4, 0x38c(a4)
+00e98 mulhsu a6, a6, a3
+00e9c add    a5, a5, a6
+00ea0 mulhsu a5, a5, a3
+00ea4 add    a4, a4, a5
+00ea8 mulhsu a5, a4, a3
+00eac add    a5, a2, a5
+00eb0 slli   a3, a5, 0x18
+00eb4 bgeu   a3, a2, 0x184
+00eb8 bgez   a2, -0x114
+00ebc add    a5, a1, a5
+00ec0 slli   a1, a1, 7
+00ec4 lui    a2, 0x7f800
+00ec8 and    a1, a1, a2
+00ecc bltz   a5, 0x4f8
+00ed0 andi   a2, a5, 0xfc
+00ed4 srli   a5, a5, 8
+00ed8 bnez   a2, 0x164
+00edc j      -0x134
+00ee0 lui    a1, 0xc0fff
+00ee4 bltu   a1, a0, 0x20c
+00ee8 srli   a1, a0, 0x10
+00eec lui    a2, 0                        26:ext_r+-45056
+00ef0 mv     a2, a2                       27:ext_r+-45056
+00ef4 andi   a1, a1, -4
+00ef8 add    a1, a2, a1
+00efc lw     a2, -0x3f4(a1)
+00f00 lw     a3, -0x474(a1)
+00f04 slli   a4, a0, 0xe
+00f08 lw     a5, -0x4f4(a1)
+00f0c mulhsu a6, a2, a0
+00f10 add    a3, a3, a6
+00f14 lw     a6, -0x574(a1)
+00f18 mulhsu a3, a3, a4
+00f1c add    a3, a5, a3
+00f20 lw     a1, -0x5f4(a1)
+00f24 mulhsu a3, a3, a4
+00f28 add    a3, a6, a3
+00f2c mulhsu a3, a3, a4
+00f30 add    a3, a1, a3
+00f34 bltz   a3, 0x448
+00f38 addi   a1, a3, 0x80
+00f3c andi   a4, a1, 0x1f8
+00f40 srli   a1, a1, 9
+00f44 slli   a2, a2, 0x17
+00f48 beqz   a4, 0x444
+00f4c sub    a0, a1, a2
+00f50 ret
+00f54 addi   a5, zero, 8
+00f58 add    a5, a0, a5
+00f5c lw     a5, 0x600(a5)
+00f60 mulhu  a6, a6, a3
+00f64 add    a3, a3, a6
+00f68 sub    a4, a5, a4
+00f6c srl    a6, a3, a4
+00f70 srli   a3, a6, 1
+00f74 andi   a7, a6, 0x3fc
+00f78 ori    a4, a3, 1
+00f7c add    a7, a2, a7
+00f80 mul    a5, a4, a5
+00f84 lw     a3, 0(a7)
+00f88 sub    a7, a1, a5
+00f8c mulh   a1, a7, a7
+00f90 srli   a1, a1, 9
+00f94 add    a1, a7, a1
+00f98 mulhsu a1, a1, a3
+00f9c srai   a1, a1, 8
+00fa0 add    a1, a1, a3
+00fa4 srli   a5, a6, 0xa
+00fa8 andi   t0, a1, 0xf8
+00fac addi   a6, a5, 0x7e
+00fb0 bnez   t0, 0x1e0
+00fb4 bne    a2, a0, 0x1ec
+00fb8 addi   a5, zero, 0x10
+00fbc j      0x1e8
+00fc0 lui    a4, 0x3f800
+00fc4 not    a2, a1
+00fc8 or     a1, a0, a4
+00fcc slli   a3, a1, 8
+00fd0 srl    a0, a3, a2
+00fd4 lui    a5, 0xaaaab
+00fd8 mulhu  a5, a0, a5
+00fdc mulhu  a5, a5, a0
+00fe0 add    a5, a0, a5
+00fe4 mulhu  a5, a5, a0
+00fe8 add    a0, a0, a5
+00fec addi   a5, a0, 0x81
+00ff0 andi   a0, a5, 0xff
+00ff4 beqz   a0, 0x404
+00ff8 srli   a1, a5, 8
+00ffc or     a0, a1, a4
+01000 ret
+01004 slli   a6, a0, 9
+01008 lui    a2, 0                        26:ex8_r+0
+0100c mv     a2, a2                       27:ex8_r+0
+01010 lui    a0, 0                        26:ex8_r+0
+01014 mv     a0, a0                       27:ex8_r+0
+01018 xor    a1, a2, a0
+0101c snez   a1, a1
+01020 slli   a1, a1, 2
+01024 add    a1, a0, a1
+01028 lw     a5, 0x600(a1)
+0102c bne    a2, a0, 0xe0
+01030 addi   a1, zero, 4
+01034 j      0xdc
+01038 srli   a5, a5, 8
+0103c sub    a0, a1, a5
+01040 ret
+01044 not    a2, a0
+01048 lui    a4, 0x3f800
+0104c srli   a2, a2, 0x17
+01050 or     a1, a0, a4
+01054 slli   a3, a1, 8
+01058 srl    a0, a3, a2
+0105c mulhu  a5, a0, a0
+01060 sub    a5, a0, a5
+01064 addi   a5, a5, 0x41
+01068 andi   a6, a5, 0x7e
+0106c bnez   a6, 0x78
+01070 addi   a4, a2, -0x90
+01074 bltu   a3, a4, 0x384
+01078 srl    a1, a3, a4
+0107c mulhu  a0, a0, a1
+01080 sub    a1, a1, a0
+01084 srli   a1, a1, 0x16
+01088 lui    a0, 0x7f000
+0108c sub    a0, a0, a1
+01090 srli   a0, a0, 1
+01094 ret
+01098 lui    a1, 0xbd800
+0109c bltu   a1, a0, 0x1c4
+010a0 srli   a2, a0, 0x17
+010a4 lui    a4, 0x3f800
+010a8 lui    a5, 0x53888
+010ac or     a1, a0, a4
+010b0 not    a2, a2
+010b4 slli   a3, a1, 8
+010b8 srl    a6, a3, a2
+010bc mulhu  a5, a6, a5
+010c0 lui    a7, 0xaaa46
+010c4 sub    a5, a7, a5
+010c8 mulhu  a5, a5, a6
+010cc mulhu  a5, a5, a6
+010d0 sub    a5, a5, a6
+010d4 mulhu  a5, a5, a6
+010d8 addi   a5, a5, 0x41
+010dc andi   a7, a5, 0x7f
+010e0 beqz   a7, 0x304
+010e4 srli   a5, a5, 7
+010e8 sub    a0, a4, a5
+010ec ret
+010f0 lui    a1, 0xc2d00
+010f4 bltu   a0, a1, 0x1c4
+010f8 lui    a1, 0xff800
+010fc bgeu   a1, a0, 0x2a0
+01100 lui    a1, 0x400
+01104 or     a0, a0, a1
+01108 ret
+0110c addi   a1, zero, 8
+01110 add    a1, a0, a1
+01114 lw     a3, 0x600(a1)
+01118 sll    a1, a6, a4
+0111c mulhu  a6, a6, a5
+01120 add    a5, a5, a6
+01124 sub    a4, a3, a4
+01128 srl    a6, a5, a4
+0112c srli   a4, a6, 1
+01130 ori    a4, a4, 1
+01134 bne    a2, a0, 0xc
+01138 addi   a5, zero, 0x10
+0113c j      8
+01140 addi   a5, zero, 0x14
+01144 add    a0, a0, a5
+01148 mul    a3, a4, a3
+0114c andi   a7, a6, 0x3fc
+01150 lw     a5, 0x600(a0)
+01154 sub    a0, a1, a3
+01158 add    a7, a2, a7
+0115c lw     a3, 0(a7)
+01160 mulhu  a1, a4, a5
+01164 add    a0, a0, a1
+01168 mulh   a1, a0, a0
+0116c srli   a1, a1, 9
+01170 add    a1, a0, a1
+01174 mulhsu a1, a1, a3
+01178 srai   a1, a1, 8
+0117c add    a1, a1, a3
+01180 srli   a6, a6, 0xa
+01184 andi   a7, a1, 0xf8
+01188 addi   a6, a6, 0x7e
+0118c beqz   a7, 0x28
+01190 slli   a6, a6, 0x17
+01194 srli   a1, a1, 8
+01198 add    a0, a1, a6
+0119c ret
+011a0 addi   a5, zero, 0x14
+011a4 add    a0, a0, a5
+011a8 lw     a5, 0x600(a0)
+011ac mulhu  a0, a5, a4
+011b0 add    a0, a7, a0
+011b4 andi   a7, a4, 0x1fe
+011b8 slli   t0, a6, 0x17
+011bc srli   a1, a1, 8
+011c0 add    a6, a2, a7
+011c4 add    a1, t0, a1
+011c8 addi   a1, a1, -1
+011cc mul    a4, a5, a4
+011d0 lw     a2, 0x608(a2)
+011d4 mulh   a5, a0, a0
+011d8 addi   a3, a3, -0x86
+011dc lhu    a6, 0x400(a6)
+011e0 slli   a7, a3, 0x10
+011e4 srli   t0, a3, 0x10
+011e8 mul    t1, t0, a0
+011ec mulhu  a4, a4, t0
+011f0 add    a4, t1, a4
+011f4 mulhsu a2, a0, a2
+011f8 or     a6, a7, a6
+011fc addi   a2, a2, 0x230
+01200 slli   a7, a6, 8
+01204 mulhsu a0, a0, a6
+01208 mulhsu a2, a2, a5
+0120c add    a2, a2, a5
+01210 mulhsu a2, a2, a3
+01214 slli   a2, a2, 7
+01218 add    a4, a4, a7
+0121c add    a0, a0, a2
+01220 add    a0, a4, a0
+01224 srli   a0, a0, 0x1f
+01228 add    a0, a0, a1
+0122c ret
+01230 addi   a0, a2, -0x70
+01234 bltu   a3, a0, 0x1c4
+01238 srl    a0, a3, a0
+0123c mulhu  a1, a0, a0
+01240 srli   a1, a1, 0x10
+01244 add    a0, a0, a1
+01248 srli   a0, a0, 0x17
+0124c addi   a0, a0, 1
+01250 srli   a0, a0, 1
+01254 lui    a1, 0x3f800
+01258 or     a0, a0, a1
+0125c ret
+01260 srli   a1, a0, 0x11
+01264 lui    a2, 0                        26:ext_r+-24576
+01268 mv     a2, a2                       27:ext_r+-24576
+0126c andi   a1, a1, -0x10
+01270 add    a1, a2, a1
+01274 lw     a2, 0x14c(a1)
+01278 lw     a3, 0x148(a1)
+0127c lw     a4, 0x144(a1)
+01280 lw     a1, 0x140(a1)
+01284 mulhsu a2, a2, a0
+01288 add    a2, a3, a2
+0128c slli   a3, a0, 0xb
+01290 mulhsu a2, a2, a3
+01294 add    a2, a4, a2
+01298 mulhsu a2, a2, a3
+0129c add    a1, a1, a2
+012a0 andi   a2, a1, 0xfc
+012a4 srli   a1, a1, 8
+012a8 beqz   a2, 0x1c8
+012ac lui    a0, 0x3e800
+012b0 add    a0, a1, a0
+012b4 ret
+012b8 lui    a1, 0xc2cdb
+012bc bgeu   a0, a1, 0xe8
+012c0 srli   a1, a0, 0x17
+012c4 addi   a5, a1, -0x177
+012c8 lui    a2, 0                        26:ex8_r+0
+012cc mv     a2, a2                       27:ex8_r+0
+012d0 slli   a6, a0, 9
+012d4 lw     a0, 0x600(a2)
+012d8 lw     a3, 0x604(a2)
+012dc lw     a7, 0x610(a2)
+012e0 sll    a4, a6, a5
+012e4 mulhu  a1, a0, a6
+012e8 sub    a5, a3, a5
+012ec add    a0, a0, a1
+012f0 srl    a1, a0, a5
+012f4 srli   a0, a1, 1
+012f8 andi   a5, a1, 0x3fc
+012fc ori    a0, a0, 1
+01300 sub    a5, a2, a5
+01304 mul    t0, a0, a3
+01308 mulhu  t1, a0, a7
+0130c lw     a3, 0x3fc(a5)
+01310 sub    t0, a4, t0
+01314 add    t0, t0, t1
+01318 mulh   a4, t0, t0
+0131c srli   a4, a4, 9
+01320 sub    t1, a4, t0
+01324 mulhsu a4, t1, a3
+01328 srai   a4, a4, 8
+0132c add    a5, a4, a3
+01330 srli   t2, a1, 0xa
+01334 addi   a4, t2, -0x7d
+01338 bltz   a5, 0x144
+0133c beqz   a3, 0x15c
+01340 addi   sp, sp, -0x10
+01344 sw     ra, 0xc(sp)
+01348 sw     s0, 8(sp)
+0134c addi   s0, sp, 0x10
+01350 xori   a1, t2, 0x7f
+01354 srli   a3, a3, 0x1f
+01358 slli   a1, a1, 0x17
+0135c sltiu  a2, a5, 0x10
+01360 mv     a0, zero
+01364 auipc  ra, 0                        19:__udivdi3+0
+01368 jalr   ra
+0136c lw     ra, 0xc(sp)
+01370 lw     s0, 8(sp)
+01374 addi   sp, sp, 0x10
+01378 ret
+0137c andi   a4, a3, 0xf8
+01380 srai   a1, a3, 8
+01384 slli   a2, a2, 0x17
+01388 bnez   a4, -0x43c
+0138c andi   a3, a3, 6
+01390 addi   a5, a2, 1
+01394 bnez   a3, -0x5ec
+01398 j      -0x35c
+0139c mv     a0, zero
+013a0 ret
+013a4 lui    a1, 0xc2cdc
+013a8 lui    a2, 0xc2cff
+013ac addi   a1, a1, -0xc9
+013b0 addi   a2, a2, 0x1b5
+013b4 sltu   a1, a0, a1
+013b8 sltu   a0, a0, a2
+013bc add    a0, a1, a0
+013c0 ret
+013c4 addi   a5, a5, 0x80
+013c8 andi   a2, a5, 0x1fc
+013cc srai   a5, a5, 9
+013d0 bnez   a2, -0x394
+013d4 bnez   a1, -0x62c
+013d8 lui    a2, 0                        26:ex8_r+4
+013dc mv     a2, a2                       27:ex8_r+4
+013e0 j      -0x110
+013e4 srli   a4, a6, 0x17
+013e8 beqz   a4, 0x10
+013ec srli   a5, a5, 7
+013f0 lui    a1, 0x3f800
+013f4 j      -0x64c
+013f8 addi   a2, a2, 0x17
+013fc lui    a4, 0x55556
+01400 srl    a0, a3, a2
+01404 mulhu  a2, a0, a0
+01408 mulhu  a3, a0, a4
+0140c mul    a6, a0, a0
+01410 slli   a7, a0, 0x11
+01414 mulhu  a3, a3, a2
+01418 srli   a6, a6, 0x18
+0141c slli   a2, a2, 8
+01420 mulhu  a0, a3, a0
+01424 or     a2, a2, a6
+01428 srli   a0, a0, 0xa
+0142c add    a0, a2, a0
+01430 add    a2, a7, a3
+01434 bltu   a1, a4, 0x20
+01438 srli   a5, a5, 7
+0143c sub    a2, a2, a0
+01440 srli   a2, a2, 0x1f
+01444 sub    a1, a2, a5
+01448 lui    a0, 0x3f800
+0144c add    a0, a1, a0
+01450 ret
+01454 srli   a5, a5, 8
+01458 add    a0, a0, a2
+0145c srai   a0, a0, 0x1f
+01460 add    a0, a5, a0
+01464 lui    a1, 0x3f800
+01468 add    a0, a0, a1
+0146c ret
+01470 lui    a5, 0xc1800
+01474 addi   a5, a5, 1
+01478 j      -0x6d0
+0147c bgeu   a1, a4, 0x2c
+01480 andi   a1, a5, 0xf8
+01484 beqz   a1, 0x80
+01488 srli   a5, a5, 8
+0148c slli   a4, a4, 0x17
+01490 sub    a0, a5, a4
+01494 ret
+01498 addi   a2, a2, 4
+0149c bltz   t0, -0x77c
+014a0 bgez   t1, -0x6e8
+014a4 j      -0x494
+014a8 addi   t2, t2, 0xa
+014ac addi   a1, a5, -0x8e
+014b0 addi   a5, a5, -0x7e
+014b4 srl    a1, a1, t2
+014b8 srl    a5, a5, t2
+014bc addi   a1, a1, 1
+014c0 addi   a5, a5, 1
+014c4 srli   a1, a1, 1
+014c8 srli   a5, a5, 1
+014cc beq    a1, a5, -0x670
+014d0 neg    a5, a0
+014d4 andi   a6, a5, 0x1fe
+014d8 not    a0, t0
+014dc beqz   a4, 0x1c
+014e0 srli   a4, a3, 8
+014e4 lui    t0, 0x80000
+014e8 divu   a4, t0, a4
+014ec mulhsu a4, a0, a4
+014f0 sub    a0, a0, a4
+014f4 addi   a3, a3, 0x80
+014f8 add    a6, a2, a6
+014fc mul    a4, a7, a5
+01500 j      -0x330
+01504 neg    a1, a0
+01508 not    a0, t0
+0150c srli   a5, a5, 8
+01510 slli   a6, a4, 0x17
+01514 andi   t0, a1, 0x1fe
+01518 mul    a4, a7, a1
+0151c not    a1, a6
+01520 add    a6, a2, t0
+01524 add    a1, a5, a1
+01528 j      -0x358

@@ -1,0 +1,739 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "9dbc0c8490b6d6d90b79ab719ef09656e53980afb16fd9cbe35fa986664a40f9",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 34.274676534308036,
+     "rv32im": 28.995332482697528,
+     "thumbv6m": 40.515260593492414
+    },
+    "S_thumbv7em_reported_only": 39.95633850332885,
+    "form": "evaluate",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "9dbc0c8490b6d6d90b79ab719ef09656e53980afb16fd9cbe35fa986664a40f9",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595",
+    "status": "would-take-over-after-full-check",
+    "targets": {
+     "rv32im": {
+      "bytes": 19088,
+      "functions": {
+       "exp": {
+        "hard_p999": 84,
+        "means": {
+         "hard": 43.82333333333333,
+         "typical": 31.596,
+         "uniform": 13.575,
+         "wide": 26.642
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 32.126666666666665,
+         "typical": 28.8995,
+         "uniform": 12.212,
+         "wide": 20.624
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1363361147235442,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 178,
+        "means": {
+         "hard": 48.50333333333333,
+         "typical": 37.908,
+         "uniform": 18.579,
+         "wide": 29.537
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 75.93333333333334,
+         "typical": 37.149,
+         "uniform": 14.698,
+         "wide": 20.731
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 164,
+        "means": {
+         "hard": 49.23,
+         "typical": 37.824,
+         "uniform": 20.233,
+         "wide": 29.983
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.41333333333333,
+         "typical": 35.997,
+         "uniform": 16.627,
+         "wide": 21.468
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 34.183701733224666,
+     "rv32im": 28.993482723323357,
+     "thumbv6m": 40.30303897386101
+    },
+    "S_thumbv7em_reported_only": 39.74954420309734,
+    "form": "evaluate",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "9dbc0c8490b6d6d90b79ab719ef09656e53980afb16fd9cbe35fa986664a40f9",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595",
+    "status": "would-take-over-after-full-check",
+    "targets": {
+     "rv32im": {
+      "bytes": 19088,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 45.38,
+         "typical": 31.325,
+         "uniform": 13.566,
+         "wide": 26.872
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 111,
+        "means": {
+         "hard": 30.95,
+         "typical": 28.789,
+         "uniform": 12.405,
+         "wide": 20.561
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1363361147235442,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20500,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 187,
+        "means": {
+         "hard": 46.58,
+         "typical": 37.4395,
+         "uniform": 18.766,
+         "wide": 29.272
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.36,
+         "typical": 36.761,
+         "uniform": 14.364,
+         "wide": 21.07
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1457771056279882,
+      "stack": 60,
+      "stack_bound": 312,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21254,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 171,
+        "means": {
+         "hard": 47.22,
+         "typical": 37.216,
+         "uniform": 20.47,
+         "wide": 29.959
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.19,
+         "typical": 35.666,
+         "uniform": 16.293,
+         "wide": 21.741
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1507868189783783,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+ },
+ "kind": "trial",
+ "note": "Typed table-row indexing in the two RV32IM positive exp reductions. Same-input comparison with former submission 50. RV32IM regressed and both Thumb images were byte-identical.",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.0082509063211649,
+   "rv32im": 1.01656989009745,
+   "thumbv6m": 1.0
+  },
+  "1947282751": {
+   "overall": 1.0083124288737684,
+   "rv32im": 1.0166939542213183,
+   "thumbv6m": 1.0
+  }
+ },
+ "runs": {
+  "base-check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads base base-check check eik-work/baselines/former-50/entry.c",
+   "exit_code": 0,
+   "files": {
+    "base-check.json": "ff0d4f8dcfa85e28d94d2a0ef0720cc05799d57fb0df7de3bbccb420aaed718a",
+    "base-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "base-check.stdout": "57861896bd76b4c7e11cc89c116de88c6290fbd357b6a477f8a6059d54ca91bd"
+   }
+  },
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads trial check check eik-work/trials/rv-exp-loads/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "b700df2072842c1789e1895cf4c034794251ba82fafef792e54913bc074a2cc8",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "0c743510a0b35860f9a16b24f9f7a215efc14df49b9a20aa87ec0cdb256b02ae"
+   }
+  },
+  "check@gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads gate check check eik-work/trials/rv-exp-loads/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check@gate.json": "5c1d6b1d85fb6839ffb41504f443575504e547bf72e691c46a2d37319d8f942b",
+    "check@gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check@gate.stdout": "0c743510a0b35860f9a16b24f9f7a215efc14df49b9a20aa87ec0cdb256b02ae"
+   }
+  },
+  "evaluate-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads eval-1874435642 evaluate-1874435642 evaluate eik-work/trials/rv-exp-loads/entry.c --quick --json --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "evaluate-1874435642.json": "e72de586a32772a7d847e8862d71bf3187a0cfe61071570fe1e533f7b9201a48",
+    "evaluate-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1874435642.stdout": "6b9347e3553f15827bf3a654553714e7d86e50d02c5b46b35945dc61315e87ad"
+   }
+  },
+  "evaluate-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads eval-1947282751 evaluate-1947282751 evaluate eik-work/trials/rv-exp-loads/entry.c --quick --json --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "evaluate-1947282751.json": "e0fadbd7003aa179a8c50bacacc0ad1f1eedfbff4c1e9919719936608852a307",
+    "evaluate-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1947282751.stdout": "2075e70e995205d735add97a7fa85863655dd1004d1e8b6260303f47731d0b27"
+   }
+  },
+  "exhaustive-host-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads host-exp exhaustive-host-exp fullcheck eik-work/trials/rv-exp-loads/entry.c --function exp --threads 2",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-host-exp.json": "f476430f2cabeccdbc8e37fad03184bd545d04fd97a8325a813e78568f3a3f42",
+    "exhaustive-host-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-host-exp.stdout": "72d50d4d9989081d30e745fcd63d34975ea5f645880f94ca1798b83a57908304"
+   }
+  },
+  "exhaustive-host-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads host-sigmoid exhaustive-host-sigmoid fullcheck eik-work/trials/rv-exp-loads/entry.c --function sigmoid --threads 2",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-host-sigmoid.json": "c6e1531482f9907ef0f086e9540a2632662396d7eb5396587e90c8661eb2da00",
+    "exhaustive-host-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-host-sigmoid.stdout": "fed77e32b165e71b252a9c4e2b81323210ddcbf16b065d7aad2ada46c7937dc5"
+   }
+  },
+  "exhaustive-host-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads host-tanh exhaustive-host-tanh fullcheck eik-work/trials/rv-exp-loads/entry.c --function tanh --threads 2",
+   "exit_code": 0,
+   "files": {
+    "exhaustive-host-tanh.json": "5d9639694b701336cb136bd1d0c79659f15972e28c5e6c391f634f23c8ef5674",
+    "exhaustive-host-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-host-tanh.stdout": "a6314b557df224b8f016f0190269e6e74b55d5e5dda732214065c1638cd08c10"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads trial fingerprint fingerprint",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "b831388701c7d3029163c61db9e4c40e94aee8812161be24f89f33145a460ef9",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "a15a495493053705bea1f0b546dfb3408491e733249c3d4d928595693c2e06b4"
+   }
+  },
+  "fingerprint@gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads gate fingerprint fingerprint",
+   "exit_code": 0,
+   "files": {
+    "fingerprint@gate.json": "5f5e01d4d2c2b9b419960794027dcce51e737c61f4bb9e0648b781cd9f5c326c",
+    "fingerprint@gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint@gate.stdout": "a15a495493053705bea1f0b546dfb3408491e733249c3d4d928595693c2e06b4"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1874435642 fullcheck-1874435642-exp fullcheck eik-work/trials/rv-exp-loads/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "d485ffa49fbccd67e4456e569f2b1f7315a6051340e3cc6394f726b404bd71da",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "dd942bfbca9ecdabab44bb65a529e89ea4a4612808071b083e4f3d40ac837a78"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1874435642 fullcheck-1874435642-sigmoid fullcheck eik-work/trials/rv-exp-loads/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "4c44be650a0ba60b0cdee4284b9b08c570dc0458aa4c66b604ac2fbdebf511f3",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "7e06df3312b8aab76b946a512d291b89159d459ceb34cbea4a4e662116c8dfbc"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1874435642 fullcheck-1874435642-tanh fullcheck eik-work/trials/rv-exp-loads/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "1dc8bba4f3d7229519b555c4c424faa663a63887257bc5234c755a3d878fcaa1",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "a575faf76680dbe81a333b6408cbac146c147742d8ed37ea3437785d5f7e0a32"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1947282751 fullcheck-1947282751-exp fullcheck eik-work/trials/rv-exp-loads/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "e8b52b234cf2c6001429f9cb152435b6022df0754cd6ef3fcb21e8fc7c17798d",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "644f736b3e3140e2eba901a47b4143cd77cf7a42957e46e5451f8b21a1ed7830"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1947282751 fullcheck-1947282751-sigmoid fullcheck eik-work/trials/rv-exp-loads/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "7a716070931dabd1ae99b0013d32d85c23460f1ddb985ed659da16ce4f5296b2",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "7889d804bc49626985f26c0dc656d7a8e267c1c7b5fe48a81a0753285a3d81a5"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1947282751 fullcheck-1947282751-tanh fullcheck eik-work/trials/rv-exp-loads/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "f6ed7fe82681c38e02559fd0631c11f8229e1bc7e01e5b615bee286bd9a2cdc0",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "30b6da274e3c93b767c4cfec621608eb9bc5f21eaadd8e917d1a0f612242f855"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads trial gate gate eik-work/trials/rv-exp-loads/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "07b99dfbae3bc53451a4201019e5de50c9be0837b3f8a1a8b0de365e986800de",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "b00bd18e27a84e211702d36c26dc03d7c1ddd103bb0ed70e042ed40ec0fc1afe"
+   }
+  },
+  "gate@gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads gate gate gate eik-work/trials/rv-exp-loads/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate@gate.json": "b8978fecf10bdc9cb2e10f9201176cef4ef7b918f9682e0e1135781ae00113c8",
+    "gate@gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate@gate.stdout": "b00bd18e27a84e211702d36c26dc03d7c1ddd103bb0ed70e042ed40ec0fc1afe"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1874435642 measure-1874435642 measure eik-work/trials/rv-exp-loads/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "b5f1882388ea4bd28d18892e4bcb738fcc3060065470efa707baca829cb48164",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "77575738e74e0f9a275b8518846c274e66845e69ede2c68cb38bd49951d03a70"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads stage-1947282751 measure-1947282751 measure eik-work/trials/rv-exp-loads/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "32b285d8a84838d4998d5b7efc83be2db3fe2dcd1f262a67b6ae0cf87e124ab4",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "15f832a8b9388ae4082187dabdb4fa2d7b8bff097cea98e9725e5aafe6086812"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads trial setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "57968f33bc11e8243fca99e1a23ecbde343dc9d63b45e405f87190b5f4ca8da1",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "setup@incumbent-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads incumbent-1874435642 setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup@incumbent-1874435642.json": "9f107b657dce1718aaee0e3743d2b2fadadb02abf37e800b455eb875126e4d96",
+    "setup@incumbent-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup@incumbent-1874435642.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "setup@incumbent-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads incumbent-1947282751 setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup@incumbent-1947282751.json": "9b0b18814e7dcf9babb0b9bc79a2e78b80581f90af68af71ad9e199e3644e166",
+    "setup@incumbent-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup@incumbent-1947282751.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  },
+  "targetcheck-rv32im-exp-1039": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads target-1039 targetcheck-rv32im-exp-1039 targetcheck eik-work/trials/rv-exp-loads/entry.c --function exp --target rv32im --chunks 1039:1042 --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-1039.json": "928e20c898996843b5e9447418630b773d96158689165b60c40f7053d9549f15",
+    "targetcheck-rv32im-exp-1039.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-1039.stdout": "5589c12724449f463abe24e3c277631f9f548d7f4cc89f7ce571fe56df7f9da8"
+   }
+  },
+  "targetcheck-rv32im-exp-1066": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads target-1066 targetcheck-rv32im-exp-1066 targetcheck eik-work/trials/rv-exp-loads/entry.c --function exp --target rv32im --chunks 1066:1068 --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-1066.json": "5b34834590ead2404cee89882321cea2e6162a1e77d15d3f4ac323ea99537b57",
+    "targetcheck-rv32im-exp-1066.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-1066.stdout": "51ec4292b17f81d5e0ca68dc1d01ccd411d9c681e6b0b262a179304500fcfb9b"
+   }
+  },
+  "targetcheck-rv32im-exp-3064": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads target-3064 targetcheck-rv32im-exp-3064 targetcheck eik-work/trials/rv-exp-loads/entry.c --function exp --target rv32im --chunks 3064:3117 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-3064.json": "e55fe6059fd7d21feb88bc24e149bdd7c551daf663460fc55ec19becafc3d0e4",
+    "targetcheck-rv32im-exp-3064.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-3064.stdout": "1f261bb46a40b2cb594fcee5101e26cc4c41c8cedfca6de6aecebcd52c46ec08"
+   }
+  },
+  "targetcheck-rv32im-exp-951": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads target-951 targetcheck-rv32im-exp-951 targetcheck eik-work/trials/rv-exp-loads/entry.c --function exp --target rv32im --chunks 951:953 --jobs 1",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-951.json": "ba7c1dab06417135a548eaf2d3f282c00b2583024f226ab84161cc558168d85c",
+    "targetcheck-rv32im-exp-951.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-951.stdout": "1e431bcd32f4963ed6a51e3036747aaf378649c3af176b179045f21f700ceb3b"
+   }
+  },
+  "targetcheck-rv32im-exp-952": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/rv-exp-loads target-952 targetcheck-rv32im-exp-952 targetcheck eik-work/trials/rv-exp-loads/entry.c --function exp --target rv32im --chunks 952:1067 --jobs 2",
+   "exit_code": 0,
+   "files": {
+    "targetcheck-rv32im-exp-952.json": "ca9c3e48e670e6df99630fb187043ed3a48c1bf4b656cfcf6094e5ed5fa4218b",
+    "targetcheck-rv32im-exp-952.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-952.stdout": "e2d470c077cdb672f846b78513a7011cdb88e5985693ca9ff4c3c00f87dca4be"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/rv-exp-loads/entry.c",
+  "sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+ },
+ "status": "measured",
+ "target": "rv-exp-loads"
+}

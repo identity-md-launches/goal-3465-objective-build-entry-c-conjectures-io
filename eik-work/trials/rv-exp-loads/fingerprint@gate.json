@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rv-exp-loads/runtime/bin/python",
+    "-m",
+    "eik",
+    "fingerprint"
+  ],
+  "exit_code": 0,
+  "seconds": 2.116,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a15a495493053705bea1f0b546dfb3408491e733249c3d4d928595693c2e06b4"
+}

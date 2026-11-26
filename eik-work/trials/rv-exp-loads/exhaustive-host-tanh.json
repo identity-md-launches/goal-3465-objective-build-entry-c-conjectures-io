@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "$REPO/test/scratch/rv-exp-loads/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/trials/rv-exp-loads/entry.c",
+    "--function",
+    "tanh",
+    "--threads",
+    "2"
+  ],
+  "exit_code": 0,
+  "seconds": 1651.939,
+  "source_sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "a6314b557df224b8f016f0190269e6e74b55d5e5dda732214065c1638cd08c10"
+}
