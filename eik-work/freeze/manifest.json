@@ -1,0 +1,849 @@
+{
+ "accepted_normalised_hashes": {
+  "04826e97988da9b0d0d5430b58c911cb5173913910a3192c4bffb8ee5ae3b2ac": "former-48",
+  "1e535a962adb23a1bd991c9b849bf723e01580928b14833b64f1b19c14b05c90": "former-37",
+  "93df82764bfc56ce941e6dfe09ef2373c6536dfbc232a35bb682eabca77756c2": "former-46",
+  "ac9fec2dd7f63bf4e670d58beff50451704af4d9e648c00ff9366ac823c790fb": "former-42",
+  "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8": "former-50"
+ },
+ "base": {
+  "normalised_sha256": "e8722042f89400f887e0e526338d22ae756c029c4646c49c4d290da1bda04db8",
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "change_note": "m0-tanh-refine: only the exponent-119 Thumb tanh refinement guard of id50 changes (refine below 253952 instead of 262144 in the Q23 remainder; 5,632 more fast returns per sign). RV32IM .text/.rodata identical to id50; Thumbv6-M +8 bytes; S ratio thumbv6m 1.000378/1.000327.",
+ "chosen": "m0-tanh-refine",
+ "chosen_packet": {
+  "path": "eik-work/trials/m0-tanh-refine/packet.json",
+  "sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c"
+ },
+ "control": {
+  "S": {
+   "1874435642": {
+    "overall": 33.99419362722625,
+    "rv32im": 28.52271424241966,
+    "thumbv6m": 40.515260593492414
+   },
+   "1947282751": {
+    "overall": 33.90189464529962,
+    "rv32im": 28.517414314250885,
+    "thumbv6m": 40.30303897386101
+   }
+  },
+  "inputs_sha256": {
+   "1874435642": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+   "1947282751": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77"
+  },
+  "path": "eik-work/trials/paired-control"
+ },
+ "diff": {
+  "path": "eik-work/freeze/entry-vs-id50.diff",
+  "sha256": "cfb554354516aa1a889cf15c2a17c06beb8cedb8927369d5a7b63e6c6f29e189",
+  "trial_diff": {
+   "path": "eik-work/trials/m0-tanh-refine/id50.diff",
+   "sha256": "553ac9b0c48dee23f33373741e8c8e044c2b33d6cf2e850e8eccd1bbbd6d8063"
+  }
+ },
+ "entry": {
+  "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+  "path": "entry.c",
+  "same_bytes_as": "eik-work/trials/m0-tanh-refine/entry.c",
+  "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b",
+  "source_bytes": 166756
+ },
+ "evaluator": {
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none",
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "follow_up": "No trial gains; all eight are >=1.0 on every board. Next: target Thumbv6-M typical-class cost (exp/sigmoid ~40 instr) with a cheaper 32x32 high-multiply substitute, or a smaller table layout that reduces bytes without adding loads; the m0-tanh-refine guard only pays if emitted as a single shift+branch.",
+ "freeze_runs": {
+  "commands": [
+   "python3 eik-work/toolkit/provision.py --fetch",
+   "python3 eik-work/toolkit/verify.py bootstrap --offline",
+   "python3 eik-work/toolkit/run.py test/scratch/freeze freeze setup setup",
+   "python3 eik-work/toolkit/run.py test/scratch/freeze freeze check check entry.c",
+   "python3 eik-work/toolkit/run.py test/scratch/freeze freeze gate gate entry.c",
+   "python3 eik-work/toolkit/run.py test/scratch/freeze freeze fingerprint fingerprint --details",
+   "python3 eik-work/toolkit/run.py test/scratch/freeze rebuild check check entry.c  (determinism of section bytes)"
+  ],
+  "crosscheck": {
+   "m0-exp-layout.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "m0-exp-layout.stdout": "561e8acfc19222a48d659fe238d14fa9c3e70e4a61012f7195e629e83394b771",
+   "m0-exp-reduction.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "m0-exp-reduction.stdout": "1b87f4e2b938b089a9c6ca5176fb677e8fc2aee1839614fb57a65ebe9878a151",
+   "m0-sigmoid-cell.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "m0-sigmoid-cell.stdout": "344346b3ae900178b10534780555430a87487671dce4db43d1d9ca31bf0151df",
+   "m0-tanh-refine.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "m0-tanh-refine.stdout": "68d32da400335aa0aedf2d4a3a077810c92e7e63d3e89ac184aec305370796dc",
+   "paired-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "paired-control.stdout": "fd03b55a739318540d964cf364f4822cc94d42e184cd79c2974bf9bc7d6c13ce",
+   "rv-exp-interval.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "rv-exp-interval.stdout": "33d810e696dbb13a8099a7e4daad190e7b35963d729e0a9fe5607624040b32a5",
+   "rv-exp-loads.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "rv-exp-loads.stdout": "7aaf7020ed72e15683497f0b4e11b225f1e18afe65521894545a16c38ba22a04",
+   "rv-tanh-quadratic.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "rv-tanh-quadratic.stdout": "ffc17a5fa8a910383d9e2287593a9e679f92442da46e94fc6eae73f105aa16e3",
+   "shared-small-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "shared-small-sigmoid.stdout": "53be2e91fc609b46a70e46a5397aee3af1d9e152ef459b008ad43e82474e5834"
+  },
+  "logs": {
+   "check.json": "236eea21f1874c313872193967f5f5287a7fc210dc37e6b3b0ea3494b9fdd359",
+   "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "check.stdout": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b",
+   "fingerprint.json": "e344245c6c108844e6e91822c097904ba7f6e4ad57615540aed6b57f68c8a978",
+   "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d",
+   "gate.json": "0c0b2c36af172becae1e991ebd49b0367b20cc34336f9e80dde9f5f79d43b848",
+   "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "gate.stdout": "680eb3f3cab414e464e67555c7bd277dd2ef207280c98627a1aa87b4e5611a15",
+   "setup.json": "1eea24b6162f7aa1348e785aa5a2fab2a683256fe412e0416ef9ce92253af318",
+   "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+  },
+  "trial_scores_referenced": {
+   "base-gate": {
+    "base-gate.json": "2a44f52faacd3c78bff49f148ae73fa8920d02a39f5dca2e376460f1786e3f51",
+    "base-gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "base-gate.stdout": "c970030c30dd219e93f653cf445d617552744f9e895a9346b8da064347e3d369"
+   },
+   "check": {
+    "check.json": "f58d5f740180db390072dc2d5b31a6590662650ba47c46628a756a052dc81359",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "c838de9b5ef278653e06ab1d6b1a73f74ee4ad5b63058f8f66621e0117ac134b"
+   },
+   "evaluate-1874435642": {
+    "evaluate-1874435642.json": "2e483f1161573645ba1eb55e85013995a6d4312eae731c2598a54f510c9023a0",
+    "evaluate-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1874435642.stdout": "220ca60eb25eae72cd7886aeeeb5ccd808d7b1003ff4ce33b7b2677fada1618c"
+   },
+   "evaluate-1947282751": {
+    "evaluate-1947282751.json": "8d0dd797309217becaabd3c50135d97942528ce896b43f415bdd44e857a23a68",
+    "evaluate-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluate-1947282751.stdout": "2dbd3f278dabd358d9abab2ef9a28cc9c3d2a403c385c28f502fc97ae61956d6"
+   },
+   "exhaustive-exp": {
+    "exhaustive-exp.json": "3c6955588feded88fb826db69f86acfff3af46507a02122aeefc0e88840f46f0",
+    "exhaustive-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-exp.stdout": "b83b0e0906ee6f0d9b25da40716ef958c373d9abd533cc9f5f465fe598837419"
+   },
+   "exhaustive-merged": {
+    "exhaustive-merged.json": "96059f2a194d6cc75ca1e849007bd181bc4ccfc4fc2c9b352b2f07b803a147da",
+    "exhaustive-merged.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-merged.stdout": "ddba622b8135eb236e6a1243c88558c82fb13a5b45c9f203f50e5d447e521473"
+   },
+   "exhaustive-sigmoid": {
+    "exhaustive-sigmoid.json": "cbaefea0324c4ad1e244b8716a1eea2f705ded123533f647f72776baf8955b6d",
+    "exhaustive-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-sigmoid.stdout": "38274b64c8b908737c057d05c2d6e104d8de4f0292c0b5c3fba12ea8731f6ea7"
+   },
+   "exhaustive-tanh": {
+    "exhaustive-tanh.json": "79942a3eb32d6a69281ff7c3632ccc6f4ea17c787274dd780802afce433bf8d7",
+    "exhaustive-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustive-tanh.stdout": "3ffe77035f906fb88a07cb1c76d085d7631e9205d3504f2044ff0d6411033b94"
+   },
+   "fingerprint": {
+    "fingerprint.json": "954577a72da0cf9d44a64e3e887c68deff975b6f929e23982cf33d0cf41fa35f",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   },
+   "gate": {
+    "gate.json": "befb25092d160ccef4285d46b380d4978723967b45fc62a76b29a058f32f7219",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "680eb3f3cab414e464e67555c7bd277dd2ef207280c98627a1aa87b4e5611a15"
+   },
+   "setup": {
+    "setup.json": "a5b84312ca2e1e0c966fca9ccbc35bf76596709bb6d33939e880caf829598622",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   },
+   "targetcheck-negative": {
+    "targetcheck-negative.json": "2e4e7fe9e762d4d5d5da670147ab61a64ca8ae958598e19fb32a343185267481",
+    "targetcheck-negative.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-negative.stdout": "d3f42c881ed4738aea168a80474c6aad5b7095988623276308643904965fabe4"
+   },
+   "targetcheck-positive": {
+    "targetcheck-positive.json": "0b6c7698c4f51699f304b157b8cdb43848bb1ac44d70554b71b278b6383d5497",
+    "targetcheck-positive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-positive.stdout": "368b0b4a632be80144722d1b9b20592e095ca634ebcea6d33092236abb37dfa1"
+   },
+   "targetcheck-rv32im-exp-all": {
+    "targetcheck-rv32im-exp-all.json": "98d9157eace9c122d12ba447d8925bf3becf64868daf51565043f12b63d2e502",
+    "targetcheck-rv32im-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-exp-all.stdout": "334556d2b3bfc1d2533aae73e72b3594370276b477219a0b43381627d3ddb35c"
+   },
+   "targetcheck-rv32im-sigmoid-all": {
+    "targetcheck-rv32im-sigmoid-all.json": "1650a9b723e6e21187aea205430d9b38840b1a684475fbc5fe768158b8271e4d",
+    "targetcheck-rv32im-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-sigmoid-all.stdout": "1f30254711be0eb38446837da6855567fd5e6e97362811aeadfcde3afc64cee8"
+   },
+   "targetcheck-rv32im-tanh-all": {
+    "targetcheck-rv32im-tanh-all.json": "90db00182499b1acb3a208cf19a7b807236b59dcc7d9d5a5d367ff27919c17a0",
+    "targetcheck-rv32im-tanh-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-rv32im-tanh-all.stdout": "d3c878c8ce90a623758239dc4456936f1a8d8b73c5cf073be9d8dd6a223dc921"
+   },
+   "targetcheck-thumbv6m-all": {
+    "targetcheck-thumbv6m-all.json": "9bc888caebafa4ccc760086943d0fe98df6cdc648aa9c5234a6d03657612a34d",
+    "targetcheck-thumbv6m-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-all.stdout": "3ac1c782783b0aa1a94efd3994885bd89bc9cded3a086d0c830bc67726111e3f"
+   },
+   "targetcheck-thumbv6m-exp-all": {
+    "targetcheck-thumbv6m-exp-all.json": "a2c40439d12136b409e031afcabfef5e8e8585d9c852fb10111dc221be957467",
+    "targetcheck-thumbv6m-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-exp-all.stdout": "fde3c89f59494fef8f248a621c4ab15184b0269ab8ad206702ae83268e3ffdf4"
+   },
+   "targetcheck-thumbv6m-sigmoid-all": {
+    "targetcheck-thumbv6m-sigmoid-all.json": "41da3067a709c00dd51972582de24c782a7002aa86b8b7cf11918a5a6ce977d5",
+    "targetcheck-thumbv6m-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv6m-sigmoid-all.stdout": "b4fdd93e91ba03c2f2ae2e73fc5606b2caf59764d02335e27863eb0de215a53e"
+   },
+   "targetcheck-thumbv7em-all": {
+    "targetcheck-thumbv7em-all.json": "207f70777a28ae806c35adf15b8d1de37f7e3a6be9ab4c0e42b6b4f2d4594408",
+    "targetcheck-thumbv7em-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-all.stdout": "7c3baa949ce7aacecd328a5cd32958032bd7d79665edc4880d3d6a58e1b90c27"
+   },
+   "targetcheck-thumbv7em-exp-all": {
+    "targetcheck-thumbv7em-exp-all.json": "8d15346ea22c0d388e3e38de870e305e47a879a0da44894eaf1b711efbe8970a",
+    "targetcheck-thumbv7em-exp-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-exp-all.stdout": "abcf746ab835fc73ee1b1937a5695ff3c53420e7df4f85004b3eecde30f119ad"
+   },
+   "targetcheck-thumbv7em-negative": {
+    "targetcheck-thumbv7em-negative.json": "eb1a4bb968694f32d359c12c708108bb8caedeee8b75819551fc7911c690e33e",
+    "targetcheck-thumbv7em-negative.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-negative.stdout": "6aad4421af6a5553cef170de1510000698a7da35ed7f689bf55ed14fdb63338d"
+   },
+   "targetcheck-thumbv7em-positive": {
+    "targetcheck-thumbv7em-positive.json": "e3fe02d0be8ef80ed064f3c1961eea30368aaa559f7a6d8d44cdac0b343c91e6",
+    "targetcheck-thumbv7em-positive.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-positive.stdout": "d47d275b222c0fe0ad227bcec7bda80a3d57c6aa3b4d2d76bffc7a2e7962c367"
+   },
+   "targetcheck-thumbv7em-sigmoid-all": {
+    "targetcheck-thumbv7em-sigmoid-all.json": "ad3e6426c183cc27b546063862d54dd2c76c540b7a5a158bb7aef4feef9f3b74",
+    "targetcheck-thumbv7em-sigmoid-all.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "targetcheck-thumbv7em-sigmoid-all.stdout": "594b49a5e0e237f39c142d8c214acb06dc01e8d1c04a9ef76e7fdc421007ab85"
+   }
+  }
+ },
+ "kit": {
+  "commit": "5a32428ad4aa23bce737d50a738ace24ddeeed2e",
+  "toolkit_files_sha256": "dfde917987ab51e848f8705cfe46d9c8dbbb1c7035db2b1130d1077d59d064f9",
+  "toolkit_manifest_sha256": "c22729dc9c28b9e54740e639a2cad1bcf58b5665aaf9ba32ccf2abea08b1cb3a"
+ },
+ "ledger": {
+  "m0-exp-layout": {
+   "S": {
+    "1874435642": {
+     "overall": 34.66019769446229,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 42.11833747689283
+    },
+    "1947282751": {
+     "overall": 34.56858515403925,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 41.903766813630675
+    }
+   },
+   "best_board": "rv32im",
+   "eligible": true,
+   "full_host_functions": [],
+   "metric": [
+    1.0,
+    1.0196652876104688
+   ],
+   "normalised_sha256": "6a3abcacab6a5c08a7fbae3ebeae71bb7dce0894b6081323204719fe7f5a4b46",
+   "packet_sha256": "1d595efaaae17c1343854df26f55197ccbaadbfa008dc5ce28f0db067dd45df4",
+   "path": "eik-work/trials/m0-exp-layout",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0195917007045177,
+     "rv32im": 1.0,
+     "thumbv6m": 1.0395672361455304
+    },
+    "1947282751": {
+     "overall": 1.0196652876104688,
+     "rv32im": 1.0,
+     "thumbv6m": 1.0397172987577399
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/m0-exp-layout/entry.c",
+    "sha256": "b5daaa84e90e59f98fc4e0da4263bf67ad82b7002949e6bce7fa5781ac643cee"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im",
+    "thumbv6m",
+    "thumbv7em"
+   ],
+   "worst": {
+    "overall": 1.0196652876104688,
+    "rv32im": 1.0,
+    "thumbv6m": 1.0397172987577399
+   }
+  },
+  "m0-exp-reduction": {
+   "S": {
+    "1874435642": {
+     "overall": 34.2460624086769,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 41.11785367027895
+    },
+    "1947282751": {
+     "overall": 34.16017983509542,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 40.91948426694916
+    }
+   },
+   "best_board": "rv32im",
+   "eligible": true,
+   "full_host_functions": [
+    "exp",
+    "sigmoid",
+    "tanh"
+   ],
+   "metric": [
+    1.0,
+    1.0076186063492356
+   ],
+   "normalised_sha256": "3e4f5ac106825a160e3680290b31dd567d0c2045ed927e65a42c2cb8cd9a4951",
+   "packet_sha256": "2dc9e89716636ca2c5a1ec55f18a4a6fc31f4d0a6ba5ee9c8691360a2b6b9010",
+   "path": "eik-work/trials/m0-exp-reduction",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.007409170642863,
+     "rv32im": 1.0,
+     "thumbv6m": 1.0148732370953408
+    },
+    "1947282751": {
+     "overall": 1.0076186063492356,
+     "rv32im": 1.0,
+     "thumbv6m": 1.015295255861176
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/m0-exp-reduction/entry.c",
+    "sha256": "c33bec89f7767b513aeaa81a54fd1945b3cba077d57d55b9733adad4c9424c88"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im",
+    "thumbv6m",
+    "thumbv7em"
+   ],
+   "worst": {
+    "overall": 1.0076186063492356,
+    "rv32im": 1.0,
+    "thumbv6m": 1.015295255861176
+   }
+  },
+  "m0-sigmoid-cell": {
+   "S": {
+    "1874435642": {
+     "overall": 34.68856549118808,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 42.18730958103816
+    },
+    "1947282751": {
+     "overall": 34.59995867710441,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 41.97986280471026
+    }
+   },
+   "best_board": "rv32im",
+   "eligible": true,
+   "full_host_functions": [],
+   "metric": [
+    1.0,
+    1.0205907085461836
+   ],
+   "normalised_sha256": "d3562c25ef2c1fd48d1708f48bfe30e739bffb42f5c645f3e3f132973d92ad92",
+   "packet_sha256": "67b1acfe436a6b56e0fc0242a525f565c5e9e3dcf2aee22ae8765cbe8f4ca85a",
+   "path": "eik-work/trials/m0-sigmoid-cell",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0204261901775395,
+     "rv32im": 1.0,
+     "thumbv6m": 1.041269609600248
+    },
+    "1947282751": {
+     "overall": 1.0205907085461836,
+     "rv32im": 1.0,
+     "thumbv6m": 1.041605394370801
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/m0-sigmoid-cell/entry.c",
+    "sha256": "f8c2ac2d2752bfec1febb2d6d0789d2b7776fe64bc551e668965d58732d0de90"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "thumbv6m",
+    "thumbv7em"
+   ],
+   "worst": {
+    "overall": 1.0205907085461836,
+    "rv32im": 1.0,
+    "thumbv6m": 1.041605394370801
+   }
+  },
+  "m0-tanh-refine": {
+   "S": {
+    "1874435642": {
+     "overall": 34.00061523046087,
+     "rv32im": 28.52271424241966,
+     "thumbv6m": 40.53056894320931
+    },
+    "1947282751": {
+     "overall": 33.90743967053243,
+     "rv32im": 28.517414314250885,
+     "thumbv6m": 40.316224056689975
+    }
+   },
+   "best_board": "rv32im",
+   "eligible": true,
+   "full_host_functions": [
+    "exp",
+    "sigmoid",
+    "tanh"
+   ],
+   "metric": [
+    1.0,
+    1.000188902943398
+   ],
+   "normalised_sha256": "adf3a5a8074ffcca8e58ea852f58143a20a00aa6a74df8f14c1b742fa21a03c8",
+   "packet_sha256": "f87f8792533bf56d0a145248527f356dc5653147c3ad378e7d029591da390f8c",
+   "path": "eik-work/trials/m0-tanh-refine",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.000188902943398,
+     "rv32im": 1.0,
+     "thumbv6m": 1.000377841571118
+    },
+    "1947282751": {
+     "overall": 1.0001635609245687,
+     "rv32im": 1.0,
+     "thumbv6m": 1.0003271486013132
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/m0-tanh-refine/entry.c",
+    "sha256": "593e2420f5363dcb5d4fe429dd486f23b88ed9e917c22864c6c1b3e7ec0c5f6b"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im",
+    "thumbv6m",
+    "thumbv7em"
+   ],
+   "worst": {
+    "overall": 1.000188902943398,
+    "rv32im": 1.0,
+    "thumbv6m": 1.000377841571118
+   }
+  },
+  "rv-exp-interval": {
+   "S": {
+    "1874435642": {
+     "overall": 36.507508925017504,
+     "rv32im": 32.896202279994895,
+     "thumbv6m": 40.515260593492414
+    },
+    "1947282751": {
+     "overall": 36.3786812099431,
+     "rv32im": 32.83644311370611,
+     "thumbv6m": 40.30303897386101
+    }
+   },
+   "best_board": "thumbv6m",
+   "eligible": true,
+   "full_host_functions": [
+    "exp",
+    "sigmoid",
+    "tanh"
+   ],
+   "metric": [
+    1.0,
+    1.0739336642413637
+   ],
+   "normalised_sha256": "332cb47966adb4e07c1485aa843f5aee6a191a29da3dd7f718ef477dd2b5713d",
+   "packet_sha256": "260ff6637a981fe2b741544bc94ff8503b42c22bd66dc06039c93e402ca45577",
+   "path": "eik-work/trials/rv-exp-interval",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0739336642413637,
+     "rv32im": 1.153333515190882,
+     "thumbv6m": 1.0
+    },
+    "1947282751": {
+     "overall": 1.0730574674529845,
+     "rv32im": 1.1514523284566125,
+     "thumbv6m": 1.0
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/rv-exp-interval/entry.c",
+    "sha256": "259751b6c7fd5072a081211b8a11f4e27a5d0e8bda9aaab666ae067dd20a0ea9"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im",
+    "thumbv6m",
+    "thumbv7em"
+   ],
+   "worst": {
+    "overall": 1.0739336642413637,
+    "rv32im": 1.153333515190882,
+    "thumbv6m": 1.0
+   }
+  },
+  "rv-exp-loads": {
+   "S": {
+    "1874435642": {
+     "overall": 34.274676534308036,
+     "rv32im": 28.995332482697528,
+     "thumbv6m": 40.515260593492414
+    },
+    "1947282751": {
+     "overall": 34.183701733224666,
+     "rv32im": 28.993482723323357,
+     "thumbv6m": 40.30303897386101
+    }
+   },
+   "best_board": "thumbv6m",
+   "eligible": true,
+   "full_host_functions": [
+    "exp",
+    "sigmoid",
+    "tanh"
+   ],
+   "metric": [
+    1.0,
+    1.0083124288737684
+   ],
+   "normalised_sha256": "9dbc0c8490b6d6d90b79ab719ef09656e53980afb16fd9cbe35fa986664a40f9",
+   "packet_sha256": "eebe1015dd1e28a79bb40ee3f52957cc63ba78a484ef09ab9a7ef56d3f919125",
+   "path": "eik-work/trials/rv-exp-loads",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0082509063211649,
+     "rv32im": 1.01656989009745,
+     "thumbv6m": 1.0
+    },
+    "1947282751": {
+     "overall": 1.0083124288737684,
+     "rv32im": 1.0166939542213183,
+     "thumbv6m": 1.0
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/rv-exp-loads/entry.c",
+    "sha256": "8e5f8332e0fdf6a70edaecd6255c7b11a9920f988329a0b753dd5559e47f5595"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im"
+   ],
+   "worst": {
+    "overall": 1.0083124288737684,
+    "rv32im": 1.0166939542213183,
+    "thumbv6m": 1.0
+   }
+  },
+  "rv-tanh-quadratic": {
+   "S": {
+    "1874435642": {
+     "overall": 35.263388616728896,
+     "rv32im": 30.692301086523873,
+     "thumbv6m": 40.515260593492414
+    },
+    "1947282751": {
+     "overall": 35.19762097934098,
+     "rv32im": 30.738935677005138,
+     "thumbv6m": 40.30303897386101
+    }
+   },
+   "best_board": "thumbv6m",
+   "eligible": true,
+   "full_host_functions": [],
+   "metric": [
+    1.0,
+    1.0382198796733328
+   ],
+   "normalised_sha256": "a3572243f68fb6f8a3afff8b77362ca9d546d79d3f4383aa77ffd5cac18e93c9",
+   "packet_sha256": "e25858b127e75153efdfb3d47d776240de3f58ca5d0393f2d2baa987b488f0a3",
+   "path": "eik-work/trials/rv-tanh-quadratic",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0373356404161367,
+     "rv32im": 1.0760652308775562,
+     "thumbv6m": 1.0
+    },
+    "1947282751": {
+     "overall": 1.0382198796733328,
+     "rv32im": 1.07790051854891,
+     "thumbv6m": 1.0
+    }
+   },
+   "source": {
+    "path": "eik-work/trials/rv-tanh-quadratic/entry.c",
+    "sha256": "595ce32546773015313ae8d5785d474304f2b4242b402604095e4443a9f60745"
+   },
+   "status": "measured",
+   "target_evidence": [
+    "rv32im"
+   ],
+   "worst": {
+    "overall": 1.0382198796733328,
+    "rv32im": 1.07790051854891,
+    "thumbv6m": 1.0
+   }
+  },
+  "shared-small-sigmoid": {
+   "S": {
+    "1874435642": {
+     "overall": 37.39233426846292,
+     "rv32im": 30.74556592260963,
+     "thumbv6m": 45.47604248247939
+    },
+    "1947282751": {
+     "overall": 37.38421204748982,
+     "rv32im": 30.820392303525246,
+     "thumbv6m": 45.34592865165533
+    }
+   },
+   "best_board": "rv32im",
+   "eligible": false,
+   "full_host_functions": [],
+   "metric": [
+    1.0807569004642719,
+    1.1027174864008082
+   ],
+   "normalised_sha256": "666165f9b81aeb43c191257587d78cf6ad3da6e7ca78af387e977e8eab0d0775",
+   "packet_sha256": "ba420076203917437e45abfd27a225df62c50917debd48b4a0763bfbbc176815",
+   "path": "eik-work/trials/shared-small-sigmoid",
+   "ratio": {
+    "1874435642": {
+     "overall": 1.0999623841206536,
+     "rv32im": 1.0779326841512191,
+     "thumbv6m": 1.1224423048579326
+    },
+    "1947282751": {
+     "overall": 1.1027174864008082,
+     "rv32im": 1.0807569004642719,
+     "thumbv6m": 1.125124303431931
+    }
+   },
+   "reason": "no passing target-object evidence",
+   "source": {
+    "path": "eik-work/trials/shared-small-sigmoid/entry.c",
+    "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262"
+   },
+   "status": "measured",
+   "target_evidence": [],
+   "worst": {
+    "overall": 1.1027174864008082,
+    "rv32im": 1.0807569004642719,
+    "thumbv6m": 1.125124303431931
+   }
+  }
+ },
+ "objects": {
+  "rv32im": {
+   "guest_image": {
+    "path": "eik-work/freeze/evidence/objects/guest-rv32im.elf",
+    "sections": {
+     ".rodata": {
+      "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+      "size": 13476
+     },
+     ".text": {
+      "sha256": "8e82d150022513638eec66fa82d675ae20aad83e74d7296f06056d23d41b4f85",
+      "size": 7380
+     }
+    },
+    "sha256": "81d8958ee4a94a41dd30bce8c8d3a331a577b98962c3ea90e232020b1346d3c9"
+   },
+   "object": {
+    "path": "eik-work/freeze/evidence/objects/sub-rv32im.o",
+    "sections": {
+     ".rodata": {
+      "sha256": "bcbbf38d5ec674e77a755b11f9309f872e46d9cc09bd86fb5ea258a35725dcf4",
+      "size": 13476
+     },
+     ".text": {
+      "sha256": "55d8b1bd88d62f23913dee50e2de08c6c505c8ef972198e9e976dbe5ed1bd633",
+      "size": 5484
+     }
+    },
+    "sha256": "e71da802c62bb10ef34e6ad6c33459ef08d9341c24b3ff05f9fa633aa24f1520"
+   }
+  },
+  "thumbv6m": {
+   "guest_image": {
+    "path": "eik-work/freeze/evidence/objects/guest-thumbv6m.elf",
+    "sections": {
+     ".ARM.exidx": {
+      "sha256": "02bcad70d338dfaf3cf25a8bfeff397b21b41e9afa93b038eafd67b642c48ac9",
+      "size": 112
+     },
+     ".rodata": {
+      "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4",
+      "size": 15760
+     },
+     ".text": {
+      "sha256": "01d706cdcbb125e98f9dc709b91588f88e50533558a2af8fa4ee70e608751766",
+      "size": 5064
+     }
+    },
+    "sha256": "21368c7e26d748d024bf0e8b55d47a1cd0fa8b85538ec2c82bcc198bdf3bfc5c"
+   },
+   "object": {
+    "path": "eik-work/freeze/evidence/objects/sub-thumbv6m.o",
+    "sections": {
+     ".ARM.exidx": {
+      "sha256": "186dec35758b51fe06bdcde75fc90f2bc36206315d9804c02e444bd41d7c2fd7",
+      "size": 104
+     },
+     ".rodata": {
+      "sha256": "8b1a7ba2ba463fc17d7a047baa7ece50cbe1681cc2751889e24d7f209b130963",
+      "size": 15740
+     },
+     ".rodata.cst16": {
+      "sha256": "d0170913d7eb1d4b13fbba99224294ea928a1b2b914c9fd2a042fa7fe97ec746",
+      "size": 16
+     },
+     ".rodata.cst4": {
+      "sha256": "d7173dd8a9e81deded3f2e4719ef149effbd21afd81da9d10ed50b5dff69a708",
+      "size": 4
+     },
+     ".text": {
+      "sha256": "b39dbbf25065cf4c8a0384a25b4107129b007c0379e2735570a9164c7d8b36ec",
+      "size": 4644
+     }
+    },
+    "sha256": "29698ab6852ac8a248b8396a9fcf4203d9f5a0c19cfc76bc5d12aad8147431ef"
+   }
+  },
+  "thumbv7em": {
+   "guest_image": {
+    "path": "eik-work/freeze/evidence/objects/guest-thumbv7em.elf",
+    "sections": {
+     ".ARM.exidx": {
+      "sha256": "4bc5cdbe7170df514edc47d8024fb953593b97a629bde9776fa5e5f560a424ad",
+      "size": 112
+     },
+     ".rodata": {
+      "sha256": "189772959e999ac3eb63300239849f2a29d10736a7fe65668491454f069dc3e4",
+      "size": 15760
+     },
+     ".text": {
+      "sha256": "29cf36d7b5200d241597c9270675f91b68fe0e59650a54f58cecdacfb832c397",
+      "size": 5928
+     }
+    },
+    "sha256": "48de0ea1940bc91803ca63d9e819a1b55026409e02089883d408de353363ace8"
+   },
+   "object": {
+    "path": "eik-work/freeze/evidence/objects/sub-thumbv7em.o",
+    "sections": {
+     ".ARM.exidx": {
+      "sha256": "786bf2b84eedd5ef9b101581daf6553944c2618356c3e7492ccd5c5891661de6",
+      "size": 104
+     },
+     ".rodata": {
+      "sha256": "8b1a7ba2ba463fc17d7a047baa7ece50cbe1681cc2751889e24d7f209b130963",
+      "size": 15740
+     },
+     ".rodata.cst16": {
+      "sha256": "d0170913d7eb1d4b13fbba99224294ea928a1b2b914c9fd2a042fa7fe97ec746",
+      "size": 16
+     },
+     ".rodata.cst4": {
+      "sha256": "d7173dd8a9e81deded3f2e4719ef149effbd21afd81da9d10ed50b5dff69a708",
+      "size": 4
+     },
+     ".text": {
+      "sha256": "0e46edb79063b35a43fa7bcc05807514eebfbaff39594a7787d9a4fc046daf87",
+      "size": 5390
+     }
+    },
+    "sha256": "a3d16db18998114b0104013e65b7bb09e2b8631a720e55fbb0190f2aa1370828"
+   }
+  }
+ },
+ "outcome": "frozen-best-eligible-single (regression vs id50; no candidate reaches 0.970)",
+ "schema": "eik-freeze-1",
+ "scores": {
+  "S": {
+   "1874435642": {
+    "overall": 34.00061523046087,
+    "rv32im": 28.52271424241966,
+    "thumbv6m": 40.53056894320931
+   },
+   "1947282751": {
+    "overall": 33.90743967053243,
+    "rv32im": 28.517414314250885,
+    "thumbv6m": 40.316224056689975
+   }
+  },
+  "best_board": "rv32im",
+  "metric": [
+   1.0,
+   1.000188902943398
+  ],
+  "ratio_vs_id50": {
+   "1874435642": {
+    "overall": 1.000188902943398,
+    "rv32im": 1.0,
+    "thumbv6m": 1.000377841571118
+   },
+   "1947282751": {
+    "overall": 1.0001635609245687,
+    "rv32im": 1.0,
+    "thumbv6m": 1.0003271486013132
+   }
+  },
+  "takes_board_at_0970": [],
+  "worst_over_seeds": {
+   "overall": 1.000188902943398,
+   "rv32im": 1.0,
+   "thumbv6m": 1.000377841571118
+  }
+ },
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "selection": {
+  "combination": null,
+  "combination_note": "no board has two eligible gains (<1.0) so no combination was built",
+  "order": [
+   "m0-tanh-refine",
+   "m0-exp-reduction",
+   "rv-exp-loads",
+   "m0-exp-layout",
+   "m0-sigmoid-cell",
+   "rv-tanh-quadratic",
+   "rv-exp-interval"
+  ],
+  "rule": "per board worse ratio over the two seeds; best board; minimise; ties by worse overall"
+ },
+ "shared_verifier": {
+  "path": "eik-work/trials/paired-control/verify.py",
+  "sha256": "09c0210b298dabbc89907bb50c452e5bdb1eb58ff663dd94fa3e57dffe292854"
+ },
+ "static": {
+  "bytes": {
+   "rv32im": 18960,
+   "thumbv6m": 20508,
+   "thumbv7em": 21254
+  },
+  "functions": 42,
+  "stack_bound": {
+   "rv32im": 176,
+   "thumbv6m": 312,
+   "thumbv7em": 280
+  }
+ },
+ "target": "freeze-entry"
+}
