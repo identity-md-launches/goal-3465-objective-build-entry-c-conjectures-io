@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/h1w/runtime/bin/python",
+    "-m",
+    "eik",
+    "fingerprint",
+    "--details"
+  ],
+  "exit_code": 0,
+  "seconds": 0.137,
+  "source_sha256": null,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+}

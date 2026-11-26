@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "$REPO/test/scratch/h1w/runtime/bin/python",
+    "-m",
+    "eik",
+    "evaluate",
+    "$REPO/eik-work/baselines/former-50/entry.c",
+    "--quick",
+    "--json",
+    "--seed",
+    "849230117"
+  ],
+  "exit_code": 0,
+  "seconds": 168.344,
+  "source_sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "6d40a907ba25c057c43cc4eccb64b8009811aeb48aacd3ceb7dbedcd4189c880"
+}

@@ -1,0 +1,51 @@
+{
+ "boards": {
+  "overall": {
+   "champion_over_public_reference": 0.96815183298679,
+   "champion_submission": 56,
+   "current_promotion_id": 61,
+   "declared_source_sha256": "1deb2fad47d370aaea71ebaafa70db23a28a022ee1b9eff4f9ca25396163c45d",
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "published_absolute_S": null,
+   "reference_path": null,
+   "reference_sha256": null,
+   "source_reason_code": "SOURCE_WITHHELD",
+   "source_status": "withheld"
+  },
+  "rv32im": {
+   "champion_over_public_reference": null,
+   "champion_submission": 52,
+   "current_promotion_id": 59,
+   "declared_source_sha256": "12614bf3cd9cac500684f28120361c360e2735914b990ebc8f5049a7d843038d",
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "published_absolute_S": null,
+   "reference_path": null,
+   "reference_sha256": null,
+   "source_reason_code": "SOURCE_WITHHELD",
+   "source_status": "withheld"
+  },
+  "thumbv6m": {
+   "champion_over_public_reference": 0.968438842462306,
+   "champion_submission": 53,
+   "current_promotion_id": 60,
+   "declared_source_sha256": "6662dc198cf29fa990e31d9dd1791f973bc69493f4620076a4739850daa2b916",
+   "measurement_identity": [
+    "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322"
+   ],
+   "published_absolute_S": null,
+   "reference_path": null,
+   "reference_sha256": null,
+   "source_reason_code": "SOURCE_WITHHELD",
+   "source_status": "withheld"
+  }
+ },
+ "note": "extract of the landed board snapshot: per-board current champion and whether reference bytes exist",
+ "snapshot_file_sha256": "9c6628300f95c89b0c5bbaf9bf60469e0070c82cc7a6d7091309045032164676",
+ "snapshot_path": "eik-work/final-validation/boards/snapshot.json",
+ "snapshot_sha256": "f43b36a94db2cf9395b84b848ed6981d3fbad41d3ca8f6933dc1faacb0e3eaf6",
+ "snapshot_utc": "2026-11-26T11:42:15.926163+00:00"
+}
