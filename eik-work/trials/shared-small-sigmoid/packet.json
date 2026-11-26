@@ -1,0 +1,595 @@
+{
+ "base": {
+  "path": "eik-work/baselines/former-50/entry.c",
+  "sha256": "88617bb49e36a06cabd7d84ce6fe504ee337f8f41ad7c55bc72f696db94060c3"
+ },
+ "control": "eik-work/trials/paired-control",
+ "index": {
+  "gate_stage": null,
+  "normalised_sha256": "666165f9b81aeb43c191257587d78cf6ad3da6e7ca78af387e977e8eab0d0775",
+  "rows": {
+   "1874435642": {
+    "S": {
+     "overall": 37.39233426846292,
+     "rv32im": 30.74556592260963,
+     "thumbv6m": 45.47604248247939
+    },
+    "S_thumbv7em_reported_only": 40.876179395484385,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 445,
+     "sigmoid": 560,
+     "tanh": 186
+    },
+    "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "666165f9b81aeb43c191257587d78cf6ad3da6e7ca78af387e977e8eab0d0775",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1874435642,
+    "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19132,
+      "functions": {
+       "exp": {
+        "hard_p999": 80,
+        "means": {
+         "hard": 41.486666666666665,
+         "typical": 30.5635,
+         "uniform": 13.297,
+         "wide": 24.738
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 115,
+        "means": {
+         "hard": 49.78,
+         "typical": 32.9215,
+         "uniform": 15.654,
+         "wide": 28.233
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 51.68666666666667,
+         "typical": 25.8045,
+         "uniform": 9.2,
+         "wide": 14.499
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1366314936441582,
+      "stack": 0,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20704,
+      "functions": {
+       "exp": {
+        "hard_p999": 146,
+        "means": {
+         "hard": 56.89333333333333,
+         "typical": 42.9275,
+         "uniform": 19.86,
+         "wide": 34.367
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 192,
+        "means": {
+         "hard": 73.52,
+         "typical": 50.6495,
+         "uniform": 28.218,
+         "wide": 44.227
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 75.93333333333334,
+         "typical": 37.149,
+         "uniform": 14.698,
+         "wide": 20.731
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1471346776861033,
+      "stack": 76,
+      "stack_bound": 328,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21374,
+      "functions": {
+       "exp": {
+        "hard_p999": 136,
+        "means": {
+         "hard": 53.596666666666664,
+         "typical": 39.7755,
+         "uniform": 21.085,
+         "wide": 32.861
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 167,
+        "means": {
+         "hard": 59.42,
+         "typical": 40.136,
+         "uniform": 20.312,
+         "wide": 31.475
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 72.41333333333333,
+         "typical": 35.997,
+         "uniform": 16.627,
+         "wide": 21.468
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1515821105860733,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   },
+   "1947282751": {
+    "S": {
+     "overall": 37.38421204748982,
+     "rv32im": 30.820392303525246,
+     "thumbv6m": 45.34592865165533
+    },
+    "S_thumbv7em_reported_only": 40.704955283999155,
+    "form": "stages",
+    "hard_pool_sizes": {
+     "exp": 408,
+     "sigmoid": 571,
+     "tanh": 198
+    },
+    "inputs_sha256": "7fe5c5af336d9931b2582e5acd0c08c3e4ee86c07045daa5772d761f0221aa77",
+    "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+    "normalised_sha256": "666165f9b81aeb43c191257587d78cf6ad3da6e7ca78af387e977e8eab0d0775",
+    "printed_incumbent_ratio": {
+     "overall": null,
+     "rv32im": null,
+     "thumbv6m": null
+    },
+    "quick_host_check": {
+     "exp": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "sigmoid": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     },
+     "tanh": {
+      "complete": false,
+      "mismatches": 0,
+      "words": 134217728
+     }
+    },
+    "sandbox": "none",
+    "seed": 1947282751,
+    "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+    "status": "measured-by-stages",
+    "targets": {
+     "rv32im": {
+      "bytes": 19132,
+      "functions": {
+       "exp": {
+        "hard_p999": 90,
+        "means": {
+         "hard": 43.09,
+         "typical": 30.327,
+         "uniform": 13.322,
+         "wide": 24.847
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 115,
+        "means": {
+         "hard": 49.306666666666665,
+         "typical": 32.801,
+         "uniform": 15.753,
+         "wide": 28.663
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 92,
+        "means": {
+         "hard": 52.73,
+         "typical": 25.7205,
+         "uniform": 8.986,
+         "wide": 14.765
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1366314936441582,
+      "stack": 8,
+      "stack_bound": 176,
+      "wrong": 0
+     },
+     "thumbv6m": {
+      "bytes": 20704,
+      "functions": {
+       "exp": {
+        "hard_p999": 153,
+        "means": {
+         "hard": 59.446666666666665,
+         "typical": 42.685,
+         "uniform": 20.147,
+         "wide": 34.309
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 202,
+        "means": {
+         "hard": 72.02,
+         "typical": 50.117,
+         "uniform": 28.427,
+         "wide": 44.46
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 117,
+        "means": {
+         "hard": 74.36,
+         "typical": 36.761,
+         "uniform": 14.364,
+         "wide": 21.07
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1471346776861033,
+      "stack": 76,
+      "stack_bound": 328,
+      "wrong": 0
+     },
+     "thumbv7em": {
+      "bytes": 21374,
+      "functions": {
+       "exp": {
+        "hard_p999": 151,
+        "means": {
+         "hard": 56.11,
+         "typical": 39.5455,
+         "uniform": 21.387,
+         "wide": 32.76
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "sigmoid": {
+        "hard_p999": 174,
+        "means": {
+         "hard": 58.04,
+         "typical": 39.517,
+         "uniform": 20.608,
+         "wide": 31.518
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       },
+       "tanh": {
+        "hard_p999": 113,
+        "means": {
+         "hard": 71.19,
+         "typical": 35.666,
+         "uniform": 16.293,
+         "wide": 21.741
+        },
+        "n": {
+         "hard": 300,
+         "typical": 2000,
+         "uniform": 1000,
+         "wide": 1000
+        },
+        "tail_factor": 1.0
+       }
+      },
+      "sample_mismatches": 0,
+      "sample_words": 98304,
+      "size_factor": 1.1515821105860733,
+      "stack": 40,
+      "stack_bound": 280,
+      "wrong": 0
+     }
+    },
+    "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+   }
+  },
+  "source_sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262"
+ },
+ "kind": "trial",
+ "note": "Negative trial vs id50 (eligible, distinct normalised source; not a duplicate): one target-independent pre-selector fast path in eik_sigmoid for |x| < 2^-7: returns 0.5 for |x| < 2^-24, else floor(a+1/2) of the affine term a = x*2^22 (x>0, ulp 2^-24) or |x|*2^23 (x<0, ulp 2^-25) in Q15, fast return only when the Q15 fraction exceeds a per-exponent floor of the x^3/48 bound, otherwise the unchanged id50 selector and kernels. Correct on all 2^32 inputs of all three functions (host UBSan/ASan) and on 12 affected sigmoid chunks per target, but S regresses on both boards (rv32im ~1.08x, thumbv6m ~1.12x): the range test runs before id50's first branch on every call (rv32im 4 extra instructions before bltz; thumbv6m ~8 before the original lsls/bmi), and the fast body (~22-26 instr) is slower than id50's own rv32 affine path. See README.md.",
+ "ratio_vs_control": {
+  "1874435642": {
+   "overall": 1.0999623841206536,
+   "rv32im": 1.0779326841512191,
+   "thumbv6m": 1.1224423048579326
+  },
+  "1947282751": {
+   "overall": 1.1027174864008082,
+   "rv32im": 1.0807569004642719,
+   "thumbv6m": 1.125124303431931
+  }
+ },
+ "runs": {
+  "check": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid check check eik-work/trials/shared-small-sigmoid/entry.c",
+   "exit_code": 0,
+   "files": {
+    "check.json": "dd466999451bd1b674fca506a726f43679f79d741b644fd136ee4ab997bb2022",
+    "check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "check.stdout": "92d2e5c38b098bb1d277079f3f61154f8386a0ea4dc7ddba4d18f1d9de2fea5f"
+   }
+  },
+  "fingerprint": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fingerprint fingerprint --details",
+   "exit_code": 0,
+   "files": {
+    "fingerprint.json": "49c96e7352a4c37db120de3c6a2b48f81a3d3e022479bee341f7cdb965433c46",
+    "fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fingerprint.stdout": "6d00a662caaa7c24064216f5b91b6ad4a9f07e61708e5d3436451c50b82bba5d"
+   }
+  },
+  "fullcheck-1874435642-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1874435642-exp fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function exp --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-exp.json": "448589e6d0001b6b0451ccace55ea450957b72a6d5b78dade7150de9fe0c05b9",
+    "fullcheck-1874435642-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-exp.stdout": "7f37b586cc5cfd56ffa7c5767f1c312270bd8ebea288c47e842f5948872938ae"
+   }
+  },
+  "fullcheck-1874435642-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1874435642-sigmoid fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function sigmoid --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-sigmoid.json": "13979ab43941a16aacf7cd5b248c8923b0262a22a89535b8624a6da761bcf621",
+    "fullcheck-1874435642-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-sigmoid.stdout": "a2c8a69115202262d8548f95f35d50e5bfb704584b29746fee9399e9170c9664"
+   }
+  },
+  "fullcheck-1874435642-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1874435642-tanh fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function tanh --quick --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1874435642-tanh.json": "80f0a1fe0be75f484661bdfc9b6fb766ff287c6892c64aec59441ca60a87748b",
+    "fullcheck-1874435642-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1874435642-tanh.stdout": "62aa0893572199fa24feefac17ff62dea91b5f57b6c18ea3c49d7f86b9a4e54d"
+   }
+  },
+  "fullcheck-1947282751-exp": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1947282751-exp fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function exp --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-exp.json": "abed0faddebd1c1364c50cba7a5c6734a242c627c4c2a87addf531041270d477",
+    "fullcheck-1947282751-exp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-exp.stdout": "87b4c4b9574064ffd880c0e26f5076189a01027eb4f83d54802e99138f93b02b"
+   }
+  },
+  "fullcheck-1947282751-sigmoid": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1947282751-sigmoid fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function sigmoid --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-sigmoid.json": "7ddac2edeb98f49a373022f046ed3cbd6c8eca02e5e1eb688ee724e6bd71497a",
+    "fullcheck-1947282751-sigmoid.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-sigmoid.stdout": "94823d412092f8941bd64657d554b216b0a13be0dbe650b4e1aeecceb83abf3f"
+   }
+  },
+  "fullcheck-1947282751-tanh": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid fullcheck-1947282751-tanh fullcheck eik-work/trials/shared-small-sigmoid/entry.c --function tanh --quick --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "fullcheck-1947282751-tanh.json": "1799f127cecf6e838df276d17a92be19a1ce19bbdc25b6fcf35305b195970a52",
+    "fullcheck-1947282751-tanh.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fullcheck-1947282751-tanh.stdout": "62aa0893572199fa24feefac17ff62dea91b5f57b6c18ea3c49d7f86b9a4e54d"
+   }
+  },
+  "gate": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid gate gate eik-work/trials/shared-small-sigmoid/entry.c",
+   "exit_code": 0,
+   "files": {
+    "gate.json": "d3f752214166be9e10d57b754ead0a074d10aaae4bad206c82569c3a5d1bd74c",
+    "gate.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gate.stdout": "7dc533694dc52e9ef4fcbc9fdc23935fdad0ee43f5f9ebcd30969ea99fa3242f"
+   }
+  },
+  "measure-1874435642": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid measure-1874435642 measure eik-work/trials/shared-small-sigmoid/entry.c --seed 1874435642",
+   "exit_code": 0,
+   "files": {
+    "measure-1874435642.json": "b1e8c9ff8eb427037b4adbc96479c1181764286775cd56d5a97f3227f709bad2",
+    "measure-1874435642.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1874435642.stdout": "1da2be6033996fa08f6410a96fa00a821b36a25e8698af4e6943787104a9d3ac"
+   }
+  },
+  "measure-1947282751": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid measure-1947282751 measure eik-work/trials/shared-small-sigmoid/entry.c --seed 1947282751",
+   "exit_code": 0,
+   "files": {
+    "measure-1947282751.json": "0f2635214ad204a4d466f1d802e7497dd63aafa3c1352e492e1463407419012a",
+    "measure-1947282751.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "measure-1947282751.stdout": "c3ef00d09db018c9904536217ca2997e937adb7a55f099b645afe4f4fc662c62"
+   }
+  },
+  "setup": {
+   "command": "python3 eik-work/toolkit/run.py test/scratch/eik shared-small-sigmoid setup setup",
+   "exit_code": 0,
+   "files": {
+    "setup.json": "59e9fa72b46ad9e622af7bc37bfb8124e291356fc0766ee1a8e5663fa606be39",
+    "setup.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup.stdout": "9eaca8a5bae00a29c01325a49d1da69bbef555558bb811075619cc76e439751b"
+   }
+  }
+ },
+ "schema": "eik-paired-1",
+ "seeds": [
+  1874435642,
+  1947282751
+ ],
+ "source": {
+  "path": "eik-work/trials/shared-small-sigmoid/entry.c",
+  "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262"
+ },
+ "status": "measured",
+ "target": "shared-small-sigmoid"
+}

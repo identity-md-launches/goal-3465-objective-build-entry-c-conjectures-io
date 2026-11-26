@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/test/scratch/v3/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 7.347,
+  "source_sha256": "ce4def04706a3af9421589ce839237f694c1ed90071dc4a0d97ea9d1dc5acc2b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2633b3e96e63344381052d517eeead6ca01813c83516f56562a2c951a1093790"
+}

@@ -1,0 +1,225 @@
+== 754707ad EM_ARM eik_sigmoid 1822
+      0 push {r4, r5, r7, lr}
+      2 add r7, sp, #8
+      4 ubfx r1, r0, #0x1a, #5
+      8 cmp r1, #0xe
+      a lsl.w r1, r0, #1
+      e bhi #0x60
+     10 cmp.w r1, #0x67000000
+     14 itt lo
+     16 movlo.w r0, #0x3f000000
+     1a poplo {r4, r5, r7, pc}
+     1c asrs r3, r0, #0x1f
+     1e mov.w r5, #-0x80000000
+     22 sub.w r3, r3, r1, lsr #24
+     26 orr.w r5, r5, r0, lsl #8
+     2a adds r3, #0x79
+     2c movw r4, #0
+     30 lsrs r2, r1, #0x18
+     32 lsr.w r3, r5, r3
+     36 movt r4, #0
+     3a add.w r5, r3, #0x4000
+     3e add.w r4, r4, r2, lsl #1
+     42 mov r3, r5
+     44 ldrh r4, [r4, #-0xce]
+     48 bfc r3, #0xf, #0x11
+     4c cmp r3, r4
+     4e bls #0xc2
+     50 lsrs r1, r5, #0xf
+     52 eor.w r1, r1, r0, asr #31
+     56 add.w r0, r1, r0, lsr #31
+     5a add.w r0, r0, #0x3f000000
+     5e pop {r4, r5, r7, pc}
+     60 cmp.w r1, #-1
+     64 ble #0xf0
+     66 cmp.w r1, #0x7d000000
+     6a blo #0x14e
+     6c movw r5, #0
+     70 movt r5, #0
+     74 ldm.w r5, {r1, r2, r4}
+     78 ldrd r3, r5, [r5, #0xc]
+     7c subs r3, r3, r0
+     7e bmi.w #0x26c
+     82 mvn r2, #0xf
+     86 and.w r2, r2, r3, lsr #12
+     8a subs r5, r5, r2
+     8c ldrd r2, r4, [r5]
+     90 ldr r3, [r5, #8]
+     92 subs r4, #0x80
+     94 uxth r5, r0
+     96 mls r3, r3, r5, r2
+     9a uxtb r2, r2
+     9c asrs r3, r3, #0xf
+     9e muls r3, r5, r3
+     a0 add.w r3, r4, r3, asr #15
+     a4 mla r2, r2, r5, r3
+     a8 tst.w r2, #0x1fc
+     ac itt ne
+     ae addne.w r0, r1, r2, asr #9
+     b2 popne {r4, r5, r7, pc}
+     b4 movw r1, #0xfff8
+     b8 movt r1, #0x17ff
+     bc add.w r1, r1, r2, asr #4
+     c0 b #0x3ac
+     c2 lsrs r1, r1, #0x1a
+     c4 cmp r1, #0x1c
+     c6 bhi #0x156
+     c8 rsb r1, r2, r0, asr #31
+     cc mov r2, r0
+     ce movw r3, #0xffff
+     d2 bfc r2, #0x17, #9
+     d6 movt r3, #0x7f
+     da adds r1, #0x7f
+     dc add r2, r3
+     de lsr.w r1, r2, r1
+     e2 eor.w r0, r1, r0, asr #31
+== 2096589f EM_ARM eik_sigmoid 1624
+      0 push {r4, r5, r6, r7, lr}
+      2 add r7, sp, #0xc
+      4 sub sp, #0xc
+      6 str r0, [sp, #8]
+      8 lsls r1, r0, #1
+      a lsrs r2, r1, #0x1b
+      c cmp r2, #0xe
+      e bhi #0x58
+     10 movs r2, #0x3f
+     12 lsls r0, r2, #0x18
+     14 lsrs r2, r1, #0x18
+     16 cmp r2, #0x67
+     18 bhs #0x1c
+     1a b #0x55e
+     1c str r0, [sp, #4]
+     1e movs r6, #1
+     20 lsls r3, r6, #0x1f
+     22 ldr r0, [sp, #8]
+     24 lsls r5, r0, #8
+     26 orrs r5, r3
+     28 asrs r4, r0, #0x1f
+     2a subs r3, r4, r2
+     2c str r3, [sp]
+     2e adds r3, #0x79
+     30 lsrs r5, r3
+     32 lsls r3, r6, #0xe
+     34 adds r6, r5, r3
+     36 ldr r3, [pc, #0x3dc]
+     38 ands r3, r6
+     3a lsls r5, r2, #1
+     3c ldr r0, [pc, #0x3d8]
+     3e adds r0, r0, r5
+     40 subs r0, #0xce
+     42 ldrh r0, [r0]
+     44 cmp r3, r0
+     46 bls #0x134
+     48 lsrs r1, r6, #0xf
+     4a eors r1, r4
+     4c ldr r0, [sp, #8]
+     4e lsrs r0, r0, #0x1f
+     50 ldr r2, [sp, #4]
+     52 orrs r0, r2
+     54 adds r0, r0, r1
+     56 b #0x55e
+     58 cmp r1, #0
+     5a bmi #0x9c
+     5c lsrs r2, r1, #0x18
+     5e cmp r2, #0x7d
+     60 blo #0xe6
+     62 ldr r5, [pc, #0x3d8]
+     64 ldm r5, {r1, r2, r3, r4, r5}
+     66 ldr r0, [sp, #8]
+     68 subs r4, r4, r0
+     6a bpl #0x6e
+     6c b #0x1e0
+     6e lsrs r0, r4, #0x10
+     70 lsls r0, r0, #4
+     72 subs r5, r5, r0
+     74 ldm r5!, {r2, r3, r4}
+     76 subs r3, #0x80
+     78 ldr r0, [sp, #8]
+     7a uxth r5, r0
+     7c muls r4, r5, r4
+     7e subs r0, r2, r4
+     80 asrs r0, r0, #0xf
+     82 muls r0, r5, r0
+     84 asrs r0, r0, #0xf
+     86 adds r3, r0, r3
+     88 uxtb r2, r2
+     8a muls r5, r2, r5
+     8c adds r2, r3, r5
+     8e lsls r0, r2, #0x17
+     90 lsrs r0, r0, #0x19
+     92 bne #0x96
+== d62afb39 EM_RISCV eik_sigmoid 2220
+      0 slli a2, a0, 1
+      4 srli a1, a2, 0x1b
+      8 addi a3, zero, 0xe
+      c bltu a3, a1, 0x7c
+     10 srli a2, a2, 0x18
+     14 addi a3, zero, 0x67
+     18 lui a1, 0x3f000
+     1c bgeu a2, a3, 0xc
+     20 mv a0, a1
+     24 ret 
+     28 srai a1, a0, 0x1f
+     2c slli a3, a0, 8
+     30 lui a4, 0x80000
+     34 slli a5, a2, 1
+     38 or a3, a3, a4
+     3c lui a4, 0
+     40 mv a4, a4
+     44 add a4, a4, a5
+     48 lui a5, 4
+     4c sub a2, a1, a2
+     50 addi a2, a2, 0x79
+     54 srl a2, a3, a2
+     58 lhu a3, -0xce(a4)
+     5c add a2, a2, a5
+     60 slli a4, a2, 0x11
+     64 srli a4, a4, 0x11
+     68 bgeu a3, a4, 0x20
+     6c srli a0, a0, 0x1f
+     70 srli a2, a2, 0xf
+     74 xor a1, a2, a1
+     78 lui a2, 0x3f000
+     7c add a0, a0, a2
+     80 add a0, a1, a0
+     84 ret 
+     88 bltz a0, 0x2c
+     8c lui a2, 0x3f000
+     90 bgeu a2, a0, 0xf0
+     94 lui a1, 0x407ff
+     98 bgeu a1, a0, 0x624
+     9c lui a1, 0x418ab
+     a0 bgeu a1, a0, 0x1b4
+     a4 lui a1, 0x7f800
+     a8 bltu a1, a0, 0x2a4
+     ac lui a0, 0x3f800
+     b0 ret 
+     b4 lui a2, 0xbe800
+     b8 bgeu a2, a0, 0x100
+     bc lui a1, 0xbff80
+     c0 bgeu a1, a0, 0x134
+     c4 lui a1, 0xc0fff
+     c8 bgeu a1, a0, 0x1f4
+     cc lui a1, 0xc2d00
+     d0 bgeu a0, a1, 0x274
+     d4 srli a2, a0, 0x17
+     d8 slli a3, a0, 9
+     dc lui a1, 0
+     e0 mv a1, a1
+     e4 addi a2, a2, -0x177
+     e8 slli a7, a2, 3
+     ec add a7, a1, a7
+     f0 lw a4, 0x5c4(a7)
+     f4 lui a5, 0x1a184
+     f8 sll a6, a3, a2
+     fc lw t0, 0x5c8(a7)
+    100 mulhu a3, a4, a3
+    104 add a3, a4, a3
+    108 srli a2, a3, 0xf
+    10c srli a4, a3, 0xe
+    110 srli t2, a3, 0x18
+    114 srli t3, a3, 0x1d
+    118 ori a2, a2, 1
+    11c andi a4, a4, 0x3fc
+    120 mul t0, a2, t0
+    124 mulhu t1, a2, a5

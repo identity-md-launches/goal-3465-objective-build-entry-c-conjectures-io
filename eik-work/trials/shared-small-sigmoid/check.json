@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "check",
+    "$REPO/eik-work/trials/shared-small-sigmoid/entry.c"
+  ],
+  "exit_code": 0,
+  "seconds": 1.047,
+  "source_sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "92d2e5c38b098bb1d277079f3f61154f8386a0ea4dc7ddba4d18f1d9de2fea5f"
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "fullcheck",
+    "$REPO/eik-work/trials/shared-small-sigmoid/entry.c",
+    "--function",
+    "exp",
+    "--chunks",
+    "0:4096",
+    "--threads",
+    "8",
+    "--out",
+    "$REPO/test/scratch/eik/reports/host-exp-full.json"
+  ],
+  "exit_code": 0,
+  "seconds": 52.162,
+  "source_sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

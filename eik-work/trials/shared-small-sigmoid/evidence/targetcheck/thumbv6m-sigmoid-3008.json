@@ -1,0 +1,26 @@
+{
+ "budget_seconds": 1760,
+ "chunk_hi": 3009,
+ "chunk_lo": 3008,
+ "competition": "exact-integer-kernels",
+ "complete": false,
+ "fingerprint": {
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none",
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "function": "sigmoid",
+ "image_sha256": "56a551e15db17f93570a01043af7fe2fc0f0dcbc2bd3063cc66a9b3e1235ad21",
+ "jobs": 1,
+ "kind": "targetcheck",
+ "mismatches": 0,
+ "range_complete": true,
+ "reasons": [],
+ "schema": "eik-report-1",
+ "seconds": 0.5,
+ "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+ "stage": null,
+ "target": "thumbv6m",
+ "verdict": "passed",
+ "words_checked": 1048576
+}

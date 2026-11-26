@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "$REPO/test/scratch/eik/runtime/bin/python",
+    "-m",
+    "eik",
+    "targetcheck",
+    "$REPO/eik-work/trials/shared-small-sigmoid/entry.c",
+    "--function",
+    "sigmoid",
+    "--target",
+    "thumbv7em",
+    "--chunks",
+    "960:961",
+    "--jobs",
+    "1",
+    "--out",
+    "$REPO/test/scratch/eik/reports/tc/thumbv7em-sigmoid-960.json"
+  ],
+  "exit_code": 0,
+  "seconds": 6.351,
+  "source_sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

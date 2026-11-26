@@ -1,0 +1,26 @@
+--- eik-work/baselines/former-50/entry.c
++++ eik-work/trials/shared-small-sigmoid/entry.c
+@@ -4802,8 +4802,23 @@
+   return t_c92 - (((t_Y << 1) + 129u) >> t_t);
+ 
+ }
++static const uint16_t sgs_th[17] = {0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 2u, 21u, 170u, 1365u, 10922u};
+ uint32_t eik_sigmoid(uint32_t w)
+ {
++    uint32_t sgs_t = w << 1;
++    if (sgs_t < 0x78000000u)
++    {
++        uint32_t sgs_e = sgs_t >> 24;
++        if (sgs_e < 103u)
++            return 0x3F000000u;
++        uint32_t sgs_n = w >> 31;
++        uint32_t sgs_z = (((w << 8) | 0x80000000u) >> (121u - sgs_e - sgs_n)) + 0x4000u;
++        if ((sgs_z & 0x7FFFu) > (uint32_t) sgs_th[sgs_e - 103u])
++        {
++            uint32_t sgs_m = 0u - sgs_n;
++            return 0x3F000000u + (((sgs_z >> 15) ^ sgs_m) - sgs_m);
++        }
++    }
+     if (EIK_SEL)
+         return eik_sigmoid_r(w);
+     return t_eik_sigmoid(w);

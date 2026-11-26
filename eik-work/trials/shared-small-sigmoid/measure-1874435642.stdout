@@ -1,0 +1,408 @@
+{
+ "bytes": {
+  "rv32im": 19132,
+  "thumbv6m": 20704,
+  "thumbv7em": 21374
+ },
+ "competition": "exact-integer-kernels",
+ "fingerprint": {
+  "measurement": "2c8fd1f3a6711f0639685319fb25262b02bfecf4c6589c52cb58928270a46322",
+  "sandbox": "none",
+  "verifier": "ebbf9d5cac596a718532b34798dc452e4050d6940594005c44f9a729c699c5a8"
+ },
+ "hard_pool": {
+  "samples": 67108864,
+  "sizes": {
+   "exp": 445,
+   "sigmoid": 560,
+   "tanh": 186
+  },
+  "source": "hardscan",
+  "threshold_log2_ulps": -18
+ },
+ "images": {
+  "rv32im": "63ff21cb0dfe43dbe40f237ccd29f0af2ca957a3a468925dfbd721b645973aa0",
+  "thumbv6m": "ab2bdc109ba741856b48fedb1f2b395da5988b288c984b7f0278dee9d159ef77",
+  "thumbv7em": "b3d2070b642a5f68a5b74066cd866641b9ccabd40b9d3970ca6caae796d985ea"
+ },
+ "inputs_sha256": "1b9ee17dc1c07a9a1364ae327f2c732ed1ae8d14b7ff6ea313d4bc3cb12d6b27",
+ "kind": "measure",
+ "reasons": [],
+ "sampled": true,
+ "schema": "eik-report-1",
+ "scores": {
+  "overall": {
+   "S": 37.39233426846292
+  },
+  "rv32im": {
+   "S": 30.74556592260963,
+   "bytes": 19132,
+   "functions": {
+    "exp": {
+     "geo_mean_instr": 28.369364717732054,
+     "tail_factor": 1.0
+    },
+    "sigmoid": {
+     "geo_mean_instr": 31.57022319228801,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 22.098416538210916,
+     "tail_factor": 1.0
+    }
+   },
+   "size_factor": 1.1366314936441582
+  },
+  "thumbv6m": {
+   "S": 45.47604248247939,
+   "bytes": 20704,
+   "functions": {
+    "exp": {
+     "geo_mean_instr": 39.742223859934064,
+     "tail_factor": 1.0
+    },
+    "sigmoid": {
+     "geo_mean_instr": 49.02182158988863,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 31.978873006119493,
+     "tail_factor": 1.0
+    }
+   },
+   "size_factor": 1.1471346776861033
+  },
+  "thumbv7em": {
+   "S": 40.876179395484385,
+   "bytes": 21374,
+   "functions": {
+    "exp": {
+     "geo_mean_instr": 37.489124404130365,
+     "tail_factor": 1.0
+    },
+    "sigmoid": {
+     "geo_mean_instr": 37.50717624317352,
+     "tail_factor": 1.0
+    },
+    "tanh": {
+     "geo_mean_instr": 31.805812485770755,
+     "tail_factor": 1.0
+    }
+   },
+   "reported_only": true,
+   "size_factor": 1.1515821105860733
+  }
+ },
+ "seed": 1874435642,
+ "sha256": "1593022e89963ac5abe3dcc4808470099be554e04094f9e1c72cd7094bbaf262",
+ "stage": null,
+ "targets": {
+  "rv32im": {
+   "functions": {
+    "exp": {
+     "hard": {
+      "max": 80,
+      "mean": 41.486666666666665,
+      "median": 43,
+      "n": 300,
+      "p999": 80
+     },
+     "typical": {
+      "max": 84,
+      "mean": 30.5635,
+      "median": 29,
+      "n": 2000,
+      "p999": 83
+     },
+     "uniform": {
+      "max": 49,
+      "mean": 13.297,
+      "median": 13,
+      "n": 1000,
+      "p999": 49
+     },
+     "wide": {
+      "max": 83,
+      "mean": 24.738,
+      "median": 21,
+      "n": 1000,
+      "p999": 79
+     }
+    },
+    "sigmoid": {
+     "hard": {
+      "max": 115,
+      "mean": 49.78,
+      "median": 43,
+      "n": 300,
+      "p999": 115
+     },
+     "typical": {
+      "max": 115,
+      "mean": 32.9215,
+      "median": 33,
+      "n": 2000,
+      "p999": 113
+     },
+     "uniform": {
+      "max": 67,
+      "mean": 15.654,
+      "median": 15,
+      "n": 1000,
+      "p999": 67
+     },
+     "wide": {
+      "max": 115,
+      "mean": 28.233,
+      "median": 32,
+      "n": 1000,
+      "p999": 103
+     }
+    },
+    "tanh": {
+     "hard": {
+      "max": 92,
+      "mean": 51.68666666666667,
+      "median": 68,
+      "n": 300,
+      "p999": 92
+     },
+     "typical": {
+      "max": 90,
+      "mean": 25.8045,
+      "median": 25,
+      "n": 2000,
+      "p999": 73
+     },
+     "uniform": {
+      "max": 49,
+      "mean": 9.2,
+      "median": 9,
+      "n": 1000,
+      "p999": 39
+     },
+     "wide": {
+      "max": 68,
+      "mean": 14.499,
+      "median": 9,
+      "n": 1000,
+      "p999": 68
+     }
+    }
+   },
+   "sample": {
+    "examples": [],
+    "mismatches": 0,
+    "words": 98304
+   },
+   "stack": 0,
+   "target": "rv32im",
+   "wrong": []
+  },
+  "thumbv6m": {
+   "functions": {
+    "exp": {
+     "hard": {
+      "max": 146,
+      "mean": 56.89333333333333,
+      "median": 61,
+      "n": 300,
+      "p999": 146
+     },
+     "typical": {
+      "max": 98,
+      "mean": 42.9275,
+      "median": 41,
+      "n": 2000,
+      "p999": 98
+     },
+     "uniform": {
+      "max": 68,
+      "mean": 19.86,
+      "median": 19,
+      "n": 1000,
+      "p999": 65
+     },
+     "wide": {
+      "max": 139,
+      "mean": 34.367,
+      "median": 29,
+      "n": 1000,
+      "p999": 139
+     }
+    },
+    "sigmoid": {
+     "hard": {
+      "max": 192,
+      "mean": 73.52,
+      "median": 54,
+      "n": 300,
+      "p999": 192
+     },
+     "typical": {
+      "max": 157,
+      "mean": 50.6495,
+      "median": 48,
+      "n": 2000,
+      "p999": 148
+     },
+     "uniform": {
+      "max": 128,
+      "mean": 28.218,
+      "median": 29,
+      "n": 1000,
+      "p999": 106
+     },
+     "wide": {
+      "max": 202,
+      "mean": 44.227,
+      "median": 47,
+      "n": 1000,
+      "p999": 181
+     }
+    },
+    "tanh": {
+     "hard": {
+      "max": 117,
+      "mean": 75.93333333333334,
+      "median": 106,
+      "n": 300,
+      "p999": 117
+     },
+     "typical": {
+      "max": 117,
+      "mean": 37.149,
+      "median": 35,
+      "n": 2000,
+      "p999": 117
+     },
+     "uniform": {
+      "max": 106,
+      "mean": 14.698,
+      "median": 16,
+      "n": 1000,
+      "p999": 41
+     },
+     "wide": {
+      "max": 117,
+      "mean": 20.731,
+      "median": 16,
+      "n": 1000,
+      "p999": 117
+     }
+    }
+   },
+   "sample": {
+    "examples": [],
+    "mismatches": 0,
+    "words": 98304
+   },
+   "stack": 76,
+   "target": "thumbv6m",
+   "wrong": []
+  },
+  "thumbv7em": {
+   "functions": {
+    "exp": {
+     "hard": {
+      "max": 136,
+      "mean": 53.596666666666664,
+      "median": 51,
+      "n": 300,
+      "p999": 136
+     },
+     "typical": {
+      "max": 92,
+      "mean": 39.7755,
+      "median": 38,
+      "n": 2000,
+      "p999": 92
+     },
+     "uniform": {
+      "max": 64,
+      "mean": 21.085,
+      "median": 20,
+      "n": 1000,
+      "p999": 61
+     },
+     "wide": {
+      "max": 129,
+      "mean": 32.861,
+      "median": 27,
+      "n": 1000,
+      "p999": 129
+     }
+    },
+    "sigmoid": {
+     "hard": {
+      "max": 167,
+      "mean": 59.42,
+      "median": 42,
+      "n": 300,
+      "p999": 167
+     },
+     "typical": {
+      "max": 139,
+      "mean": 40.136,
+      "median": 39,
+      "n": 2000,
+      "p999": 133
+     },
+     "uniform": {
+      "max": 111,
+      "mean": 20.312,
+      "median": 21,
+      "n": 1000,
+      "p999": 95
+     },
+     "wide": {
+      "max": 174,
+      "mean": 31.475,
+      "median": 31,
+      "n": 1000,
+      "p999": 158
+     }
+    },
+    "tanh": {
+     "hard": {
+      "max": 113,
+      "mean": 72.41333333333333,
+      "median": 99,
+      "n": 300,
+      "p999": 113
+     },
+     "typical": {
+      "max": 113,
+      "mean": 35.997,
+      "median": 35,
+      "n": 2000,
+      "p999": 113
+     },
+     "uniform": {
+      "max": 99,
+      "mean": 16.627,
+      "median": 19,
+      "n": 1000,
+      "p999": 40
+     },
+     "wide": {
+      "max": 113,
+      "mean": 21.468,
+      "median": 19,
+      "n": 1000,
+      "p999": 113
+     }
+    }
+   },
+   "sample": {
+    "examples": [],
+    "mismatches": 0,
+    "words": 98304
+   },
+   "stack": 40,
+   "target": "thumbv7em",
+   "wrong": []
+  }
+ },
+ "verdict": "passed"
+}
